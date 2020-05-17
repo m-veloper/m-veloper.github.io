@@ -1,6 +1,22 @@
 [
 
 {
+"title"    : "[유닉스] 사용자(User) 관리 명령어, 그룹(Group) 관리 명령어",
+"category" : "",
+"tags"     : "unix",
+"url"      : "/devlog/2020/05/18/unix-53/",
+"date"     : "2020-05-18 00:00:00 +0900"
+} ,
+
+{
+"title"    : "[Javascript/ECMAScript6/ES6] 연산자",
+"category" : "",
+"tags"     : "ECMAScript6, ES6, ES2015",
+"url"      : "/devlog/2020/05/18/ECMAScript6-03/",
+"date"     : "2020-05-18 00:00:00 +0900"
+} ,
+
+{
 "title"    : "[유닉스] 시스템 부팅과 종료",
 "category" : "",
 "tags"     : "unix",
