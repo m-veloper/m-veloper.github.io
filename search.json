@@ -1,6 +1,22 @@
 [
 
 {
+"title"    : "[유닉스] 시스템 성능 관리 명령어",
+"category" : "",
+"tags"     : "unix",
+"url"      : "/devlog/2020/05/19/unix-54/",
+"date"     : "2020-05-19 00:00:00 +0900"
+} ,
+
+{
+"title"    : "[Javascript/ECMAScript6/ES6] 조건문",
+"category" : "",
+"tags"     : "ECMAScript6, ES6, ES2015",
+"url"      : "/devlog/2020/05/19/ECMAScript6-04/",
+"date"     : "2020-05-19 00:00:00 +0900"
+} ,
+
+{
 "title"    : "[유닉스] 사용자(User) 관리 명령어, 그룹(Group) 관리 명령어",
 "category" : "",
 "tags"     : "unix",
