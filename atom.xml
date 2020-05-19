@@ -4,12 +4,32 @@
  <title>슬기로운 개발 생활</title>
  <link href="https://m-veloper.github.io/atom.xml" rel="self"/>
  <id>https://m-veloper.github.io</id>
- <updated>2020-05-19T00:28:20+09:00</updated>
+ <updated>2020-05-20T00:05:33+09:00</updated>
  <author>
    <name>m-veloper</name>
    <uri>https://m-veloper.github.io</uri>
    <email>m_veloper@naver.com</email>
  </author>
+
+ 
+
+ <entry>
+   <title>[유닉스] 시스템 백업과 복구 명령어</title>
+   <link href="https://m-veloper.github.io/devlog/2020/05/20/unix-55/"/>
+   <id>https://m-veloper.github.io/devlog/2020/05/20/unix-55</id>
+   <updated>2020-05-20T00:00:00+09:00</updated>
+   <content type="html">&lt;p&gt;&lt;img src=&quot;/assets/img/unix/2020-05-20-unix-55.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt; &lt;h1 id=&quot;시스템-백업과-복구-명령어&quot;&gt;시스템 백업과 복구 명령어&lt;/h1&gt; &lt;p&gt;&lt;br /&gt;&lt;/p&gt; &lt;h3 id=&quot;테이프에-파일-보관--tar&quot;&gt;테이프에 파일 보관 : tar&lt;/h3&gt; &lt;ul&gt; &lt;li&gt;tar 명령은 기본적으로 파일을 자기 테이프(magnetic tape)에 보관하도록 특별히 설계되었음&lt;/li&gt; &lt;li&gt;현재는 여러 개의 파일들을 하나의 파일로 묶는 용도로 더 많이 쓰이고 있음&lt;/li&gt; &lt;li&gt;tar 명령의 특징은 단순함, 신뢰성, 안정성, 자기 테이프 장치 이외의...</content>
+ </entry>
+
+ 
+
+ <entry>
+   <title>[Javascript/ECMAScript6/ES6] 함수</title>
+   <link href="https://m-veloper.github.io/devlog/2020/05/20/ECMAScript6-05/"/>
+   <id>https://m-veloper.github.io/devlog/2020/05/20/ECMAScript6-05</id>
+   <updated>2020-05-20T00:00:00+09:00</updated>
+   <content type="html">&lt;p&gt;&lt;img src=&quot;/assets/img/ECMAScript6/2020-05-20-ECMAScript6-05.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt; &lt;blockquote&gt; &lt;p&gt;이글은 “벨로퍼트”님의 동영상 강의를 보고 정리한 내용입니다.&lt;/p&gt; &lt;/blockquote&gt; &lt;p&gt;&lt;br /&gt;&lt;/p&gt; &lt;h1 id=&quot;함수&quot;&gt;함수&lt;/h1&gt; &lt;p&gt;함수는, 특정 코드를 하나의 명령으로 실행 할 수 있게 해주는 기능입니다.&lt;/p&gt; &lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;b&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;...</content>
+ </entry>
 
  
 
@@ -89,26 +109,6 @@
    <id>https://m-veloper.github.io/devlog/2020/05/16/ECMAScript6-01</id>
    <updated>2020-05-16T00:00:00+09:00</updated>
    <content type="html">&lt;p&gt;&lt;img src=&quot;/assets/img/ECMAScript6/2020-05-16-ECMAScript6-01.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt; &lt;blockquote&gt; &lt;p&gt;이글은 “&lt;a href=&quot;https://wormwlrm.github.io/2018/10/03/What-is-the-difference-between-javascript-and-ecmascript.html&quot;&gt;재그지그&lt;/a&gt;“님의 글을 참고하였습니다.&lt;/p&gt; &lt;/blockquote&gt; &lt;p&gt;&lt;br /&gt;&lt;/p&gt; &lt;h1 id=&quot;ecmascript6es6-는-무엇일까&quot;&gt;ECMAScript6/ES6 는 무엇일까?&lt;/h1&gt; &lt;p&gt;이 글은 JavaScript와 ECMAScript에 대한 이해를 바탕으로 작성합니다. 이 글은 JavaScript에는 친숙하지만,&lt;/p&gt; &lt;p&gt;EMCAScript와 웹 브라우저, Babel과 같은 JavaScript를 둘러싼 여러가지 환경들에 대해 이해하고자 하는 분들에게&lt;/p&gt; &lt;p&gt;초점이 맞추어져 있습니다. 그리고 스크립팅 언어, JavaScript 엔진...</content>
- </entry>
-
- 
-
- <entry>
-   <title>[Jekyll] 검색(Search) 기능 만들기/ Github 블로그 검색(Search) 기능</title>
-   <link href="https://m-veloper.github.io/tip/2020/05/15/tip-jekyll-01/"/>
-   <id>https://m-veloper.github.io/tip/2020/05/15/tip-jekyll-01</id>
-   <updated>2020-05-15T00:00:00+09:00</updated>
-   <content type="html">&lt;p&gt;&lt;img src=&quot;/assets/img/jekyll/2020-05-15-jekyll-01.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt; &lt;h1 id=&quot;검색search-기능-만들기&quot;&gt;검색(Search) 기능 만들기&lt;/h1&gt; &lt;h4 id=&quot;-본-포스팅은-기본적인-블로그가-만들어져-있다고-가정하고-진행합니다-&quot;&gt;[ 본 포스팅은 기본적인 블로그가 만들어져 있다고 가정하고 진행합니다. ]&lt;/h4&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;블로그에 글이 점점 많아지면서 내 자신도 내 글을 찾기가 점점 힘들어지고 있다는걸 깨달았습니다.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;페이징을 하나하나 넘겨가면서 내 글을 찾아서 보는것이 상당히 비효율적입니다.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;제 블로그에서 정보를...</content>
- </entry>
-
- 
-
- <entry>
-   <title>[유닉스] 쉘 스크립트(Shell Script) 디버깅</title>
-   <link href="https://m-veloper.github.io/devlog/2020/05/14/unix-50/"/>
-   <id>https://m-veloper.github.io/devlog/2020/05/14/unix-50</id>
-   <updated>2020-05-14T00:00:00+09:00</updated>
-   <content type="html">&lt;p&gt;&lt;img src=&quot;/assets/img/unix/2020-05-14-unix-50.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt; &lt;h1 id=&quot;디버깅-오류-발생&quot;&gt;디버깅 오류 발생&lt;/h1&gt; &lt;ul&gt; &lt;li&gt;복잡한 스크립트를 작성하다 보면 오류가 자주 발생&lt;/li&gt; &lt;li&gt;구문 오류는 바로 확인하여 수정 가능&lt;/li&gt; &lt;li&gt;실행 오류는 추적하기 쉽지 않음&lt;/li&gt; &lt;li&gt;쉘은 별도의 디버거를 제공하진 않지만 각 행의 실행을 추적할 수 있는 방법 제공&lt;/li&gt; &lt;/ul&gt; &lt;h1 id=&quot;bash-x를-이용한-디버깅&quot;&gt;bash –x를 이용한 디버깅&lt;/h1&gt; &lt;ul&gt; &lt;li&gt;가장 많이 사용되며,...</content>
  </entry>
 
  

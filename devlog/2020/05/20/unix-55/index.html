@@ -1,0 +1,1690 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<!-- Meta -->
+	<meta charset="UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+	<meta name="generator" content="Jekyll">
+	<meta name="naver-site-verification" content="fa37cbf8ce41948de6e94c01991ffa04cea9b093"/>
+	<meta name="google-site-verification" content="5M4Zw9wg_UqQkvlayfb5Mc_ogvJdc013w_zLUkxgO-Y" />
+
+	<!--<title>[유닉스] 시스템 백업과 복구 명령어</title>-->
+	<title>슬기로운 개발 생활</title>
+
+	<!-- CSS & fonts -->
+	<link rel="stylesheet" href="/assets/css/main.css">
+	<link rel="stylesheet" href="/assets/icomoon/style.css">
+	<link rel="stylesheet" href="/assets/icomoon/style.css">
+	<link rel="stylesheet" href="/assets/css/font-awesome.min.css">
+	<link href="https://cdn.jsdelivr.net/gh/joungkyun/font-d2coding/d2coding.css" rel="stylesheet" type="text/css">
+	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,900,400italic%7CSignika:700,300,400,600' rel='stylesheet' type='text/css'>
+	<link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/default.min.css">
+
+	<!-- RSS -->
+	<link href="/atom.xml" type="application/atom+xml" rel="alternate" title="ATOM Feed" />
+	<!-- Script -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="/assets/js/main.js"></script>
+<script src="/assets/js/load-js-deferred.js"></script>
+<script src="/assets/js/fontawesome-all.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
+<script data-ad-client="ca-pub-9898399593070144" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
+<script type="text/javascript" src="//wcs.naver.net/wcslog.js"></script>
+
+
+
+
+
+<script>
+  window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+  ga('create', 'UA-158538042-1', 'auto');
+  ga('send', 'pageview');
+  loadJSDeferred('https://www.google-analytics.com/analytics.js');
+</script>
+
+
+<!-- m-veloper 네이버애널리틱스 -->
+<script type="text/javascript">
+    if(!wcs_add) var wcs_add = {};
+    wcs_add["wa"] = "45688ef54680e0";
+    if(window.wcs) {
+        wcs_do();
+    }
+</script>
+
+
+
+
+
+  </head>
+
+
+<body>
+
+	<div id="wrap">
+	  	
+	  	<!-- Navigation -->
+	  	<nav id="nav">
+	<div id="nav-list">
+		<div class="sidebar-about">
+			<h2><a id="_title" href="/">슬기로운 개발 생활</a></h2>
+			<p>느리지만 가고있어요..</p>
+
+		</div>
+		<!--<a href="">Home</a>-->
+
+		<!-- 카테고리, 태그 메뉴-->
+		<div id="_sidebar" class="sidebar">
+			<div class="sidebar-sticky" role="banner">
+				<nav class="sidebar-nav heading" role="navigation">
+					<ul>
+						<li>
+							<div  class="list-wrapper">
+								<h3 class="sidebar-nav-item">Learn</h3>
+							</div>
+							<ul class="list-body">
+								<li>
+									<a class="sidebar-nav-subitem" href="/a_tags/database/">Database</a>
+								</li>
+								<li>
+									<a class="sidebar-nav-subitem" href="/a_tags/unix/">Unix</a>
+								</li>
+								<li>
+									<a class="sidebar-nav-subitem" href="/a_tags/sass/">Sass</a>
+								</li>
+								<li>
+									<a class="sidebar-nav-subitem" href="/a_tags/javascript/">Javascript(ES6)</a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<div  class="list-wrapper">
+								<h3 class="sidebar-nav-item">Review</h3>
+							</div>
+							<ul class="list-body">
+								<li>
+									<a class="sidebar-nav-subitem" href="/a_tags/goods/">Goods</a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<div  class="list-wrapper">
+								<h3 class="sidebar-nav-item">Tip</h3>
+							</div>
+							<ul class="list-body">
+								<li>
+									<a class="sidebar-nav-subitem" href="/a_tags/web/">Web</a>
+									<a class="sidebar-nav-subitem" href="/a_tags/etc/">Etc</a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<div  class="list-wrapper">
+								<a class="" href="/search/"><h3 class="sidebar-nav-item">Search [검색]</h3></a>
+								<a class="" href="/a_tags/portfolio/"><h3 class="sidebar-nav-item">Portfolio</h3></a>
+								<a class="" href="/about/"><h3 class="sidebar-nav-item">About</h3></a>
+							</div>
+						</li>
+					</ul>
+
+					<!---->
+					<!--<article class="page" role="article">-->
+						<!--<div class="author-body" style="max-width: 25%; margin: auto">-->
+							<!---->
+							<!--
+  
+
+  
+
+  <img
+    src="/assets/img/me.png"
+    class="me"
+    alt="m_veloper"
+    srcset="/assets/img/me.png 1x,/assets/img/me.png 2x"
+    
+  />
+
+-->
+							<!---->
+						<!--</div>-->
+					<!--</article>-->
+
+					<!--<ul>-->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!---->
+					<!--<li>-->
+						<!--<div  class="list-wrapper">-->
+							<!--&lt;!&ndash;<a class="sidebar-nav-item" href="/a_categories/devlog/">Devlog</a>&ndash;&gt;-->
+							<!--<h3 class="sidebar-nav-item">Devlog</h3>-->
+						<!--</div>-->
+						<!--<ul class="list-body">-->
+							<!---->
+							<!---->
+							<!--<li>-->
+								<!--<a class="sidebar-nav-subitem" href="/a_tags/database/index.html">Database</a>-->
+							<!--</li>-->
+							<!---->
+							<!---->
+							<!---->
+							<!--<li>-->
+								<!--<a class="sidebar-nav-subitem" href="/a_tags/database/2/index.html">Database</a>-->
+							<!--</li>-->
+							<!---->
+							<!---->
+							<!---->
+							<!--<li>-->
+								<!--<a class="sidebar-nav-subitem" href="/a_tags/database/3/index.html">Database</a>-->
+							<!--</li>-->
+							<!---->
+							<!---->
+							<!---->
+							<!--<li>-->
+								<!--<a class="sidebar-nav-subitem" href="/a_tags/database/4/index.html">Database</a>-->
+							<!--</li>-->
+							<!---->
+							<!---->
+							<!---->
+							<!--<li>-->
+								<!--<a class="sidebar-nav-subitem" href="/a_tags/database/5/index.html">Database</a>-->
+							<!--</li>-->
+							<!---->
+							<!---->
+							<!---->
+							<!--<li>-->
+								<!--<a class="sidebar-nav-subitem" href="/a_tags/database/6/index.html">Database</a>-->
+							<!--</li>-->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!--<li>-->
+								<!--<a class="sidebar-nav-subitem" href="/a_tags/javascript/index.html">Database</a>-->
+							<!--</li>-->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!--<li>-->
+								<!--<a class="sidebar-nav-subitem" href="/a_tags/sass/2/index.html">Sass</a>-->
+							<!--</li>-->
+							<!---->
+							<!---->
+							<!---->
+							<!--<li>-->
+								<!--<a class="sidebar-nav-subitem" href="/a_tags/sass/index.html">Sass</a>-->
+							<!--</li>-->
+							<!---->
+							<!---->
+							<!---->
+							<!--<li>-->
+								<!--<a class="sidebar-nav-subitem" href="/a_tags/unix/index.html">Unix</a>-->
+							<!--</li>-->
+							<!---->
+							<!---->
+							<!---->
+							<!--<li>-->
+								<!--<a class="sidebar-nav-subitem" href="/a_tags/unix/2/index.html">Unix</a>-->
+							<!--</li>-->
+							<!---->
+							<!---->
+							<!---->
+							<!--<li>-->
+								<!--<a class="sidebar-nav-subitem" href="/a_tags/unix/3/index.html">Unix</a>-->
+							<!--</li>-->
+							<!---->
+							<!---->
+							<!---->
+							<!--<li>-->
+								<!--<a class="sidebar-nav-subitem" href="/a_tags/unix/4/index.html">Unix</a>-->
+							<!--</li>-->
+							<!---->
+							<!---->
+							<!---->
+							<!--<li>-->
+								<!--<a class="sidebar-nav-subitem" href="/a_tags/unix/5/index.html">Unix</a>-->
+							<!--</li>-->
+							<!---->
+							<!---->
+							<!---->
+							<!--<li>-->
+								<!--<a class="sidebar-nav-subitem" href="/a_tags/unix/6/index.html">Unix</a>-->
+							<!--</li>-->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+						<!--</ul>-->
+					<!--</li>-->
+					<!---->
+					<!---->
+					<!--<li>-->
+						<!--<div  class="list-wrapper">-->
+							<!--&lt;!&ndash;<a class="sidebar-nav-item" href="/a_categories/review/">Review</a>&ndash;&gt;-->
+							<!--<h3 class="sidebar-nav-item">Review</h3>-->
+						<!--</div>-->
+						<!--<ul class="list-body">-->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!--<li>-->
+								<!--<a class="sidebar-nav-subitem" href="/a_tags/goods/index.html">Goods</a>-->
+							<!--</li>-->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+						<!--</ul>-->
+					<!--</li>-->
+					<!---->
+					<!---->
+					<!--<li>-->
+						<!--<div  class="list-wrapper">-->
+							<!--&lt;!&ndash;<a class="sidebar-nav-item" href="/a_categories/tip/">Tip</a>&ndash;&gt;-->
+							<!--<h3 class="sidebar-nav-item">Tip</h3>-->
+						<!--</div>-->
+						<!--<ul class="list-body">-->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!--<li>-->
+								<!--<a class="sidebar-nav-subitem" href="/a_tags/etc/index.html">Etc</a>-->
+							<!--</li>-->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!--<li>-->
+								<!--<a class="sidebar-nav-subitem" href="/a_tags/web/2/index.html">Web</a>-->
+							<!--</li>-->
+							<!---->
+							<!---->
+							<!---->
+							<!--<li>-->
+								<!--<a class="sidebar-nav-subitem" href="/a_tags/web/3/index.html">Web</a>-->
+							<!--</li>-->
+							<!---->
+							<!---->
+							<!---->
+							<!--<li>-->
+								<!--<a class="sidebar-nav-subitem" href="/a_tags/web/4/index.html">Web</a>-->
+							<!--</li>-->
+							<!---->
+							<!---->
+							<!---->
+							<!--<li>-->
+								<!--<a class="sidebar-nav-subitem" href="/a_tags/web/index.html">Web</a>-->
+							<!--</li>-->
+							<!---->
+							<!---->
+						<!--</ul>-->
+					<!--</li>-->
+					<!---->
+					<!---->
+					<!--<li>-->
+						<!--<div  class="list-wrapper">-->
+							<!--&lt;!&ndash;<a class="sidebar-nav-item" href="/a_categories/portfolio/">Portfolio</a>&ndash;&gt;-->
+							<!--<h3 class="sidebar-nav-item">Portfolio</h3>-->
+						<!--</div>-->
+						<!--<ul class="list-body">-->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!--<li>-->
+								<!--<a class="sidebar-nav-subitem" href="/a_tags/portfolio/index.html">Portfolio</a>-->
+							<!--</li>-->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+							<!---->
+						<!--</ul>-->
+					<!--</li>-->
+					<!---->
+				<!--</ul>-->
+				</nav>
+			</div>
+		</div>
+
+		<!-- Nav pages -->
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+    
+    <!-- Nav links -->
+	  <!--<a href="https://github.com/KingFelix/emerald/archive/master.zip">Download</a>-->
+<!--<a href="https://github.com/KingFelix/emerald">Project on Github</a>-->
+<!--<a href="https://github.com/KingFelix/emerald">Categories</a>-->
+
+	</div>
+  <!-- Nav footer -->
+	
+	  <footer>
+	
+	<!--<span>version 1.1.0</span>-->
+
+</footer>
+	
+</nav>
+
+    
+    <!-- Icon menu -->
+	  <a id="nav-menu">
+	  	<div id="menu"></div>
+	  </a>
+
+      <!-- Header -->
+      
+        <header id="header">
+	<a href="/">
+		<!--<img src="/img/emerald.svg" alt="Emerald Logo">-->
+		<h1 class="top">M</h1>
+	  <h1 class="bottom">veloper</h1>
+	</a>
+</header>
+
+      
+
+    <!-- Main content -->
+		<div class="main-layout">
+			<div id="side-ad-left">
+				<div class="googleAd" style="min-width:250px; min-height:250px;">
+  <!-- 수직2 -->
+  <ins class="adsbygoogle"
+       style="display:block"
+       data-ad-client="ca-pub-9898399593070144"
+       data-ad-slot="1150677138"
+       data-ad-format="vertical"
+       data-full-width-responsive="true"></ins>
+  <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+</div>
+<div class="googleAd" style="min-width:250px; min-height:250px;">
+  <!-- 정사각1 -->
+  <ins class="adsbygoogle"
+       style="display:block"
+       data-ad-client="ca-pub-9898399593070144"
+       data-ad-slot="3014955973"
+       data-ad-format="vertical"
+       data-full-width-responsive="true"></ins>
+  <script>
+      (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+</div>
+			</div>
+			<div id="container">
+				<main>
+					<article id="post-page">
+	<h2 class="title">[유닉스] 시스템 백업과 복구 명령어</h2>
+	<a class="tag" href="" data-flip="title">
+		<time datetime="" class="by-line">2020년 05월 20일</time>
+	</a>
+	<hr>
+	<div class="content">
+		<div class='kakao-ad-top'>
+			<div>
+				<ins class="kakao_ad_area" style="display:none;" data-ad-unit= "DAN-sksc2jl3lbhe" data-ad-width= "250" data-ad-height= "250"></ins>
+			</div>
+			<div>
+				<ins class="kakao_ad_area" style="display:none;" data-ad-unit= "DAN-s13c6ao56o2p" data-ad-width= "250" data-ad-height= "250"></ins>
+			</div>
+			<div>
+				<ins class="kakao_ad_area" style="display:none;" data-ad-unit= "DAN-to1sb755uomv" data-ad-width= "250" data-ad-height= "250"></ins>
+			</div>
+		</div>
+
+		<p><img src="/assets/img/unix/2020-05-20-unix-55.png" alt="" /></p>
+
+<h1 id="시스템-백업과-복구-명령어">시스템 백업과 복구 명령어</h1>
+
+<p><br /></p>
+
+<h3 id="테이프에-파일-보관--tar">테이프에 파일 보관 : tar</h3>
+
+<ul>
+  <li>tar 명령은 기본적으로 파일을 자기 테이프(magnetic tape)에 보관하도록 특별히 설계되었음</li>
+  <li>현재는 여러 개의 파일들을 하나의 파일로 묶는 용도로 더 많이 쓰이고 있음</li>
+  <li>tar 명령의 특징은 단순함, 신뢰성, 안정성, 자기 테이프 장치 이외의 어떤 매체에도 저장할 수 있는 유연성</li>
+  <li>형식 : tar [options] [생성될 파일명] [대상 파일명 또는 대상 디렉토리, 장치명]</li>
+</ul>
+
+<p><br /></p>
+
+<p><img src="/assets/img/unix/2020-05-20-unix-55-01.png" alt="" /></p>
+
+<ul>
+  <li>가장 많이 사용되는 옵션은 cvf, tvf, xvf</li>
+  <li>저장 매체로 플로피 디스크나 자기 테이프로 지정하고 백업하는 예
+    <ul>
+      <li>/dev/fd0는 플로피 드라이브를 백업 매체로 지정하는 것</li>
+      <li>/var 디렉토리를 플로피 드라이브로 복사</li>
+    </ul>
+  </li>
+</ul>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># tar –cf /dev/fd0 /var</span>
+</code></pre></div></div>
+
+<ul>
+  <li>백업될 크기가 하나의 플로피 디스크에 저장하기에 너무 커서 연속적으로 백업을 받아야 할 경우 –M 옵션 사용</li>
+</ul>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># tar –cMf /dev/fd0 /var</span>
+<span class="nb">tar</span>: Removing leading ‘/’ from member names
+Prepare volume <span class="c">#2 for ‘/dev/fd0’ and hit return;</span>
+Prepare volume <span class="c">#3 for ‘/dev/fd0’ and hit return;</span>
+Prepare volume <span class="c">#4 for ‘/dev/fd0’ and hit return;</span>
+Prepare volume <span class="c">#5 for ‘/dev/fd0’ and hit return;</span>
+......
+</code></pre></div></div>
+
+<ul>
+  <li>/var 디렉토리를 자기 테이프로 백업하는 경우
+    <ul>
+      <li>/dev/st0는 자기 테이프 저장 매체를 의미</li>
+    </ul>
+  </li>
+</ul>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># tar –cf /dev/st0 /var</span>
+</code></pre></div></div>
+
+<ul>
+  <li>플로피 디스크 /dev/fd0에 옵션 –tvf를 사용하여 백업된 데이터의 내용을 보는 예</li>
+</ul>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># tar –tvf /dev/fd0</span>
+drwxr-xr-x root/root 0 2002-05-10 12:24:31 var/
+drwxr-xr-x root/root 0 2002-05-10 12:01:53 var/lost+found/
+drwxr-xr-x root/root 0 2002-05-10 03:41:43 var/lib/
+drwxr-xr-x root/root 0 1996-02-15 07:07:19 var/lib/rpm/
+<span class="nt">-rw-r</span>—r- root/root 11403264 2002-05-10 12:28:35 var/lib/rpm/Packages
+</code></pre></div></div>
+
+<ul>
+  <li>-xvf를 사용하여 tar로 백업한 파일을 복구</li>
+</ul>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># tar –xvMf /dev/fd0</span>
+var/
+var/lost+found/
+var/lib/
+var/lib/rpm/
+var/lib/rpm/Packages
+Prepare volume <span class="c">#2 for ‘/dev/fd0’ and hit return:</span>
+var/lib/rpm/Name
+var/lib/rpm/Basenames
+Prepare volume <span class="c">#3 for ‘dev/fd0’ and hit return:</span>
+var/lib/rpm/Group
+......
+</code></pre></div></div>
+
+<ul>
+  <li>/var 디렉토리를 usb 저장매체에 backup.tar 파일명으로 백업하고, 백업한 파일을 /test 디렉토리에 복구한 후에 ls 명령어로 확인하는 경우</li>
+</ul>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># tar –cf /dev/sdb1/backup.tar /var</span>
+<span class="c"># ls /dev/sdb1</span>
+backup.tar
+<span class="c"># tar –xvf /dev/sdb1/backup.tar</span>
+<span class="c"># ls</span>
+var
+</code></pre></div></div>
+
+<p><br /></p>
+
+<h3 id="점진적-백업--dump-restore">점진적 백업 : dump, restore</h3>
+
+<ul>
+  <li>dump 명령은 파일 시스템을 백업하는데 있어서 가장 일반화된 명령어</li>
+  <li>dump 명령을 사용하여 시스템을 백업하고 restore 명령을 사용하여 백업된 파일을 복구</li>
+  <li>dump는 파일 시스템 전체나 파일 시스템의 일부를 백업할 수 있음</li>
+  <li>백업될 파일은 0에서 9까지 레벨로 지정하여 작업</li>
+  <li>동일한 파일 시스템을 백업할 때, 예전이 이미 백업해 놓은 파일이 있다면, 그 백업 파일과 비교해서 변경된 파일이나 수정된 파일만을 목록으로 만들어 변경된 목록만을 업데이트 하는 형식</li>
+  <li>예를 들면,</li>
+  <li>일요일에 파일 시스템을 레벨 0으로 완전 백업을 했을 경우</li>
+  <li>월요일에 레벨 1로 덤프하면 완전 백업 이후 변경된 모든 데이터를 기록</li>
+  <li>화요일에 레벨 2로 덤프하면 레벨 1 덤프 이후 변경된 데이터를 기록</li>
+  <li>레벨 0은 완전 백업을 의미, 1에서 9까지는 점진적 백업이라 함</li>
+  <li>형식 : dump [option argument] file-to-dump</li>
+</ul>
+
+<p><img src="/assets/img/unix/2020-05-20-unix-55-02.png" alt="" /></p>
+
+<ul>
+  <li>/home 디렉토리에 대해 전체 백업을 진행하여 /backup 디렉토리에 저장할 경우
+    <ul>
+      <li>dump 레벨 0으로 /home 디렉토리를 /backup 디렉토리에 backup.dump 파일로 백업</li>
+    </ul>
+  </li>
+</ul>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># dump –0f /backup/backup.dump /home</span>
+</code></pre></div></div>
+
+<ul>
+  <li>tape 장치에 dump를 이용한 백업의 예
+    <ul>
+      <li>/home 디렉토리를 테이프 장치로 백업하는 예</li>
+      <li>/dev/st0는 첫 번째 테이프 장치를 의미하는 시스템 파일</li>
+      <li>테이프 장치가 여러 개 있다면 /dev/st1, /dev/st2 순서로 이름이 지정됨</li>
+    </ul>
+  </li>
+</ul>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># dump –0f /dev/st0 /home</span>
+</code></pre></div></div>
+
+<ul>
+  <li>dump로 백업한 파일은 restore 명령으로 복구, restore는 dump로 백업한 파일만 복구시킬 수 있음</li>
+</ul>
+
+<p><img src="/assets/img/unix/2020-05-20-unix-55-03.png" alt="" /></p>
+
+<ul>
+  <li>restore 명령을 이용하여 /home 디렉토리 중에서 /home/user1 이라는 서브디렉토리만을 선택적으로 복구하는 예
+    <ul>
+      <li>복구하기 전에 /home/user1 디렉토리 안의 모든 파일을 지우고 시작</li>
+      <li>add 명령을 사용하여 user1이 <em>user1으로 ‘</em>’가 붙어있는데, 이는 백업 파일 (/backup/backup.dump)에서 user1 디렉토리만 활성화시켜 복구한다는 의미</li>
+    </ul>
+  </li>
+</ul>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># restore –if /backup/backup.dump</span>
+restore <span class="o">&gt;</span> <span class="nb">ls</span>
+......
+home/
+restore <span class="o">&gt;</span> <span class="nb">cd </span>home/
+restore <span class="o">&gt;</span> <span class="nb">ls</span>
+./home:
+ksshin/ user1/
+restore <span class="o">&gt;</span> add user1/
+restore <span class="o">&gt;</span> verbose
+verbose mode on
+restore <span class="o">&gt;</span> <span class="nb">ls</span>
+./home:
+4096 ./ 4096 ksshin/ 4096 <span class="k">*</span>user1/
+2 ../
+restore <span class="o">&gt;</span>
+</code></pre></div></div>
+
+<ul>
+  <li>restore로 복구하기 전에, 백업한 디렉토리인 “/home”이 “/” 디렉토리 밑에 있으므로 “/”로 이동해서 복구해야 함</li>
+</ul>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>restore <span class="o">&gt;</span> extract
+Extract requested files
+You have not <span class="nb">read </span>any volumes yet.
+Unless you know which volume your file<span class="o">(</span>s<span class="o">)</span> are on you ......
+......
+restore <span class="o">&gt;</span> quit
+<span class="c"># cd user1</span>
+<span class="c"># ls</span>
+......
+</code></pre></div></div>
+
+<p><br /></p>
+
+<h3 id="파일-보관--cpio">파일 보관 : cpio</h3>
+
+<ul>
+  <li>cpio 명령은 파일을 디스크 장치나 테이프 장치에 백업하기 위해 많이 사용되는 일반적인 명령</li>
+</ul>
+
+<p><img src="/assets/img/unix/2020-05-20-unix-55-04.png" alt="" /></p>
+
+<p><img src="/assets/img/unix/2020-05-20-unix-55-05.png" alt="" /></p>
+
+<ul>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>cpio 명령을 사용하여 백업하기 위해서는 “</td>
+          <td>”(pipe) 기호와 리다이렉션 기호를 사용</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li>cpio는 표준 입력장치로부터 입력사항을 받아들이고, 표준 출력장치로 출력사항을 보냄</li>
+  <li>표준 입력은 ls, cat, find 명령을 사용할 수 있고, 출력은 저장 매체인 플로피 디스크, 테이프, 하드디스크 등</li>
+</ul>
+
+<h4 id="표준-입력으로-ls-명령을-사용하여-저장장치에-백업하는-예">표준 입력으로 ls 명령을 사용하여 저장장치에 백업하는 예</h4>
+
+<ul>
+  <li>플로피에 백업</li>
+</ul>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># ls [백업할 파일] | cpio –o &gt; /dev/fd0</span>
+</code></pre></div></div>
+
+<ul>
+  <li>테이프에 백업</li>
+</ul>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># ls [백업할 파일] | cpio –o &gt; /dev/st0</span>
+</code></pre></div></div>
+
+<ul>
+  <li>하드디스크에 백업</li>
+</ul>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># ls [백업할 파일] | cpio –o &gt; [아카이브 파일을 만들 위치]</span>
+</code></pre></div></div>
+
+<ul>
+  <li>usb에 백업</li>
+</ul>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># ls [백업할 파일] | cpio –o &gt; /dev/sdb1</span>
+</code></pre></div></div>
+
+<p><br /></p>
+
+<h4 id="백업했던-파일을-복구하는-예">백업했던 파일을 복구하는 예</h4>
+
+<ul>
+  <li>플로피의 백업 파일 복구</li>
+</ul>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># cpio –i &lt; /dev/fd0</span>
+</code></pre></div></div>
+
+<ul>
+  <li>테이프의 백업 파일 복구</li>
+</ul>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># cpio –i &lt; /dev/st0</span>
+</code></pre></div></div>
+
+<ul>
+  <li>하드디스크의 백업 파일 복구</li>
+</ul>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># cpio –i &lt; [아카이브 파일 위치]</span>
+</code></pre></div></div>
+
+<ul>
+  <li>usb의 백업 파일 복구</li>
+</ul>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># cpio –i &lt; /dev/sdb1</span>
+</code></pre></div></div>
+
+<p><br /></p>
+
+<h4 id="백업-저장-매체로-하드디스크를-지정하여-파일을-백업한-후-다시-백업한-파일을-복구하는-예">백업 저장 매체로 하드디스크를 지정하여 파일을 백업한 후, 다시 백업한 파일을 복구하는 예</h4>
+
+<ul>
+  <li>백업</li>
+</ul>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># ls –F</span>
+test1/ test2
+<span class="c"># ls | cpio –ov &gt; backup.cpio</span>
+backup.cpio
+test1
+test2
+1 blocks
+<span class="c"># ls –l backup.cpio</span>
+<span class="nt">-rx---r-</span> 1 root root 512 Jul 19 22:09 backup.cpio
+<span class="c">#</span>
+</code></pre></div></div>
+
+<ul>
+  <li>복구</li>
+</ul>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># rm –rf test1</span>
+<span class="c"># rm –f test2</span>
+<span class="c"># ls</span>
+backup.cpio
+<span class="c">#</span>
+<span class="c"># cpio –ifv &lt; backup.cpio</span>
+cpio: backup.cpio not created: newer or same age version exists
+backup.cpio
+test1
+teset2
+1 blocks
+<span class="c"># ls</span>
+backup.cpio test1 test2
+<span class="c">#</span>
+</code></pre></div></div>
+
+
+
+		<!-- buymeacoffee 버튼 -->
+		<div id="sponsor-button" style="text-align: center">
+			<a class="bmc-button" target="_blank" href="https://www.buymeacoffee.com/TWYGPxs">
+				<img src="https://cdn.buymeacoffee.com/buttons/bmc-new-btn-logo.svg" alt="Buy me a coffee">
+				<span style="margin-left:15px;font-size:28px !important;">Buy me a coffee</span>
+			</a>
+		</div>
+
+
+		<div class="kakao-ad-bottom">
+			<div>
+				<ins class="kakao_ad_area" style="display:none;" data-ad-unit="DAN-rhg23mrcvho4" data-ad-width= "728" data-ad-height= "90"></ins>
+			</div>
+			<div>
+				<ins class="kakao_ad_area" style="display:none;" data-ad-unit    = "DAN-r1icduz054jb" data-ad-width   = "728" data-ad-height  = "90"></ins>
+			</div>
+			<div>
+				<ins class="kakao_ad_area" style="display:none;" data-ad-unit    = "DAN-1jy7ort537t4o" data-ad-width   = "728" data-ad-height  = "90"></ins>
+			</div>
+		</div>
+
+		<aside class="comments" role="complementary">
+  <h2>Comments</h2>
+  <hr/>
+  <div id="disqus_thread"></div>
+  <script>
+    !function (s, i) {
+      function e(e) {
+        var t = s.pageYOffset || i.body.scrollTop;
+        s.DISQUS && !s._disqusThis && !s._disqusFirst && t + s.innerHeight >= s._disqusThreadOffsetTop && (s._disqusThis = !0, s.DISQUS.reset(
+          { reload: !0, config: d }))
+      }
+
+      var d = function () {
+        this.page.title = "[유닉스] 시스템 백업과 복구 명령어",
+          this.page.identifier = "/devlog/2020/05/20/unix-55",
+          this.page.url = "https://m-veloper.github.io/devlog/2020/05/20/unix-55/"
+      };
+      s._disqusFirst = void 0 === s._disqusFirst || s._disqusFirst, s._disqusLoading = void 0 !== s._disqusLoading && s._disqusLoading, s._disqusThis = !1, s._disqusThreadOffsetTop = i.getElementById(
+        "disqus_thread").offsetTop, s._disqusLoading ? s._disqusFirst = !1 : (s._disqusLoading = !0, loadJSDeferred(
+        "//m-veloper.disqus.com/embed.js"), s.addEventListener ? s.addEventListener(
+        "scroll",
+        e,
+        { passive: !0 }) : s.attachEvent ? s.attachEvent("onscroll", e) : s.onscroll = e)
+    }(window, document);
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+</aside>
+
+	</div>
+</article>
+
+
+				</main>
+				<!-- 페이지 네이션-->
+				<div class="pagination-container">
+
+</div>
+			</div>
+			<div id="side-ad-right">
+				<div class="googleAd" style="min-width:250px; min-height:250px;">
+  <!-- 수직 -->
+  <ins class="adsbygoogle"
+       style="display:block"
+       data-ad-client="ca-pub-9898399593070144"
+       data-ad-slot="4781185980"
+       data-ad-format="vertical"
+       data-full-width-responsive="true"></ins>
+  <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+</div>
+<div class="googleAd" style="min-width:250px; min-height:250px;">
+  <!-- 정사각2 -->
+  <ins class="adsbygoogle"
+       style="display:block"
+       data-ad-client="ca-pub-9898399593070144"
+       data-ad-slot="3731628500"
+       data-ad-format="vertical"
+       data-full-width-responsive="true"></ins>
+  <script>
+      (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+</div>
+			</div>
+		</div>
+		  <!-- Footer -->
+	    <!--<footer class="footer"><span>@2020 - m_veloper</span></footer>-->
+<footer class="footer">
+  <div class="container">
+  <div class="row">
+    <div class="col-md-4">
+      <div>
+        
+
+        
+        
+        <div class="sidebar-social">
+          <ul>
+  
+    
+
+
+
+
+
+
+
+
+
+<li>
+  <a href="https://github.com/m-veloper">
+    <span class="icon-github" title="GitHub"></span>
+    <!--<span class="sr-only">GitHub</span>-->
+  </a>
+</li>
+
+  
+    
+
+
+
+
+
+
+
+
+
+<li>
+  <a href="mailto:m_veloper@naver.com">
+    <span class="icon-mail" title="Email"></span>
+    <!--<span class="sr-only">Email</span>-->
+  </a>
+</li>
+
+  
+    
+
+
+
+
+
+
+
+
+
+<li>
+  <a href="https://m-veloper.github.io/feed.xml">
+    <span class="icon-rss2" title="RSS"></span>
+    <!--<span class="sr-only">RSS</span>-->
+  </a>
+</li>
+
+  
+</ul>
+
+        </div>
+        
+      </div>
+      <div>
+        <!--<p><small> Copyright © 2020 | <a href="/" title="">m_veloper</a> | All rights reserved.</small></p>-->
+        <p>m_veloper@naver.com</p>
+        <p>Copyright © 2020 | <a href="/" title="">m_veloper</a> | All rights reserved.</p>
+      </div>
+    </div>
+  </div>
+</div>
+</footer>
+
+	    <!-- Script -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="/assets/js/main.js"></script>
+<script src="/assets/js/load-js-deferred.js"></script>
+<script src="/assets/js/fontawesome-all.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
+<script data-ad-client="ca-pub-9898399593070144" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
+<script type="text/javascript" src="//wcs.naver.net/wcslog.js"></script>
+
+
+
+
+
+<script>
+  window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+  ga('create', 'UA-158538042-1', 'auto');
+  ga('send', 'pageview');
+  loadJSDeferred('https://www.google-analytics.com/analytics.js');
+</script>
+
+
+<!-- m-veloper 네이버애널리틱스 -->
+<script type="text/javascript">
+    if(!wcs_add) var wcs_add = {};
+    wcs_add["wa"] = "45688ef54680e0";
+    if(window.wcs) {
+        wcs_do();
+    }
+</script>
+
+
+	</div>
+</body>
+</html>

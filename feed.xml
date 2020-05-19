@@ -5,9 +5,528 @@
     <description></description>
     <link>https://m-veloper.github.io/</link>
     <atom:link href="https://m-veloper.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 19 May 2020 00:28:20 +0900</pubDate>
-    <lastBuildDate>Tue, 19 May 2020 00:28:20 +0900</lastBuildDate>
+    <pubDate>Wed, 20 May 2020 00:05:33 +0900</pubDate>
+    <lastBuildDate>Wed, 20 May 2020 00:05:33 +0900</lastBuildDate>
     <generator>Jekyll v3.8.6</generator>
+    
+      <item>
+        <title>[유닉스] 시스템 백업과 복구 명령어</title>
+        <description>&lt;p&gt;&lt;img src=&quot;/assets/img/unix/2020-05-20-unix-55.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;시스템-백업과-복구-명령어&quot;&gt;시스템 백업과 복구 명령어&lt;/h1&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;테이프에-파일-보관--tar&quot;&gt;테이프에 파일 보관 : tar&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;tar 명령은 기본적으로 파일을 자기 테이프(magnetic tape)에 보관하도록 특별히 설계되었음&lt;/li&gt;
+  &lt;li&gt;현재는 여러 개의 파일들을 하나의 파일로 묶는 용도로 더 많이 쓰이고 있음&lt;/li&gt;
+  &lt;li&gt;tar 명령의 특징은 단순함, 신뢰성, 안정성, 자기 테이프 장치 이외의 어떤 매체에도 저장할 수 있는 유연성&lt;/li&gt;
+  &lt;li&gt;형식 : tar [options] [생성될 파일명] [대상 파일명 또는 대상 디렉토리, 장치명]&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/unix/2020-05-20-unix-55-01.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;가장 많이 사용되는 옵션은 cvf, tvf, xvf&lt;/li&gt;
+  &lt;li&gt;저장 매체로 플로피 디스크나 자기 테이프로 지정하고 백업하는 예
+    &lt;ul&gt;
+      &lt;li&gt;/dev/fd0는 플로피 드라이브를 백업 매체로 지정하는 것&lt;/li&gt;
+      &lt;li&gt;/var 디렉토리를 플로피 드라이브로 복사&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# tar –cf /dev/fd0 /var&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;백업될 크기가 하나의 플로피 디스크에 저장하기에 너무 커서 연속적으로 백업을 받아야 할 경우 –M 옵션 사용&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# tar –cMf /dev/fd0 /var&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;tar&lt;/span&gt;: Removing leading ‘/’ from member names
+Prepare volume &lt;span class=&quot;c&quot;&gt;#2 for ‘/dev/fd0’ and hit return;&lt;/span&gt;
+Prepare volume &lt;span class=&quot;c&quot;&gt;#3 for ‘/dev/fd0’ and hit return;&lt;/span&gt;
+Prepare volume &lt;span class=&quot;c&quot;&gt;#4 for ‘/dev/fd0’ and hit return;&lt;/span&gt;
+Prepare volume &lt;span class=&quot;c&quot;&gt;#5 for ‘/dev/fd0’ and hit return;&lt;/span&gt;
+......
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;/var 디렉토리를 자기 테이프로 백업하는 경우
+    &lt;ul&gt;
+      &lt;li&gt;/dev/st0는 자기 테이프 저장 매체를 의미&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# tar –cf /dev/st0 /var&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;플로피 디스크 /dev/fd0에 옵션 –tvf를 사용하여 백업된 데이터의 내용을 보는 예&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# tar –tvf /dev/fd0&lt;/span&gt;
+drwxr-xr-x root/root 0 2002-05-10 12:24:31 var/
+drwxr-xr-x root/root 0 2002-05-10 12:01:53 var/lost+found/
+drwxr-xr-x root/root 0 2002-05-10 03:41:43 var/lib/
+drwxr-xr-x root/root 0 1996-02-15 07:07:19 var/lib/rpm/
+&lt;span class=&quot;nt&quot;&gt;-rw-r&lt;/span&gt;—r- root/root 11403264 2002-05-10 12:28:35 var/lib/rpm/Packages
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;-xvf를 사용하여 tar로 백업한 파일을 복구&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# tar –xvMf /dev/fd0&lt;/span&gt;
+var/
+var/lost+found/
+var/lib/
+var/lib/rpm/
+var/lib/rpm/Packages
+Prepare volume &lt;span class=&quot;c&quot;&gt;#2 for ‘/dev/fd0’ and hit return:&lt;/span&gt;
+var/lib/rpm/Name
+var/lib/rpm/Basenames
+Prepare volume &lt;span class=&quot;c&quot;&gt;#3 for ‘dev/fd0’ and hit return:&lt;/span&gt;
+var/lib/rpm/Group
+......
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;/var 디렉토리를 usb 저장매체에 backup.tar 파일명으로 백업하고, 백업한 파일을 /test 디렉토리에 복구한 후에 ls 명령어로 확인하는 경우&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# tar –cf /dev/sdb1/backup.tar /var&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# ls /dev/sdb1&lt;/span&gt;
+backup.tar
+&lt;span class=&quot;c&quot;&gt;# tar –xvf /dev/sdb1/backup.tar&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# ls&lt;/span&gt;
+var
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;점진적-백업--dump-restore&quot;&gt;점진적 백업 : dump, restore&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;dump 명령은 파일 시스템을 백업하는데 있어서 가장 일반화된 명령어&lt;/li&gt;
+  &lt;li&gt;dump 명령을 사용하여 시스템을 백업하고 restore 명령을 사용하여 백업된 파일을 복구&lt;/li&gt;
+  &lt;li&gt;dump는 파일 시스템 전체나 파일 시스템의 일부를 백업할 수 있음&lt;/li&gt;
+  &lt;li&gt;백업될 파일은 0에서 9까지 레벨로 지정하여 작업&lt;/li&gt;
+  &lt;li&gt;동일한 파일 시스템을 백업할 때, 예전이 이미 백업해 놓은 파일이 있다면, 그 백업 파일과 비교해서 변경된 파일이나 수정된 파일만을 목록으로 만들어 변경된 목록만을 업데이트 하는 형식&lt;/li&gt;
+  &lt;li&gt;예를 들면,&lt;/li&gt;
+  &lt;li&gt;일요일에 파일 시스템을 레벨 0으로 완전 백업을 했을 경우&lt;/li&gt;
+  &lt;li&gt;월요일에 레벨 1로 덤프하면 완전 백업 이후 변경된 모든 데이터를 기록&lt;/li&gt;
+  &lt;li&gt;화요일에 레벨 2로 덤프하면 레벨 1 덤프 이후 변경된 데이터를 기록&lt;/li&gt;
+  &lt;li&gt;레벨 0은 완전 백업을 의미, 1에서 9까지는 점진적 백업이라 함&lt;/li&gt;
+  &lt;li&gt;형식 : dump [option argument] file-to-dump&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/unix/2020-05-20-unix-55-02.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;/home 디렉토리에 대해 전체 백업을 진행하여 /backup 디렉토리에 저장할 경우
+    &lt;ul&gt;
+      &lt;li&gt;dump 레벨 0으로 /home 디렉토리를 /backup 디렉토리에 backup.dump 파일로 백업&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# dump –0f /backup/backup.dump /home&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;tape 장치에 dump를 이용한 백업의 예
+    &lt;ul&gt;
+      &lt;li&gt;/home 디렉토리를 테이프 장치로 백업하는 예&lt;/li&gt;
+      &lt;li&gt;/dev/st0는 첫 번째 테이프 장치를 의미하는 시스템 파일&lt;/li&gt;
+      &lt;li&gt;테이프 장치가 여러 개 있다면 /dev/st1, /dev/st2 순서로 이름이 지정됨&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# dump –0f /dev/st0 /home&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;dump로 백업한 파일은 restore 명령으로 복구, restore는 dump로 백업한 파일만 복구시킬 수 있음&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/unix/2020-05-20-unix-55-03.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;restore 명령을 이용하여 /home 디렉토리 중에서 /home/user1 이라는 서브디렉토리만을 선택적으로 복구하는 예
+    &lt;ul&gt;
+      &lt;li&gt;복구하기 전에 /home/user1 디렉토리 안의 모든 파일을 지우고 시작&lt;/li&gt;
+      &lt;li&gt;add 명령을 사용하여 user1이 &lt;em&gt;user1으로 ‘&lt;/em&gt;’가 붙어있는데, 이는 백업 파일 (/backup/backup.dump)에서 user1 디렉토리만 활성화시켜 복구한다는 의미&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# restore –if /backup/backup.dump&lt;/span&gt;
+restore &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;ls&lt;/span&gt;
+......
+home/
+restore &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;home/
+restore &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;ls&lt;/span&gt;
+./home:
+ksshin/ user1/
+restore &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; add user1/
+restore &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; verbose
+verbose mode on
+restore &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;ls&lt;/span&gt;
+./home:
+4096 ./ 4096 ksshin/ 4096 &lt;span class=&quot;k&quot;&gt;*&lt;/span&gt;user1/
+2 ../
+restore &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;restore로 복구하기 전에, 백업한 디렉토리인 “/home”이 “/” 디렉토리 밑에 있으므로 “/”로 이동해서 복구해야 함&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;restore &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; extract
+Extract requested files
+You have not &lt;span class=&quot;nb&quot;&gt;read &lt;/span&gt;any volumes yet.
+Unless you know which volume your file&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;s&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; are on you ......
+......
+restore &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; quit
+&lt;span class=&quot;c&quot;&gt;# cd user1&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# ls&lt;/span&gt;
+......
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;파일-보관--cpio&quot;&gt;파일 보관 : cpio&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;cpio 명령은 파일을 디스크 장치나 테이프 장치에 백업하기 위해 많이 사용되는 일반적인 명령&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/unix/2020-05-20-unix-55-04.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/unix/2020-05-20-unix-55-05.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;table&gt;
+      &lt;tbody&gt;
+        &lt;tr&gt;
+          &lt;td&gt;cpio 명령을 사용하여 백업하기 위해서는 “&lt;/td&gt;
+          &lt;td&gt;”(pipe) 기호와 리다이렉션 기호를 사용&lt;/td&gt;
+        &lt;/tr&gt;
+      &lt;/tbody&gt;
+    &lt;/table&gt;
+  &lt;/li&gt;
+  &lt;li&gt;cpio는 표준 입력장치로부터 입력사항을 받아들이고, 표준 출력장치로 출력사항을 보냄&lt;/li&gt;
+  &lt;li&gt;표준 입력은 ls, cat, find 명령을 사용할 수 있고, 출력은 저장 매체인 플로피 디스크, 테이프, 하드디스크 등&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;표준-입력으로-ls-명령을-사용하여-저장장치에-백업하는-예&quot;&gt;표준 입력으로 ls 명령을 사용하여 저장장치에 백업하는 예&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;플로피에 백업&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# ls [백업할 파일] | cpio –o &amp;gt; /dev/fd0&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;테이프에 백업&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# ls [백업할 파일] | cpio –o &amp;gt; /dev/st0&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;하드디스크에 백업&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# ls [백업할 파일] | cpio –o &amp;gt; [아카이브 파일을 만들 위치]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;usb에 백업&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# ls [백업할 파일] | cpio –o &amp;gt; /dev/sdb1&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;백업했던-파일을-복구하는-예&quot;&gt;백업했던 파일을 복구하는 예&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;플로피의 백업 파일 복구&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# cpio –i &amp;lt; /dev/fd0&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;테이프의 백업 파일 복구&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# cpio –i &amp;lt; /dev/st0&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;하드디스크의 백업 파일 복구&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# cpio –i &amp;lt; [아카이브 파일 위치]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;usb의 백업 파일 복구&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# cpio –i &amp;lt; /dev/sdb1&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;백업-저장-매체로-하드디스크를-지정하여-파일을-백업한-후-다시-백업한-파일을-복구하는-예&quot;&gt;백업 저장 매체로 하드디스크를 지정하여 파일을 백업한 후, 다시 백업한 파일을 복구하는 예&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;백업&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# ls –F&lt;/span&gt;
+test1/ test2
+&lt;span class=&quot;c&quot;&gt;# ls | cpio –ov &amp;gt; backup.cpio&lt;/span&gt;
+backup.cpio
+test1
+test2
+1 blocks
+&lt;span class=&quot;c&quot;&gt;# ls –l backup.cpio&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;-rx---r-&lt;/span&gt; 1 root root 512 Jul 19 22:09 backup.cpio
+&lt;span class=&quot;c&quot;&gt;#&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;복구&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# rm –rf test1&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# rm –f test2&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# ls&lt;/span&gt;
+backup.cpio
+&lt;span class=&quot;c&quot;&gt;#&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# cpio –ifv &amp;lt; backup.cpio&lt;/span&gt;
+cpio: backup.cpio not created: newer or same age version exists
+backup.cpio
+test1
+teset2
+1 blocks
+&lt;span class=&quot;c&quot;&gt;# ls&lt;/span&gt;
+backup.cpio test1 test2
+&lt;span class=&quot;c&quot;&gt;#&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+</description>
+        <pubDate>Wed, 20 May 2020 00:00:00 +0900</pubDate>
+        <link>https://m-veloper.github.io/devlog/2020/05/20/unix-55/</link>
+        <guid isPermaLink="true">https://m-veloper.github.io/devlog/2020/05/20/unix-55/</guid>
+        
+        <category>unix</category>
+        
+        
+        <category>devlog</category>
+        
+      </item>
+    
+      <item>
+        <title>[Javascript/ECMAScript6/ES6] 함수</title>
+        <description>&lt;p&gt;&lt;img src=&quot;/assets/img/ECMAScript6/2020-05-20-ECMAScript6-05.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;이글은 “벨로퍼트”님의 동영상 강의를 보고 정리한 내용입니다.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;함수&quot;&gt;함수&lt;/h1&gt;
+
+&lt;p&gt;함수는, 특정 코드를 하나의 명령으로 실행 할 수 있게 해주는 기능입니다.&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;b&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;sum&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;한번, 이 작업을 함수로 만들어보겠습니다.&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;sum&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;sum&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;결과는 3이 됩니다.&lt;/p&gt;
+
+&lt;p&gt;함수를 만들 때는 function 키워드를 사용하며, 함수에서 어떤 값을 받아올지 정해주는데 이를 파라미터(매개변수)라고 부릅니다.&lt;/p&gt;
+
+&lt;p&gt;함수 내부에서 return 키워드를 사용하여 함수의 결과물을 지정 할 수 있습니다.&lt;/p&gt;
+
+&lt;p&gt;추가적으로, return 을 하게 되면 함수가 끝납니다. 만약 다음과 같이 코드가 작성된다면, return 아래의 코드는 호출이 안됩니다.&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;호출이 되지 않는 코드!&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;sum&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;sum&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;따라해보기&quot;&gt;따라해보기&lt;/h2&gt;
+
+&lt;p&gt;함수 사용을 연습해봅시다.&lt;/p&gt;
+
+&lt;p&gt;name 이라는 파라미터를 넣으면 콘솔에 ‘Hello name!’ 이라는 결과를 출력하는 코드를 작성해봅시다.&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;hello&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;Hello, &lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;name&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;!&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;hello&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;velopert&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;결과물은 다음과 같습니다.&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;Hello, velopert!&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;console.log 를 하게 될 때 우리는 문자열을 조합하기 위해서 + 연산자를 사용했습니다. 이렇게 문자열을 조합 할 때 + 를 사용해도 큰 문제는 없지만, 
+더욱 편하게 조합을 하는 방법이 있습니다. 바로, ES6 의 템플릿 리터럴 (Template Literal)이라는 문법을 사용하는 것 입니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;es6-란&quot;&gt;ES6 란?&lt;/h3&gt;
+
+&lt;p&gt;ES6 는 ECMAScript6 를 의미하며, 자바스크립트의 버전을 가르킵니다. ES6는 2015년에 도입이 되었습니다. 
+ES6 는 ES2015 라고 불리기도 합니다. 그리고 2015년 이후에 계속해서 새로운 자바스크립트 버전이 나오고 있습니다. 
+ES7(ES2016) ES8(ES2017) ES9(ES2018) ES10(ES2019).. 새로운 자바스크립트 버전이 나올때마다 새로운 문법이 소개됩니다.&lt;/p&gt;
+
+&lt;p&gt;브라우저 버전에 따라 지원되는 자바스크립트 버전이 다릅니다. 
+하지만, 보통 웹 개발을 할 때에는 Babel 이라는 도구를 사용하여 최신 버전의 자바스크립트가 구버전의 브라우저에서도 실행되도록 할 수 있습니다. 
+(정확히는, 최신버전 자바스크립트를 구버전 형태로 변환하는 작업을 거칩니다.)&lt;/p&gt;
+
+&lt;p&gt;템플릿 리터럴을 사용하여 구현을 해봅시다.&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;hello&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;`Hello, &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;!`&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;hello&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;velopert&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;점수를-성적등급으로-변환하기&quot;&gt;점수를 성적등급으로 변환하기&lt;/h2&gt;
+
+&lt;p&gt;이번에는 점수가 주어졌을 때 A, B, C, D, F 등급을 반환하는 함수를 만들어봅시다.&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;getGrade&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;score&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;score&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;===&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;A+&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;score&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;90&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;A&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;score&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;===&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;89&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;B+&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;score&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;80&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;B&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;score&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;===&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;79&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;C+&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;score&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;70&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;C&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;score&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;===&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;69&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;D+&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;score&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;60&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;D&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;F&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;grade&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;getGrade&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;90&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;grade&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;화살표-함수&quot;&gt;화살표 함수&lt;/h1&gt;
+
+&lt;p&gt;함수를 선언하는 방식 중 또 다른 방법은 화살표 함수 문법을 사용 하는 것 입니다.&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;add&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+
+&lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;function 키워드 대신에 =&amp;gt; 문자를 사용해서 함수를 구현했는데요, 화살표의 좌측에는 함수의 파라미터, 화살표의 우측에는 코드 블록이 들어옵니다.&lt;/p&gt;
+
+&lt;p&gt;그런데, 만약에 위와 같이 코드 블록 내부에서 바로 return 을 하는 경우는 다음과 같이 줄여서 쓸 수도 있습니다.&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;add&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;아까 만들었던 getGrade 함수처럼 여러 줄로 구성되어있는 경우에는 코드 블록을 만들어야합니다.&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;getGrade&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;score&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;score&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;===&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;A+&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;score&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;90&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;A&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;score&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;===&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;89&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;B+&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;score&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;80&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;B&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;score&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;===&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;79&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;C+&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;score&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;70&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;C&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;score&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;===&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;69&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;D+&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;score&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;60&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;D&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;F&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;grade&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;getGrade&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;90&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;grade&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;화살표 함수와 일반 function 으로 만든 함수와의 주요 차이점은 화살표 함수에서 가르키는 this 와 function 에서 가르키는 this 가 서로 다르다는 건데요, 이에 대한 자세한 내용은 나중에 알아보도록 하겠습니다.&lt;/p&gt;
+
+</description>
+        <pubDate>Wed, 20 May 2020 00:00:00 +0900</pubDate>
+        <link>https://m-veloper.github.io/devlog/2020/05/20/ECMAScript6-05/</link>
+        <guid isPermaLink="true">https://m-veloper.github.io/devlog/2020/05/20/ECMAScript6-05/</guid>
+        
+        <category>ECMAScript6</category>
+        
+        <category>ES6</category>
+        
+        <category>ES2015</category>
+        
+        
+        <category>devlog</category>
+        
+      </item>
     
       <item>
         <title>[유닉스] 시스템 성능 관리 명령어</title>
@@ -4899,358 +5418,6 @@ test&lt;/span&gt;
         <guid isPermaLink="true">https://m-veloper.github.io/devlog/2020/04/30/unix-39/</guid>
         
         <category>unix</category>
-        
-        
-        <category>devlog</category>
-        
-      </item>
-    
-      <item>
-        <title>[유닉스] 쉘(Shell)의 기능 및 종류</title>
-        <description>&lt;p&gt;&lt;img src=&quot;/assets/img/unix/2020-04-30-unix-38.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h1 id=&quot;쉘shell&quot;&gt;쉘(Shell)&lt;/h1&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;사용자와 커널을 연결시켜주는 기능을 수행하는 특별한 프로그램&lt;/li&gt;
-  &lt;li&gt;사용자가 입력한 명령을 처리하고 실행 결과를 알려주는 기능&lt;/li&gt;
-  &lt;li&gt;세 가지 기능 : 명령어 해석기, 프로그래밍, 사용자 환경 설정&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;명령어-해석기-기능&quot;&gt;명령어 해석기 기능&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;사용자와 커널 사이에서 명령을 해석하여 전달하는 해석기(Interpreter) 또는 번역기(Translator) 역할 수행&lt;/li&gt;
-  &lt;li&gt;사용자가 입력한 명령이나 파일에서 읽어들인 명령을 해석하고 적절한 프로그램을 실행시킴&lt;/li&gt;
-  &lt;li&gt;로그인 쉘 : 사용자가 로그인하면 쉘은 자동으로 실행되어 사용자가 명령 입력하기를 기다림. /etc/passwd 파일에 사용자별로 지정되어 있음&lt;/li&gt;
-  &lt;li&gt;사용자 명령을 기다리고 있음의 표시가 프롬프트&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;프로그래밍-기능&quot;&gt;프로그래밍 기능&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;쉘 자체에서 프로그램 작성 가능&lt;/li&gt;
-  &lt;li&gt;여러 명령을 사용해 반복적으로 수행하는 작업을 프로그램 하나로 만들 수 있음
-    &lt;ul&gt;
-      &lt;li&gt;쉘 스크립트&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;사용자-환경-설정-기능&quot;&gt;사용자 환경 설정 기능&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;초기화 파일 기능을 이용해 사용자 환경을 설정&lt;/li&gt;
-  &lt;li&gt;명령을 찾아오는 경로 설정, 새로운 파일의 기본 권한 설정, 다양한 환경 변수 설정 등을 초기화 파일에 설정할 수 있음&lt;/li&gt;
-  &lt;li&gt;사용자가 로그인할 때 이 초기화 파일이 실행되어 사용자의 초기 환경 설정&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;쉘shell의-동작-순서&quot;&gt;쉘(Shell)의 동작 순서&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/img/unix/2020-04-30-unix-38-01.png&quot; alt=&quot;&quot; /&gt;
-&lt;br /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;서브-쉘shell-생성&quot;&gt;서브 쉘(Shell) 생성&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;로그인 쉘 : 사용자가 로그인하면 자동으로 생성되는 기본 쉘&lt;/li&gt;
-  &lt;li&gt;서브 쉘 : 로그인 쉘의 프롬프트에서 다른 쉘을 실행해 새로 생성된 쉘&lt;/li&gt;
-  &lt;li&gt;서브 쉘은 또 다른 서브 쉘 생성 가능&lt;/li&gt;
-  &lt;li&gt;서브 쉘 종료 명령은 logout, Ctrl+D, exit 등 (exit을 추천)&lt;/li&gt;
-  &lt;li&gt;서브 쉘이 종료되면 서브 쉘을 실행했던 이전 쉘 환경으로 돌아감&lt;/li&gt;
-  &lt;li&gt;로그인 쉘에서 로그아웃하면 접속 해제됨&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/img/unix/2020-04-30-unix-38-02.png&quot; alt=&quot;&quot; /&gt;
-&lt;br /&gt;&lt;/p&gt;
-
-&lt;h1 id=&quot;쉘shell의-종류&quot;&gt;쉘(Shell)의 종류&lt;/h1&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;본 쉘, 콘 쉘, C 쉘, 배시 쉘&lt;/li&gt;
-  &lt;li&gt;명령을 입력하고 실행하는 대화식 동작 방식이 공통점&lt;/li&gt;
-  &lt;li&gt;스크립트를 작성하는 문법이 다름&lt;/li&gt;
-  &lt;li&gt;현재 사용 중인 쉘의 종류를 알아보는 가장 쉬운 방법은 프롬프트 모양을 보는 것
-    &lt;ul&gt;
-      &lt;li&gt;본 쉘, 콘 쉘, 배시 쉘은 $, C 쉘은 %&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;본bourne-shell-sh-쉘&quot;&gt;본(Bourne Shell, sh) 쉘&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;최초의 쉘&lt;/li&gt;
-  &lt;li&gt;개발자 스티븐 본(Stephen Bourne)의 이름을 따서 붙여짐&lt;/li&gt;
-  &lt;li&gt;초기에 단순하고 처리 속도가 빨라 많이 사용됨&lt;/li&gt;
-  &lt;li&gt;현재도 대부분의 유닉스 시스템에 기본 설치&lt;/li&gt;
-  &lt;li&gt;시스템 관리 작업을 수행하는 많은 쉘 스크립트들이 본 쉘을 기반으로 함&lt;/li&gt;
-  &lt;li&gt;명령이름 : sh&lt;/li&gt;
-  &lt;li&gt;히스토리 기능, 앨리어스 기능, 작업 제어 등 사용자 편의를 위한 기능을 제공하지 못해 다른 쉘들이 등장&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;콘korn-shell-ksh-쉘&quot;&gt;콘(Korn Shell, ksh) 쉘&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;1980년대 중반 AT&amp;amp;T 벨연구소의 데이비드 콘(David Korn)이 콘 쉘(Korn Shell)을 개발&lt;/li&gt;
-  &lt;li&gt;본 쉘과의 호환성 유지&lt;/li&gt;
-  &lt;li&gt;히스토리 기능, 앨리어스 기능 등 C 쉘의 특징들도 제공&lt;/li&gt;
-  &lt;li&gt;처리 속도가 빠름&lt;/li&gt;
-  &lt;li&gt;명령이름 : ksh&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;cc-shell-csh-쉘&quot;&gt;C(C Shell, csh) 쉘&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;캘리포니아 버클리 대학교에서 빌 조이(Bill Joy)가 개발&lt;/li&gt;
-  &lt;li&gt;본 쉘의 기능을 확장한 것&lt;/li&gt;
-  &lt;li&gt;본 쉘에 없는 앨리어스, 히스토리 등 사용자 편의 기능 포함&lt;/li&gt;
-  &lt;li&gt;C 언어를 기반으로 만들어졌으며 강력한 프로그램 작성 기능&lt;/li&gt;
-  &lt;li&gt;쉘 스크립트 작성을 위한 구문 형식이 C 언어와 같아 이름이 C 쉘이 되었음&lt;/li&gt;
-  &lt;li&gt;명령이름 : csh&lt;/li&gt;
-  &lt;li&gt;다양한 사용자 편의 기능을 구현하느라 크기가 커지고 처리 속도도 느려졌다는 단점이 있으나 편리한 기능 때문에 사용자들이 즐겨 사용함&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;배시-쉘-bourne-again-shell&quot;&gt;배시 쉘 (Bourne Again Shell)&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;본 쉘을 기반으로 개발된 쉘&lt;/li&gt;
-  &lt;li&gt;1988년 브라이언 폭스(Brian Fox)에 의해 개발됨&lt;/li&gt;
-  &lt;li&gt;본 쉘과 호환성을 유지하면서 C 쉘, 콘 쉘의 편리한 기능도 포함&lt;/li&gt;
-  &lt;li&gt;GPL을 따르는 공개 소프트웨어&lt;/li&gt;
-  &lt;li&gt;리눅스의 기본 쉘, 솔라리스 11의 기본 쉘&lt;/li&gt;
-  &lt;li&gt;명령이름 : bash&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;기타-쉘&quot;&gt;기타 쉘&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;C 쉘, 콘 쉘을 바탕으로 한 다양한 쉘들이 추가로 개발되었음&lt;/li&gt;
-  &lt;li&gt;TC(The Enhanced C Shell, tcsh) 쉘
-    &lt;ul&gt;
-      &lt;li&gt;C 쉘의 기능을 확장한 것&lt;/li&gt;
-      &lt;li&gt;명령행 편집 기능&lt;/li&gt;
-      &lt;li&gt;명령어 완성 기능&lt;/li&gt;
-      &lt;li&gt;히스토리 목록에서의 시간 표시 기능&lt;/li&gt;
-      &lt;li&gt;명령이름 : tcsh&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;데스크 탑 콘 쉘
-    &lt;ul&gt;
-      &lt;li&gt;콘 쉘의 변형&lt;/li&gt;
-      &lt;li&gt;X 윈도의 기능을 지원할 수 있도록 콘 쉘 기능을 확장한 것&lt;/li&gt;
-      &lt;li&gt;명령이름 : dtksh&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Z 쉘
-    &lt;ul&gt;
-      &lt;li&gt;TC 쉘과 콘 쉘의 기능을 함께 가지고 있음&lt;/li&gt;
-      &lt;li&gt;명령이름 : zsh&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;쉘shell의-확인&quot;&gt;쉘(Shell)의 확인&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;echo 명령으로 쉘 종류 확인&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$SHELL&lt;/span&gt;
-/bin/bash
-&lt;span class=&quot;err&quot;&gt;$&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;/etc/passwd 파일에서 확인
-    &lt;ul&gt;
-      &lt;li&gt;grep 명령을 사용하여 user1 문자열이 있는 행을 찾아 내용 출력&lt;/li&gt;
-      &lt;li&gt;/bin/bash가 사용자의 기본 쉘&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;grep &lt;/span&gt;user1 /etc/passwd
-user1:x:1001:1001:,,,:/home/user1:/bin/bash
-&lt;span class=&quot;err&quot;&gt;$&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;/etc/shells 파일에서 확인&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;cat&lt;/span&gt; /etc/shells
-&lt;span class=&quot;c&quot;&gt;# /etc/shells: valid login shells&lt;/span&gt;
-/bin/sh
-/bin/dash
-/bin/bash
-/bin/rbash
-&lt;span class=&quot;err&quot;&gt;$&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;사용 중인 배시 쉘에 대한 상세 정보 확인&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;bash &lt;span class=&quot;nt&quot;&gt;--version&lt;/span&gt;
-GNU bash, version 4.3.11&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;1&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-release&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;i686-pc-linux-gnu&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-Copyright &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;C&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; 2013 Free Software Foundation, Inc.
-License GPLv3+: GNU GPL version 3 or later &amp;lt;http://...&amp;gt;
-This is free software&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; you are free to change and redistribute it.
-There is NO WARRANTY, to the extent permitted by law.
-&lt;span class=&quot;err&quot;&gt;$&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;쉘의-변경&quot;&gt;쉘의 변경&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;chsh 명령을 사용하여 로그인 쉘을 변경&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$SHELL&lt;/span&gt;
-/bin/bash
-&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;chsh
-Password:
-Changing the login shell &lt;span class=&quot;k&quot;&gt;for &lt;/span&gt;ksshin
-Enter the new value, or press ENTER &lt;span class=&quot;k&quot;&gt;for &lt;/span&gt;the default
-Login Shell &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;/bin/bash]:
-&lt;span class=&quot;err&quot;&gt;$&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-</description>
-        <pubDate>Thu, 30 Apr 2020 00:00:00 +0900</pubDate>
-        <link>https://m-veloper.github.io/devlog/2020/04/30/unix-38/</link>
-        <guid isPermaLink="true">https://m-veloper.github.io/devlog/2020/04/30/unix-38/</guid>
-        
-        <category>unix</category>
-        
-        
-        <category>devlog</category>
-        
-      </item>
-    
-      <item>
-        <title>[Database] MySQL 타입 변환 함수 (Type Conversion Functions)</title>
-        <description>&lt;p&gt;&lt;img src=&quot;/assets/img/database/2020/04/2020-04-29-database-49.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h1 id=&quot;타입-변환-함수-type-conversion-functions&quot;&gt;타입 변환 함수 (Type Conversion Functions)&lt;/h1&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/img/database/2020/04/2020-04-29-database-49-01.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;binary&quot;&gt;BINARY&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;문자열을 바이너리 문자열로 변환&lt;/li&gt;
-  &lt;li&gt;속성값 비교를 강화하기 위한 방법
-    &lt;ul&gt;
-      &lt;li&gt;문자끼리 비교가 아닌 바이트 간의 비교&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;대소문자 구분함&lt;/li&gt;
-  &lt;li&gt;문자뒤의 스페이스도 중요한 문자로 인식&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-sql highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;SELECT&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'a'&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'A'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;SELECT&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;BINARY&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'a'&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'A'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;쿼리 결과
-&lt;img src=&quot;/assets/img/database/2020/04/2020-04-29-database-49-02.png&quot; alt=&quot;&quot; /&gt;
-&lt;br /&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-sql highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;SELECT&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'a'&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'a'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;SELECT&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;BINARY&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'a'&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'a'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;쿼리 결과
-&lt;img src=&quot;/assets/img/database/2020/04/2020-04-29-database-49-03.png&quot; alt=&quot;&quot; /&gt;
-&lt;br /&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;cast&quot;&gt;CAST()&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;입력 : 모든 데이터 타입의 표현식&lt;/li&gt;
-  &lt;li&gt;출력 : 지정된 데이터 타입으로 결과 값을 변환&lt;/li&gt;
-  &lt;li&gt;CONVERT( )와 유사&lt;/li&gt;
-  &lt;li&gt;기본 형식&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-sql highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;CAST&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;expr&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;AS&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;type&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;convert&quot;&gt;CONVERT()&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;입력 : 모든 데이터 타입의 표현식&lt;/li&gt;
-  &lt;li&gt;출력 : 지정된 데이터 타입으로 결과 값을 변환&lt;/li&gt;
-  &lt;li&gt;기본 형식&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-sql highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;CONVERT&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;expr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;type&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;CONVERT&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;expr&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;USING&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;인코딩문자세트&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;변환가능한 데이터 type&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-sql highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;BINARY&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;N&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-&lt;span class=&quot;nb&quot;&gt;CHAR&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;N&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-&lt;span class=&quot;nb&quot;&gt;DATE&lt;/span&gt;
-&lt;span class=&quot;nb&quot;&gt;DATETIME&lt;/span&gt;
-&lt;span class=&quot;nb&quot;&gt;DECIMAL&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;M&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;D&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-&lt;span class=&quot;nb&quot;&gt;SIGNED&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;INTEGER&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-&lt;span class=&quot;nb&quot;&gt;TIME&lt;/span&gt;
-&lt;span class=&quot;nb&quot;&gt;UNSIGNED&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;INTEGER&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;CONVERT( … USING … ) : 다른 인코딩 문자세트로 변환하기 위하여 사용&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-sql highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;SELECT&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;CONVERT&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;‘한글’&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;USING&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;utf8&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;2020-4-10-문자열을-datetime-데이터-타입으로-변환&quot;&gt;‘2020-4-10’ 문자열을 DATETIME 데이터 타입으로 변환&lt;/h3&gt;
-
-&lt;div class=&quot;language-sql highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;SELECT&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;CAST&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'2020-4-10'&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;AS&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;DATETIME&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;쿼리 결과
-&lt;img src=&quot;/assets/img/database/2020/04/2020-04-29-database-49-04.png&quot; alt=&quot;&quot; /&gt;
-&lt;br /&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;2020-4-10-101010를-date-데이터-타입으로-변환&quot;&gt;‘2020-4-10 10:10:10’를 DATE 데이터 타입으로 변환&lt;/h3&gt;
-
-&lt;div class=&quot;language-sql highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;SELECT&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;CAST&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'2020-4-10 10:10:10'&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;AS&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;DATE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;쿼리 결과
-&lt;img src=&quot;/assets/img/database/2020/04/2020-04-29-database-49-05.png&quot; alt=&quot;&quot; /&gt;
-&lt;br /&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-</description>
-        <pubDate>Wed, 29 Apr 2020 00:00:00 +0900</pubDate>
-        <link>https://m-veloper.github.io/devlog/2020/04/29/database-49/</link>
-        <guid isPermaLink="true">https://m-veloper.github.io/devlog/2020/04/29/database-49/</guid>
-        
-        <category>database</category>
-        
-        <category>mysql</category>
         
         
         <category>devlog</category>
