@@ -1,6 +1,14 @@
 [
 
 {
+"title"    : "[Javascript/ECMAScript6/ES6] 객체",
+"category" : "",
+"tags"     : "ECMAScript6, ES6, ES2015",
+"url"      : "/devlog/2020/05/21/ECMAScript6-06/",
+"date"     : "2020-05-21 00:00:00 +0900"
+} ,
+
+{
 "title"    : "[유닉스] 시스템 백업과 복구 명령어",
 "category" : "",
 "tags"     : "unix",

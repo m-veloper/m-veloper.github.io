@@ -4,12 +4,22 @@
  <title>슬기로운 개발 생활</title>
  <link href="https://m-veloper.github.io/atom.xml" rel="self"/>
  <id>https://m-veloper.github.io</id>
- <updated>2020-05-20T00:05:33+09:00</updated>
+ <updated>2020-05-21T00:15:04+09:00</updated>
  <author>
    <name>m-veloper</name>
    <uri>https://m-veloper.github.io</uri>
    <email>m_veloper@naver.com</email>
  </author>
+
+ 
+
+ <entry>
+   <title>[Javascript/ECMAScript6/ES6] 객체</title>
+   <link href="https://m-veloper.github.io/devlog/2020/05/21/ECMAScript6-06/"/>
+   <id>https://m-veloper.github.io/devlog/2020/05/21/ECMAScript6-06</id>
+   <updated>2020-05-21T00:00:00+09:00</updated>
+   <content type="html">&lt;p&gt;&lt;img src=&quot;/assets/img/ECMAScript6/2020-05-21-ECMAScript6-06.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt; &lt;blockquote&gt; &lt;p&gt;이글은 “벨로퍼트”님의 동영상 강의를 보고 정리한 내용입니다.&lt;/p&gt; &lt;/blockquote&gt; &lt;p&gt;&lt;br /&gt;&lt;/p&gt; &lt;h1 id=&quot;객체&quot;&gt;객체&lt;/h1&gt; &lt;p&gt;객체는 우리가 변수 혹은 상수를 사용하게 될 때 하나의 이름에 여러 종류의 값을 넣을 수 있게 해줍니다.&lt;/p&gt; &lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;dog&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span...</content>
+ </entry>
 
  
 
@@ -99,16 +109,6 @@
    <id>https://m-veloper.github.io/devlog/2020/05/16/unix-51</id>
    <updated>2020-05-16T00:00:00+09:00</updated>
    <content type="html">&lt;p&gt;&lt;img src=&quot;/assets/img/unix/2020-05-16-unix-51.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt; &lt;h1 id=&quot;시스템-관리자&quot;&gt;시스템 관리자&lt;/h1&gt; &lt;ul&gt; &lt;li&gt;유닉스 사용자 &lt;ul&gt; &lt;li&gt;일반 사용자와 시스템 관리자&lt;/li&gt; &lt;li&gt;일반 사용자 : 정해진 범위 내에서만 작업을 수행할 수 있는 사용자&lt;/li&gt; &lt;li&gt;시스템 관리자 : 시스템이 올바로 동작할 수 있도록 시스템을 관리하고 운영하는 책임을 가진 사용자&lt;/li&gt; &lt;/ul&gt; &lt;/li&gt; &lt;/ul&gt; &lt;h3 id=&quot;시스템-관리자의-역할&quot;&gt;시스템 관리자의 역할&lt;/h3&gt; &lt;ul&gt; &lt;li&gt;사용자 등록,...</content>
- </entry>
-
- 
-
- <entry>
-   <title>[Javascript] ECMAScript6/ES6 는 무엇일까?</title>
-   <link href="https://m-veloper.github.io/devlog/2020/05/16/ECMAScript6-01/"/>
-   <id>https://m-veloper.github.io/devlog/2020/05/16/ECMAScript6-01</id>
-   <updated>2020-05-16T00:00:00+09:00</updated>
-   <content type="html">&lt;p&gt;&lt;img src=&quot;/assets/img/ECMAScript6/2020-05-16-ECMAScript6-01.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt; &lt;blockquote&gt; &lt;p&gt;이글은 “&lt;a href=&quot;https://wormwlrm.github.io/2018/10/03/What-is-the-difference-between-javascript-and-ecmascript.html&quot;&gt;재그지그&lt;/a&gt;“님의 글을 참고하였습니다.&lt;/p&gt; &lt;/blockquote&gt; &lt;p&gt;&lt;br /&gt;&lt;/p&gt; &lt;h1 id=&quot;ecmascript6es6-는-무엇일까&quot;&gt;ECMAScript6/ES6 는 무엇일까?&lt;/h1&gt; &lt;p&gt;이 글은 JavaScript와 ECMAScript에 대한 이해를 바탕으로 작성합니다. 이 글은 JavaScript에는 친숙하지만,&lt;/p&gt; &lt;p&gt;EMCAScript와 웹 브라우저, Babel과 같은 JavaScript를 둘러싼 여러가지 환경들에 대해 이해하고자 하는 분들에게&lt;/p&gt; &lt;p&gt;초점이 맞추어져 있습니다. 그리고 스크립팅 언어, JavaScript 엔진...</content>
  </entry>
 
  
