@@ -4,12 +4,22 @@
  <title>슬기로운 개발 생활</title>
  <link href="https://m-veloper.github.io/atom.xml" rel="self"/>
  <id>https://m-veloper.github.io</id>
- <updated>2020-05-21T00:15:04+09:00</updated>
+ <updated>2020-05-22T00:07:47+09:00</updated>
  <author>
    <name>m-veloper</name>
    <uri>https://m-veloper.github.io</uri>
    <email>m_veloper@naver.com</email>
  </author>
+
+ 
+
+ <entry>
+   <title>[Javascript/ECMAScript6/ES6] 배열</title>
+   <link href="https://m-veloper.github.io/devlog/2020/05/22/ECMAScript6-07/"/>
+   <id>https://m-veloper.github.io/devlog/2020/05/22/ECMAScript6-07</id>
+   <updated>2020-05-22T00:00:00+09:00</updated>
+   <content type="html">&lt;p&gt;&lt;img src=&quot;/assets/img/ECMAScript6/2020-05-22-ECMAScript6-07.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt; &lt;blockquote&gt; &lt;p&gt;이글은 “벨로퍼트”님의 동영상 강의를 보고 정리한 내용입니다.&lt;/p&gt; &lt;/blockquote&gt; &lt;p&gt;&lt;br /&gt;&lt;/p&gt; &lt;h1 id=&quot;배열&quot;&gt;배열&lt;/h1&gt; &lt;p&gt;객체는 한 변수 혹은 상수에 여러가지 정보를 담기 위함이였다면, 배열은 여러개의 항목들이 들어있는 리스트와 같습니다.&lt;/p&gt; &lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;array&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span...</content>
+ </entry>
 
  
 
@@ -99,16 +109,6 @@
    <id>https://m-veloper.github.io/devlog/2020/05/17/ECMAScript6-02</id>
    <updated>2020-05-17T00:00:00+09:00</updated>
    <content type="html">&lt;p&gt;&lt;img src=&quot;/assets/img/ECMAScript6/2020-05-17-ECMAScript6-02.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt; &lt;blockquote&gt; &lt;p&gt;이글은 “벨로퍼트”님의 동영상 강의를 보고 정리한 내용입니다.&lt;/p&gt; &lt;/blockquote&gt; &lt;p&gt;&lt;br /&gt;&lt;/p&gt; &lt;h1 id=&quot;변수와-상수&quot;&gt;변수와 상수&lt;/h1&gt; &lt;p&gt;변수와 상수에 대해서 알아봅시다. 변수와 상수는, 특정 이름에 특정 값을 담을 때 사용합니다.&lt;/p&gt; &lt;p&gt;예를 들어서 우리가 value 라는 이름에 1 이라는 값을 넣는다고 가정해봅시다.&lt;/p&gt; &lt;p&gt;그러면, 코드를 이렇게 입력하면 됩니다.&lt;/p&gt; &lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div...</content>
- </entry>
-
- 
-
- <entry>
-   <title>[유닉스] 시스템 관리자</title>
-   <link href="https://m-veloper.github.io/devlog/2020/05/16/unix-51/"/>
-   <id>https://m-veloper.github.io/devlog/2020/05/16/unix-51</id>
-   <updated>2020-05-16T00:00:00+09:00</updated>
-   <content type="html">&lt;p&gt;&lt;img src=&quot;/assets/img/unix/2020-05-16-unix-51.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt; &lt;h1 id=&quot;시스템-관리자&quot;&gt;시스템 관리자&lt;/h1&gt; &lt;ul&gt; &lt;li&gt;유닉스 사용자 &lt;ul&gt; &lt;li&gt;일반 사용자와 시스템 관리자&lt;/li&gt; &lt;li&gt;일반 사용자 : 정해진 범위 내에서만 작업을 수행할 수 있는 사용자&lt;/li&gt; &lt;li&gt;시스템 관리자 : 시스템이 올바로 동작할 수 있도록 시스템을 관리하고 운영하는 책임을 가진 사용자&lt;/li&gt; &lt;/ul&gt; &lt;/li&gt; &lt;/ul&gt; &lt;h3 id=&quot;시스템-관리자의-역할&quot;&gt;시스템 관리자의 역할&lt;/h3&gt; &lt;ul&gt; &lt;li&gt;사용자 등록,...</content>
  </entry>
 
  

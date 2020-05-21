@@ -1,6 +1,14 @@
 [
 
 {
+"title"    : "[Javascript/ECMAScript6/ES6] 배열",
+"category" : "",
+"tags"     : "ECMAScript6, ES6, ES2015",
+"url"      : "/devlog/2020/05/22/ECMAScript6-07/",
+"date"     : "2020-05-22 00:00:00 +0900"
+} ,
+
+{
 "title"    : "[Javascript/ECMAScript6/ES6] 객체",
 "category" : "",
 "tags"     : "ECMAScript6, ES6, ES2015",
