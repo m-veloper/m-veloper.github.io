@@ -4,12 +4,22 @@
  <title>슬기로운 개발 생활</title>
  <link href="https://m-veloper.github.io/atom.xml" rel="self"/>
  <id>https://m-veloper.github.io</id>
- <updated>2020-05-24T16:16:15+09:00</updated>
+ <updated>2020-05-25T00:09:21+09:00</updated>
  <author>
    <name>m-veloper</name>
    <uri>https://m-veloper.github.io</uri>
    <email>m_veloper@naver.com</email>
  </author>
+
+ 
+
+ <entry>
+   <title>[Javascript/ECMAScript6/ES6] 프로토타입과 클래스</title>
+   <link href="https://m-veloper.github.io/devlog/2020/05/25/ECMAScript6-10/"/>
+   <id>https://m-veloper.github.io/devlog/2020/05/25/ECMAScript6-10</id>
+   <updated>2020-05-25T00:00:00+09:00</updated>
+   <content type="html">&lt;p&gt;&lt;img src=&quot;/assets/img/ECMAScript6/2020-05-25-ECMAScript6-10.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt; &lt;blockquote&gt; &lt;p&gt;이글은 “벨로퍼트”님의 동영상 강의를 보고 정리한 내용입니다.&lt;/p&gt; &lt;/blockquote&gt; &lt;p&gt;&lt;br /&gt;&lt;/p&gt; &lt;h1 id=&quot;프로토타입과-클래스&quot;&gt;프로토타입과 클래스&lt;/h1&gt; &lt;p&gt;&lt;br /&gt;&lt;/p&gt; &lt;h2 id=&quot;객체-생성자&quot;&gt;객체 생성자&lt;/h2&gt; &lt;p&gt;객체 생성자는 함수를 통해서 새로운 객체를 만들고 그 안에 넣고 싶은 값 혹은 함수들을 구현 할 수 있게 해줍니다.&lt;/p&gt; &lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Animal&lt;/span&gt;&lt;span...</content>
+ </entry>
 
  
 
@@ -99,16 +109,6 @@
    <id>https://m-veloper.github.io/devlog/2020/05/18/unix-53</id>
    <updated>2020-05-18T00:00:00+09:00</updated>
    <content type="html">&lt;p&gt;&lt;img src=&quot;/assets/img/unix/2020-05-18-unix-53.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt; &lt;h1 id=&quot;사용자user-관리-명령어&quot;&gt;사용자(User) 관리 명령어&lt;/h1&gt; &lt;p&gt;&lt;br /&gt;&lt;/p&gt; &lt;h3 id=&quot;사용자-계정&quot;&gt;사용자 계정&lt;/h3&gt; &lt;ul&gt; &lt;li&gt;시스템 관리자의 중요한 역할 중 하나는 사용자 계정을 만들고 관리하는 일&lt;/li&gt; &lt;li&gt;사용자 계정의 구성 요소 &lt;ul&gt; &lt;li&gt;로그인 ID : 시스템에 로그인할 때 사용자를 구분하기 위해 사용하는 이름. 사용자 이름. 시스템에서 유일해야 함&lt;/li&gt; &lt;li&gt;비밀번호 : 시스템에 로그인...</content>
- </entry>
-
- 
-
- <entry>
-   <title>[Javascript/ECMAScript6/ES6] 연산자</title>
-   <link href="https://m-veloper.github.io/devlog/2020/05/18/ECMAScript6-03/"/>
-   <id>https://m-veloper.github.io/devlog/2020/05/18/ECMAScript6-03</id>
-   <updated>2020-05-18T00:00:00+09:00</updated>
-   <content type="html">&lt;p&gt;&lt;img src=&quot;/assets/img/ECMAScript6/2020-05-18-ECMAScript6-03.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt; &lt;blockquote&gt; &lt;p&gt;이글은 “벨로퍼트”님의 동영상 강의를 보고 정리한 내용입니다.&lt;/p&gt; &lt;/blockquote&gt; &lt;p&gt;&lt;br /&gt;&lt;/p&gt; &lt;h1 id=&quot;연산자&quot;&gt;연산자&lt;/h1&gt; &lt;p&gt;연산자는 프로그래밍 언어에서 특정 연산을 하도록 하는 문자입니다.&lt;/p&gt; &lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;value&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// 변수 선언&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;value&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span...</content>
  </entry>
 
  

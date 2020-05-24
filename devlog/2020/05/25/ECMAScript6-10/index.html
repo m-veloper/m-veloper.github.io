@@ -9,7 +9,7 @@
 	<meta name="naver-site-verification" content="fa37cbf8ce41948de6e94c01991ffa04cea9b093"/>
 	<meta name="google-site-verification" content="5M4Zw9wg_UqQkvlayfb5Mc_ogvJdc013w_zLUkxgO-Y" />
 
-	<!--<title>[Javascript/ECMAScript6/ES6] 객체</title>-->
+	<!--<title>[Javascript/ECMAScript6/ES6] 프로토타입과 클래스</title>-->
 	<title>슬기로운 개발 생활</title>
 
 	<!-- CSS & fonts -->
@@ -1153,9 +1153,9 @@
 			<div id="container">
 				<main>
 					<article id="post-page">
-	<h2 class="title">[Javascript/ECMAScript6/ES6] 객체</h2>
+	<h2 class="title">[Javascript/ECMAScript6/ES6] 프로토타입과 클래스</h2>
 	<a class="tag" href="" data-flip="title">
-		<time datetime="" class="by-line">2020년 05월 21일</time>
+		<time datetime="" class="by-line">2020년 05월 25일</time>
 	</a>
 	<hr>
 	<div class="content">
@@ -1171,7 +1171,7 @@
 			</div>
 		</div>
 
-		<p><img src="/assets/img/ECMAScript6/2020-05-21-ECMAScript6-06.png" alt="" /></p>
+		<p><img src="/assets/img/ECMAScript6/2020-05-25-ECMAScript6-10.png" alt="" /></p>
 
 <blockquote>
   <p>이글은 “벨로퍼트”님의 동영상 강의를 보고 정리한 내용입니다.</p>
@@ -1179,275 +1179,261 @@
 
 <p><br /></p>
 
-<h1 id="객체">객체</h1>
+<h1 id="프로토타입과-클래스">프로토타입과 클래스</h1>
 
-<p>객체는 우리가 변수 혹은 상수를 사용하게 될 때 하나의 이름에 여러 종류의 값을 넣을 수 있게 해줍니다.</p>
+<p><br /></p>
 
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">dog</span> <span class="o">=</span> <span class="p">{</span>
-  <span class="na">name</span><span class="p">:</span> <span class="dl">'</span><span class="s1">멍멍이</span><span class="dl">'</span><span class="p">,</span>
-  <span class="na">age</span><span class="p">:</span> <span class="mi">2</span>
-<span class="p">};</span>
+<h2 id="객체-생성자">객체 생성자</h2>
 
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">dog</span><span class="p">.</span><span class="nx">name</span><span class="p">);</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">dog</span><span class="p">.</span><span class="nx">age</span><span class="p">);</span>
+<p>객체 생성자는 함수를 통해서 새로운 객체를 만들고 그 안에 넣고 싶은 값 혹은 함수들을 구현 할 수 있게 해줍니다.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">Animal</span><span class="p">(</span><span class="nx">type</span><span class="p">,</span> <span class="nx">name</span><span class="p">,</span> <span class="nx">sound</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">this</span><span class="p">.</span><span class="nx">type</span> <span class="o">=</span> <span class="nx">type</span><span class="p">;</span>
+  <span class="k">this</span><span class="p">.</span><span class="nx">name</span> <span class="o">=</span> <span class="nx">name</span><span class="p">;</span>
+  <span class="k">this</span><span class="p">.</span><span class="nx">sound</span> <span class="o">=</span> <span class="nx">sound</span><span class="p">;</span>
+  <span class="k">this</span><span class="p">.</span><span class="nx">say</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">sound</span><span class="p">);</span>
+  <span class="p">};</span>
+<span class="p">}</span>
+
+<span class="kd">const</span> <span class="nx">dog</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Animal</span><span class="p">(</span><span class="dl">'</span><span class="s1">개</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">멍멍이</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">멍멍</span><span class="dl">'</span><span class="p">);</span>
+<span class="kd">const</span> <span class="nx">cat</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Animal</span><span class="p">(</span><span class="dl">'</span><span class="s1">고양이</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">야옹이</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">야옹</span><span class="dl">'</span><span class="p">);</span>
+
+<span class="nx">dog</span><span class="p">.</span><span class="nx">say</span><span class="p">();</span>
+<span class="nx">cat</span><span class="p">.</span><span class="nx">say</span><span class="p">();</span>
 </code></pre></div></div>
 
 <p>결과물은 다음과 같습니다.</p>
 
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">멍멍이</span>
-<span class="mi">2</span>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">멍멍</span>
+<span class="err">야옹</span>
 </code></pre></div></div>
 
-<p>객체를 선언 할 때에는 이렇게 { } 문자 안에 원하는 값들을 넣어주면 됩니다. 값을 집어 넣을 때에는</p>
+<p>객체 생성자를 사용 할 때는 보통 함수의 이름을 대문자로 시작하고, 새로운 객체를 만들 때에는 new 키워드를 앞에 붙여주어야 합니다.</p>
 
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">키</span><span class="p">:</span> <span class="err">원하는</span> <span class="err">값</span>
-</code></pre></div></div>
+<p>지금 위 코드를 보시면, dog 가 가지고 있는 say 함수와 cat 이 가지고 있는 수행하는 코드가 똑같음에도 불구하고 객체가 생성 될 때 마다 함수도 새로 만들어져서 this.say 로 설정이 되고 있습니다.</p>
 
-<p>형태로 넣으며, 키에 해당하는 부분은 공백이 없어야합니다. 만약에 공백이 있어야 하는 상황이라면 이를 따옴표로 감싸서 문자열로 넣어주면 됩니다.</p>
-
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">sample</span> <span class="o">=</span> <span class="p">{</span>
-  <span class="dl">'</span><span class="s1">key with space</span><span class="dl">'</span><span class="p">:</span> <span class="kc">true</span>
-<span class="p">};</span>
-</code></pre></div></div>
-
-<p>한번 영화 어벤져스의 캐릭터 아이언맨과 캡틴 아메리카의 정보를 객체안에 집어넣어봅시다.</p>
-
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">ironMan</span> <span class="o">=</span> <span class="p">{</span>
-  <span class="na">name</span><span class="p">:</span> <span class="dl">'</span><span class="s1">토니 스타크</span><span class="dl">'</span><span class="p">,</span>
-  <span class="na">actor</span><span class="p">:</span> <span class="dl">'</span><span class="s1">로버트 다우니 주니어</span><span class="dl">'</span><span class="p">,</span>
-  <span class="na">alias</span><span class="p">:</span> <span class="dl">'</span><span class="s1">아이언맨</span><span class="dl">'</span>
-<span class="p">};</span>
-
-<span class="kd">const</span> <span class="nx">captainAmerica</span> <span class="o">=</span> <span class="p">{</span>
-  <span class="na">name</span><span class="p">:</span> <span class="dl">'</span><span class="s1">스티븐 로저스</span><span class="dl">'</span><span class="p">,</span>
-  <span class="na">actor</span><span class="p">:</span> <span class="dl">'</span><span class="s1">크리스 에반스</span><span class="dl">'</span><span class="p">,</span>
-  <span class="na">alias</span><span class="p">:</span> <span class="dl">'</span><span class="s1">캡틴 아메리카</span><span class="dl">'</span>
-<span class="p">};</span>
-
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">ironMan</span><span class="p">);</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">captainAmerica</span><span class="p">);</span>
-</code></pre></div></div>
+<p>같은 객체 생성자 함수를 사용하는 경우, 특정 함수 또는 값을 재사용 할 수 있는데 바로 프로토타입입니다.</p>
 
 <p><br /></p>
 
-<h2 id="함수에서-객체를-파라미터로-받기">함수에서 객체를 파라미터로 받기</h2>
+<h2 id="프로토타입">프로토타입</h2>
 
-<p>함수를 새로 만들어서 방금 만든 객체를 파라미터로 받아와서 사용해봅시다.</p>
+<p>프로토타입은 다음과 같이 객체 생성자 함수 아래에 .prototype.[원하는키] = 코드를 입력하여 설정 할 수 있습니다.</p>
 
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">ironMan</span> <span class="o">=</span> <span class="p">{</span>
-  <span class="na">name</span><span class="p">:</span> <span class="dl">'</span><span class="s1">토니 스타크</span><span class="dl">'</span><span class="p">,</span>
-  <span class="na">actor</span><span class="p">:</span> <span class="dl">'</span><span class="s1">로버트 다우니 주니어</span><span class="dl">'</span><span class="p">,</span>
-  <span class="na">alias</span><span class="p">:</span> <span class="dl">'</span><span class="s1">아이언맨</span><span class="dl">'</span>
-<span class="p">};</span>
-
-<span class="kd">const</span> <span class="nx">captainAmerica</span> <span class="o">=</span> <span class="p">{</span>
-  <span class="na">name</span><span class="p">:</span> <span class="dl">'</span><span class="s1">스티븐 로저스</span><span class="dl">'</span><span class="p">,</span>
-  <span class="na">actor</span><span class="p">:</span> <span class="dl">'</span><span class="s1">크리스 에반스</span><span class="dl">'</span><span class="p">,</span>
-  <span class="na">alias</span><span class="p">:</span> <span class="dl">'</span><span class="s1">캡틴 아메리카</span><span class="dl">'</span>
-<span class="p">};</span>
-
-<span class="kd">function</span> <span class="nx">print</span><span class="p">(</span><span class="nx">hero</span><span class="p">)</span> <span class="p">{</span>
-  <span class="kd">const</span> <span class="nx">text</span> <span class="o">=</span> <span class="s2">`</span><span class="p">${</span><span class="nx">hero</span><span class="p">.</span><span class="nx">alias</span><span class="p">}</span><span class="s2">(</span><span class="p">${</span><span class="nx">hero</span><span class="p">.</span><span class="nx">name</span><span class="p">}</span><span class="s2">) 역할을 맡은 배우는 </span><span class="p">${</span>
-    <span class="nx">hero</span><span class="p">.</span><span class="nx">actor</span>
-  <span class="p">}</span><span class="s2"> 입니다.`</span><span class="p">;</span>
-  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">text</span><span class="p">);</span>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">Animal</span><span class="p">(</span><span class="nx">type</span><span class="p">,</span> <span class="nx">name</span><span class="p">,</span> <span class="nx">sound</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">this</span><span class="p">.</span><span class="nx">type</span> <span class="o">=</span> <span class="nx">type</span><span class="p">;</span>
+  <span class="k">this</span><span class="p">.</span><span class="nx">name</span> <span class="o">=</span> <span class="nx">name</span><span class="p">;</span>
+  <span class="k">this</span><span class="p">.</span><span class="nx">sound</span> <span class="o">=</span> <span class="nx">sound</span><span class="p">;</span>
 <span class="p">}</span>
 
-<span class="nx">print</span><span class="p">(</span><span class="nx">ironMan</span><span class="p">);</span>
-<span class="nx">print</span><span class="p">(</span><span class="nx">captainAmerica</span><span class="p">);</span>
-</code></pre></div></div>
-
-<p>결과물</p>
-
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">아이언맨</span><span class="p">(</span><span class="err">토니</span> <span class="err">스타크</span><span class="p">)</span> <span class="err">역할을</span> <span class="err">맡은</span> <span class="err">배우는</span> <span class="err">로버트</span> <span class="err">다우니</span> <span class="err">주니어</span> <span class="err">입니다</span><span class="p">.</span>
-<span class="err">캡틴</span> <span class="err">아메리카</span><span class="p">(</span><span class="err">스티븐</span> <span class="err">로저스</span><span class="p">)</span> <span class="err">역할을</span> <span class="err">맡은</span> <span class="err">배우는</span> <span class="err">크리스</span> <span class="err">에반스</span> <span class="err">입니다</span><span class="p">.</span>
-</code></pre></div></div>
-
-<p><br /></p>
-
-<h2 id="객체-비구조화-할당--객체-구조-분해-">객체 비구조화 할당 ( 객체 구조 분해 )</h2>
-
-<p>print 함수를 보시면 파라미터로 받아온 hero 내부의 값을 조회 할 때 마다 hero. 를 입력하고 있는데, 
-객체 비구조화 할당이라는 문법을 사용하면 코드를 더욱 짧고 보기 좋게 작성 할 수 있습니다.</p>
-
-<ul>
-  <li>이 문법은 “객체 구조 분해” 라고 불리기도 합니다.</li>
-</ul>
-
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">ironMan</span> <span class="o">=</span> <span class="p">{</span>
-  <span class="na">name</span><span class="p">:</span> <span class="dl">'</span><span class="s1">토니 스타크</span><span class="dl">'</span><span class="p">,</span>
-  <span class="na">actor</span><span class="p">:</span> <span class="dl">'</span><span class="s1">로버트 다우니 주니어</span><span class="dl">'</span><span class="p">,</span>
-  <span class="na">alias</span><span class="p">:</span> <span class="dl">'</span><span class="s1">아이언맨</span><span class="dl">'</span>
+<span class="nx">Animal</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">say</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">sound</span><span class="p">);</span>
 <span class="p">};</span>
+<span class="nx">Animal</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">sharedValue</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
 
-<span class="kd">const</span> <span class="nx">captainAmerica</span> <span class="o">=</span> <span class="p">{</span>
-  <span class="na">name</span><span class="p">:</span> <span class="dl">'</span><span class="s1">스티븐 로저스</span><span class="dl">'</span><span class="p">,</span>
-  <span class="na">actor</span><span class="p">:</span> <span class="dl">'</span><span class="s1">크리스 에반스</span><span class="dl">'</span><span class="p">,</span>
-  <span class="na">alias</span><span class="p">:</span> <span class="dl">'</span><span class="s1">캡틴 아메리카</span><span class="dl">'</span>
-<span class="p">};</span>
-
-<span class="kd">function</span> <span class="nx">print</span><span class="p">(</span><span class="nx">hero</span><span class="p">)</span> <span class="p">{</span>
-  <span class="kd">const</span> <span class="p">{</span> <span class="nx">alias</span><span class="p">,</span> <span class="nx">name</span><span class="p">,</span> <span class="nx">actor</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">hero</span><span class="p">;</span>
-  <span class="kd">const</span> <span class="nx">text</span> <span class="o">=</span> <span class="s2">`</span><span class="p">${</span><span class="nx">alias</span><span class="p">}</span><span class="s2">(</span><span class="p">${</span><span class="nx">name</span><span class="p">}</span><span class="s2">) 역할을 맡은 배우는 </span><span class="p">${</span><span class="nx">actor</span><span class="p">}</span><span class="s2"> 입니다.`</span><span class="p">;</span>
-  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">text</span><span class="p">);</span>
-<span class="p">}</span>
-
-<span class="nx">print</span><span class="p">(</span><span class="nx">ironMan</span><span class="p">);</span>
-<span class="nx">print</span><span class="p">(</span><span class="nx">captainAmerica</span><span class="p">);</span>
-</code></pre></div></div>
-
-<p>똑같은 결과가 나타났나요?</p>
-
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="p">{</span> <span class="nx">alias</span><span class="p">,</span> <span class="nx">name</span><span class="p">,</span> <span class="nx">actor</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">hero</span><span class="p">;</span>
-</code></pre></div></div>
-
-<p>이 코드가 객체에서 값들을 추출해서 새로운 상수로 선언해 주는 것 입니다.</p>
-
-<p>여기서 더 나아가면, 파라미터 단계에서 객체 비구조화 할당을 할 수도 있습니다.</p>
-
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">ironMan</span> <span class="o">=</span> <span class="p">{</span>
-  <span class="na">name</span><span class="p">:</span> <span class="dl">'</span><span class="s1">토니 스타크</span><span class="dl">'</span><span class="p">,</span>
-  <span class="na">actor</span><span class="p">:</span> <span class="dl">'</span><span class="s1">로버트 다우니 주니어</span><span class="dl">'</span><span class="p">,</span>
-  <span class="na">alias</span><span class="p">:</span> <span class="dl">'</span><span class="s1">아이언맨</span><span class="dl">'</span>
-<span class="p">};</span>
-
-<span class="kd">const</span> <span class="nx">captainAmerica</span> <span class="o">=</span> <span class="p">{</span>
-  <span class="na">name</span><span class="p">:</span> <span class="dl">'</span><span class="s1">스티븐 로저스</span><span class="dl">'</span><span class="p">,</span>
-  <span class="na">actor</span><span class="p">:</span> <span class="dl">'</span><span class="s1">크리스 에반스</span><span class="dl">'</span><span class="p">,</span>
-  <span class="na">alias</span><span class="p">:</span> <span class="dl">'</span><span class="s1">캡틴 아메리카</span><span class="dl">'</span>
-<span class="p">};</span>
-
-<span class="kd">function</span> <span class="nx">print</span><span class="p">({</span> <span class="nx">alias</span><span class="p">,</span> <span class="nx">name</span><span class="p">,</span> <span class="nx">actor</span> <span class="p">})</span> <span class="p">{</span>
-  <span class="kd">const</span> <span class="nx">text</span> <span class="o">=</span> <span class="s2">`</span><span class="p">${</span><span class="nx">alias</span><span class="p">}</span><span class="s2">(</span><span class="p">${</span><span class="nx">name</span><span class="p">}</span><span class="s2">) 역할을 맡은 배우는 </span><span class="p">${</span><span class="nx">actor</span><span class="p">}</span><span class="s2"> 입니다.`</span><span class="p">;</span>
-  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">text</span><span class="p">);</span>
-<span class="p">}</span>
-
-<span class="nx">print</span><span class="p">(</span><span class="nx">ironMan</span><span class="p">);</span>
-<span class="nx">print</span><span class="p">(</span><span class="nx">captainAmerica</span><span class="p">);</span>
-</code></pre></div></div>
-
-<p>어떤가요? 코드가 처음보다 훨씬 깔끔해졌지요?</p>
-
-<p><br /></p>
-
-<h2 id="객체-안에-함수-넣기">객체 안에 함수 넣기</h2>
-
-<p>객체 안에 함수를 넣을 수도 있습니다. 한번 다음 코드를 실행해보세요.</p>
-
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">dog</span> <span class="o">=</span> <span class="p">{</span>
-  <span class="na">name</span><span class="p">:</span> <span class="dl">'</span><span class="s1">멍멍이</span><span class="dl">'</span><span class="p">,</span>
-  <span class="na">sound</span><span class="p">:</span> <span class="dl">'</span><span class="s1">멍멍!</span><span class="dl">'</span><span class="p">,</span>
-  <span class="na">say</span><span class="p">:</span> <span class="kd">function</span> <span class="nx">say</span><span class="p">()</span> <span class="p">{</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">sound</span><span class="p">);</span>
-  <span class="p">}</span>
-<span class="p">};</span>
+<span class="kd">const</span> <span class="nx">dog</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Animal</span><span class="p">(</span><span class="dl">'</span><span class="s1">개</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">멍멍이</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">멍멍</span><span class="dl">'</span><span class="p">);</span>
+<span class="kd">const</span> <span class="nx">cat</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Animal</span><span class="p">(</span><span class="dl">'</span><span class="s1">고양이</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">야옹이</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">야옹</span><span class="dl">'</span><span class="p">);</span>
 
 <span class="nx">dog</span><span class="p">.</span><span class="nx">say</span><span class="p">();</span>
+<span class="nx">cat</span><span class="p">.</span><span class="nx">say</span><span class="p">();</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">dog</span><span class="p">.</span><span class="nx">sharedValue</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">cat</span><span class="p">.</span><span class="nx">sharedValue</span><span class="p">);</span>
 </code></pre></div></div>
 
 <p>결과는 다음과 같습니다.</p>
 
 <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">멍멍</span>
+<span class="err">야옹</span>
+<span class="mi">1</span>
+<span class="mi">1</span>
 </code></pre></div></div>
-
-<p>함수가 객체안에 들어가게 되면, this 는 자신이 속해있는 객체를 가르키게 됩니다.</p>
-
-<p>함수를 선언 할 때에는 이름이 없어도 됩니다.</p>
-
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">dog</span> <span class="o">=</span> <span class="p">{</span>
-  <span class="na">name</span><span class="p">:</span> <span class="dl">'</span><span class="s1">멍멍이</span><span class="dl">'</span><span class="p">,</span>
-  <span class="na">sound</span><span class="p">:</span> <span class="dl">'</span><span class="s1">멍멍!</span><span class="dl">'</span><span class="p">,</span>
-  <span class="na">say</span><span class="p">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">sound</span><span class="p">);</span>
-  <span class="p">}</span>
-<span class="p">};</span>
-
-<span class="nx">dog</span><span class="p">.</span><span class="nx">say</span><span class="p">()</span>
-</code></pre></div></div>
-
-<p>이전과 똑같이 작동 할 것입니다.</p>
-
-<p>객체 안에 함수를 넣을 때, 화살표 함수로 선언한다면 제대로 작동하지 않습니다.</p>
-
-<p>이유는, function 으로 선언한 함수는 this 가 제대로 자신이 속한 객체를 가르키게 되는데, 화살표 함수는 그렇지 않기 때문입니다.</p>
 
 <p><br /></p>
 
-<h2 id="getter-함수와-setter-함수">Getter 함수와 Setter 함수</h2>
+<h2 id="객체-생성자-상속받기">객체 생성자 상속받기</h2>
 
-<p>객체 안에 Getter 함수와 Setter 함수를 설정하는 방법을 알아봅시다. 객체를 만들고 나면, 다음과 같이 객체안의 값을 수정 할 수도 있는데요,</p>
+<p>예를 들어서 우리가 Cat 과 Dog 라는 새로운 객체 생성자를 만든다고 가정해봅시다. 
+그리고, 해당 객체 생성자들에서 Animal 의 기능을 재사용한다고 가정해봅시다. 
+그렇다면, 이렇게 구현 할 수 있습니다.</p>
 
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">numbers</span> <span class="o">=</span> <span class="p">{</span>
-  <span class="na">a</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-  <span class="na">b</span><span class="p">:</span> <span class="mi">2</span>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">Animal</span><span class="p">(</span><span class="nx">type</span><span class="p">,</span> <span class="nx">name</span><span class="p">,</span> <span class="nx">sound</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">this</span><span class="p">.</span><span class="nx">type</span> <span class="o">=</span> <span class="nx">type</span><span class="p">;</span>
+  <span class="k">this</span><span class="p">.</span><span class="nx">name</span> <span class="o">=</span> <span class="nx">name</span><span class="p">;</span>
+  <span class="k">this</span><span class="p">.</span><span class="nx">sound</span> <span class="o">=</span> <span class="nx">sound</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nx">Animal</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">say</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">sound</span><span class="p">);</span>
 <span class="p">};</span>
+<span class="nx">Animal</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">sharedValue</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
 
-<span class="nx">numbers</span><span class="p">.</span><span class="nx">a</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">numbers</span><span class="p">);</span>
+<span class="kd">function</span> <span class="nx">Dog</span><span class="p">(</span><span class="nx">name</span><span class="p">,</span> <span class="nx">sound</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">Animal</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="dl">'</span><span class="s1">개</span><span class="dl">'</span><span class="p">,</span> <span class="nx">name</span><span class="p">,</span> <span class="nx">sound</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="nx">Dog</span><span class="p">.</span><span class="nx">prototype</span> <span class="o">=</span> <span class="nx">Animal</span><span class="p">.</span><span class="nx">prototype</span><span class="p">;</span>
+
+<span class="kd">function</span> <span class="nx">Cat</span><span class="p">(</span><span class="nx">name</span><span class="p">,</span> <span class="nx">sound</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">Animal</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="dl">'</span><span class="s1">고양이</span><span class="dl">'</span><span class="p">,</span> <span class="nx">name</span><span class="p">,</span> <span class="nx">sound</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="nx">Cat</span><span class="p">.</span><span class="nx">prototype</span> <span class="o">=</span> <span class="nx">Animal</span><span class="p">.</span><span class="nx">prototype</span><span class="p">;</span>
+
+<span class="kd">const</span> <span class="nx">dog</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Dog</span><span class="p">(</span><span class="dl">'</span><span class="s1">멍멍이</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">멍멍</span><span class="dl">'</span><span class="p">);</span>
+<span class="kd">const</span> <span class="nx">cat</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Cat</span><span class="p">(</span><span class="dl">'</span><span class="s1">야옹이</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">야옹</span><span class="dl">'</span><span class="p">);</span>
+
+<span class="nx">dog</span><span class="p">.</span><span class="nx">say</span><span class="p">();</span>
+<span class="nx">cat</span><span class="p">.</span><span class="nx">say</span><span class="p">();</span>
 </code></pre></div></div>
 
-<p>Getter 함수와 Setter 함수를 사용하게 되면 특정 값을 바꾸려고 하거나, 특정 값을 조회하려고 할 때 우리가 원하는 코드를 실행 시킬 수 있습니다.</p>
+<p>새로 만든 Dog 와 Cat 함수에서 Animal.call 을 호출해주고 있는데요, 
+여기서 첫번째 인자에는 this 를 넣어주어야 하고, 
+그 이후에는 Animal 객체 생성자 함수에서 필요로 하는 파라미터를 넣어주어야 합니다.</p>
 
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">numbers</span> <span class="o">=</span> <span class="p">{</span>
-  <span class="na">a</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-  <span class="na">b</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
-  <span class="kd">get</span> <span class="nx">sum</span><span class="p">()</span> <span class="p">{</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">sum 함수가 실행됩니다!</span><span class="dl">'</span><span class="p">);</span>
-    <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">a</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="nx">b</span><span class="p">;</span>
+<p>추가적으로 prototype 을 공유해야 하기 때문에 상속받은 객체 생성자 함수를 만들고 나서 
+prototype 값을 Animal.prototype 으로 설정해주었습니다.</p>
+
+<p><br /></p>
+
+<h2 id="클래스">클래스</h2>
+
+<p>클래스라는 기능은 C++, Java, C#, PHP 등의 다른 프로그래밍 언어에는 있는 기능인데 
+자바스크립트에는 없었기 때문에 예전 자바스크립트 (ES5) 에서는 클래스 문법이 따로 없었기 때문에 
+위에서 작성한 코드처럼 객체 생성자 함수를 사용하여 비슷한 작업을 구현해왔습니다.</p>
+
+<p>ES6 에서부터는 class 라는 문법이 추가되었는데요, 
+우리가 객체 생성자로 구현했던 코드를 조금 더 명확하고, 깔끔하게 구현 할 수 있게 해줍니다. 
+추가적으로, 상속도 훨씬 쉽게 해줄 수 있습니다.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nx">Animal</span> <span class="p">{</span>
+  <span class="kd">constructor</span><span class="p">(</span><span class="nx">type</span><span class="p">,</span> <span class="nx">name</span><span class="p">,</span> <span class="nx">sound</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">type</span> <span class="o">=</span> <span class="nx">type</span><span class="p">;</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">name</span> <span class="o">=</span> <span class="nx">name</span><span class="p">;</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">sound</span> <span class="o">=</span> <span class="nx">sound</span><span class="p">;</span>
   <span class="p">}</span>
-<span class="p">};</span>
-
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">numbers</span><span class="p">.</span><span class="nx">sum</span><span class="p">);</span>
-<span class="nx">numbers</span><span class="p">.</span><span class="nx">b</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">numbers</span><span class="p">.</span><span class="nx">sum</span><span class="p">);</span>
-</code></pre></div></div>
-
-<p>우리는 numbers.sum() 을 한 것이 아니라 number.sum 을 조회했을 뿐인데, 함수가 실행되고 그 결과값이 출력되었습니다.</p>
-
-<p>이런식으로 Getter 함수는 특정 값을 조회 할 때 우리가 설정한 함수로 연산된 값을 반환합니다.</p>
-
-<p>이번에는 Setter 함수를 사용해봅시다.</p>
-
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">numbers</span> <span class="o">=</span> <span class="p">{</span>
-  <span class="na">_a</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-  <span class="na">_b</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
-  <span class="na">sum</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
-  <span class="nx">calculate</span><span class="p">()</span> <span class="p">{</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">calculate</span><span class="dl">'</span><span class="p">);</span>
-    <span class="k">this</span><span class="p">.</span><span class="nx">sum</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">_a</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="nx">_b</span><span class="p">;</span>
-  <span class="p">},</span>
-  <span class="kd">get</span> <span class="nx">a</span><span class="p">()</span> <span class="p">{</span>
-    <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">_a</span><span class="p">;</span>
-  <span class="p">},</span>
-  <span class="kd">get</span> <span class="nx">b</span><span class="p">()</span> <span class="p">{</span>
-    <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">_b</span><span class="p">;</span>
-  <span class="p">},</span>
-  <span class="kd">set</span> <span class="nx">a</span><span class="p">(</span><span class="nx">value</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">a가 바뀝니다.</span><span class="dl">'</span><span class="p">);</span>
-    <span class="k">this</span><span class="p">.</span><span class="nx">_a</span> <span class="o">=</span> <span class="nx">value</span><span class="p">;</span>
-    <span class="k">this</span><span class="p">.</span><span class="nx">calculate</span><span class="p">();</span>
-  <span class="p">},</span>
-  <span class="kd">set</span> <span class="nx">b</span><span class="p">(</span><span class="nx">value</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">b가 바뀝니다.</span><span class="dl">'</span><span class="p">);</span>
-    <span class="k">this</span><span class="p">.</span><span class="nx">_b</span> <span class="o">=</span> <span class="nx">value</span><span class="p">;</span>
-    <span class="k">this</span><span class="p">.</span><span class="nx">calculate</span><span class="p">();</span>
+  <span class="nx">say</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">sound</span><span class="p">);</span>
   <span class="p">}</span>
-<span class="p">};</span>
+<span class="p">}</span>
 
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">numbers</span><span class="p">.</span><span class="nx">sum</span><span class="p">);</span>
-<span class="nx">numbers</span><span class="p">.</span><span class="nx">a</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
-<span class="nx">numbers</span><span class="p">.</span><span class="nx">b</span> <span class="o">=</span> <span class="mi">7</span><span class="p">;</span>
-<span class="nx">numbers</span><span class="p">.</span><span class="nx">a</span> <span class="o">=</span> <span class="mi">9</span><span class="p">;</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">numbers</span><span class="p">.</span><span class="nx">sum</span><span class="p">);</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">numbers</span><span class="p">.</span><span class="nx">sum</span><span class="p">);</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">numbers</span><span class="p">.</span><span class="nx">sum</span><span class="p">);</span>
+<span class="kd">const</span> <span class="nx">dog</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Animal</span><span class="p">(</span><span class="dl">'</span><span class="s1">개</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">멍멍이</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">멍멍</span><span class="dl">'</span><span class="p">);</span>
+<span class="kd">const</span> <span class="nx">cat</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Animal</span><span class="p">(</span><span class="dl">'</span><span class="s1">고양이</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">야옹이</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">야옹</span><span class="dl">'</span><span class="p">);</span>
+
+<span class="nx">dog</span><span class="p">.</span><span class="nx">say</span><span class="p">();</span>
+<span class="nx">cat</span><span class="p">.</span><span class="nx">say</span><span class="p">();</span>
 </code></pre></div></div>
 
-<p>Setter 함수를 설정 할 때에는 함수의 앞부분에 set 키워드를 붙입니다.</p>
+<p>여기서 우리가 say 라는 함수를 클래스 내부에 선언하였는데요, 클래스 내부의 함수를 ‘메서드’라고 부릅니다. 
+이렇게 메서드를 만들면 자동으로 prototype 으로 등록이 됩니다.</p>
 
-<p>Setter 함수를 설정하고 나면, numbers.a = 5 이렇게 값을 설정했을 때 5 를 함수의 파라미터로 받아오게 됩니다. 위 코드에서는 객체 안에 _a, _b 라는 숫자를 선언해주고, 이 값들을 위한 Getter 와 Setter 함수를 설정해주었습니다.</p>
+<p>결과는 다음과 같습니다.</p>
 
-<p>아까 전에는 만든 객체에서는 numbers.sum 이 조회 될 때마다 덧셈이 이루어졌었지만, 이제는 a 혹은 b 값이 바뀔 때마다 sum 값을 연산합니다.</p>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">멍멍</span>
+<span class="err">야옹</span>
+</code></pre></div></div>
+
+<p>class 를 사용했을때에는, 다른 클래스를 쉽게 상속 할 수 있습니다.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nx">Animal</span> <span class="p">{</span>
+  <span class="kd">constructor</span><span class="p">(</span><span class="nx">type</span><span class="p">,</span> <span class="nx">name</span><span class="p">,</span> <span class="nx">sound</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">type</span> <span class="o">=</span> <span class="nx">type</span><span class="p">;</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">name</span> <span class="o">=</span> <span class="nx">name</span><span class="p">;</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">sound</span> <span class="o">=</span> <span class="nx">sound</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="nx">say</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">sound</span><span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">class</span> <span class="nx">Dog</span> <span class="kd">extends</span> <span class="nx">Animal</span> <span class="p">{</span>
+  <span class="kd">constructor</span><span class="p">(</span><span class="nx">name</span><span class="p">,</span> <span class="nx">sound</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">super</span><span class="p">(</span><span class="dl">'</span><span class="s1">개</span><span class="dl">'</span><span class="p">,</span> <span class="nx">name</span><span class="p">,</span> <span class="nx">sound</span><span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">class</span> <span class="nx">Cat</span> <span class="kd">extends</span> <span class="nx">Animal</span> <span class="p">{</span>
+  <span class="kd">constructor</span><span class="p">(</span><span class="nx">name</span><span class="p">,</span> <span class="nx">sound</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">super</span><span class="p">(</span><span class="dl">'</span><span class="s1">고양이</span><span class="dl">'</span><span class="p">,</span> <span class="nx">name</span><span class="p">,</span> <span class="nx">sound</span><span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">const</span> <span class="nx">dog</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Dog</span><span class="p">(</span><span class="dl">'</span><span class="s1">멍멍이</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">멍멍</span><span class="dl">'</span><span class="p">);</span>
+<span class="kd">const</span> <span class="nx">cat</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Cat</span><span class="p">(</span><span class="dl">'</span><span class="s1">야옹이</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">야옹</span><span class="dl">'</span><span class="p">);</span>
+
+<span class="nx">dog</span><span class="p">.</span><span class="nx">say</span><span class="p">();</span>
+<span class="nx">cat</span><span class="p">.</span><span class="nx">say</span><span class="p">();</span>
+</code></pre></div></div>
+
+<p>결과물은 다음과 같습니다.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">멍멍</span>
+<span class="err">야옹</span>
+</code></pre></div></div>
+
+<p>상속을 할 때는 extends 키워드를 사용하며, constructor에서 사용하는 super() 함수가 상속받은 클래스의 생성자를 가르킵니다.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nx">Animal</span> <span class="p">{</span>
+  <span class="kd">constructor</span><span class="p">(</span><span class="nx">type</span><span class="p">,</span> <span class="nx">name</span><span class="p">,</span> <span class="nx">sound</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">type</span> <span class="o">=</span> <span class="nx">type</span><span class="p">;</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">name</span> <span class="o">=</span> <span class="nx">name</span><span class="p">;</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">sound</span> <span class="o">=</span> <span class="nx">sound</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">class</span> <span class="nx">Dog</span> <span class="kd">extends</span> <span class="nx">Animal</span> <span class="p">{</span>
+  <span class="kd">constructor</span><span class="p">(</span><span class="nx">name</span><span class="p">,</span> <span class="nx">sound</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">super</span><span class="p">(</span><span class="dl">'</span><span class="s1">개</span><span class="dl">'</span><span class="p">,</span> <span class="nx">name</span><span class="p">,</span> <span class="nx">sound</span><span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">class</span> <span class="nx">Cat</span> <span class="kd">extends</span> <span class="nx">Animal</span> <span class="p">{</span>
+  <span class="kd">constructor</span><span class="p">(</span><span class="nx">name</span><span class="p">,</span> <span class="nx">sound</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">super</span><span class="p">(</span><span class="dl">'</span><span class="s1">고양이</span><span class="dl">'</span><span class="p">,</span> <span class="nx">name</span><span class="p">,</span> <span class="nx">sound</span><span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">const</span> <span class="nx">dog</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Dog</span><span class="p">(</span><span class="dl">'</span><span class="s1">멍멍이</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">멍멍</span><span class="dl">'</span><span class="p">);</span>
+<span class="kd">const</span> <span class="nx">dog2</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Dog</span><span class="p">(</span><span class="dl">'</span><span class="s1">왈왈이</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">왈왈</span><span class="dl">'</span><span class="p">);</span>
+<span class="kd">const</span> <span class="nx">cat</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Cat</span><span class="p">(</span><span class="dl">'</span><span class="s1">야옹이</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">야옹</span><span class="dl">'</span><span class="p">);</span>
+<span class="kd">const</span> <span class="nx">cat2</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Cat</span><span class="p">(</span><span class="dl">'</span><span class="s1">냐옹이</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">냐옹</span><span class="dl">'</span><span class="p">);</span>
+
+<span class="nx">dog</span><span class="p">.</span><span class="nx">say</span><span class="p">();</span>
+<span class="nx">dog2</span><span class="p">.</span><span class="nx">say</span><span class="p">();</span>
+<span class="nx">cat</span><span class="p">.</span><span class="nx">say</span><span class="p">();</span>
+<span class="nx">cat2</span><span class="p">.</span><span class="nx">say</span><span class="p">();</span>
+</code></pre></div></div>
+
+<p><br /></p>
+
+<h2 id="연습">연습</h2>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nx">Food</span> <span class="p">{</span>
+  <span class="kd">constructor</span><span class="p">(</span><span class="nx">name</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">name</span> <span class="o">=</span> <span class="nx">name</span><span class="p">;</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">brands</span> <span class="o">=</span> <span class="p">[];</span>
+  <span class="p">}</span>
+  <span class="nx">addBrand</span><span class="p">(</span><span class="nx">brand</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">brands</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">brand</span><span class="p">)</span>
+  <span class="p">}</span>
+  <span class="nx">print</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">`</span><span class="p">${</span><span class="k">this</span><span class="p">.</span><span class="nx">name</span><span class="p">}</span><span class="s2">을/를 파는 음식점들:`</span><span class="p">)</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">brands</span><span class="p">.</span><span class="nx">join</span><span class="p">(</span><span class="dl">'</span><span class="s1">, </span><span class="dl">'</span><span class="p">));</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">const</span> <span class="nx">pizza</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Food</span><span class="p">(</span><span class="dl">'</span><span class="s1">피자</span><span class="dl">'</span><span class="p">);</span>
+<span class="nx">pizza</span><span class="p">.</span><span class="nx">addBrand</span><span class="p">(</span><span class="dl">'</span><span class="s1">피자헛</span><span class="dl">'</span><span class="p">);</span>
+<span class="nx">pizza</span><span class="p">.</span><span class="nx">addBrand</span><span class="p">(</span><span class="dl">'</span><span class="s1">도미노 피자</span><span class="dl">'</span><span class="p">);</span>
+
+<span class="kd">const</span> <span class="nx">chicken</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Food</span><span class="p">(</span><span class="dl">'</span><span class="s1">치킨</span><span class="dl">'</span><span class="p">);</span>
+<span class="nx">chicken</span><span class="p">.</span><span class="nx">addBrand</span><span class="p">(</span><span class="dl">'</span><span class="s1">굽네치킨</span><span class="dl">'</span><span class="p">);</span>
+<span class="nx">chicken</span><span class="p">.</span><span class="nx">addBrand</span><span class="p">(</span><span class="dl">'</span><span class="s1">BBQ</span><span class="dl">'</span><span class="p">);</span>
+
+<span class="nx">pizza</span><span class="p">.</span><span class="nx">print</span><span class="p">()</span>
+<span class="nx">chicken</span><span class="p">.</span><span class="nx">print</span><span class="p">();</span>
+</code></pre></div></div>
+
+<p>이런식으로, 클래스를 만들어서 사용하면 같은 형태를 지닌 객체들을 만들때 객체들이 지닌 값과 함수를 보기 좋은 형태로 쉽게 관리 할 수 있습니다.</p>
 
 
 
@@ -1485,9 +1471,9 @@
       }
 
       var d = function () {
-        this.page.title = "[Javascript/ECMAScript6/ES6] 객체",
-          this.page.identifier = "/devlog/2020/05/21/ECMAScript6-06",
-          this.page.url = "https://m-veloper.github.io/devlog/2020/05/21/ECMAScript6-06/"
+        this.page.title = "[Javascript/ECMAScript6/ES6] 프로토타입과 클래스",
+          this.page.identifier = "/devlog/2020/05/25/ECMAScript6-10",
+          this.page.url = "https://m-veloper.github.io/devlog/2020/05/25/ECMAScript6-10/"
       };
       s._disqusFirst = void 0 === s._disqusFirst || s._disqusFirst, s._disqusLoading = void 0 !== s._disqusLoading && s._disqusLoading, s._disqusThis = !1, s._disqusThreadOffsetTop = i.getElementById(
         "disqus_thread").offsetTop, s._disqusLoading ? s._disqusFirst = !1 : (s._disqusLoading = !0, loadJSDeferred(
