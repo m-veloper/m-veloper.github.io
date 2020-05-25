@@ -4,12 +4,22 @@
  <title>슬기로운 개발 생활</title>
  <link href="https://m-veloper.github.io/atom.xml" rel="self"/>
  <id>https://m-veloper.github.io</id>
- <updated>2020-05-25T00:09:21+09:00</updated>
+ <updated>2020-05-26T00:13:49+09:00</updated>
  <author>
    <name>m-veloper</name>
    <uri>https://m-veloper.github.io</uri>
    <email>m_veloper@naver.com</email>
  </author>
+
+ 
+
+ <entry>
+   <title>[Javascript/ECMAScript6/ES6] 삼항 연산자</title>
+   <link href="https://m-veloper.github.io/devlog/2020/05/26/ECMAScript6-11/"/>
+   <id>https://m-veloper.github.io/devlog/2020/05/26/ECMAScript6-11</id>
+   <updated>2020-05-26T00:00:00+09:00</updated>
+   <content type="html">&lt;p&gt;&lt;img src=&quot;/assets/img/ECMAScript6/2020-05-26-ECMAScript6-11.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt; &lt;blockquote&gt; &lt;p&gt;이글은 “벨로퍼트”님의 동영상 강의를 보고 정리한 내용입니다.&lt;/p&gt; &lt;/blockquote&gt; &lt;p&gt;&lt;br /&gt;&lt;/p&gt; &lt;h1 id=&quot;삼항-연산자&quot;&gt;삼항 연산자&lt;/h1&gt; &lt;p&gt;이 문법은 ES6 문법은 아닙니다. 참고로 해주세요.&lt;/p&gt; &lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;array&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[];&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;text&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;''&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span...</content>
+ </entry>
 
  
 
@@ -99,16 +109,6 @@
    <id>https://m-veloper.github.io/devlog/2020/05/19/ECMAScript6-04</id>
    <updated>2020-05-19T00:00:00+09:00</updated>
    <content type="html">&lt;p&gt;&lt;img src=&quot;/assets/img/ECMAScript6/2020-05-19-ECMAScript6-04.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt; &lt;blockquote&gt; &lt;p&gt;이글은 “벨로퍼트”님의 동영상 강의를 보고 정리한 내용입니다.&lt;/p&gt; &lt;/blockquote&gt; &lt;p&gt;&lt;br /&gt;&lt;/p&gt; &lt;h1 id=&quot;조건문&quot;&gt;조건문&lt;/h1&gt; &lt;p&gt;조건문을 사용하면 특정 조건이 만족됐을 때 특정 코드를 실행할 수 있습니다.&lt;/p&gt; &lt;p&gt;&lt;br /&gt;&lt;/p&gt; &lt;h2 id=&quot;if-문&quot;&gt;if 문&lt;/h2&gt; &lt;p&gt;가장 기본적인 조건문은 if 문입니다.&lt;/p&gt; &lt;p&gt;if문은, “~~하다면 ~~를 해라” 를 의미합니다.&lt;/p&gt; &lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt;...</content>
- </entry>
-
- 
-
- <entry>
-   <title>[유닉스] 사용자(User) 관리 명령어, 그룹(Group) 관리 명령어</title>
-   <link href="https://m-veloper.github.io/devlog/2020/05/18/unix-53/"/>
-   <id>https://m-veloper.github.io/devlog/2020/05/18/unix-53</id>
-   <updated>2020-05-18T00:00:00+09:00</updated>
-   <content type="html">&lt;p&gt;&lt;img src=&quot;/assets/img/unix/2020-05-18-unix-53.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt; &lt;h1 id=&quot;사용자user-관리-명령어&quot;&gt;사용자(User) 관리 명령어&lt;/h1&gt; &lt;p&gt;&lt;br /&gt;&lt;/p&gt; &lt;h3 id=&quot;사용자-계정&quot;&gt;사용자 계정&lt;/h3&gt; &lt;ul&gt; &lt;li&gt;시스템 관리자의 중요한 역할 중 하나는 사용자 계정을 만들고 관리하는 일&lt;/li&gt; &lt;li&gt;사용자 계정의 구성 요소 &lt;ul&gt; &lt;li&gt;로그인 ID : 시스템에 로그인할 때 사용자를 구분하기 위해 사용하는 이름. 사용자 이름. 시스템에서 유일해야 함&lt;/li&gt; &lt;li&gt;비밀번호 : 시스템에 로그인...</content>
  </entry>
 
  

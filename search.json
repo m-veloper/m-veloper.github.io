@@ -1,6 +1,14 @@
 [
 
 {
+"title"    : "[Javascript/ECMAScript6/ES6] 삼항 연산자",
+"category" : "",
+"tags"     : "ECMAScript6, ES6, ES2015",
+"url"      : "/devlog/2020/05/26/ECMAScript6-11/",
+"date"     : "2020-05-26 00:00:00 +0900"
+} ,
+
+{
 "title"    : "[Javascript/ECMAScript6/ES6] 프로토타입과 클래스",
 "category" : "",
 "tags"     : "ECMAScript6, ES6, ES2015",
