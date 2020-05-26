@@ -4,12 +4,22 @@
  <title>슬기로운 개발 생활</title>
  <link href="https://m-veloper.github.io/atom.xml" rel="self"/>
  <id>https://m-veloper.github.io</id>
- <updated>2020-05-26T00:13:49+09:00</updated>
+ <updated>2020-05-27T00:10:59+09:00</updated>
  <author>
    <name>m-veloper</name>
    <uri>https://m-veloper.github.io</uri>
    <email>m_veloper@naver.com</email>
  </author>
+
+ 
+
+ <entry>
+   <title>[Javascript/ECMAScript6/ES6] Truthy and Falsy</title>
+   <link href="https://m-veloper.github.io/devlog/2020/05/27/ECMAScript6-12/"/>
+   <id>https://m-veloper.github.io/devlog/2020/05/27/ECMAScript6-12</id>
+   <updated>2020-05-27T00:00:00+09:00</updated>
+   <content type="html">&lt;p&gt;&lt;img src=&quot;/assets/img/ECMAScript6/2020-05-27-ECMAScript6-12.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt; &lt;blockquote&gt; &lt;p&gt;이글은 “벨로퍼트”님의 동영상 강의를 보고 정리한 내용입니다.&lt;/p&gt; &lt;/blockquote&gt; &lt;p&gt;&lt;br /&gt;&lt;/p&gt; &lt;h1 id=&quot;truthy-and-falsy&quot;&gt;Truthy and Falsy&lt;/h1&gt; &lt;p&gt;이것은 자바스크립트 문법까지는 아니지만, 알아둬야 하는 개념입니다.&lt;/p&gt; &lt;p&gt;Truthy: true 같은거… Falsy: false 같은거…&lt;/p&gt; &lt;p&gt;라고 이해를 하면 되는데요, 예를 들어서 다음과 같은 함수가 있다고 가정해봅시다.&lt;/p&gt; &lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span...</content>
+ </entry>
 
  
 
@@ -99,16 +109,6 @@
    <id>https://m-veloper.github.io/devlog/2020/05/19/unix-54</id>
    <updated>2020-05-19T00:00:00+09:00</updated>
    <content type="html">&lt;p&gt;&lt;img src=&quot;/assets/img/unix/2020-05-19-unix-54.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt; &lt;h1 id=&quot;시스템-성능-관리-명령어&quot;&gt;시스템 성능 관리 명령어&lt;/h1&gt; &lt;p&gt;&lt;br /&gt;&lt;/p&gt; &lt;h3 id=&quot;개요&quot;&gt;개요&lt;/h3&gt; &lt;ul&gt; &lt;li&gt;시스템이 현재 사용하고 있는 자원의 현황 조사&lt;/li&gt; &lt;li&gt;시스템이 효율적으로 동작하고 있는지 검사&lt;/li&gt; &lt;li&gt;시스템 성능에 영향을 미치는 요소, 시스템이 최적의 성능을 발휘하기 위해 무엇이 필요한지 알게 됨&lt;/li&gt; &lt;/ul&gt; &lt;p&gt;&lt;br /&gt;&lt;/p&gt; &lt;h3 id=&quot;시스템-상태--uptime&quot;&gt;시스템 상태 : uptime&lt;/h3&gt; &lt;ul&gt; &lt;li&gt;시스템의...</content>
- </entry>
-
- 
-
- <entry>
-   <title>[Javascript/ECMAScript6/ES6] 조건문</title>
-   <link href="https://m-veloper.github.io/devlog/2020/05/19/ECMAScript6-04/"/>
-   <id>https://m-veloper.github.io/devlog/2020/05/19/ECMAScript6-04</id>
-   <updated>2020-05-19T00:00:00+09:00</updated>
-   <content type="html">&lt;p&gt;&lt;img src=&quot;/assets/img/ECMAScript6/2020-05-19-ECMAScript6-04.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt; &lt;blockquote&gt; &lt;p&gt;이글은 “벨로퍼트”님의 동영상 강의를 보고 정리한 내용입니다.&lt;/p&gt; &lt;/blockquote&gt; &lt;p&gt;&lt;br /&gt;&lt;/p&gt; &lt;h1 id=&quot;조건문&quot;&gt;조건문&lt;/h1&gt; &lt;p&gt;조건문을 사용하면 특정 조건이 만족됐을 때 특정 코드를 실행할 수 있습니다.&lt;/p&gt; &lt;p&gt;&lt;br /&gt;&lt;/p&gt; &lt;h2 id=&quot;if-문&quot;&gt;if 문&lt;/h2&gt; &lt;p&gt;가장 기본적인 조건문은 if 문입니다.&lt;/p&gt; &lt;p&gt;if문은, “~~하다면 ~~를 해라” 를 의미합니다.&lt;/p&gt; &lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt;...</content>
  </entry>
 
  

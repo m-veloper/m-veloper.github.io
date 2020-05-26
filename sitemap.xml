@@ -2,6 +2,22 @@
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
     <url>
+      <loc>https://m-veloper.github.io/devlog/2020/05/27/ECMAScript6-12/</loc>
+      
+        <lastmod>2020-05-27T00:00:00+09:00</lastmod>
+      
+
+      
+        <changefreq>weekly</changefreq>
+      
+
+      
+          <priority>1.0</priority>
+      
+
+    </url>
+  
+    <url>
       <loc>https://m-veloper.github.io/devlog/2020/05/26/ECMAScript6-11/</loc>
       
         <lastmod>2020-05-26T00:00:00+09:00</lastmod>
@@ -2853,6 +2869,278 @@
       <loc>https://m-veloper.github.io/devlog/2020/02/12/database-01/</loc>
       
         <lastmod>2020-02-12T00:00:00+09:00</lastmod>
+      
+
+      
+        <changefreq>weekly</changefreq>
+      
+
+      
+          <priority>1.0</priority>
+      
+
+    </url>
+  
+    <url>
+      <loc>https://m-veloper.github.io/2020/01/01/portfolio-18/</loc>
+      
+        <lastmod>2020-01-01T00:00:00+09:00</lastmod>
+      
+
+      
+        <changefreq>weekly</changefreq>
+      
+
+      
+          <priority>1.0</priority>
+      
+
+    </url>
+  
+    <url>
+      <loc>https://m-veloper.github.io/2020/01/01/portfolio-17/</loc>
+      
+        <lastmod>2020-01-01T00:00:00+09:00</lastmod>
+      
+
+      
+        <changefreq>weekly</changefreq>
+      
+
+      
+          <priority>1.0</priority>
+      
+
+    </url>
+  
+    <url>
+      <loc>https://m-veloper.github.io/2020/01/01/portfolio-16/</loc>
+      
+        <lastmod>2020-01-01T00:00:00+09:00</lastmod>
+      
+
+      
+        <changefreq>weekly</changefreq>
+      
+
+      
+          <priority>1.0</priority>
+      
+
+    </url>
+  
+    <url>
+      <loc>https://m-veloper.github.io/2020/01/01/portfolio-15/</loc>
+      
+        <lastmod>2020-01-01T00:00:00+09:00</lastmod>
+      
+
+      
+        <changefreq>weekly</changefreq>
+      
+
+      
+          <priority>1.0</priority>
+      
+
+    </url>
+  
+    <url>
+      <loc>https://m-veloper.github.io/2020/01/01/portfolio-14/</loc>
+      
+        <lastmod>2020-01-01T00:00:00+09:00</lastmod>
+      
+
+      
+        <changefreq>weekly</changefreq>
+      
+
+      
+          <priority>1.0</priority>
+      
+
+    </url>
+  
+    <url>
+      <loc>https://m-veloper.github.io/2020/01/01/portfolio-13/</loc>
+      
+        <lastmod>2020-01-01T00:00:00+09:00</lastmod>
+      
+
+      
+        <changefreq>weekly</changefreq>
+      
+
+      
+          <priority>1.0</priority>
+      
+
+    </url>
+  
+    <url>
+      <loc>https://m-veloper.github.io/2020/01/01/portfolio-12/</loc>
+      
+        <lastmod>2020-01-01T00:00:00+09:00</lastmod>
+      
+
+      
+        <changefreq>weekly</changefreq>
+      
+
+      
+          <priority>1.0</priority>
+      
+
+    </url>
+  
+    <url>
+      <loc>https://m-veloper.github.io/2020/01/01/portfolio-11/</loc>
+      
+        <lastmod>2020-01-01T00:00:00+09:00</lastmod>
+      
+
+      
+        <changefreq>weekly</changefreq>
+      
+
+      
+          <priority>1.0</priority>
+      
+
+    </url>
+  
+    <url>
+      <loc>https://m-veloper.github.io/2020/01/01/portfolio-10/</loc>
+      
+        <lastmod>2020-01-01T00:00:00+09:00</lastmod>
+      
+
+      
+        <changefreq>weekly</changefreq>
+      
+
+      
+          <priority>1.0</priority>
+      
+
+    </url>
+  
+    <url>
+      <loc>https://m-veloper.github.io/2020/01/01/portfolio-09/</loc>
+      
+        <lastmod>2020-01-01T00:00:00+09:00</lastmod>
+      
+
+      
+        <changefreq>weekly</changefreq>
+      
+
+      
+          <priority>1.0</priority>
+      
+
+    </url>
+  
+    <url>
+      <loc>https://m-veloper.github.io/2020/01/01/portfolio-08/</loc>
+      
+        <lastmod>2020-01-01T00:00:00+09:00</lastmod>
+      
+
+      
+        <changefreq>weekly</changefreq>
+      
+
+      
+          <priority>1.0</priority>
+      
+
+    </url>
+  
+    <url>
+      <loc>https://m-veloper.github.io/2020/01/01/portfolio-07/</loc>
+      
+        <lastmod>2020-01-01T00:00:00+09:00</lastmod>
+      
+
+      
+        <changefreq>weekly</changefreq>
+      
+
+      
+          <priority>1.0</priority>
+      
+
+    </url>
+  
+    <url>
+      <loc>https://m-veloper.github.io/2020/01/01/portfolio-06/</loc>
+      
+        <lastmod>2020-01-01T00:00:00+09:00</lastmod>
+      
+
+      
+        <changefreq>weekly</changefreq>
+      
+
+      
+          <priority>1.0</priority>
+      
+
+    </url>
+  
+    <url>
+      <loc>https://m-veloper.github.io/2020/01/01/portfolio-05/</loc>
+      
+        <lastmod>2020-01-01T00:00:00+09:00</lastmod>
+      
+
+      
+        <changefreq>weekly</changefreq>
+      
+
+      
+          <priority>1.0</priority>
+      
+
+    </url>
+  
+    <url>
+      <loc>https://m-veloper.github.io/2020/01/01/portfolio-04/</loc>
+      
+        <lastmod>2020-01-01T00:00:00+09:00</lastmod>
+      
+
+      
+        <changefreq>weekly</changefreq>
+      
+
+      
+          <priority>1.0</priority>
+      
+
+    </url>
+  
+    <url>
+      <loc>https://m-veloper.github.io/2020/01/01/portfolio-03/</loc>
+      
+        <lastmod>2020-01-01T00:00:00+09:00</lastmod>
+      
+
+      
+        <changefreq>weekly</changefreq>
+      
+
+      
+          <priority>1.0</priority>
+      
+
+    </url>
+  
+    <url>
+      <loc>https://m-veloper.github.io/2020/01/01/portfolio-02/</loc>
+      
+        <lastmod>2020-01-01T00:00:00+09:00</lastmod>
       
 
       
