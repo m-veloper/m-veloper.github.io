@@ -1,6 +1,14 @@
 [
 
 {
+"title"    : "[Javascript/ECMAScript6/ES6] 단축 평가 (short-circuit evaluation) 논리 계산법",
+"category" : "",
+"tags"     : "ECMAScript6, ES6, ES2015",
+"url"      : "/devlog/2020/05/28/ECMAScript6-13/",
+"date"     : "2020-05-28 00:00:00 +0900"
+} ,
+
+{
 "title"    : "[Javascript/ECMAScript6/ES6] Truthy and Falsy",
 "category" : "",
 "tags"     : "ECMAScript6, ES6, ES2015",
