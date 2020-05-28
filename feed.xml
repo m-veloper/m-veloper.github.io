@@ -5,9 +5,92 @@
     <description></description>
     <link>https://m-veloper.github.io/</link>
     <atom:link href="https://m-veloper.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 28 May 2020 13:08:48 +0900</pubDate>
-    <lastBuildDate>Thu, 28 May 2020 13:08:48 +0900</lastBuildDate>
+    <pubDate>Fri, 29 May 2020 00:14:55 +0900</pubDate>
+    <lastBuildDate>Fri, 29 May 2020 00:14:55 +0900</lastBuildDate>
     <generator>Jekyll v3.8.6</generator>
+    
+      <item>
+        <title>[Javascript/ECMAScript6/ES6] 함수의 기본 파라미터</title>
+        <description>&lt;p&gt;&lt;img src=&quot;/assets/img/ECMAScript6/2020-05-29-ECMAScript6-14.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;이글은 “벨로퍼트”님의 동영상 강의를 보고 정리한 내용입니다.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;함수의-기본-파라미터&quot;&gt;함수의 기본 파라미터&lt;/h1&gt;
+
+&lt;p&gt;한번, 우리가 원의 넓이를 구하는 함수를 만들어보겠습니다.&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;calculateCircleArea&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;r&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Math&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;PI&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;r&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;r&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;area&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;calculateCircleArea&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;area&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// 50.26548245743669&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;여기서 Math.PI 는 원주율 파이(π) 값을 가르킵니다.&lt;/p&gt;
+
+&lt;p&gt;만약 우리가 이 함수에 r 값을 넣어주지 않으면 어떤 결과가 나타날까요?&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;calculateCircleArea&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;r&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Math&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;PI&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;r&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;r&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;area&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;calculateCircleArea&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;area&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// NaN&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;결과는 NaN 이 나옵니다. Not a Number 라는 의미로, 우리가 undefined * undefined 이렇게 숫자가 아닌 값에 곱셈을 하니까 이상한 결과물이 나와버렸습니다.&lt;/p&gt;
+
+&lt;p&gt;이 함수에서 만약에 r 값이 주어지지 않았다면 기본 값을 1을 사용하도록 설정해봅시다.&lt;/p&gt;
+
+&lt;p&gt;우리가 지금까지 배운 것들을 활용하면 이렇게 작성 할 수 있습니다.&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;calculateCircleArea&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;r&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;radius&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;r&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Math&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;PI&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;radius&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;radius&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;area&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;calculateCircleArea&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;area&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// 3.14159265358979&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;ES5 시절엔 위와 같이 하는게 최선이였는데, ES6 에선 다음과 같이 할 수 있게 되었습니다.&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;calculateCircleArea&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;r&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Math&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;PI&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;r&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;r&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;area&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;calculateCircleArea&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;area&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// 3.141592653589793&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;함수의 기본 파라미터 문법은 화살표 함수에서도 사용 할 수 있습니다.&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;calculateCircleArea&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;r&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Math&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;PI&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;r&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;r&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;area&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;calculateCircleArea&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;area&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// 3.141592653589793&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+</description>
+        <pubDate>Fri, 29 May 2020 00:00:00 +0900</pubDate>
+        <link>https://m-veloper.github.io/devlog/2020/05/29/ECMAScript6-14/</link>
+        <guid isPermaLink="true">https://m-veloper.github.io/devlog/2020/05/29/ECMAScript6-14/</guid>
+        
+        <category>ECMAScript6</category>
+        
+        <category>ES6</category>
+        
+        <category>ES2015</category>
+        
+        
+        <category>devlog</category>
+        
+      </item>
     
       <item>
         <title>[Javascript/ECMAScript6/ES6] 단축 평가 (short-circuit evaluation) 논리 계산법</title>
@@ -5828,250 +5911,6 @@ Password:
         <guid isPermaLink="true">https://m-veloper.github.io/devlog/2020/05/06/unix-41/</guid>
         
         <category>unix</category>
-        
-        
-        <category>devlog</category>
-        
-      </item>
-    
-      <item>
-        <title>[Database] 자바(JAVA) 란? 자바의 정의</title>
-        <description>&lt;p&gt;&lt;img src=&quot;/assets/img/database/2020/05/2020-05-05-database-56.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h1 id=&quot;java&quot;&gt;JAVA&lt;/h1&gt;
-
-&lt;h3 id=&quot;프로그래밍-언어&quot;&gt;프로그래밍 언어&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;기계어(Machine Language)
-    &lt;ul&gt;
-      &lt;li&gt;0, 1의 이진수로 구성된 언어&lt;/li&gt;
-      &lt;li&gt;컴퓨터의 CPU는 기계어만 이해하고 처리가능&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;어셈블리어
-    &lt;ul&gt;
-      &lt;li&gt;기계어 명령을 ADD, SUB, MOVE 등과 같은 표현하기 쉬운 상징적인 단어인 니모닉 기호(mnemonic symbol)로 일대일 대응시킨 언어&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;고급언어
-    &lt;ul&gt;
-      &lt;li&gt;사람이 이해하기 쉽고, 복잡한 작업, 자료 구조,알고리즘을 표현하기 위해 고안된 언어&lt;/li&gt;
-      &lt;li&gt;Pascal, Basic, C/C++, Java, C#&lt;/li&gt;
-      &lt;li&gt;절차 지향 언어와 객체 지향 언어로 나눌 수 있음&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;컴파일&quot;&gt;컴파일&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;소스 : 프로그래밍 언어로 작성된 텍스트 파일&lt;/li&gt;
-  &lt;li&gt;컴파일 : 소스 파일을 컴퓨터가 이해할 수 있는 기계어로 만드는 과정
-    &lt;ul&gt;
-      &lt;li&gt;소스 파일 확장자와 컴파일 된 파일의 확장자
-        &lt;ul&gt;
-          &lt;li&gt;자바 : .java -&amp;gt; .class&lt;/li&gt;
-          &lt;li&gt;C : .c -&amp;gt; .obj-&amp;gt; .exe&lt;/li&gt;
-          &lt;li&gt;C++ : .cpp -&amp;gt; .obj -&amp;gt; .exe&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;자바의-목적&quot;&gt;자바의 목적&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;플랫폼 호환성 문제 해결
-    &lt;ul&gt;
-      &lt;li&gt;기존 언어로 작성된 프로그램은 PC, 유닉스, 메인 프레임 등 플랫폼 간에 호환성 없음&lt;/li&gt;
-      &lt;li&gt;소스를 다시 컴파일하거나 프로그램을 재 작성해야 하는 단점&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;플랫폼 독립적인 언어 개발
-    &lt;ul&gt;
-      &lt;li&gt;모든 플랫폼에서 호환성을 갖는 프로그래밍 언어 필요&lt;/li&gt;
-      &lt;li&gt;네트워크, 특히 웹에 최적화된 프로그래밍 언어의 필요성 대두&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;메모리 사용량이 적고 다양한 플랫폼을 가지는 가전 제품에 적용
-    &lt;ul&gt;
-      &lt;li&gt;가전 제품 : 작은 량의 메모리를 가지는 제어 장치&lt;/li&gt;
-      &lt;li&gt;내장형 시스템 요구 충족&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;wora-write-once-run-anywhere&quot;&gt;WORA (Write Once Run Anywhere)&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;한번 작성된 코드는 모든 플랫폼에서 바로 실행되는 자바의 특징&lt;/li&gt;
-  &lt;li&gt;C/C++ 등 기존 언어가 가진 플랫폼 종속성 극복
-    &lt;ul&gt;
-      &lt;li&gt;OS, H/W에 상관없이 자바 프로그램이 동일하게 실행&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;네트워크에 연결된 어느 클라이언트에서나 실행
-    &lt;ul&gt;
-      &lt;li&gt;웹 브라우저, 분산 환경 지원&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;wora를-가능하게-하는-자바의-특징&quot;&gt;WORA를 가능하게 하는 자바의 특징&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;바이트 코드(byte code)
-    &lt;ul&gt;
-      &lt;li&gt;자바 소스를 컴파일한 목적 코드&lt;/li&gt;
-      &lt;li&gt;CPU에 종속적이지 않은 중립적인 코드&lt;/li&gt;
-      &lt;li&gt;JVM에 의해 해석되고 실행됨&lt;/li&gt;
-      &lt;li&gt;클래스 파일(.class)에 저장&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;JVM(Java Virtual Machine)
-    &lt;ul&gt;
-      &lt;li&gt;자바 바이트 코드를 실행하는 자바 가상 기계(소프트웨어)&lt;/li&gt;
-      &lt;li&gt;각기 다른 플랫폼에 설치&lt;/li&gt;
-      &lt;li&gt;동일한 자바 실행 환경 제공&lt;/li&gt;
-      &lt;li&gt;자바 가상 기계 자체는 플랫폼에 종속적
-        &lt;ul&gt;
-          &lt;li&gt;자바 가상 기계는 플랫폼마다 각각 작성됨&lt;/li&gt;
-          &lt;li&gt;예) 리눅스에서 작동하는 자바 가상 기계는 윈도우에서 작동하지 않음&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;자바 가상 기계 개발 및 공급
-        &lt;ul&gt;
-          &lt;li&gt;자바 개발사인 오라클 외 IBM, MS 등 다양한 회사에서 제작 공급&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;자바의-배포판&quot;&gt;자바의 배포판&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;JAVA SE
-    &lt;ul&gt;
-      &lt;li&gt;자바 표준 배포판(Standard Edition)&lt;/li&gt;
-      &lt;li&gt;데스크탑과 서버 응용 개발 플랫폼&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Java ME
-    &lt;ul&gt;
-      &lt;li&gt;자바 마이크로 배포판&lt;/li&gt;
-      &lt;li&gt;휴대 전화나 PDA, 셋톱박스 등 제한된 리소스를 갖는 하드웨어에서 응용 개발을 위한 플랫폼&lt;/li&gt;
-      &lt;li&gt;Java SE의 서브셋 + 임베디드 및 가전 제품을 위한 API 정의&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Java EE
-    &lt;ul&gt;
-      &lt;li&gt;자바를 이용한 다중 사용자, 기업용 응용 개발을 위한 플랫폼&lt;/li&gt;
-      &lt;li&gt;Java SE + 인터넷 기반의 서버사이드 컴퓨팅 관련 API 추가&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;자바-개발-환경&quot;&gt;자바 개발 환경&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;JRE(Java Runtime Environment)
-    &lt;ul&gt;
-      &lt;li&gt;자바 실행 환경&lt;/li&gt;
-      &lt;li&gt;JVM 포함&lt;/li&gt;
-      &lt;li&gt;자바 실행 환경만 필요한 경우 JRE만 따로 다운 가능&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;JDK(Java Development Kit)
-    &lt;ul&gt;
-      &lt;li&gt;자바 응용 개발 환경&lt;/li&gt;
-      &lt;li&gt;개발에 필요한 도구 포함&lt;/li&gt;
-      &lt;li&gt;컴파일러, JRE (Java Runtime Environment), 클래스 라이브러리, 샘플 등 포함&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;JDK의 bin 디렉터리에 포함된 주요 개발 도구
-    &lt;ul&gt;
-      &lt;li&gt;javac : 자바 소스를 바이트 코드로 변환하는 컴파일러&lt;/li&gt;
-      &lt;li&gt;java : jre의 bin 디렉터리에도 있는 자바 응용프로그램 실행기&lt;/li&gt;
-      &lt;li&gt;javadoc : 자바소스 프로그램으로부터 HTML형식의 API 도큐먼트 생성&lt;/li&gt;
-      &lt;li&gt;jar : 자바클래스 파일을 압축한 자바 아카이브 파일 (JAR)의 생성하고 관리하는 유틸리티&lt;/li&gt;
-      &lt;li&gt;jdb : 자바 디버거&lt;/li&gt;
-      &lt;li&gt;javap : 클래스 파일이 담긴 바이트 코드를 자바 소스와 함께 보여주는 디어셈블러&lt;/li&gt;
-      &lt;li&gt;appletviewer - 웹 브라우저 없이 애플릿 응용프로그램을 실행하고 디버깅하는 유틸리티&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;자바 API ( Application Programming Interface )
-    &lt;ul&gt;
-      &lt;li&gt;JDK에 포함된 클래스 라이브러리
-        &lt;ul&gt;
-          &lt;li&gt;주요한 기능들을 미리 구현한 클래스 라이브러리의 집합&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;개발자는 API를 이용하여 쉽고 빠르게 자바 프로그램 개발
-        &lt;ul&gt;
-          &lt;li&gt;&lt;a href=&quot;http://docs.oracle.com/javase/8/docs/api&quot;&gt;API&lt;/a&gt;에서 정의한 규격에 따라 클래스 사용&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;자바 통합 개발 환경 ( IDE – Integrated Development Environment )
-    &lt;ul&gt;
-      &lt;li&gt;편집, 컴파일, 디버깅을 한번에 할 수 있는 통합된 개발 환경&lt;/li&gt;
-      &lt;li&gt;이클립스(Eclipse)
-        &lt;ul&gt;
-          &lt;li&gt;자바 응용 프로그램 개발을 위한 통합 개발 환경&lt;/li&gt;
-          &lt;li&gt;IBM에 의해 개발된 오픈 소스 프로젝트&lt;/li&gt;
-          &lt;li&gt;&lt;a href=&quot;http://www.eclipse.org/downloads/&quot;&gt;이클립스 다운로드&lt;/a&gt;&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;이클립스 사용시 주의 사항
-        &lt;ul&gt;
-          &lt;li&gt;설치된 JRE가 32bit 또는 64bit version 에 따라, 이클립스도 동일한 package를 사용하여야 한다.&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h1 id=&quot;jdbc&quot;&gt;JDBC&lt;/h1&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;관계형 데이터베이스에 저장된 데이터를 접근 및 조작할 수 있게 하는 자바 API&lt;/li&gt;
-  &lt;li&gt;자바 응용프로그램이 다양한 DBMS에 대해 일관된 API로 데이터베이스 연결, 검색, 수정, 관리를 할 수 있게 한다.&lt;/li&gt;
-  &lt;li&gt;자바 응용프로그램 개발자는 DBMS의 종류에 관계없이 JDBC API만을 이용하면 된다.&lt;/li&gt;
-  &lt;li&gt;JDBC 구조도&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/img/database/2020/05/2020-05-05-database-56-01.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;JDBC 드라이버 매니저
-    &lt;ul&gt;
-      &lt;li&gt;자바 API에서 지원&lt;/li&gt;
-      &lt;li&gt;JDBC 드라이버를 로드&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;JDBC 드라이버
-    &lt;ul&gt;
-      &lt;li&gt;전용 프로토콜을 이용하여 DBMS에 접근&lt;/li&gt;
-      &lt;li&gt;DBMS마다 고유한 JDBC 드라이버를 제공&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;www.mysql.com/downloads/&quot;&gt;JDBC 드라이버 다운로드&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-</description>
-        <pubDate>Tue, 05 May 2020 00:00:00 +0900</pubDate>
-        <link>https://m-veloper.github.io/devlog/2020/05/05/database-56/</link>
-        <guid isPermaLink="true">https://m-veloper.github.io/devlog/2020/05/05/database-56/</guid>
-        
-        <category>database</category>
-        
-        <category>mysql</category>
         
         
         <category>devlog</category>
