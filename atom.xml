@@ -2,9 +2,9 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
  <title>슬기로운 개발 생활</title>
- <link href="http://localhost:4000/atom.xml" rel="self"/>
- <id>http://localhost:4000</id>
- <updated>2020-05-28T00:16:37+09:00</updated>
+ <link href="https://m-veloper.github.io/atom.xml" rel="self"/>
+ <id>https://m-veloper.github.io</id>
+ <updated>2020-05-28T10:51:12+09:00</updated>
  <author>
    <name>m-veloper</name>
    <uri>https://m-veloper.github.io</uri>
@@ -15,8 +15,8 @@
 
  <entry>
    <title>[Javascript/ECMAScript6/ES6] 단축 평가 (short-circuit evaluation) 논리 계산법</title>
-   <link href="http://localhost:4000/devlog/2020/05/28/ECMAScript6-13/"/>
-   <id>http://localhost:4000/devlog/2020/05/28/ECMAScript6-13</id>
+   <link href="https://m-veloper.github.io/devlog/2020/05/28/ECMAScript6-13/"/>
+   <id>https://m-veloper.github.io/devlog/2020/05/28/ECMAScript6-13</id>
    <updated>2020-05-28T00:00:00+09:00</updated>
    <content type="html">&lt;p&gt;&lt;img src=&quot;/assets/img/ECMAScript6/2020-05-28-ECMAScript6-13.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt; &lt;blockquote&gt; &lt;p&gt;이글은 “벨로퍼트”님의 동영상 강의를 보고 정리한 내용입니다.&lt;/p&gt; &lt;/blockquote&gt; &lt;p&gt;&lt;br /&gt;&lt;/p&gt; &lt;h1 id=&quot;단축-평가-short-circuit-evaluation-논리-계산법&quot;&gt;단축 평가 (short-circuit evaluation) 논리 계산법&lt;/h1&gt; &lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// true&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// false&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;...</content>
  </entry>
@@ -25,8 +25,8 @@
 
  <entry>
    <title>[Javascript/ECMAScript6/ES6] Truthy and Falsy</title>
-   <link href="http://localhost:4000/devlog/2020/05/27/ECMAScript6-12/"/>
-   <id>http://localhost:4000/devlog/2020/05/27/ECMAScript6-12</id>
+   <link href="https://m-veloper.github.io/devlog/2020/05/27/ECMAScript6-12/"/>
+   <id>https://m-veloper.github.io/devlog/2020/05/27/ECMAScript6-12</id>
    <updated>2020-05-27T00:00:00+09:00</updated>
    <content type="html">&lt;p&gt;&lt;img src=&quot;/assets/img/ECMAScript6/2020-05-27-ECMAScript6-12.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt; &lt;blockquote&gt; &lt;p&gt;이글은 “벨로퍼트”님의 동영상 강의를 보고 정리한 내용입니다.&lt;/p&gt; &lt;/blockquote&gt; &lt;p&gt;&lt;br /&gt;&lt;/p&gt; &lt;h1 id=&quot;truthy-and-falsy&quot;&gt;Truthy and Falsy&lt;/h1&gt; &lt;p&gt;이것은 자바스크립트 문법까지는 아니지만, 알아둬야 하는 개념입니다.&lt;/p&gt; &lt;p&gt;Truthy: true 같은거… Falsy: false 같은거…&lt;/p&gt; &lt;p&gt;라고 이해를 하면 되는데요, 예를 들어서 다음과 같은 함수가 있다고 가정해봅시다.&lt;/p&gt; &lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span...</content>
  </entry>
@@ -35,8 +35,8 @@
 
  <entry>
    <title>[Javascript/ECMAScript6/ES6] 삼항 연산자</title>
-   <link href="http://localhost:4000/devlog/2020/05/26/ECMAScript6-11/"/>
-   <id>http://localhost:4000/devlog/2020/05/26/ECMAScript6-11</id>
+   <link href="https://m-veloper.github.io/devlog/2020/05/26/ECMAScript6-11/"/>
+   <id>https://m-veloper.github.io/devlog/2020/05/26/ECMAScript6-11</id>
    <updated>2020-05-26T00:00:00+09:00</updated>
    <content type="html">&lt;p&gt;&lt;img src=&quot;/assets/img/ECMAScript6/2020-05-26-ECMAScript6-11.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt; &lt;blockquote&gt; &lt;p&gt;이글은 “벨로퍼트”님의 동영상 강의를 보고 정리한 내용입니다.&lt;/p&gt; &lt;/blockquote&gt; &lt;p&gt;&lt;br /&gt;&lt;/p&gt; &lt;h1 id=&quot;삼항-연산자&quot;&gt;삼항 연산자&lt;/h1&gt; &lt;p&gt;이 문법은 ES6 문법은 아닙니다. 참고로 해주세요.&lt;/p&gt; &lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;array&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[];&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;text&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;''&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span...</content>
  </entry>
@@ -45,8 +45,8 @@
 
  <entry>
    <title>[Javascript/ECMAScript6/ES6] 프로토타입과 클래스</title>
-   <link href="http://localhost:4000/devlog/2020/05/25/ECMAScript6-10/"/>
-   <id>http://localhost:4000/devlog/2020/05/25/ECMAScript6-10</id>
+   <link href="https://m-veloper.github.io/devlog/2020/05/25/ECMAScript6-10/"/>
+   <id>https://m-veloper.github.io/devlog/2020/05/25/ECMAScript6-10</id>
    <updated>2020-05-25T00:00:00+09:00</updated>
    <content type="html">&lt;p&gt;&lt;img src=&quot;/assets/img/ECMAScript6/2020-05-25-ECMAScript6-10.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt; &lt;blockquote&gt; &lt;p&gt;이글은 “벨로퍼트”님의 동영상 강의를 보고 정리한 내용입니다.&lt;/p&gt; &lt;/blockquote&gt; &lt;p&gt;&lt;br /&gt;&lt;/p&gt; &lt;h1 id=&quot;프로토타입과-클래스&quot;&gt;프로토타입과 클래스&lt;/h1&gt; &lt;p&gt;&lt;br /&gt;&lt;/p&gt; &lt;h2 id=&quot;객체-생성자&quot;&gt;객체 생성자&lt;/h2&gt; &lt;p&gt;객체 생성자는 함수를 통해서 새로운 객체를 만들고 그 안에 넣고 싶은 값 혹은 함수들을 구현 할 수 있게 해줍니다.&lt;/p&gt; &lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Animal&lt;/span&gt;&lt;span...</content>
  </entry>
@@ -55,8 +55,8 @@
 
  <entry>
    <title>[Javascript/ECMAScript6/ES6] 배열 내장함수</title>
-   <link href="http://localhost:4000/devlog/2020/05/24/ECMAScript6-09/"/>
-   <id>http://localhost:4000/devlog/2020/05/24/ECMAScript6-09</id>
+   <link href="https://m-veloper.github.io/devlog/2020/05/24/ECMAScript6-09/"/>
+   <id>https://m-veloper.github.io/devlog/2020/05/24/ECMAScript6-09</id>
    <updated>2020-05-24T00:00:00+09:00</updated>
    <content type="html">&lt;p&gt;&lt;img src=&quot;/assets/img/ECMAScript6/2020-05-24-ECMAScript6-09.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt; &lt;blockquote&gt; &lt;p&gt;이글은 “벨로퍼트”님의 동영상 강의를 보고 정리한 내용입니다.&lt;/p&gt; &lt;/blockquote&gt; &lt;p&gt;&lt;br /&gt;&lt;/p&gt; &lt;h1 id=&quot;배열-내장함수&quot;&gt;배열 내장함수&lt;/h1&gt; &lt;p&gt;&lt;br /&gt;&lt;/p&gt; &lt;h2 id=&quot;foreach&quot;&gt;forEach&lt;/h2&gt; &lt;p&gt;forEach 는 가장 쉬운 배열 내장함수입니다. 기존에 우리가 배웠던 for 문을 대체 시킬 수 있습니다.&lt;/p&gt; &lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;superheroes&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span...</content>
  </entry>
@@ -65,8 +65,8 @@
 
  <entry>
    <title>[Javascript/ECMAScript6/ES6] 반복문</title>
-   <link href="http://localhost:4000/devlog/2020/05/23/ECMAScript6-08/"/>
-   <id>http://localhost:4000/devlog/2020/05/23/ECMAScript6-08</id>
+   <link href="https://m-veloper.github.io/devlog/2020/05/23/ECMAScript6-08/"/>
+   <id>https://m-veloper.github.io/devlog/2020/05/23/ECMAScript6-08</id>
    <updated>2020-05-23T00:00:00+09:00</updated>
    <content type="html">&lt;p&gt;&lt;img src=&quot;/assets/img/ECMAScript6/2020-05-23-ECMAScript6-08.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt; &lt;blockquote&gt; &lt;p&gt;이글은 “벨로퍼트”님의 동영상 강의를 보고 정리한 내용입니다.&lt;/p&gt; &lt;/blockquote&gt; &lt;p&gt;&lt;br /&gt;&lt;/p&gt; &lt;h1 id=&quot;반복문&quot;&gt;반복문&lt;/h1&gt; &lt;p&gt;반복문은 특정 작업을 반복적으로 할 때 사용할 수 있는 구문입니다.&lt;/p&gt; &lt;p&gt;&lt;br /&gt;&lt;/p&gt; &lt;h2 id=&quot;for&quot;&gt;for&lt;/h2&gt; &lt;p&gt;for 문은 가장 기본적인 반복문입니다. 특정 값에 변화를 주어가면서 우리가 정한 조건이 만족된다면 계속 반복합니다.&lt;/p&gt; &lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre...</content>
  </entry>
@@ -75,8 +75,8 @@
 
  <entry>
    <title>[Javascript/ECMAScript6/ES6] 배열</title>
-   <link href="http://localhost:4000/devlog/2020/05/22/ECMAScript6-07/"/>
-   <id>http://localhost:4000/devlog/2020/05/22/ECMAScript6-07</id>
+   <link href="https://m-veloper.github.io/devlog/2020/05/22/ECMAScript6-07/"/>
+   <id>https://m-veloper.github.io/devlog/2020/05/22/ECMAScript6-07</id>
    <updated>2020-05-22T00:00:00+09:00</updated>
    <content type="html">&lt;p&gt;&lt;img src=&quot;/assets/img/ECMAScript6/2020-05-22-ECMAScript6-07.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt; &lt;blockquote&gt; &lt;p&gt;이글은 “벨로퍼트”님의 동영상 강의를 보고 정리한 내용입니다.&lt;/p&gt; &lt;/blockquote&gt; &lt;p&gt;&lt;br /&gt;&lt;/p&gt; &lt;h1 id=&quot;배열&quot;&gt;배열&lt;/h1&gt; &lt;p&gt;객체는 한 변수 혹은 상수에 여러가지 정보를 담기 위함이였다면, 배열은 여러개의 항목들이 들어있는 리스트와 같습니다.&lt;/p&gt; &lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;array&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span...</content>
  </entry>
@@ -85,8 +85,8 @@
 
  <entry>
    <title>[Javascript/ECMAScript6/ES6] 객체</title>
-   <link href="http://localhost:4000/devlog/2020/05/21/ECMAScript6-06/"/>
-   <id>http://localhost:4000/devlog/2020/05/21/ECMAScript6-06</id>
+   <link href="https://m-veloper.github.io/devlog/2020/05/21/ECMAScript6-06/"/>
+   <id>https://m-veloper.github.io/devlog/2020/05/21/ECMAScript6-06</id>
    <updated>2020-05-21T00:00:00+09:00</updated>
    <content type="html">&lt;p&gt;&lt;img src=&quot;/assets/img/ECMAScript6/2020-05-21-ECMAScript6-06.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt; &lt;blockquote&gt; &lt;p&gt;이글은 “벨로퍼트”님의 동영상 강의를 보고 정리한 내용입니다.&lt;/p&gt; &lt;/blockquote&gt; &lt;p&gt;&lt;br /&gt;&lt;/p&gt; &lt;h1 id=&quot;객체&quot;&gt;객체&lt;/h1&gt; &lt;p&gt;객체는 우리가 변수 혹은 상수를 사용하게 될 때 하나의 이름에 여러 종류의 값을 넣을 수 있게 해줍니다.&lt;/p&gt; &lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;dog&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span...</content>
  </entry>
@@ -95,8 +95,8 @@
 
  <entry>
    <title>[유닉스] 시스템 백업과 복구 명령어</title>
-   <link href="http://localhost:4000/devlog/2020/05/20/unix-55/"/>
-   <id>http://localhost:4000/devlog/2020/05/20/unix-55</id>
+   <link href="https://m-veloper.github.io/devlog/2020/05/20/unix-55/"/>
+   <id>https://m-veloper.github.io/devlog/2020/05/20/unix-55</id>
    <updated>2020-05-20T00:00:00+09:00</updated>
    <content type="html">&lt;p&gt;&lt;img src=&quot;/assets/img/unix/2020-05-20-unix-55.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt; &lt;h1 id=&quot;시스템-백업과-복구-명령어&quot;&gt;시스템 백업과 복구 명령어&lt;/h1&gt; &lt;p&gt;&lt;br /&gt;&lt;/p&gt; &lt;h3 id=&quot;테이프에-파일-보관--tar&quot;&gt;테이프에 파일 보관 : tar&lt;/h3&gt; &lt;ul&gt; &lt;li&gt;tar 명령은 기본적으로 파일을 자기 테이프(magnetic tape)에 보관하도록 특별히 설계되었음&lt;/li&gt; &lt;li&gt;현재는 여러 개의 파일들을 하나의 파일로 묶는 용도로 더 많이 쓰이고 있음&lt;/li&gt; &lt;li&gt;tar 명령의 특징은 단순함, 신뢰성, 안정성, 자기 테이프 장치 이외의...</content>
  </entry>
@@ -105,8 +105,8 @@
 
  <entry>
    <title>[Javascript/ECMAScript6/ES6] 함수</title>
-   <link href="http://localhost:4000/devlog/2020/05/20/ECMAScript6-05/"/>
-   <id>http://localhost:4000/devlog/2020/05/20/ECMAScript6-05</id>
+   <link href="https://m-veloper.github.io/devlog/2020/05/20/ECMAScript6-05/"/>
+   <id>https://m-veloper.github.io/devlog/2020/05/20/ECMAScript6-05</id>
    <updated>2020-05-20T00:00:00+09:00</updated>
    <content type="html">&lt;p&gt;&lt;img src=&quot;/assets/img/ECMAScript6/2020-05-20-ECMAScript6-05.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt; &lt;blockquote&gt; &lt;p&gt;이글은 “벨로퍼트”님의 동영상 강의를 보고 정리한 내용입니다.&lt;/p&gt; &lt;/blockquote&gt; &lt;p&gt;&lt;br /&gt;&lt;/p&gt; &lt;h1 id=&quot;함수&quot;&gt;함수&lt;/h1&gt; &lt;p&gt;함수는, 특정 코드를 하나의 명령으로 실행 할 수 있게 해주는 기능입니다.&lt;/p&gt; &lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;b&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;...</content>
  </entry>
