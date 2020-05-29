@@ -1341,24 +1341,28 @@
 
 <p>한번, 우리가 원의 넓이를 구하는 함수를 만들어보겠습니다.</p>
 
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">calculateCircleArea</span><span class="p">(</span><span class="nx">r</span><span class="p">)</span> <span class="p">{</span>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="kd">function</span> <span class="nx">calculateCircleArea</span><span class="p">(</span><span class="nx">r</span><span class="p">)</span> <span class="p">{</span>
   <span class="k">return</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">PI</span> <span class="o">*</span> <span class="nx">r</span> <span class="o">*</span> <span class="nx">r</span><span class="p">;</span>
 <span class="p">}</span>
 
 <span class="kd">const</span> <span class="nx">area</span> <span class="o">=</span> <span class="nx">calculateCircleArea</span><span class="p">(</span><span class="mi">4</span><span class="p">);</span>
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">area</span><span class="p">);</span> <span class="c1">// 50.26548245743669</span>
+
 </code></pre></div></div>
 
 <p>여기서 Math.PI 는 원주율 파이(π) 값을 가르킵니다.</p>
 
 <p>만약 우리가 이 함수에 r 값을 넣어주지 않으면 어떤 결과가 나타날까요?</p>
 
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">calculateCircleArea</span><span class="p">(</span><span class="nx">r</span><span class="p">)</span> <span class="p">{</span>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="kd">function</span> <span class="nx">calculateCircleArea</span><span class="p">(</span><span class="nx">r</span><span class="p">)</span> <span class="p">{</span>
   <span class="k">return</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">PI</span> <span class="o">*</span> <span class="nx">r</span> <span class="o">*</span> <span class="nx">r</span><span class="p">;</span>
 <span class="p">}</span>
 
 <span class="kd">const</span> <span class="nx">area</span> <span class="o">=</span> <span class="nx">calculateCircleArea</span><span class="p">();</span>
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">area</span><span class="p">);</span> <span class="c1">// NaN</span>
+
 </code></pre></div></div>
 
 <p>결과는 NaN 이 나옵니다. Not a Number 라는 의미로, 우리가 undefined * undefined 이렇게 숫자가 아닌 값에 곱셈을 하니까 이상한 결과물이 나와버렸습니다.</p>
@@ -1367,31 +1371,37 @@
 
 <p>우리가 지금까지 배운 것들을 활용하면 이렇게 작성 할 수 있습니다.</p>
 
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">calculateCircleArea</span><span class="p">(</span><span class="nx">r</span><span class="p">)</span> <span class="p">{</span>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="kd">function</span> <span class="nx">calculateCircleArea</span><span class="p">(</span><span class="nx">r</span><span class="p">)</span> <span class="p">{</span>
   <span class="kd">const</span> <span class="nx">radius</span> <span class="o">=</span> <span class="nx">r</span> <span class="o">||</span> <span class="mi">1</span><span class="p">;</span>
   <span class="k">return</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">PI</span> <span class="o">*</span> <span class="nx">radius</span> <span class="o">*</span> <span class="nx">radius</span><span class="p">;</span>
 <span class="p">}</span>
 
 <span class="kd">const</span> <span class="nx">area</span> <span class="o">=</span> <span class="nx">calculateCircleArea</span><span class="p">();</span>
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">area</span><span class="p">);</span> <span class="c1">// 3.14159265358979</span>
+
 </code></pre></div></div>
 
 <p>ES5 시절엔 위와 같이 하는게 최선이였는데, ES6 에선 다음과 같이 할 수 있게 되었습니다.</p>
 
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">calculateCircleArea</span><span class="p">(</span><span class="nx">r</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="kd">function</span> <span class="nx">calculateCircleArea</span><span class="p">(</span><span class="nx">r</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
   <span class="k">return</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">PI</span> <span class="o">*</span> <span class="nx">r</span> <span class="o">*</span> <span class="nx">r</span><span class="p">;</span>
 <span class="p">}</span>
 
 <span class="kd">const</span> <span class="nx">area</span> <span class="o">=</span> <span class="nx">calculateCircleArea</span><span class="p">();</span>
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">area</span><span class="p">);</span> <span class="c1">// 3.141592653589793</span>
+
 </code></pre></div></div>
 
 <p>함수의 기본 파라미터 문법은 화살표 함수에서도 사용 할 수 있습니다.</p>
 
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">calculateCircleArea</span> <span class="o">=</span> <span class="p">(</span><span class="nx">r</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">PI</span> <span class="o">*</span> <span class="nx">r</span> <span class="o">*</span> <span class="nx">r</span><span class="p">;</span>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="kd">const</span> <span class="nx">calculateCircleArea</span> <span class="o">=</span> <span class="p">(</span><span class="nx">r</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">PI</span> <span class="o">*</span> <span class="nx">r</span> <span class="o">*</span> <span class="nx">r</span><span class="p">;</span>
 
 <span class="kd">const</span> <span class="nx">area</span> <span class="o">=</span> <span class="nx">calculateCircleArea</span><span class="p">();</span>
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">area</span><span class="p">);</span> <span class="c1">// 3.141592653589793</span>
+
 </code></pre></div></div>
 
 
