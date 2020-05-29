@@ -1,6 +1,14 @@
 [
 
 {
+"title"    : "[Javascript/ECMAScript6/ES6] 조건문 더 스마트하게 사용하기",
+"category" : "",
+"tags"     : "ECMAScript6, ES6, ES2015",
+"url"      : "/devlog/2020/05/30/ECMAScript6-15/",
+"date"     : "2020-05-30 00:00:00 +0900"
+} ,
+
+{
 "title"    : "[Javascript/ECMAScript6/ES6] 함수의 기본 파라미터",
 "category" : "",
 "tags"     : "ECMAScript6, ES6, ES2015",
@@ -779,7 +787,7 @@
 {
 "title"    : "[JSTL] 콤마(,) 또는 소수점 사용법",
 "category" : "",
-"tags"     : "web, jstl, spring",
+"tags"     : "web, java, jstl, spring",
 "url"      : "/tip/2020/03/30/tip-jstl-03/",
 "date"     : "2020-03-30 00:00:00 +0900"
 } ,
@@ -955,7 +963,7 @@
 {
 "title"    : "[JSTL] &lt; c:choose &gt;&lt; c:when &gt; 다중(중복, 여러번) 사용 하기 (&lt; c:choose &gt;&lt; c:when &gt;안에 &lt; c:choose &gt;&lt;c:when &gt;)",
 "category" : "",
-"tags"     : "web, jstl, spring",
+"tags"     : "web, java, jstl, spring",
 "url"      : "/tip/2020/03/18/tip-jstl-02/",
 "date"     : "2020-03-18 00:00:00 +0900"
 } ,
@@ -1211,7 +1219,7 @@
 {
 "title"    : "[JSTL] &lt; c:if &gt;, &lt; c:choose &gt; 태그 사용법",
 "category" : "",
-"tags"     : "web, jstl, spring",
+"tags"     : "web, java, jstl, spring",
 "url"      : "/tip/2020/03/04/tip-jstl-01/",
 "date"     : "2020-03-04 00:00:00 +0900"
 } ,
