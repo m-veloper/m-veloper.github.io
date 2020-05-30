@@ -1,6 +1,14 @@
 [
 
 {
+"title"    : "[Javascript/ECMAScript6/ES6] 비구조화 할당 (구조분해) 문법",
+"category" : "",
+"tags"     : "ECMAScript6, ES6, ES2015",
+"url"      : "/devlog/2020/05/31/ECMAScript6-16/",
+"date"     : "2020-05-31 00:00:00 +0900"
+} ,
+
+{
 "title"    : "[Javascript/ECMAScript6/ES6] 조건문 더 스마트하게 사용하기",
 "category" : "",
 "tags"     : "ECMAScript6, ES6, ES2015",
