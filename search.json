@@ -1,6 +1,14 @@
 [
 
 {
+"title"    : "[Javascript/ECMAScript6/ES6] spread 와 rest",
+"category" : "",
+"tags"     : "ECMAScript6, ES6, ES2015",
+"url"      : "/devlog/2020/06/01/ECMAScript6-17/",
+"date"     : "2020-06-01 00:00:00 +0900"
+} ,
+
+{
 "title"    : "[Javascript/ECMAScript6/ES6] 비구조화 할당 (구조분해) 문법",
 "category" : "",
 "tags"     : "ECMAScript6, ES6, ES2015",
