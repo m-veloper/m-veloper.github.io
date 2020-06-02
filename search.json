@@ -1,6 +1,14 @@
 [
 
 {
+"title"    : "[Javascript/ECMAScript6/ES6] Promise",
+"category" : "",
+"tags"     : "ECMAScript6, ES6, ES2015",
+"url"      : "/devlog/2020/06/03/ECMAScript6-19/",
+"date"     : "2020-06-03 00:00:00 +0900"
+} ,
+
+{
 "title"    : "[Javascript/ECMAScript6/ES6] Scope 와 Hoisting 에 대한 이해",
 "category" : "",
 "tags"     : "ECMAScript6, ES6, ES2015",
