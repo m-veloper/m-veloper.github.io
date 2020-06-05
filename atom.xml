@@ -4,12 +4,22 @@
  <title>슬기로운 개발 생활</title>
  <link href="https://m-veloper.github.io/atom.xml" rel="self"/>
  <id>https://m-veloper.github.io</id>
- <updated>2020-06-05T00:18:22+09:00</updated>
+ <updated>2020-06-06T00:24:35+09:00</updated>
  <author>
    <name>m-veloper</name>
    <uri>https://m-veloper.github.io</uri>
    <email>m_veloper@naver.com</email>
  </author>
+
+ 
+
+ <entry>
+   <title>[Javascript/ECMAScript6/ES6] 모달 만들기</title>
+   <link href="https://m-veloper.github.io/devlog/2020/06/06/ECMAScript6-22/"/>
+   <id>https://m-veloper.github.io/devlog/2020/06/06/ECMAScript6-22</id>
+   <updated>2020-06-06T00:00:00+09:00</updated>
+   <content type="html">&lt;p&gt;&lt;img src=&quot;/assets/img/ECMAScript6/2020-06-06-ECMAScript6-22.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt; &lt;blockquote&gt; &lt;p&gt;이글은 “벨로퍼트”님의 동영상 강의를 보고 정리한 내용입니다.&lt;/p&gt; &lt;/blockquote&gt; &lt;p&gt;&lt;br /&gt;&lt;/p&gt; &lt;h1 id=&quot;모달-만들기&quot;&gt;모달 만들기&lt;/h1&gt; &lt;p&gt;모달이란, 다음 이미지와 같이 기존의 내용을 가리고 나타나는 메시지박스 같은 형태의 UI 를 의미합니다.&lt;/p&gt; &lt;p&gt;&lt;img src=&quot;/assets/img/ECMAScript6/2020-06-06-ECMAScript6-22-01.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt; &lt;p&gt;이번에는 이런 UI 를 HTML 과 JavaScript 를 사용하여 만들어보겠습니다.&lt;/p&gt; &lt;p&gt;우선, Codesandbox 에서 새로운...</content>
+ </entry>
 
  
 
@@ -99,16 +109,6 @@
    <id>https://m-veloper.github.io/devlog/2020/05/28/ECMAScript6-13</id>
    <updated>2020-05-28T00:00:00+09:00</updated>
    <content type="html">&lt;p&gt;&lt;img src=&quot;/assets/img/ECMAScript6/2020-05-28-ECMAScript6-13.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt; &lt;blockquote&gt; &lt;p&gt;이글은 “벨로퍼트”님의 동영상 강의를 보고 정리한 내용입니다.&lt;/p&gt; &lt;/blockquote&gt; &lt;p&gt;&lt;br /&gt;&lt;/p&gt; &lt;h1 id=&quot;단축-평가-short-circuit-evaluation-논리-계산법&quot;&gt;단축 평가 (short-circuit evaluation) 논리 계산법&lt;/h1&gt; &lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// true&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// false&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;...</content>
- </entry>
-
- 
-
- <entry>
-   <title>[Javascript/ECMAScript6/ES6] Truthy and Falsy</title>
-   <link href="https://m-veloper.github.io/devlog/2020/05/27/ECMAScript6-12/"/>
-   <id>https://m-veloper.github.io/devlog/2020/05/27/ECMAScript6-12</id>
-   <updated>2020-05-27T00:00:00+09:00</updated>
-   <content type="html">&lt;p&gt;&lt;img src=&quot;/assets/img/ECMAScript6/2020-05-27-ECMAScript6-12.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt; &lt;blockquote&gt; &lt;p&gt;이글은 “벨로퍼트”님의 동영상 강의를 보고 정리한 내용입니다.&lt;/p&gt; &lt;/blockquote&gt; &lt;p&gt;&lt;br /&gt;&lt;/p&gt; &lt;h1 id=&quot;truthy-and-falsy&quot;&gt;Truthy and Falsy&lt;/h1&gt; &lt;p&gt;이것은 자바스크립트 문법까지는 아니지만, 알아둬야 하는 개념입니다.&lt;/p&gt; &lt;p&gt;Truthy: true 같은거… Falsy: false 같은거…&lt;/p&gt; &lt;p&gt;라고 이해를 하면 되는데요, 예를 들어서 다음과 같은 함수가 있다고 가정해봅시다.&lt;/p&gt; &lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span...</content>
  </entry>
 
  
