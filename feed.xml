@@ -5,9 +5,90 @@
     <description></description>
     <link>https://m-veloper.github.io/</link>
     <atom:link href="https://m-veloper.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 06 Jun 2020 00:24:35 +0900</pubDate>
-    <lastBuildDate>Sat, 06 Jun 2020 00:24:35 +0900</lastBuildDate>
+    <pubDate>Sun, 07 Jun 2020 01:03:14 +0900</pubDate>
+    <lastBuildDate>Sun, 07 Jun 2020 01:03:14 +0900</lastBuildDate>
     <generator>Jekyll v3.8.6</generator>
+    
+      <item>
+        <title>[CSS] 모바일(반응형) 에서 좌,우가 움직이는 현상, 수평 스크롤 없애기</title>
+        <description>&lt;p&gt;&lt;img src=&quot;/assets/img/css/2020-06-07-tip-css-04.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;모바일 웹에서 수평 스크롤(가로 스크롤)이 있을 경우 위의 그림과 같이 
+화면을 터치하여 왼쪽으로 이동시키면 사이트가 좌우로 움직이게 되는 문제 발생.&lt;/p&gt;
+
+&lt;p&gt;모바일 기기에서 수평 스크롤을 비활성화하여 이 문제를 해결할 수 있습니다.&lt;/p&gt;
+
+&lt;p&gt;비슷한 현상이 생기는경우 아래와 같이 수정해보길 바랍니다.&lt;/p&gt;
+
+&lt;p&gt;우선 다음 메타 태그를 header에 추가합니다. (이미 있는 경우 기존 것을 대체합니다.)&lt;/p&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;meta&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;viewport&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;content=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;어떤 사용자는 content=”initial-scale=1.0; maximum-scale=1.0;를 삭제하니 문제가 해결된다고도 하네요.&lt;/p&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;meta&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;viewport&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;content=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;width=device-width&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;meta&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;viewport&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;content=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;user-scalable=0;&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;아이폰 등 Apple iOS 기기에서 문제가 나타나는 경우 다음 메타 태그를 추가하도록 하도록 합니다.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;아이폰 문제 확인해보기 : &lt;a href=&quot;https://stackoverflow.com/questions/12885625/prevent-horizontal-scroll-in-ios-webapp&quot;&gt;Prevent horizontal scroll in iOS WebApp&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;meta&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;content=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;yes&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;apple-mobile-web-app-capable&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;meta&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;content=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;minimum-scale=1.0, width=device-width, maximum-scale=1, user-scalable=no&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;viewport&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;저는 위의 방법으로도 모바일 기기에서 가로 스크롤이 없어지지 않았습니다.&lt;/p&gt;
+
+&lt;p&gt;대신 다음과 같은 CSS 코드를 스타일시트에 추가하니 문제가 해결되었습니다&lt;/p&gt;
+
+&lt;div class=&quot;language-css highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+&lt;span class=&quot;nt&quot;&gt;html&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;body&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+&lt;span class=&quot;nl&quot;&gt;max-width&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;100%&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;nl&quot;&gt;overflow-x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;hidden&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;이외에도 다음과 같은 CSS 코드를 시도해볼 수 있습니다.&lt;/p&gt;
+
+&lt;div class=&quot;language-css highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+&lt;span class=&quot;nt&quot;&gt;body&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+&lt;span class=&quot;nl&quot;&gt;overflow&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;hidden&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;nl&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;100%&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;nl&quot;&gt;-webkit-box-sizing&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;border-box&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;nl&quot;&gt;-moz-box-sizing&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;border-box&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;nl&quot;&gt;box-sizing&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;border-box&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+</description>
+        <pubDate>Sun, 07 Jun 2020 00:00:00 +0900</pubDate>
+        <link>https://m-veloper.github.io/tip/2020/06/07/tip-css-04/</link>
+        <guid isPermaLink="true">https://m-veloper.github.io/tip/2020/06/07/tip-css-04/</guid>
+        
+        <category>web</category>
+        
+        <category>css</category>
+        
+        
+        <category>tip</category>
+        
+      </item>
     
       <item>
         <title>[Javascript/ECMAScript6/ES6] 모달 만들기</title>
@@ -6212,177 +6293,6 @@ Password:
         <pubDate>Thu, 14 May 2020 00:00:00 +0900</pubDate>
         <link>https://m-veloper.github.io/devlog/2020/05/14/unix-50/</link>
         <guid isPermaLink="true">https://m-veloper.github.io/devlog/2020/05/14/unix-50/</guid>
-        
-        <category>unix</category>
-        
-        
-        <category>devlog</category>
-        
-      </item>
-    
-      <item>
-        <title>[유닉스] 쉘 스크립트(Shell Script) 함수</title>
-        <description>&lt;p&gt;&lt;img src=&quot;/assets/img/unix/2020-05-13-unix-49.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h1 id=&quot;함수&quot;&gt;함수&lt;/h1&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;앨리어스를 이용하면 간단한 명령들을 하나의 다른 이름으로 재정의하여 사용할 수 있음&lt;/li&gt;
-  &lt;li&gt;명령을 조건에 따라 다르게 실행하거나 인자를 받아 처리해야 할 때 함수를 사용&lt;/li&gt;
-  &lt;li&gt;함수는 스크립트 안에서 정의하여 프로그래밍에 활용될 수도 있고, 사용자 초기화 파일에 정의하여 나만의 명령으로 사용할 수도 있음&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;함수의-정의&quot;&gt;함수의 정의&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;함수를 프롬프트에서 정의해 사용 가능&lt;/li&gt;
-  &lt;li&gt;함수의 본문을 나타내는 중괄호는 함수 이름 다음에 써도 되지만, 앞뒤에 공백을 주어 다른 문자열과 구분해야 함&lt;/li&gt;
-  &lt;li&gt;기본 형식&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-sql highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;functioname&lt;/span&gt;
-&lt;span class=&quot;err&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;err&quot;&gt;명령들&lt;/span&gt;
-&lt;span class=&quot;err&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;지우려는 파일을 휴지통으로 보내는 함수 만들기
-    &lt;ul&gt;
-      &lt;li&gt;휴지통으로 사용할 디렉토리 생성&lt;/li&gt;
-      &lt;li&gt;디렉토리 이름은 .으로 시작하여 숨김 파일로&lt;/li&gt;
-      &lt;li&gt;프롬프트에서 function 키워드와 함수 이름을 입력하면 프롬프트가 PS2 변수에 지정된 2차 프롬프트로 변경되어 다음 입력을 기다림&lt;/li&gt;
-      &lt;li&gt;{ } 사이에 원하는 명령을 입력&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-sql highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;err&quot;&gt;$&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mkdir&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;~/&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;TRASH&lt;/span&gt;
-&lt;span class=&quot;err&quot;&gt;$&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;trash&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;{&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mv&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;~/&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;TRASH&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;err&quot;&gt;$&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;함수가 올바로 정의되었는지 확인하려면 typeset –f 명령 이용
-    &lt;ul&gt;
-      &lt;li&gt;정의되어 있는 모든 함수의 목록을 보여줌&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-sql highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;err&quot;&gt;$&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;typeset&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;trash&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;err&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;mv&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;~/&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;TRASH&lt;/span&gt;
-&lt;span class=&quot;err&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;err&quot;&gt;$&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;함수-호출&quot;&gt;함수 호출&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;파일 생성 후 .TRASH 디렉토리로 삭제&lt;/li&gt;
-  &lt;li&gt;trash 함수를 .profile이나 .bashrc 파일에 저장하면 이후 로그인할 때마다 이 함수를 사용할 수 있음&lt;/li&gt;
-  &lt;li&gt;앨리어스를 이용해 rm 명령을 trash 함수로 바꾸어 놓을 수도 있음&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-sql highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;err&quot;&gt;$&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;touch&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;c&lt;/span&gt;
-&lt;span class=&quot;err&quot;&gt;$&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;trash&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;c&lt;/span&gt;
-&lt;span class=&quot;err&quot;&gt;$&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ls&lt;/span&gt;
-&lt;span class=&quot;err&quot;&gt;$&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ls&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;~/&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;TRASH&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;c&lt;/span&gt;
-&lt;span class=&quot;err&quot;&gt;$&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;함수의-종료--return-문&quot;&gt;함수의 종료 : return 문&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;함수 본문의 마지막 문장을 실행하거나 return 문을 만나면 종료&lt;/li&gt;
-  &lt;li&gt;함수의 종료 값은 return 명령으로 지정&lt;/li&gt;
-  &lt;li&gt;return 명령이 없으면 함수 안의 마지막 명령의 종료 상태 값이 함수의 종료 값이 되고 $? 변수에 저장됨&lt;/li&gt;
-  &lt;li&gt;예제 : 인자로 주어진 두 값을 더하는 스크립트&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-sql highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;err&quot;&gt;$&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;cat&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;–&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;test_add&lt;/span&gt;
-&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;#!/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;bin&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;bash&lt;/span&gt;
-&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;#&lt;/span&gt;
-&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;#&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;test&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;sum&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;function&lt;/span&gt;
-&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;#&lt;/span&gt;
-&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;
-&lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;sum&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;{&lt;/span&gt;
-&lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt;     &lt;span class=&quot;n&quot;&gt;typeset&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;sum&lt;/span&gt;
-&lt;span class=&quot;mi&quot;&gt;8&lt;/span&gt;
-&lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;     &lt;span class=&quot;p&quot;&gt;((&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;sum&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
-&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;sum&lt;/span&gt;
-&lt;span class=&quot;mi&quot;&gt;11&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;mi&quot;&gt;12&lt;/span&gt;
-&lt;span class=&quot;mi&quot;&gt;13&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;sum&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;
-&lt;span class=&quot;mi&quot;&gt;14&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;“$&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;?&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;”&lt;/span&gt;
-&lt;span class=&quot;err&quot;&gt;$&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;실행 결과&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-sql highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;err&quot;&gt;$&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;chmod&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;test_add&lt;/span&gt;
-&lt;span class=&quot;err&quot;&gt;$&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;test_add&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;
-&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;
-&lt;span class=&quot;err&quot;&gt;$&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;함수-삭제&quot;&gt;함수 삭제&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;unset 명령을 이용해 삭제&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-sql highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;err&quot;&gt;$&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;unset&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;–&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;f&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;trash&lt;/span&gt;
-&lt;span class=&quot;err&quot;&gt;$&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;typeset&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;
-&lt;span class=&quot;err&quot;&gt;$&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;함수-예제&quot;&gt;함수 예제&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;여러 곳의 target으로 파일을 복사하는 함수를 작성하여, temp란 파일을 백업 파일로 복사하는 쉘 프로그램
-    &lt;ul&gt;
-      &lt;li&gt;shift는 받아들인 인수를 하나씩 shift하는 명령&lt;/li&gt;
-      &lt;li&gt;shift 명령을 쓰면 두 번째 인수로 offset이 됨&lt;/li&gt;
-      &lt;li&gt;“$#”은 받아들인 인수의 개수&lt;/li&gt;
-      &lt;li&gt;“$1”은 첫 번재 인수, “$2”는 두 번째 인수&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-sql highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;err&quot;&gt;$&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;cat&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mcp&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;multicopy&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-&lt;span class=&quot;err&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;source&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;#&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;gt&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
-      &lt;span class=&quot;n&quot;&gt;cp&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;source&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;
-      &lt;span class=&quot;n&quot;&gt;shift&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;done&lt;/span&gt;
-&lt;span class=&quot;err&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;multicopy&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;“의&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;백업파일&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;”$&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;“&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;이&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;생성되었습니다&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;”&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;^&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;z&lt;/span&gt;
-&lt;span class=&quot;err&quot;&gt;$&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ls&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;document&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mc&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;temp&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;test&lt;/span&gt;
-&lt;span class=&quot;err&quot;&gt;$&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mcp&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;temp&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;temp1&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;temp2&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;temp3&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;temp&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;의&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;백업파일&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;temp1&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;temp2&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;temp3&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;이&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;생성되었습니다&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;
-&lt;span class=&quot;err&quot;&gt;$&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ls&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;document&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mc&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;temp&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;temp1&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;temp2&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;temp3&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;test&lt;/span&gt;
-&lt;span class=&quot;err&quot;&gt;$&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-</description>
-        <pubDate>Wed, 13 May 2020 00:00:00 +0900</pubDate>
-        <link>https://m-veloper.github.io/devlog/2020/05/13/unix-49/</link>
-        <guid isPermaLink="true">https://m-veloper.github.io/devlog/2020/05/13/unix-49/</guid>
         
         <category>unix</category>
         

@@ -4,12 +4,22 @@
  <title>슬기로운 개발 생활</title>
  <link href="https://m-veloper.github.io/atom.xml" rel="self"/>
  <id>https://m-veloper.github.io</id>
- <updated>2020-06-06T00:24:35+09:00</updated>
+ <updated>2020-06-07T01:03:14+09:00</updated>
  <author>
    <name>m-veloper</name>
    <uri>https://m-veloper.github.io</uri>
    <email>m_veloper@naver.com</email>
  </author>
+
+ 
+
+ <entry>
+   <title>[CSS] 모바일(반응형) 에서 좌,우가 움직이는 현상, 수평 스크롤 없애기</title>
+   <link href="https://m-veloper.github.io/tip/2020/06/07/tip-css-04/"/>
+   <id>https://m-veloper.github.io/tip/2020/06/07/tip-css-04</id>
+   <updated>2020-06-07T00:00:00+09:00</updated>
+   <content type="html">&lt;p&gt;&lt;img src=&quot;/assets/img/css/2020-06-07-tip-css-04.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt; &lt;p&gt;모바일 웹에서 수평 스크롤(가로 스크롤)이 있을 경우 위의 그림과 같이 화면을 터치하여 왼쪽으로 이동시키면 사이트가 좌우로 움직이게 되는 문제 발생.&lt;/p&gt; &lt;p&gt;모바일 기기에서 수평 스크롤을 비활성화하여 이 문제를 해결할 수 있습니다.&lt;/p&gt; &lt;p&gt;비슷한 현상이 생기는경우 아래와 같이 수정해보길 바랍니다.&lt;/p&gt; &lt;p&gt;우선 다음 메타 태그를 header에 추가합니다. (이미 있는 경우...</content>
+ </entry>
 
  
 
@@ -99,16 +109,6 @@
    <id>https://m-veloper.github.io/devlog/2020/05/29/ECMAScript6-14</id>
    <updated>2020-05-29T00:00:00+09:00</updated>
    <content type="html">&lt;p&gt;&lt;img src=&quot;/assets/img/ECMAScript6/2020-05-29-ECMAScript6-14.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt; &lt;blockquote&gt; &lt;p&gt;이글은 “벨로퍼트”님의 동영상 강의를 보고 정리한 내용입니다.&lt;/p&gt; &lt;/blockquote&gt; &lt;p&gt;&lt;br /&gt;&lt;/p&gt; &lt;h1 id=&quot;함수의-기본-파라미터&quot;&gt;함수의 기본 파라미터&lt;/h1&gt; &lt;p&gt;한번, 우리가 원의 넓이를 구하는 함수를 만들어보겠습니다.&lt;/p&gt; &lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;calculateCircleArea&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;r&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Math&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;PI&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;r&lt;/span&gt;...</content>
- </entry>
-
- 
-
- <entry>
-   <title>[Javascript/ECMAScript6/ES6] 단축 평가 (short-circuit evaluation) 논리 계산법</title>
-   <link href="https://m-veloper.github.io/devlog/2020/05/28/ECMAScript6-13/"/>
-   <id>https://m-veloper.github.io/devlog/2020/05/28/ECMAScript6-13</id>
-   <updated>2020-05-28T00:00:00+09:00</updated>
-   <content type="html">&lt;p&gt;&lt;img src=&quot;/assets/img/ECMAScript6/2020-05-28-ECMAScript6-13.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt; &lt;blockquote&gt; &lt;p&gt;이글은 “벨로퍼트”님의 동영상 강의를 보고 정리한 내용입니다.&lt;/p&gt; &lt;/blockquote&gt; &lt;p&gt;&lt;br /&gt;&lt;/p&gt; &lt;h1 id=&quot;단축-평가-short-circuit-evaluation-논리-계산법&quot;&gt;단축 평가 (short-circuit evaluation) 논리 계산법&lt;/h1&gt; &lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// true&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// false&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;...</content>
  </entry>
 
  
