@@ -9,7 +9,7 @@
 	<meta name="naver-site-verification" content="fa37cbf8ce41948de6e94c01991ffa04cea9b093"/>
 	<meta name="google-site-verification" content="5M4Zw9wg_UqQkvlayfb5Mc_ogvJdc013w_zLUkxgO-Y" />
 
-	<!--<title>슬기로운 개발 생활</title>-->
+	<!--<title>[CSS] 텍스트가 div, code block 범위 밖으로 나가는 현상 해결</title>-->
 	<title>슬기로운 개발 생활</title>
 
 	<!-- CSS & fonts -->
@@ -1354,675 +1354,108 @@
 			</div>
 			<div id="container">
 				<main>
-					<!--태그에 해당하는 글들 목록-->
+					<article id="post-page">
+	<h2 class="title">[CSS] 텍스트가 div, code block 범위 밖으로 나가는 현상 해결</h2>
+	<a class="tag" href="" data-flip="title">
+		<time datetime="" class="by-line">2020년 06월 08일</time>
+	</a>
+	<hr>
+	<div class="content">
+		<div class='kakao-ad-top'>
+			<div>
+				<ins class="kakao_ad_area kh1" style="display:none;" data-ad-unit= "DAN-sksc2jl3lbhe" data-ad-width= "250" data-ad-height= "250"></ins>
+			</div>
+			<div>
+				<ins class="kakao_ad_area kh2" style="display:none;" data-ad-unit= "DAN-s13c6ao56o2p" data-ad-width= "250" data-ad-height= "250"></ins>
+			</div>
+			<div>
+				<ins class="kakao_ad_area kh3" style="display:none;" data-ad-unit= "DAN-to1sb755uomv" data-ad-width= "250" data-ad-height= "250"></ins>
+			</div>
+		</div>
 
-  
-    
-<style>
-  .post+.post:before{
-    display: none !important;
-  }
-</style>
+		<p><img src="/assets/img/css/2020-06-08-tip-css-05.png" alt="" /></p>
 
+<p>div 태그 또는 특정 태그에 코드나, 일반 텍스트 입력시 자동으로 줄 바꿈을 하지 못하고 범위를 벗어나는 경우가 있습니다.</p>
 
-<article id="post-devlog/2020/04/28/database-45" class="post mb6 this" role="article">
-  <div>
-    <!--제목-->
-    <h1 class="post-title">
-      
-        <a href="/devlog/2020/04/28/database-45/" data-flip="title">
-      
-      [Database] MySQL DAY, MONTH, YEAR, EXTRACT 관련 함수
-      
-        </a>
-      
-    </h1>
+<p>저의 경우 블로그 포스팅시 코드블럭(code block) 범위를 벗어나는 경우였습니다.</p>
 
-    <!--날짜-->
-    <p class="post-date heading">
-      <!--<time datetime="2020-04-28T00:00:00+09:00">28 Apr 2020</time>-->
-      <time datetime="2020-04-28T00:00:00+09:00">2020년 04월 28일</time>
-    </p>
-    <!--카테고리영역-->
-    
+<p>이 문제를 해결하는 방법은 간단합니다.</p>
 
+<p>div 또는 특정 태그의 스타일을 정해주는 부분에 “word-break:break-all;” 또는 “white-space: pre-wrap;”를 추가하면 됩니다.</p>
 
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="nt">div</span><span class="p">{</span>
+  <span class="nl">word-break</span><span class="p">:</span><span class="n">break-all</span><span class="p">;</span>
+<span class="p">}</span>
 
+</code></pre></div></div>
 
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="nt">pre</span><span class="o">,</span> <span class="nt">code</span> <span class="p">{</span>
+    <span class="nl">white-space</span><span class="p">:</span> <span class="n">pre-wrap</span><span class="p">;</span>
+<span class="p">}</span>
 
-
-
-
-
-<a class="tag" href="" data-flip="title">Devlog</a>
-
-
-    
+</code></pre></div></div>
 
 
 
+		<!-- buymeacoffee 버튼 -->
+		<div id="sponsor-button" style="text-align: center">
+			<a class="bmc-button" target="_blank" href="https://www.buymeacoffee.com/TWYGPxs">
+				<img src="https://cdn.buymeacoffee.com/buttons/bmc-new-btn-logo.svg" alt="Buy me a coffee">
+				<span style="margin-left:15px;font-size:28px !important;">Buy me a coffee</span>
+			</a>
+		</div>
 
 
+		<div class="kakao-ad-bottom">
+			<div>
+				<ins class="kakao_ad_area kb1" style="display:none;" data-ad-unit="DAN-rhg23mrcvho4" data-ad-width= "728" data-ad-height= "90"></ins>
+			</div>
+			<div>
+				<ins class="kakao_ad_area kb2" style="display:none;" data-ad-unit    = "DAN-r1icduz054jb" data-ad-width   = "728" data-ad-height  = "90"></ins>
+			</div>
+			<div>
+				<ins class="kakao_ad_area kb3" style="display:none;" data-ad-unit    = "DAN-1jy7ort537t4o" data-ad-width   = "728" data-ad-height  = "90"></ins>
+			</div>
+		</div>
 
+		<aside class="comments" role="complementary">
+  <h2>Comments</h2>
+  <hr/>
+  <div id="disqus_thread"></div>
+  <script>
+    !function (s, i) {
+      function e(e) {
+        var t = s.pageYOffset || i.body.scrollTop;
+        s.DISQUS && !s._disqusThis && !s._disqusFirst && t + s.innerHeight >= s._disqusThreadOffsetTop && (s._disqusThis = !0, s.DISQUS.reset(
+          { reload: !0, config: d }))
+      }
 
+      var d = function () {
+        this.page.title = "[CSS] 텍스트가 div, code block 범위 밖으로 나가는 현상 해결",
+          this.page.identifier = "/tip/2020/06/08/tip-css-05",
+          this.page.url = "https://m-veloper.github.io/tip/2020/06/08/tip-css-05/"
+      };
+      s._disqusFirst = void 0 === s._disqusFirst || s._disqusFirst, s._disqusLoading = void 0 !== s._disqusLoading && s._disqusLoading, s._disqusThis = !1, s._disqusThreadOffsetTop = i.getElementById(
+        "disqus_thread").offsetTop, s._disqusLoading ? s._disqusFirst = !1 : (s._disqusLoading = !0, loadJSDeferred(
+        "//m-veloper.disqus.com/embed.js"), s.addEventListener ? s.addEventListener(
+        "scroll",
+        e,
+        { passive: !0 }) : s.attachEvent ? s.attachEvent("onscroll", e) : s.onscroll = e)
+    }(window, document);
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
 
+</aside>
 
-<a class="tag" href="" data-flip="title">Database</a><a class="tag" href="" data-flip="title">Mysql</a>
-
-
-    
-  <div class="hr" style="padding-bottom:0"></div>
-
-
-  </div>
-
-  
-
-  
-  
-
+	</div>
 </article>
-
-  
-
-  
-    
-<style>
-  .post+.post:before{
-    display: none !important;
-  }
-</style>
-
-
-<article id="post-devlog/2020/04/28/database-44" class="post mb6 this" role="article">
-  <div>
-    <!--제목-->
-    <h1 class="post-title">
-      
-        <a href="/devlog/2020/04/28/database-44/" data-flip="title">
-      
-      [Database] MySQL TIMESTAMP 함수
-      
-        </a>
-      
-    </h1>
-
-    <!--날짜-->
-    <p class="post-date heading">
-      <!--<time datetime="2020-04-28T00:00:00+09:00">28 Apr 2020</time>-->
-      <time datetime="2020-04-28T00:00:00+09:00">2020년 04월 28일</time>
-    </p>
-    <!--카테고리영역-->
-    
-
-
-
-
-
-
-
-
-
-<a class="tag" href="" data-flip="title">Devlog</a>
-
-
-    
-
-
-
-
-
-
-
-
-
-<a class="tag" href="" data-flip="title">Database</a><a class="tag" href="" data-flip="title">Mysql</a>
-
-
-    
-  <div class="hr" style="padding-bottom:0"></div>
-
-
-  </div>
-
-  
-
-  
-  
-
-</article>
-
-  
-
-  
-    
-<style>
-  .post+.post:before{
-    display: none !important;
-  }
-</style>
-
-
-<article id="post-devlog/2020/04/28/database-43" class="post mb6 this" role="article">
-  <div>
-    <!--제목-->
-    <h1 class="post-title">
-      
-        <a href="/devlog/2020/04/28/database-43/" data-flip="title">
-      
-      [Database] MySQL TIME 관련 함수(시간 관련 함수)
-      
-        </a>
-      
-    </h1>
-
-    <!--날짜-->
-    <p class="post-date heading">
-      <!--<time datetime="2020-04-28T00:00:00+09:00">28 Apr 2020</time>-->
-      <time datetime="2020-04-28T00:00:00+09:00">2020년 04월 28일</time>
-    </p>
-    <!--카테고리영역-->
-    
-
-
-
-
-
-
-
-
-
-<a class="tag" href="" data-flip="title">Devlog</a>
-
-
-    
-
-
-
-
-
-
-
-
-
-<a class="tag" href="" data-flip="title">Database</a><a class="tag" href="" data-flip="title">Mysql</a>
-
-
-    
-  <div class="hr" style="padding-bottom:0"></div>
-
-
-  </div>
-
-  
-
-  
-  
-
-</article>
-
-  
-
-  
-    
-<style>
-  .post+.post:before{
-    display: none !important;
-  }
-</style>
-
-
-<article id="post-devlog/2020/04/28/database-42" class="post mb6 this" role="article">
-  <div>
-    <!--제목-->
-    <h1 class="post-title">
-      
-        <a href="/devlog/2020/04/28/database-42/" data-flip="title">
-      
-      [Database] MySQL DATE FORMAT 함수(날짜 포맷 함수)
-      
-        </a>
-      
-    </h1>
-
-    <!--날짜-->
-    <p class="post-date heading">
-      <!--<time datetime="2020-04-28T00:00:00+09:00">28 Apr 2020</time>-->
-      <time datetime="2020-04-28T00:00:00+09:00">2020년 04월 28일</time>
-    </p>
-    <!--카테고리영역-->
-    
-
-
-
-
-
-
-
-
-
-<a class="tag" href="" data-flip="title">Devlog</a>
-
-
-    
-
-
-
-
-
-
-
-
-
-<a class="tag" href="" data-flip="title">Database</a><a class="tag" href="" data-flip="title">Mysql</a>
-
-
-    
-  <div class="hr" style="padding-bottom:0"></div>
-
-
-  </div>
-
-  
-
-  
-  
-
-</article>
-
-  
-
-  
-    
-<style>
-  .post+.post:before{
-    display: none !important;
-  }
-</style>
-
-
-<article id="post-devlog/2020/04/28/database-41" class="post mb6 this" role="article">
-  <div>
-    <!--제목-->
-    <h1 class="post-title">
-      
-        <a href="/devlog/2020/04/28/database-41/" data-flip="title">
-      
-      [Database] MySQL Date 함수(날짜 함수)
-      
-        </a>
-      
-    </h1>
-
-    <!--날짜-->
-    <p class="post-date heading">
-      <!--<time datetime="2020-04-28T00:00:00+09:00">28 Apr 2020</time>-->
-      <time datetime="2020-04-28T00:00:00+09:00">2020년 04월 28일</time>
-    </p>
-    <!--카테고리영역-->
-    
-
-
-
-
-
-
-
-
-
-<a class="tag" href="" data-flip="title">Devlog</a>
-
-
-    
-
-
-
-
-
-
-
-
-
-<a class="tag" href="" data-flip="title">Database</a><a class="tag" href="" data-flip="title">Mysql</a>
-
-
-    
-  <div class="hr" style="padding-bottom:0"></div>
-
-
-  </div>
-
-  
-
-  
-  
-
-</article>
-
-  
-
-  
-    
-<style>
-  .post+.post:before{
-    display: none !important;
-  }
-</style>
-
-
-<article id="post-devlog/2020/04/27/database-38" class="post mb6 this" role="article">
-  <div>
-    <!--제목-->
-    <h1 class="post-title">
-      
-        <a href="/devlog/2020/04/27/database-38/" data-flip="title">
-      
-      [Database] MySQL의 내장 함수
-      
-        </a>
-      
-    </h1>
-
-    <!--날짜-->
-    <p class="post-date heading">
-      <!--<time datetime="2020-04-27T00:00:00+09:00">27 Apr 2020</time>-->
-      <time datetime="2020-04-27T00:00:00+09:00">2020년 04월 27일</time>
-    </p>
-    <!--카테고리영역-->
-    
-
-
-
-
-
-
-
-
-
-<a class="tag" href="" data-flip="title">Devlog</a>
-
-
-    
-
-
-
-
-
-
-
-
-
-<a class="tag" href="" data-flip="title">Database</a><a class="tag" href="" data-flip="title">Mysql</a>
-
-
-    
-  <div class="hr" style="padding-bottom:0"></div>
-
-
-  </div>
-
-  
-
-  
-  
-
-</article>
-
-  
-
-  
-    
-<style>
-  .post+.post:before{
-    display: none !important;
-  }
-</style>
-
-
-<article id="post-devlog/2020/04/27/database-40" class="post mb6 this" role="article">
-  <div>
-    <!--제목-->
-    <h1 class="post-title">
-      
-        <a href="/devlog/2020/04/27/database-40/" data-flip="title">
-      
-      [Database] MySQL 제어 함수 - IF, IFNULL, NULLIF
-      
-        </a>
-      
-    </h1>
-
-    <!--날짜-->
-    <p class="post-date heading">
-      <!--<time datetime="2020-04-27T00:00:00+09:00">27 Apr 2020</time>-->
-      <time datetime="2020-04-27T00:00:00+09:00">2020년 04월 27일</time>
-    </p>
-    <!--카테고리영역-->
-    
-
-
-
-
-
-
-
-
-
-<a class="tag" href="" data-flip="title">Devlog</a>
-
-
-    
-
-
-
-
-
-
-
-
-
-<a class="tag" href="" data-flip="title">Database</a><a class="tag" href="" data-flip="title">Mysql</a>
-
-
-    
-  <div class="hr" style="padding-bottom:0"></div>
-
-
-  </div>
-
-  
-
-  
-  
-
-</article>
-
-  
-
-  
-    
-<style>
-  .post+.post:before{
-    display: none !important;
-  }
-</style>
-
-
-<article id="post-devlog/2020/04/27/database-39" class="post mb6 this" role="article">
-  <div>
-    <!--제목-->
-    <h1 class="post-title">
-      
-        <a href="/devlog/2020/04/27/database-39/" data-flip="title">
-      
-      [Database] MySQL 제어 함수 - CASE
-      
-        </a>
-      
-    </h1>
-
-    <!--날짜-->
-    <p class="post-date heading">
-      <!--<time datetime="2020-04-27T00:00:00+09:00">27 Apr 2020</time>-->
-      <time datetime="2020-04-27T00:00:00+09:00">2020년 04월 27일</time>
-    </p>
-    <!--카테고리영역-->
-    
-
-
-
-
-
-
-
-
-
-<a class="tag" href="" data-flip="title">Devlog</a>
-
-
-    
-
-
-
-
-
-
-
-
-
-<a class="tag" href="" data-flip="title">Database</a><a class="tag" href="" data-flip="title">Mysql</a>
-
-
-    
-  <div class="hr" style="padding-bottom:0"></div>
-
-
-  </div>
-
-  
-
-  
-  
-
-</article>
-
-  
-
-  
-    
-<style>
-  .post+.post:before{
-    display: none !important;
-  }
-</style>
-
-
-<article id="post-devlog/2020/04/21/unix-35" class="post mb6 this" role="article">
-  <div>
-    <!--제목-->
-    <h1 class="post-title">
-      
-        <a href="/devlog/2020/04/21/unix-35/" data-flip="title">
-      
-      [유닉스] 필드 잘라내기 ( cut )
-      
-        </a>
-      
-    </h1>
-
-    <!--날짜-->
-    <p class="post-date heading">
-      <!--<time datetime="2020-04-21T00:00:00+09:00">21 Apr 2020</time>-->
-      <time datetime="2020-04-21T00:00:00+09:00">2020년 04월 21일</time>
-    </p>
-    <!--카테고리영역-->
-    
-
-
-
-
-
-
-
-
-
-<a class="tag" href="" data-flip="title">Devlog</a>
-
-
-    
-
-
-
-
-
-
-
-
-
-<a class="tag" href="" data-flip="title">Unix</a>
-
-
-    
-  <div class="hr" style="padding-bottom:0"></div>
-
-
-  </div>
-
-  
-
-  
-  
-
-</article>
-
-  
 
 
 				</main>
 				<!-- 페이지 네이션-->
 				<div class="pagination-container">
-
-<ul class='pagination'>
-  
-  <a href="/6/">&laquo;</a>
-  
-  
-  
-  <li >
-          <a href="/5/index.html" title="슬기로운 개발 생활">
-            5
-          </a>
-        </li>
-  
-  <li >
-          <a href="/6/index.html" title="슬기로운 개발 생활">
-            6
-          </a>
-        </li>
-  
-  <li  class="pagination-selected" >
-          <a href="/7/index.html" title="슬기로운 개발 생활">
-            7
-          </a>
-        </li>
-  
-  <li >
-          <a href="/8/index.html" title="슬기로운 개발 생활">
-            8
-          </a>
-        </li>
-  
-  <li >
-          <a href="/9/index.html" title="슬기로운 개발 생활">
-            9
-          </a>
-        </li>
-  
-  
-  
-  <a href="/8/">&raquo;</a>
-  
-</ul>
 
 </div>
 			</div>
