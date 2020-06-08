@@ -1,6 +1,14 @@
 [
 
 {
+"title"    : "[JSTL] substring 문자열 자르기",
+"category" : "",
+"tags"     : "web, java, jstl, spring",
+"url"      : "/tip/2020/06/09/tip-jstl-04/",
+"date"     : "2020-06-09 00:00:00 +0900"
+} ,
+
+{
 "title"    : "[CSS] 텍스트가 div, code block 범위 밖으로 나가는 현상 해결",
 "category" : "",
 "tags"     : "web, css",
