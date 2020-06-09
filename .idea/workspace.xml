@@ -1,16 +1,89 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="383bdea2-0c4b-4353-84c5-af5fcbec588c" name="Default" comment="">
+    <list default="true" id="4c62f87d-2e27-4843-baac-9df94dc5670e" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/404.html" afterPath="$PROJECT_DIR$/404.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/10/index.html" afterPath="$PROJECT_DIR$/10/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/11/index.html" afterPath="$PROJECT_DIR$/11/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/12/index.html" afterPath="$PROJECT_DIR$/12/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/13/index.html" afterPath="$PROJECT_DIR$/13/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/14/index.html" afterPath="$PROJECT_DIR$/14/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/15/index.html" afterPath="$PROJECT_DIR$/15/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/16/index.html" afterPath="$PROJECT_DIR$/16/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/17/index.html" afterPath="$PROJECT_DIR$/17/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/18/index.html" afterPath="$PROJECT_DIR$/18/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/19/index.html" afterPath="$PROJECT_DIR$/19/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2/index.html" afterPath="$PROJECT_DIR$/2/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/20/index.html" afterPath="$PROJECT_DIR$/20/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2020/01/01/portfolio-01/index.html" afterPath="$PROJECT_DIR$/2020/01/01/portfolio-01/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2020/01/01/portfolio-02/index.html" afterPath="$PROJECT_DIR$/2020/01/01/portfolio-02/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2020/01/01/portfolio-03/index.html" afterPath="$PROJECT_DIR$/2020/01/01/portfolio-03/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2020/01/01/portfolio-04/index.html" afterPath="$PROJECT_DIR$/2020/01/01/portfolio-04/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2020/01/01/portfolio-05/index.html" afterPath="$PROJECT_DIR$/2020/01/01/portfolio-05/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2020/01/01/portfolio-06/index.html" afterPath="$PROJECT_DIR$/2020/01/01/portfolio-06/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2020/01/01/portfolio-07/index.html" afterPath="$PROJECT_DIR$/2020/01/01/portfolio-07/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2020/01/01/portfolio-08/index.html" afterPath="$PROJECT_DIR$/2020/01/01/portfolio-08/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2020/01/01/portfolio-09/index.html" afterPath="$PROJECT_DIR$/2020/01/01/portfolio-09/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2020/01/01/portfolio-10/index.html" afterPath="$PROJECT_DIR$/2020/01/01/portfolio-10/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2020/01/01/portfolio-11/index.html" afterPath="$PROJECT_DIR$/2020/01/01/portfolio-11/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2020/01/01/portfolio-12/index.html" afterPath="$PROJECT_DIR$/2020/01/01/portfolio-12/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2020/01/01/portfolio-13/index.html" afterPath="$PROJECT_DIR$/2020/01/01/portfolio-13/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2020/01/01/portfolio-14/index.html" afterPath="$PROJECT_DIR$/2020/01/01/portfolio-14/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2020/01/01/portfolio-15/index.html" afterPath="$PROJECT_DIR$/2020/01/01/portfolio-15/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2020/01/01/portfolio-16/index.html" afterPath="$PROJECT_DIR$/2020/01/01/portfolio-16/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2020/01/01/portfolio-17/index.html" afterPath="$PROJECT_DIR$/2020/01/01/portfolio-17/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2020/01/01/portfolio-18/index.html" afterPath="$PROJECT_DIR$/2020/01/01/portfolio-18/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2020/04/06/tip-life-01/index.html" afterPath="$PROJECT_DIR$/2020/04/06/tip-life-01/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2020/04/08/tip-life-02/index.html" afterPath="$PROJECT_DIR$/2020/04/08/tip-life-02/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2020/04/08/tip-life-03/index.html" afterPath="$PROJECT_DIR$/2020/04/08/tip-life-03/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/21/index.html" afterPath="$PROJECT_DIR$/21/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/22/index.html" afterPath="$PROJECT_DIR$/22/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/23/index.html" afterPath="$PROJECT_DIR$/23/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/24/index.html" afterPath="$PROJECT_DIR$/24/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/3/index.html" afterPath="$PROJECT_DIR$/3/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/4/index.html" afterPath="$PROJECT_DIR$/4/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/404/index.html" afterPath="$PROJECT_DIR$/404/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/5/index.html" afterPath="$PROJECT_DIR$/5/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/6/index.html" afterPath="$PROJECT_DIR$/6/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/7/index.html" afterPath="$PROJECT_DIR$/7/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/8/index.html" afterPath="$PROJECT_DIR$/8/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/9/index.html" afterPath="$PROJECT_DIR$/9/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/a_categories/devlog/index.html" afterPath="$PROJECT_DIR$/a_categories/devlog/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/a_categories/portfolio/index.html" afterPath="$PROJECT_DIR$/a_categories/portfolio/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/a_categories/review/index.html" afterPath="$PROJECT_DIR$/a_categories/review/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/a_categories/tip/index.html" afterPath="$PROJECT_DIR$/a_categories/tip/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/a_tags/database/2/index.html" afterPath="$PROJECT_DIR$/a_tags/database/2/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/a_tags/database/3/index.html" afterPath="$PROJECT_DIR$/a_tags/database/3/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/a_tags/database/4/index.html" afterPath="$PROJECT_DIR$/a_tags/database/4/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/a_tags/database/5/index.html" afterPath="$PROJECT_DIR$/a_tags/database/5/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/a_tags/database/6/index.html" afterPath="$PROJECT_DIR$/a_tags/database/6/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/a_tags/database/7/index.html" afterPath="$PROJECT_DIR$/a_tags/database/7/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/a_tags/database/index.html" afterPath="$PROJECT_DIR$/a_tags/database/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/a_tags/etc/index.html" afterPath="$PROJECT_DIR$/a_tags/etc/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/a_tags/goods/index.html" afterPath="$PROJECT_DIR$/a_tags/goods/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/a_tags/javascript/2/index.html" afterPath="$PROJECT_DIR$/a_tags/javascript/2/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/a_tags/javascript/3/index.html" afterPath="$PROJECT_DIR$/a_tags/javascript/3/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/a_tags/javascript/index.html" afterPath="$PROJECT_DIR$/a_tags/javascript/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/a_tags/portfolio/2/index.html" afterPath="$PROJECT_DIR$/a_tags/portfolio/2/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/a_tags/portfolio/index.html" afterPath="$PROJECT_DIR$/a_tags/portfolio/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/a_tags/sass/2/index.html" afterPath="$PROJECT_DIR$/a_tags/sass/2/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/a_tags/sass/index.html" afterPath="$PROJECT_DIR$/a_tags/sass/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/a_tags/unix/2/index.html" afterPath="$PROJECT_DIR$/a_tags/unix/2/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/a_tags/unix/3/index.html" afterPath="$PROJECT_DIR$/a_tags/unix/3/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/a_tags/unix/4/index.html" afterPath="$PROJECT_DIR$/a_tags/unix/4/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/a_tags/unix/5/index.html" afterPath="$PROJECT_DIR$/a_tags/unix/5/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/a_tags/unix/6/index.html" afterPath="$PROJECT_DIR$/a_tags/unix/6/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/a_tags/unix/7/index.html" afterPath="$PROJECT_DIR$/a_tags/unix/7/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/a_tags/unix/index.html" afterPath="$PROJECT_DIR$/a_tags/unix/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/a_tags/web/2/index.html" afterPath="$PROJECT_DIR$/a_tags/web/2/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/a_tags/web/3/index.html" afterPath="$PROJECT_DIR$/a_tags/web/3/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/a_tags/web/4/index.html" afterPath="$PROJECT_DIR$/a_tags/web/4/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/a_tags/web/5/index.html" afterPath="$PROJECT_DIR$/a_tags/web/5/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/a_tags/web/index.html" afterPath="$PROJECT_DIR$/a_tags/web/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/about/index.html" afterPath="$PROJECT_DIR$/about/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/category/artwork/index.html" afterPath="$PROJECT_DIR$/category/artwork/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/category/devlog/index.html" afterPath="$PROJECT_DIR$/category/devlog/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/category/essay/index.html" afterPath="$PROJECT_DIR$/category/essay/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/category/review/index.html" afterPath="$PROJECT_DIR$/category/review/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/category/tip/index.html" afterPath="$PROJECT_DIR$/category/tip/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/category/travel/index.html" afterPath="$PROJECT_DIR$/category/travel/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/css/font-awesome.min.css" afterPath="$PROJECT_DIR$/assets/css/font-awesome.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/icomoon/style.css" afterPath="$PROJECT_DIR$/assets/icomoon/style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/atom.xml" afterPath="$PROJECT_DIR$/atom.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/devlog/2020/02/12/database-01/index.html" afterPath="$PROJECT_DIR$/devlog/2020/02/12/database-01/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/devlog/2020/02/13/database-02/index.html" afterPath="$PROJECT_DIR$/devlog/2020/02/13/database-02/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/devlog/2020/02/14/database-03/index.html" afterPath="$PROJECT_DIR$/devlog/2020/02/14/database-03/index.html" />
@@ -59,37 +132,113 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/devlog/2020/03/16/sass-11/index.html" afterPath="$PROJECT_DIR$/devlog/2020/03/16/sass-11/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/devlog/2020/03/17/sass-12/index.html" afterPath="$PROJECT_DIR$/devlog/2020/03/17/sass-12/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/devlog/2020/03/17/sass-13/index.html" afterPath="$PROJECT_DIR$/devlog/2020/03/17/sass-13/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/devlog/2020/03/19/database-18/index.html" afterPath="$PROJECT_DIR$/devlog/2020/03/19/database-18/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/devlog/2020/03/20/database-19/index.html" afterPath="$PROJECT_DIR$/devlog/2020/03/20/database-19/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/devlog/2020/03/20/database-20/index.html" afterPath="$PROJECT_DIR$/devlog/2020/03/20/database-20/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/devlog/2020/03/20/database-21/index.html" afterPath="$PROJECT_DIR$/devlog/2020/03/20/database-21/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/devlog/2020/03/20/database-22/index.html" afterPath="$PROJECT_DIR$/devlog/2020/03/20/database-22/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/devlog/2020/03/20/unix-19/index.html" afterPath="$PROJECT_DIR$/devlog/2020/03/20/unix-19/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/devlog/2020/03/20/unix-20/index.html" afterPath="$PROJECT_DIR$/devlog/2020/03/20/unix-20/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/devlog/2020/03/20/unix-21/index.html" afterPath="$PROJECT_DIR$/devlog/2020/03/20/unix-21/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/devlog/2020/03/22/sass-14/index.html" afterPath="$PROJECT_DIR$/devlog/2020/03/22/sass-14/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/devlog/2020/03/22/sass-15/index.html" afterPath="$PROJECT_DIR$/devlog/2020/03/22/sass-15/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/devlog/2020/04/03/database-23/index.html" afterPath="$PROJECT_DIR$/devlog/2020/04/03/database-23/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/devlog/2020/04/03/database-24/index.html" afterPath="$PROJECT_DIR$/devlog/2020/04/03/database-24/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/devlog/2020/04/03/database-25/index.html" afterPath="$PROJECT_DIR$/devlog/2020/04/03/database-25/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/devlog/2020/04/03/database-26/index.html" afterPath="$PROJECT_DIR$/devlog/2020/04/03/database-26/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/devlog/2020/04/03/database-27/index.html" afterPath="$PROJECT_DIR$/devlog/2020/04/03/database-27/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/devlog/2020/04/03/database-28/index.html" afterPath="$PROJECT_DIR$/devlog/2020/04/03/database-28/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/devlog/2020/04/05/unix-22/index.html" afterPath="$PROJECT_DIR$/devlog/2020/04/05/unix-22/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/devlog/2020/04/05/unix-23/index.html" afterPath="$PROJECT_DIR$/devlog/2020/04/05/unix-23/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/devlog/2020/04/06/unix-24/index.html" afterPath="$PROJECT_DIR$/devlog/2020/04/06/unix-24/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/devlog/2020/04/06/unix-25/index.html" afterPath="$PROJECT_DIR$/devlog/2020/04/06/unix-25/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/devlog/2020/04/06/unix-26/index.html" afterPath="$PROJECT_DIR$/devlog/2020/04/06/unix-26/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/devlog/2020/04/13/database-29/index.html" afterPath="$PROJECT_DIR$/devlog/2020/04/13/database-29/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/devlog/2020/04/13/database-30/index.html" afterPath="$PROJECT_DIR$/devlog/2020/04/13/database-30/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/devlog/2020/04/13/database-31/index.html" afterPath="$PROJECT_DIR$/devlog/2020/04/13/database-31/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/devlog/2020/04/13/database-32/index.html" afterPath="$PROJECT_DIR$/devlog/2020/04/13/database-32/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/devlog/2020/04/14/database-33/index.html" afterPath="$PROJECT_DIR$/devlog/2020/04/14/database-33/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/devlog/2020/04/15/unix-27/index.html" afterPath="$PROJECT_DIR$/devlog/2020/04/15/unix-27/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/devlog/2020/04/16/unix-28/index.html" afterPath="$PROJECT_DIR$/devlog/2020/04/16/unix-28/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/devlog/2020/04/17/unix-29/index.html" afterPath="$PROJECT_DIR$/devlog/2020/04/17/unix-29/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/devlog/2020/04/17/unix-30/index.html" afterPath="$PROJECT_DIR$/devlog/2020/04/17/unix-30/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/devlog/2020/04/18/database-34/index.html" afterPath="$PROJECT_DIR$/devlog/2020/04/18/database-34/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/devlog/2020/04/18/database-35/index.html" afterPath="$PROJECT_DIR$/devlog/2020/04/18/database-35/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/devlog/2020/04/18/database-36/index.html" afterPath="$PROJECT_DIR$/devlog/2020/04/18/database-36/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/devlog/2020/04/18/database-37/index.html" afterPath="$PROJECT_DIR$/devlog/2020/04/18/database-37/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/devlog/2020/04/19/unix-31/index.html" afterPath="$PROJECT_DIR$/devlog/2020/04/19/unix-31/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/devlog/2020/04/20/unix-32/index.html" afterPath="$PROJECT_DIR$/devlog/2020/04/20/unix-32/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/devlog/2020/04/20/unix-33/index.html" afterPath="$PROJECT_DIR$/devlog/2020/04/20/unix-33/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/devlog/2020/04/20/unix-34/index.html" afterPath="$PROJECT_DIR$/devlog/2020/04/20/unix-34/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/devlog/2020/04/21/unix-35/index.html" afterPath="$PROJECT_DIR$/devlog/2020/04/21/unix-35/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/devlog/2020/04/21/unix-36/index.html" afterPath="$PROJECT_DIR$/devlog/2020/04/21/unix-36/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/devlog/2020/04/21/unix-37/index.html" afterPath="$PROJECT_DIR$/devlog/2020/04/21/unix-37/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/devlog/2020/04/27/database-38/index.html" afterPath="$PROJECT_DIR$/devlog/2020/04/27/database-38/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/devlog/2020/04/27/database-39/index.html" afterPath="$PROJECT_DIR$/devlog/2020/04/27/database-39/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/devlog/2020/04/27/database-40/index.html" afterPath="$PROJECT_DIR$/devlog/2020/04/27/database-40/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/devlog/2020/04/28/database-41/index.html" afterPath="$PROJECT_DIR$/devlog/2020/04/28/database-41/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/devlog/2020/04/28/database-42/index.html" afterPath="$PROJECT_DIR$/devlog/2020/04/28/database-42/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/devlog/2020/04/28/database-43/index.html" afterPath="$PROJECT_DIR$/devlog/2020/04/28/database-43/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/devlog/2020/04/28/database-44/index.html" afterPath="$PROJECT_DIR$/devlog/2020/04/28/database-44/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/devlog/2020/04/28/database-45/index.html" afterPath="$PROJECT_DIR$/devlog/2020/04/28/database-45/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/devlog/2020/04/28/database-46/index.html" afterPath="$PROJECT_DIR$/devlog/2020/04/28/database-46/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/devlog/2020/04/29/database-47/index.html" afterPath="$PROJECT_DIR$/devlog/2020/04/29/database-47/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/devlog/2020/04/29/database-48/index.html" afterPath="$PROJECT_DIR$/devlog/2020/04/29/database-48/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/devlog/2020/04/29/database-49/index.html" afterPath="$PROJECT_DIR$/devlog/2020/04/29/database-49/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/devlog/2020/04/30/unix-38/index.html" afterPath="$PROJECT_DIR$/devlog/2020/04/30/unix-38/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/devlog/2020/04/30/unix-39/index.html" afterPath="$PROJECT_DIR$/devlog/2020/04/30/unix-39/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/devlog/2020/04/30/unix-40/index.html" afterPath="$PROJECT_DIR$/devlog/2020/04/30/unix-40/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/devlog/2020/05/02/database-50/index.html" afterPath="$PROJECT_DIR$/devlog/2020/05/02/database-50/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/devlog/2020/05/02/database-51/index.html" afterPath="$PROJECT_DIR$/devlog/2020/05/02/database-51/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/devlog/2020/05/03/database-52/index.html" afterPath="$PROJECT_DIR$/devlog/2020/05/03/database-52/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/devlog/2020/05/04/database-53/index.html" afterPath="$PROJECT_DIR$/devlog/2020/05/04/database-53/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/devlog/2020/05/04/database-54/index.html" afterPath="$PROJECT_DIR$/devlog/2020/05/04/database-54/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/devlog/2020/05/05/database-55/index.html" afterPath="$PROJECT_DIR$/devlog/2020/05/05/database-55/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/devlog/2020/05/05/database-56/index.html" afterPath="$PROJECT_DIR$/devlog/2020/05/05/database-56/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/devlog/2020/05/06/unix-41/index.html" afterPath="$PROJECT_DIR$/devlog/2020/05/06/unix-41/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/devlog/2020/05/07/unix-42/index.html" afterPath="$PROJECT_DIR$/devlog/2020/05/07/unix-42/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/devlog/2020/05/08/unix-43/index.html" afterPath="$PROJECT_DIR$/devlog/2020/05/08/unix-43/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/devlog/2020/05/09/unix-44/index.html" afterPath="$PROJECT_DIR$/devlog/2020/05/09/unix-44/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/devlog/2020/05/09/unix-45/index.html" afterPath="$PROJECT_DIR$/devlog/2020/05/09/unix-45/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/devlog/2020/05/10/unix-46/index.html" afterPath="$PROJECT_DIR$/devlog/2020/05/10/unix-46/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/devlog/2020/05/11/unix-47/index.html" afterPath="$PROJECT_DIR$/devlog/2020/05/11/unix-47/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/devlog/2020/05/12/unix-48/index.html" afterPath="$PROJECT_DIR$/devlog/2020/05/12/unix-48/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/devlog/2020/05/13/unix-49/index.html" afterPath="$PROJECT_DIR$/devlog/2020/05/13/unix-49/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/devlog/2020/05/14/unix-50/index.html" afterPath="$PROJECT_DIR$/devlog/2020/05/14/unix-50/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/devlog/2020/05/16/ECMAScript6-01/index.html" afterPath="$PROJECT_DIR$/devlog/2020/05/16/ECMAScript6-01/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/devlog/2020/05/16/unix-51/index.html" afterPath="$PROJECT_DIR$/devlog/2020/05/16/unix-51/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/devlog/2020/05/17/ECMAScript6-02/index.html" afterPath="$PROJECT_DIR$/devlog/2020/05/17/ECMAScript6-02/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/devlog/2020/05/17/unix-52/index.html" afterPath="$PROJECT_DIR$/devlog/2020/05/17/unix-52/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/devlog/2020/05/18/ECMAScript6-03/index.html" afterPath="$PROJECT_DIR$/devlog/2020/05/18/ECMAScript6-03/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/devlog/2020/05/18/unix-53/index.html" afterPath="$PROJECT_DIR$/devlog/2020/05/18/unix-53/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/devlog/2020/05/19/ECMAScript6-04/index.html" afterPath="$PROJECT_DIR$/devlog/2020/05/19/ECMAScript6-04/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/devlog/2020/05/19/unix-54/index.html" afterPath="$PROJECT_DIR$/devlog/2020/05/19/unix-54/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/devlog/2020/05/20/ECMAScript6-05/index.html" afterPath="$PROJECT_DIR$/devlog/2020/05/20/ECMAScript6-05/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/devlog/2020/05/20/unix-55/index.html" afterPath="$PROJECT_DIR$/devlog/2020/05/20/unix-55/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/devlog/2020/05/21/ECMAScript6-06/index.html" afterPath="$PROJECT_DIR$/devlog/2020/05/21/ECMAScript6-06/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/devlog/2020/05/22/ECMAScript6-07/index.html" afterPath="$PROJECT_DIR$/devlog/2020/05/22/ECMAScript6-07/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/devlog/2020/05/23/ECMAScript6-08/index.html" afterPath="$PROJECT_DIR$/devlog/2020/05/23/ECMAScript6-08/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/devlog/2020/05/24/ECMAScript6-09/index.html" afterPath="$PROJECT_DIR$/devlog/2020/05/24/ECMAScript6-09/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/devlog/2020/05/25/ECMAScript6-10/index.html" afterPath="$PROJECT_DIR$/devlog/2020/05/25/ECMAScript6-10/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/devlog/2020/05/26/ECMAScript6-11/index.html" afterPath="$PROJECT_DIR$/devlog/2020/05/26/ECMAScript6-11/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/devlog/2020/05/27/ECMAScript6-12/index.html" afterPath="$PROJECT_DIR$/devlog/2020/05/27/ECMAScript6-12/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/devlog/2020/05/28/ECMAScript6-13/index.html" afterPath="$PROJECT_DIR$/devlog/2020/05/28/ECMAScript6-13/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/devlog/2020/05/29/ECMAScript6-14/index.html" afterPath="$PROJECT_DIR$/devlog/2020/05/29/ECMAScript6-14/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/devlog/2020/05/30/ECMAScript6-15/index.html" afterPath="$PROJECT_DIR$/devlog/2020/05/30/ECMAScript6-15/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/devlog/2020/05/31/ECMAScript6-16/index.html" afterPath="$PROJECT_DIR$/devlog/2020/05/31/ECMAScript6-16/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/devlog/2020/06/01/ECMAScript6-17/index.html" afterPath="$PROJECT_DIR$/devlog/2020/06/01/ECMAScript6-17/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/devlog/2020/06/02/ECMAScript6-18/index.html" afterPath="$PROJECT_DIR$/devlog/2020/06/02/ECMAScript6-18/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/devlog/2020/06/03/ECMAScript6-19/index.html" afterPath="$PROJECT_DIR$/devlog/2020/06/03/ECMAScript6-19/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/devlog/2020/06/04/ECMAScript6-20/index.html" afterPath="$PROJECT_DIR$/devlog/2020/06/04/ECMAScript6-20/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/devlog/2020/06/05/ECMAScript6-21/index.html" afterPath="$PROJECT_DIR$/devlog/2020/06/05/ECMAScript6-21/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/devlog/2020/06/06/ECMAScript6-22/index.html" afterPath="$PROJECT_DIR$/devlog/2020/06/06/ECMAScript6-22/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/feed.xml" afterPath="$PROJECT_DIR$/feed.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/page-2/index.html" afterPath="$PROJECT_DIR$/page-2/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/page-3/index.html" afterPath="$PROJECT_DIR$/page-3/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/page-4/index.html" afterPath="$PROJECT_DIR$/page-4/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/page-5/index.html" afterPath="$PROJECT_DIR$/page-5/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/page-6/index.html" afterPath="$PROJECT_DIR$/page-6/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/page-7/index.html" afterPath="$PROJECT_DIR$/page-7/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/page-8/index.html" afterPath="$PROJECT_DIR$/page-8/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/posts/index.html" afterPath="$PROJECT_DIR$/posts/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/review/2020/03/14/review-goods-fuji-x100v-01/index.html" afterPath="$PROJECT_DIR$/review/2020/03/14/review-goods-fuji-x100v-01/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/review/2020/03/14/review-goods-fuji-x100v-02/index.html" afterPath="$PROJECT_DIR$/review/2020/03/14/review-goods-fuji-x100v-02/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/robots.txt" afterPath="$PROJECT_DIR$/robots.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/search.json" afterPath="$PROJECT_DIR$/search.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/search/index.html" afterPath="$PROJECT_DIR$/search/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sitemap.xml" afterPath="$PROJECT_DIR$/sitemap.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tag/devlog-css/index.html" afterPath="$PROJECT_DIR$/tag/devlog-css/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tag/devlog-database/index.html" afterPath="$PROJECT_DIR$/tag/devlog-database/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tag/devlog-javascript/index.html" afterPath="$PROJECT_DIR$/tag/devlog-javascript/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tag/devlog-react/index.html" afterPath="$PROJECT_DIR$/tag/devlog-react/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tag/devlog-sass/index.html" afterPath="$PROJECT_DIR$/tag/devlog-sass/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tag/devlog-unix/index.html" afterPath="$PROJECT_DIR$/tag/devlog-unix/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tag/essay-essay/index.html" afterPath="$PROJECT_DIR$/tag/essay-essay/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tag/essay-startup/index.html" afterPath="$PROJECT_DIR$/tag/essay-startup/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tag/review-book/index.html" afterPath="$PROJECT_DIR$/tag/review-book/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tag/review-food/index.html" afterPath="$PROJECT_DIR$/tag/review-food/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tag/review-goods/index.html" afterPath="$PROJECT_DIR$/tag/review-goods/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tag/tip-css/index.html" afterPath="$PROJECT_DIR$/tag/tip-css/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tag/tip-java/index.html" afterPath="$PROJECT_DIR$/tag/tip-java/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tag/tip-javascript/index.html" afterPath="$PROJECT_DIR$/tag/tip-javascript/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tag/tip-jstl/index.html" afterPath="$PROJECT_DIR$/tag/tip-jstl/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tag/tip-mysql/index.html" afterPath="$PROJECT_DIR$/tag/tip-mysql/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tag/travel-korea/index.html" afterPath="$PROJECT_DIR$/tag/travel-korea/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tip/2020/02/25/tip-javascript-01/index.html" afterPath="$PROJECT_DIR$/tip/2020/02/25/tip-javascript-01/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tip/2020/02/25/tip-javascript-02/index.html" afterPath="$PROJECT_DIR$/tip/2020/02/25/tip-javascript-02/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tip/2020/02/27/tip-javascript-03/index.html" afterPath="$PROJECT_DIR$/tip/2020/02/27/tip-javascript-03/index.html" />
@@ -103,6 +252,33 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tip/2020/03/16/tip-mysql-02/index.html" afterPath="$PROJECT_DIR$/tip/2020/03/16/tip-mysql-02/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tip/2020/03/18/tip-java-02/index.html" afterPath="$PROJECT_DIR$/tip/2020/03/18/tip-java-02/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tip/2020/03/18/tip-jstl-02/index.html" afterPath="$PROJECT_DIR$/tip/2020/03/18/tip-jstl-02/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tip/2020/03/21/tip-javascript-08/index.html" afterPath="$PROJECT_DIR$/tip/2020/03/21/tip-javascript-08/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tip/2020/03/23/tip-javascript-09/index.html" afterPath="$PROJECT_DIR$/tip/2020/03/23/tip-javascript-09/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tip/2020/03/23/tip-mysql-03/index.html" afterPath="$PROJECT_DIR$/tip/2020/03/23/tip-mysql-03/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tip/2020/03/23/tip-mysql-04/index.html" afterPath="$PROJECT_DIR$/tip/2020/03/23/tip-mysql-04/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tip/2020/03/23/tip-mysql-05/index.html" afterPath="$PROJECT_DIR$/tip/2020/03/23/tip-mysql-05/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tip/2020/03/24/tip-css-01/index.html" afterPath="$PROJECT_DIR$/tip/2020/03/24/tip-css-01/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tip/2020/03/25/tip-javascript-10/index.html" afterPath="$PROJECT_DIR$/tip/2020/03/25/tip-javascript-10/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tip/2020/03/26/tip-java-03/index.html" afterPath="$PROJECT_DIR$/tip/2020/03/26/tip-java-03/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tip/2020/03/27/tip-chartjs-01/index.html" afterPath="$PROJECT_DIR$/tip/2020/03/27/tip-chartjs-01/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tip/2020/03/29/tip-chartjs-02/index.html" afterPath="$PROJECT_DIR$/tip/2020/03/29/tip-chartjs-02/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tip/2020/03/30/tip-java-04/index.html" afterPath="$PROJECT_DIR$/tip/2020/03/30/tip-java-04/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tip/2020/03/30/tip-jstl-03/index.html" afterPath="$PROJECT_DIR$/tip/2020/03/30/tip-jstl-03/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tip/2020/03/31/tip-chartjs-03/index.html" afterPath="$PROJECT_DIR$/tip/2020/03/31/tip-chartjs-03/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tip/2020/03/31/tip-javascript-11/index.html" afterPath="$PROJECT_DIR$/tip/2020/03/31/tip-javascript-11/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tip/2020/04/01/tip-javascript-12/index.html" afterPath="$PROJECT_DIR$/tip/2020/04/01/tip-javascript-12/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tip/2020/04/02/tip-css-02/index.html" afterPath="$PROJECT_DIR$/tip/2020/04/02/tip-css-02/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tip/2020/04/02/tip-javascript-13/index.html" afterPath="$PROJECT_DIR$/tip/2020/04/02/tip-javascript-13/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tip/2020/04/07/tip-css-03/index.html" afterPath="$PROJECT_DIR$/tip/2020/04/07/tip-css-03/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tip/2020/04/07/tip-javascript-14/index.html" afterPath="$PROJECT_DIR$/tip/2020/04/07/tip-javascript-14/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tip/2020/04/08/tip-javascript-15/index.html" afterPath="$PROJECT_DIR$/tip/2020/04/08/tip-javascript-15/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tip/2020/04/08/tip-javascript-16/index.html" afterPath="$PROJECT_DIR$/tip/2020/04/08/tip-javascript-16/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tip/2020/04/10/tip-javascript-17/index.html" afterPath="$PROJECT_DIR$/tip/2020/04/10/tip-javascript-17/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tip/2020/04/10/tip-javascript-18/index.html" afterPath="$PROJECT_DIR$/tip/2020/04/10/tip-javascript-18/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tip/2020/05/15/tip-jekyll-01/index.html" afterPath="$PROJECT_DIR$/tip/2020/05/15/tip-jekyll-01/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tip/2020/06/07/tip-css-04/index.html" afterPath="$PROJECT_DIR$/tip/2020/06/07/tip-css-04/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tip/2020/06/08/tip-css-05/index.html" afterPath="$PROJECT_DIR$/tip/2020/06/08/tip-css-05/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tip/2020/06/09/tip-jstl-04/index.html" afterPath="$PROJECT_DIR$/tip/2020/06/09/tip-jstl-04/index.html" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -114,45 +290,13 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="sitemap.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sitemap.xml">
+    <leaf>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/2020/01/01/portfolio-17/index.html">
           <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-            <state relative-caret-position="13946">
-              <caret line="734" column="34" lean-forward="false" selection-start-line="734" selection-start-column="34" selection-end-line="734" selection-end-column="34" />
-              <folding>
-                <marker date="1584628500229" expanded="true" signature="17436:17656" ph="..." />
-=======
-            <state relative-caret-position="16192">
-              <caret line="1012" column="0" lean-forward="false" selection-start-line="1012" selection-start-column="0" selection-end-line="1012" selection-end-column="0" />
-              <folding>
-                <marker date="1584522367996" expanded="true" signature="17163:17383" ph="..." />
->>>>>>> 5fca3cb7f4a4c3da942b5e8fefada601b47f9651
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="404.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/404.html">
-          <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-            <state relative-caret-position="319">
-              <caret line="56" column="0" lean-forward="true" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
-              <folding>
-                <element signature="e#1487#1495#0" expanded="true" />
-                <element signature="n#style#0;n#ins#0;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#ins#0;n#div#1;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-=======
-            <state relative-caret-position="158">
-              <caret line="38" column="0" lean-forward="true" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
-              <folding>
-                <element signature="e#1487#1495#0" expanded="true" />
-                <marker date="1584522376722" expanded="false" signature="14491:14504" ph="..." />
-                <marker date="1584522376722" expanded="false" signature="14899:14912" ph="..." />
->>>>>>> 5fca3cb7f4a4c3da942b5e8fefada601b47f9651
-              </folding>
+            <state relative-caret-position="297">
+              <caret line="1434" column="53" lean-forward="true" selection-start-line="1434" selection-start-column="53" selection-end-line="1434" selection-end-column="53" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -161,13 +305,15 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>http://localhost:4000/devlog</find>
       <find>http://localhost:4000</find>
     </findStrings>
     <replaceStrings>
       <replace />
       <replace>https://m-veloper.github.io</replace>
     </replaceStrings>
+    <dirStrings>
+      <dir>D:\m-veloper.github.io</dir>
+    </dirStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -180,12 +326,7 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/devlog/2020/02/12/database-01/index.html" />
-        <option value="$PROJECT_DIR$/sitemap.xml" />
-        <option value="$PROJECT_DIR$/category/artwork/index.html" />
-        <option value="$PROJECT_DIR$/category/devlog/index.html" />
-        <option value="$PROJECT_DIR$/404.html" />
+        <option value="$PROJECT_DIR$/2020/01/01/portfolio-17/index.html" />
       </list>
     </option>
   </component>
@@ -196,7 +337,7 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
+    <option name="x" value="1912" />
     <option name="y" value="-8" />
     <option name="width" value="1936" />
     <option name="height" value="1056" />
@@ -217,7 +358,6 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -230,62 +370,9 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="m-veloper.github.io" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="m-veloper.github.io" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="m-veloper.github.io" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="m-veloper.github.io" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="img" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="unix" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="m-veloper.github.io" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="m-veloper.github.io" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="img" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -314,61 +401,6 @@
       <predefined_log_file id="idea.log" enabled="true" />
       <method />
     </configuration>
-    <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android App">
-      <module name="" />
-      <option name="DEPLOY" value="true" />
-      <option name="ARTIFACT_NAME" value="" />
-      <option name="PM_INSTALL_OPTIONS" value="" />
-      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
-      <option name="MODE" value="default_activity" />
-      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
-      <option name="PREFERRED_AVD" value="" />
-      <option name="CLEAR_LOGCAT" value="false" />
-      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
-      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
-      <option name="FORCE_STOP_RUNNING_APP" value="true" />
-      <option name="DEBUGGER_TYPE" value="Java" />
-      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
-      <option name="PREFERRED_AVD" value="" />
-      <Java />
-      <Profilers>
-        <option name="ENABLE_ADVANCED_PROFILING" value="true" />
-        <option name="GAPID_ENABLED" value="false" />
-        <option name="GAPID_DISABLE_PCS" value="false" />
-        <option name="SUPPORT_LIB_ENABLED" value="true" />
-        <option name="INSTRUMENTATION_ENABLED" value="true" />
-      </Profilers>
-      <option name="DEEP_LINK" value="" />
-      <option name="ACTIVITY_CLASS" value="" />
-      <method />
-    </configuration>
-    <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
-      <module name="" />
-      <option name="TESTING_TYPE" value="0" />
-      <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="CLASS_NAME" value="" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="EXTRA_OPTIONS" value="" />
-      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
-      <option name="PREFERRED_AVD" value="" />
-      <option name="CLEAR_LOGCAT" value="false" />
-      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
-      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
-      <option name="FORCE_STOP_RUNNING_APP" value="true" />
-      <option name="DEBUGGER_TYPE" value="Java" />
-      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
-      <option name="PREFERRED_AVD" value="" />
-      <Java />
-      <Profilers>
-        <option name="ENABLE_ADVANCED_PROFILING" value="true" />
-        <option name="GAPID_ENABLED" value="false" />
-        <option name="GAPID_DISABLE_PCS" value="false" />
-        <option name="SUPPORT_LIB_ENABLED" value="true" />
-        <option name="INSTRUMENTATION_ENABLED" value="true" />
-      </Profilers>
-      <method />
-    </configuration>
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="HTML_USED" value="false" />
       <option name="WIDTH" value="400" />
@@ -392,161 +424,6 @@
       <envs />
       <method />
     </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="" />
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
-    <configuration default="true" type="ArquillianTestNG" factoryName="">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="" />
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="SUITE_NAME" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="GROUP_NAME" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <option name="VM_PARAMETERS" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" />
-      <option name="OUTPUT_DIRECTORY" />
-      <option name="ANNOTATION_TYPE" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <option name="USE_DEFAULT_REPORTERS" value="false" />
-      <option name="PROPERTIES_FILE" />
-      <envs />
-      <properties />
-      <listeners />
-      <method />
-    </configuration>
-    <configuration default="true" type="Cold Fusion runner description" factoryName="Cold Fusion" custom_browser="" web_path="">
-      <method />
-    </configuration>
-    <configuration default="true" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="myFilePath" />
-      <option name="GLUE" />
-      <option name="myNameFilter" />
-      <option name="myGeneratedName" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="FlashRunConfigurationType" factoryName="Flash App">
-      <option name="BCName" value="" />
-      <option name="IOSSimulatorSdkPath" value="" />
-      <option name="adlOptions" value="" />
-      <option name="airProgramParameters" value="" />
-      <option name="appDescriptorForEmulator" value="Android" />
-      <option name="debugTransport" value="USB" />
-      <option name="debuggerSdkRaw" value="BC SDK" />
-      <option name="emulator" value="NexusOne" />
-      <option name="emulatorAdlOptions" value="" />
-      <option name="fastPackaging" value="true" />
-      <option name="fullScreenHeight" value="0" />
-      <option name="fullScreenWidth" value="0" />
-      <option name="launchUrl" value="false" />
-      <option name="launcherParameters">
-        <LauncherParameters>
-          <option name="browser" value="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" />
-          <option name="launcherType" value="OSDefault" />
-          <option name="newPlayerInstance" value="false" />
-          <option name="playerPath" value="FlashPlayerDebugger.exe" />
-        </LauncherParameters>
-      </option>
-      <option name="mobileRunTarget" value="Emulator" />
-      <option name="moduleName" value="" />
-      <option name="overriddenMainClass" value="" />
-      <option name="overriddenOutputFileName" value="" />
-      <option name="overrideMainClass" value="false" />
-      <option name="runTrusted" value="true" />
-      <option name="screenDpi" value="0" />
-      <option name="screenHeight" value="0" />
-      <option name="screenWidth" value="0" />
-      <option name="url" value="http://" />
-      <option name="usbDebugPort" value="7936" />
-      <method />
-    </configuration>
-    <configuration default="true" type="FlexUnitRunConfigurationType" factoryName="FlexUnit" appDescriptorForEmulator="Android" class_name="" emulatorAdlOptions="" method_name="" package_name="" scope="Class">
-      <option name="BCName" value="" />
-      <option name="launcherParameters">
-        <LauncherParameters>
-          <option name="browser" value="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" />
-          <option name="launcherType" value="OSDefault" />
-          <option name="newPlayerInstance" value="false" />
-          <option name="playerPath" value="FlashPlayerDebugger.exe" />
-        </LauncherParameters>
-      </option>
-      <option name="moduleName" value="" />
-      <option name="trusted" value="true" />
-      <method />
-    </configuration>
-    <configuration default="true" type="GradleRunConfiguration" factoryName="Gradle">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list />
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <method />
-    </configuration>
-    <configuration default="true" type="GrailsRunConfigurationType" factoryName="Grails">
-      <setting name="vmparams" value="" />
-      <setting name="cmdLine" value="run-app" />
-      <setting name="passParentEnv" value="true" />
-      <setting name="launchBrowser" value="true" />
-      <setting name="launchBrowserUrl" value="" />
-      <setting name="depsClasspath" value="false" />
-      <method />
-    </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -568,80 +445,12 @@
       <patterns />
       <method />
     </configuration>
-    <configuration default="true" type="JarApplication" factoryName="JAR Application">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="Java Scratch" factoryName="Java Scratch">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="SCRATCH_FILE_ID" value="0" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavaScriptTestRunnerJest" factoryName="Jest">
-      <node-interpreter value="project" />
-      <working-dir value="" />
-      <envs />
-      <scope-kind value="ALL" />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavaScriptTestRunnerProtractor" factoryName="Protractor">
-      <config-file value="" />
-      <node-interpreter value="project" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
-      <method />
-    </configuration>
-    <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="m-veloper.github.io" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType" factoryName="Kotlin script">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="filePath" />
-      <option name="vmParameters" />
-      <option name="alternativeJrePath" />
-      <option name="programParameters" />
-      <option name="passParentEnvs" value="true" />
-      <option name="workingDirectory" />
-      <option name="isAlternativeJrePathEnabled" value="false" />
-      <envs />
-      <method />
-    </configuration>
     <configuration default="true" type="Remote" factoryName="Remote">
       <option name="USE_SOCKET_TRANSPORT" value="true" />
       <option name="SERVER_MODE" value="false" />
       <option name="SHMEM_ADDRESS" value="javadebug" />
       <option name="HOST" value="localhost" />
       <option name="PORT" value="5005" />
-      <method />
-    </configuration>
-    <configuration default="true" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="" />
-      <envs />
       <method />
     </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
@@ -672,138 +481,56 @@
       <listeners />
       <method />
     </configuration>
-    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
-      <node-interpreter>project</node-interpreter>
-      <node-options />
-      <gulpfile />
-      <tasks />
-      <arguments />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
-      <command value="run" />
-      <scripts />
-      <node-interpreter value="project" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="osgi.bnd.run" factoryName="Run Launcher">
-      <method />
-    </configuration>
-    <configuration default="true" type="osgi.bnd.run" factoryName="Test Launcher (JUnit)">
-      <method />
-    </configuration>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="383bdea2-0c4b-4353-84c5-af5fcbec588c" name="Default" comment="" />
-      <created>1581907310881</created>
+      <changelist id="4c62f87d-2e27-4843-baac-9df94dc5670e" name="Default" comment="" />
+      <created>1591666277426</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1581907310881</updated>
-      <workItem from="1581907312162" duration="637000" />
-      <workItem from="1581927842742" duration="58000" />
-      <workItem from="1581946804420" duration="244000" />
-      <workItem from="1582026449131" duration="871000" />
-      <workItem from="1582036240147" duration="86000" />
-      <workItem from="1582122393878" duration="847000" />
-      <workItem from="1582203877686" duration="10000" />
-      <workItem from="1582213297486" duration="31000" />
-      <workItem from="1582457222193" duration="25000" />
-      <workItem from="1582458488816" duration="280000" />
-      <workItem from="1582466734426" duration="32000" />
-      <workItem from="1582545639246" duration="233000" />
-      <workItem from="1582550088848" duration="599000" />
-      <workItem from="1582558353930" duration="62000" />
-      <workItem from="1582631214000" duration="9000" />
-      <workItem from="1582634307239" duration="315000" />
-      <workItem from="1582717370938" duration="78000" />
-      <workItem from="1582721182764" duration="91000" />
-      <workItem from="1582805906248" duration="52000" />
-      <workItem from="1582806570713" duration="657000" />
-      <workItem from="1582817188957" duration="599000" />
-      <workItem from="1582890581506" duration="666000" />
-      <workItem from="1582899038024" duration="9000" />
-      <workItem from="1582967645459" duration="132000" />
-      <workItem from="1582985398931" duration="18000" />
-      <workItem from="1583051586565" duration="90000" />
-      <workItem from="1583062766979" duration="1222000" />
-      <workItem from="1583158712590" duration="714000" />
-      <workItem from="1583242535070" duration="887000" />
-      <workItem from="1583331226260" duration="86000" />
-      <workItem from="1583487204436" duration="341000" />
-      <workItem from="1583572389636" duration="599000" />
-      <workItem from="1583582493861" duration="709000" />
-      <workItem from="1583583584639" duration="259000" />
-      <workItem from="1583646772806" duration="544000" />
-      <workItem from="1583673577319" duration="713000" />
-      <workItem from="1583765677704" duration="693000" />
-      <workItem from="1583840092857" duration="744000" />
-      <workItem from="1583923345633" duration="158000" />
-      <workItem from="1584013428620" duration="233000" />
-      <workItem from="1584014144549" duration="775000" />
-      <workItem from="1584097943774" duration="773000" />
-      <workItem from="1584162961153" duration="742000" />
-      <workItem from="1584174577049" duration="771000" />
-      <workItem from="1584176898116" duration="155000" />
-      <workItem from="1584186582716" duration="530000" />
-      <workItem from="1584197310297" duration="694000" />
-      <workItem from="1584201911620" duration="24000" />
-      <workItem from="1584358315164" duration="663000" />
-<<<<<<< HEAD
-      <workItem from="1584449859674" duration="858000" />
-      <workItem from="1584626371843" duration="1236000" />
-=======
-      <workItem from="1584449859674" duration="805000" />
-      <workItem from="1584505256595" duration="119000" />
-      <workItem from="1584522289546" duration="86000" />
->>>>>>> 5fca3cb7f4a4c3da942b5e8fefada601b47f9651
+      <updated>1591666277426</updated>
+      <workItem from="1591666278747" duration="137000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-<<<<<<< HEAD
-    <option name="totallyTimeSpent" value="21984000" />
-=======
-    <option name="totallyTimeSpent" value="20900000" />
->>>>>>> 5fca3cb7f4a4c3da942b5e8fefada601b47f9651
+    <option name="totallyTimeSpent" value="137000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3227513" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32903227" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -818,514 +545,11 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/feed.xml">
+    <entry file="file://$PROJECT_DIR$/2020/01/01/portfolio-17/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/feed.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sitemap.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="969">
-          <caret line="51" column="9" lean-forward="false" selection-start-line="51" selection-start-column="9" selection-end-line="51" selection-end-column="9" />
-          <folding>
-<<<<<<< HEAD
-            <marker date="1584628500229" expanded="true" signature="17436:17656" ph="..." />
-=======
-            <marker date="1584522367996" expanded="true" signature="17163:17383" ph="..." />
->>>>>>> 5fca3cb7f4a4c3da942b5e8fefada601b47f9651
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/404.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="874">
-          <caret line="46" column="0" lean-forward="false" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sitemap.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="969">
-          <caret line="51" column="9" lean-forward="false" selection-start-line="51" selection-start-column="9" selection-end-line="51" selection-end-column="9" />
-          <folding>
-<<<<<<< HEAD
-            <marker date="1584628500229" expanded="true" signature="17436:17656" ph="..." />
-=======
-            <marker date="1584522367996" expanded="true" signature="17163:17383" ph="..." />
->>>>>>> 5fca3cb7f4a4c3da942b5e8fefada601b47f9651
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/404.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="874">
-          <caret line="46" column="0" lean-forward="false" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sitemap.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="19" column="9" lean-forward="false" selection-start-line="19" selection-start-column="9" selection-end-line="19" selection-end-column="9" />
-          <folding>
-<<<<<<< HEAD
-            <marker date="1584628500229" expanded="true" signature="17436:17656" ph="..." />
-=======
-            <marker date="1584522367996" expanded="true" signature="17163:17383" ph="..." />
->>>>>>> 5fca3cb7f4a4c3da942b5e8fefada601b47f9651
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/404.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="760">
-          <caret line="40" column="37" lean-forward="false" selection-start-line="40" selection-start-column="37" selection-end-line="40" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sitemap.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="19" column="9" lean-forward="false" selection-start-line="19" selection-start-column="9" selection-end-line="19" selection-end-column="9" />
-          <folding>
-<<<<<<< HEAD
-            <marker date="1584628500229" expanded="true" signature="17436:17656" ph="..." />
-=======
-            <marker date="1584522367996" expanded="true" signature="17163:17383" ph="..." />
->>>>>>> 5fca3cb7f4a4c3da942b5e8fefada601b47f9651
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/404.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="760">
-          <caret line="40" column="37" lean-forward="false" selection-start-line="40" selection-start-column="37" selection-end-line="40" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sitemap.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" column="6" lean-forward="false" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
-          <folding>
-<<<<<<< HEAD
-            <marker date="1584628500229" expanded="true" signature="17436:17656" ph="..." />
-=======
-            <marker date="1584522367996" expanded="true" signature="17163:17383" ph="..." />
->>>>>>> 5fca3cb7f4a4c3da942b5e8fefada601b47f9651
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/404.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="950">
-          <caret line="50" column="0" lean-forward="true" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sitemap.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" column="6" lean-forward="false" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
-          <folding>
-<<<<<<< HEAD
-            <marker date="1584628500229" expanded="true" signature="17436:17656" ph="..." />
-=======
-            <marker date="1584522367996" expanded="true" signature="17163:17383" ph="..." />
->>>>>>> 5fca3cb7f4a4c3da942b5e8fefada601b47f9651
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/404.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="760">
-          <caret line="40" column="37" lean-forward="false" selection-start-line="40" selection-start-column="37" selection-end-line="40" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sitemap.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="20" column="38" lean-forward="false" selection-start-line="20" selection-start-column="11" selection-end-line="20" selection-end-column="38" />
-          <folding>
-<<<<<<< HEAD
-            <marker date="1584628500229" expanded="true" signature="17436:17656" ph="..." />
-=======
-            <marker date="1584522367996" expanded="true" signature="17163:17383" ph="..." />
->>>>>>> 5fca3cb7f4a4c3da942b5e8fefada601b47f9651
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/404.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="760">
-          <caret line="40" column="37" lean-forward="false" selection-start-line="40" selection-start-column="37" selection-end-line="40" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sitemap.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="20" column="38" lean-forward="false" selection-start-line="20" selection-start-column="11" selection-end-line="20" selection-end-column="38" />
-          <folding>
-<<<<<<< HEAD
-            <marker date="1584628500229" expanded="true" signature="17436:17656" ph="..." />
-=======
-            <marker date="1584522367996" expanded="true" signature="17163:17383" ph="..." />
->>>>>>> 5fca3cb7f4a4c3da942b5e8fefada601b47f9651
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/404.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="760">
-          <caret line="40" column="37" lean-forward="false" selection-start-line="40" selection-start-column="37" selection-end-line="40" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sitemap.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-<<<<<<< HEAD
-            <marker date="1584628500229" expanded="true" signature="17436:17656" ph="..." />
-=======
-            <marker date="1584522367996" expanded="true" signature="17163:17383" ph="..." />
->>>>>>> 5fca3cb7f4a4c3da942b5e8fefada601b47f9651
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sitemap.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-<<<<<<< HEAD
-            <marker date="1584628500229" expanded="true" signature="17436:17656" ph="..." />
-=======
-            <marker date="1584522367996" expanded="true" signature="17163:17383" ph="..." />
->>>>>>> 5fca3cb7f4a4c3da942b5e8fefada601b47f9651
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sitemap.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-<<<<<<< HEAD
-            <marker date="1584628500229" expanded="true" signature="17436:17656" ph="..." />
-=======
-            <marker date="1584522367996" expanded="true" signature="17163:17383" ph="..." />
->>>>>>> 5fca3cb7f4a4c3da942b5e8fefada601b47f9651
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/404.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="760">
-          <caret line="40" column="37" lean-forward="false" selection-start-line="40" selection-start-column="37" selection-end-line="40" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sitemap.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="4" column="38" lean-forward="false" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="38" />
-          <folding>
-<<<<<<< HEAD
-            <marker date="1584628500229" expanded="true" signature="17436:17656" ph="..." />
-=======
-            <marker date="1584522367996" expanded="true" signature="17163:17383" ph="..." />
->>>>>>> 5fca3cb7f4a4c3da942b5e8fefada601b47f9651
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/devlog/2020/02/12/database-01/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1216">
-          <caret line="64" column="28" lean-forward="false" selection-start-line="64" selection-start-column="28" selection-end-line="64" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sitemap.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="4" column="38" lean-forward="false" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="38" />
-          <folding>
-<<<<<<< HEAD
-            <marker date="1584628500229" expanded="true" signature="17436:17656" ph="..." />
-=======
-            <marker date="1584522367996" expanded="true" signature="17163:17383" ph="..." />
->>>>>>> 5fca3cb7f4a4c3da942b5e8fefada601b47f9651
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/404.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="836">
-          <caret line="44" column="49" lean-forward="true" selection-start-line="44" selection-start-column="49" selection-end-line="44" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="65" column="99" lean-forward="true" selection-start-line="65" selection-start-column="79" selection-end-line="65" selection-end-column="99" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/devlog/2020/02/12/database-01/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="57" column="2" lean-forward="true" selection-start-line="57" selection-start-column="2" selection-end-line="57" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sitemap.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="22" column="42" lean-forward="false" selection-start-line="22" selection-start-column="42" selection-end-line="22" selection-end-column="42" />
-          <folding>
-<<<<<<< HEAD
-            <marker date="1584628500229" expanded="true" signature="17436:17656" ph="..." />
-=======
-            <marker date="1584522367996" expanded="true" signature="17163:17383" ph="..." />
->>>>>>> 5fca3cb7f4a4c3da942b5e8fefada601b47f9651
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/404.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="188">
-          <caret line="40" column="37" lean-forward="false" selection-start-line="40" selection-start-column="37" selection-end-line="40" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sitemap.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-<<<<<<< HEAD
-            <marker date="1584628500229" expanded="true" signature="17436:17656" ph="..." />
-=======
-            <marker date="1584522367996" expanded="true" signature="17163:17383" ph="..." />
->>>>>>> 5fca3cb7f4a4c3da942b5e8fefada601b47f9651
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sitemap.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-<<<<<<< HEAD
-            <marker date="1584628500229" expanded="true" signature="17436:17656" ph="..." />
-=======
-            <marker date="1584522367996" expanded="true" signature="17163:17383" ph="..." />
->>>>>>> 5fca3cb7f4a4c3da942b5e8fefada601b47f9651
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sitemap.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-<<<<<<< HEAD
-            <marker date="1584628500229" expanded="true" signature="17436:17656" ph="..." />
-=======
-            <marker date="1584522367996" expanded="true" signature="17163:17383" ph="..." />
->>>>>>> 5fca3cb7f4a4c3da942b5e8fefada601b47f9651
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/404.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="760">
-          <caret line="40" column="37" lean-forward="false" selection-start-line="40" selection-start-column="37" selection-end-line="40" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sitemap.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="4" column="38" lean-forward="false" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="38" />
-          <folding>
-<<<<<<< HEAD
-            <marker date="1584628500229" expanded="true" signature="17436:17656" ph="..." />
-=======
-            <marker date="1584522367996" expanded="true" signature="17163:17383" ph="..." />
->>>>>>> 5fca3cb7f4a4c3da942b5e8fefada601b47f9651
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/devlog/2020/02/12/database-01/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1216">
-          <caret line="64" column="28" lean-forward="false" selection-start-line="64" selection-start-column="28" selection-end-line="64" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sitemap.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="4" column="38" lean-forward="false" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="38" />
-          <folding>
-<<<<<<< HEAD
-            <marker date="1584628500229" expanded="true" signature="17436:17656" ph="..." />
-=======
-            <marker date="1584522367996" expanded="true" signature="17163:17383" ph="..." />
->>>>>>> 5fca3cb7f4a4c3da942b5e8fefada601b47f9651
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/404.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="836">
-          <caret line="44" column="49" lean-forward="true" selection-start-line="44" selection-start-column="49" selection-end-line="44" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="65" column="99" lean-forward="true" selection-start-line="65" selection-start-column="79" selection-end-line="65" selection-end-column="99" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/devlog/2020/02/12/database-01/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="57" column="2" lean-forward="true" selection-start-line="57" selection-start-column="2" selection-end-line="57" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/redirects.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/browserconfig.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/feed.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/category/artwork/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="817">
-          <caret line="43" column="48" lean-forward="false" selection-start-line="43" selection-start-column="48" selection-end-line="43" selection-end-column="48" />
+        <state relative-caret-position="297">
+          <caret line="1434" column="53" lean-forward="true" selection-start-line="1434" selection-start-column="53" selection-end-line="1434" selection-end-column="53" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/category/devlog/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="893">
-          <caret line="47" column="0" lean-forward="false" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/img/unix/2020-02-18-unix-03-01.png" />
-    <entry file="file://$PROJECT_DIR$/robots.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sitemap.xml">
-      <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-        <state relative-caret-position="13946">
-          <caret line="734" column="34" lean-forward="false" selection-start-line="734" selection-start-column="34" selection-end-line="734" selection-end-column="34" />
-          <folding>
-            <marker date="1584628500229" expanded="true" signature="17436:17656" ph="..." />
-=======
-        <state relative-caret-position="16192">
-          <caret line="1012" column="0" lean-forward="false" selection-start-line="1012" selection-start-column="0" selection-end-line="1012" selection-end-column="0" />
-          <folding>
-            <marker date="1584522367996" expanded="true" signature="17163:17383" ph="..." />
->>>>>>> 5fca3cb7f4a4c3da942b5e8fefada601b47f9651
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/404.html">
-      <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-        <state relative-caret-position="319">
-          <caret line="56" column="0" lean-forward="true" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
-          <folding>
-            <element signature="e#1487#1495#0" expanded="true" />
-            <element signature="n#style#0;n#ins#0;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#ins#0;n#div#1;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-=======
-        <state relative-caret-position="158">
-          <caret line="38" column="0" lean-forward="true" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
-          <folding>
-            <element signature="e#1487#1495#0" expanded="true" />
-            <marker date="1584522376722" expanded="false" signature="14491:14504" ph="..." />
-            <marker date="1584522376722" expanded="false" signature="14899:14912" ph="..." />
->>>>>>> 5fca3cb7f4a4c3da942b5e8fefada601b47f9651
-          </folding>
         </state>
       </provider>
     </entry>
