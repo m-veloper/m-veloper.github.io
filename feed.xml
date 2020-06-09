@@ -5,9 +5,113 @@
     <description></description>
     <link>https://m-veloper.github.io/</link>
     <atom:link href="https://m-veloper.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 09 Jun 2020 11:11:02 +0900</pubDate>
-    <lastBuildDate>Tue, 09 Jun 2020 11:11:02 +0900</lastBuildDate>
+    <pubDate>Wed, 10 Jun 2020 00:31:44 +0900</pubDate>
+    <lastBuildDate>Wed, 10 Jun 2020 00:31:44 +0900</lastBuildDate>
     <generator>Jekyll v3.8.6</generator>
+    
+      <item>
+        <title>[자바스크립트] 소수점 버림, 올림, 반올림, 자르기 방법</title>
+        <description>&lt;p&gt;&lt;img src=&quot;/assets/img/javascript/2020-06-10-tip-javascript-19.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;math&quot;&gt;Math()&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Math.ceil() : 소수점 올림, 정수 반환&lt;/li&gt;
+  &lt;li&gt;Math.floor() : 소수점 버림, 정수 반환&lt;/li&gt;
+  &lt;li&gt;Math.round() : 소수점 반올림, 정수 반환&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;올림&quot;&gt;올림&lt;/h2&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;testNum&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;99.11&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;Math&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;ceil&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;testNum&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// 100 출력, 올림 적용&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;버림&quot;&gt;버림&lt;/h2&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;testNum&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;99.11&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;Math&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;floor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;testNum&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// 99 출력, 버림 적용&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;반올림&quot;&gt;반올림&lt;/h2&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;testNum&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;99.5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;Math&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;round&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;testNum&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// 100 출력, 반올림 적용&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;tofixed-toexponential-toprecision&quot;&gt;toFixed(), toExponential(), toPrecision()&lt;/h1&gt;
+
+&lt;p&gt;toFixed(), toExponential(), toPrecision()는 소수점 처리에 사용할 수 있는 다른 함수들 입니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;tofixed&quot;&gt;toFixed()&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;toFixed를 사용하면 숫자에서 원하는 소수점 길이만큼만 반올림하여서 반환&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;testNum&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;99.9876543&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;nx&quot;&gt;testNum&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;toFixed&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// 100 출력&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;testNum&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;toFixed&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// 99.98765 출력&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;toexponential&quot;&gt;toExponential()&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;이 함수를 사용하면 지정한 소수점 이하부터는 지수표기법으로 변환하여  출력&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;testNum&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;99.12345&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;nx&quot;&gt;testNum&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;toExponential&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// 9.9123e+2 출력 지수표기법으로 표기됨&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;toprecision&quot;&gt;toPrecision()&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;지정된 값만큼 반올림한 정수와 소수점으로 나타낸다. 이때 지정한 값보다 원래 데이터 자리수가 더 많은 경우 지수표기법으로 나타난다. 반대로 원 데이터의 자리수가 더 적은 경우 뒷자리는 반올림으로 표기된다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;testNum&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;99.123&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;testNum&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;toPrecision&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// 9.9e+2  출력, 지수표기법&lt;/span&gt;
+
+&lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;testNum&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;toPrecision&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// 99.120 반올림하여 표기&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+</description>
+        <pubDate>Wed, 10 Jun 2020 00:00:00 +0900</pubDate>
+        <link>https://m-veloper.github.io/2020/06/10/tip-javascript-19/</link>
+        <guid isPermaLink="true">https://m-veloper.github.io/2020/06/10/tip-javascript-19/</guid>
+        
+        <category>web</category>
+        
+        <category>javascript</category>
+        
+        
+      </item>
     
       <item>
         <title>[JSTL] substring 문자열 자르기</title>
@@ -5829,196 +5933,6 @@ Password:
         <guid isPermaLink="true">https://m-veloper.github.io/devlog/2020/05/16/unix-51/</guid>
         
         <category>unix</category>
-        
-        
-        <category>devlog</category>
-        
-      </item>
-    
-      <item>
-        <title>[Javascript] ECMAScript6/ES6 는 무엇일까?</title>
-        <description>&lt;p&gt;&lt;img src=&quot;/assets/img/ECMAScript6/2020-05-16-ECMAScript6-01.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;이글은 “&lt;a href=&quot;https://wormwlrm.github.io/2018/10/03/What-is-the-difference-between-javascript-and-ecmascript.html&quot;&gt;재그지그&lt;/a&gt;“님의 글을 참고하였습니다.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h1 id=&quot;ecmascript6es6-는-무엇일까&quot;&gt;ECMAScript6/ES6 는 무엇일까?&lt;/h1&gt;
-
-&lt;p&gt;이 글은 JavaScript와 ECMAScript에 대한 이해를 바탕으로 작성합니다. 이 글은 JavaScript에는 친숙하지만,&lt;/p&gt;
-
-&lt;p&gt;EMCAScript와 웹 브라우저, Babel과 같은 JavaScript를 둘러싼 여러가지 환경들에 대해 이해하고자 하는 분들에게&lt;/p&gt;
-
-&lt;p&gt;초점이 맞추어져 있습니다. 그리고 스크립팅 언어, JavaScript 엔진 및 브라우저 등에 대해 자세히 알아볼 것입니다.&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h1 id=&quot;ecma-인터내셔널ecma-international&quot;&gt;Ecma 인터내셔널(Ecma International)&lt;/h1&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/img/ECMAScript6/2020-05-16-ECMAScript6-01-01.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Ecma 인터내셔널은 정보 통신에 대한 표준을 제정하는 비영리 표준화 기구입니다.&lt;/p&gt;
-
-&lt;p&gt;Ecma는 표준을 제정합니다. 대표적으로 CD롬 볼륨과 파일 구조, C# 언어 규격, JSON 포맷처럼&lt;/p&gt;
-
-&lt;p&gt;일부 정보 통신 기술에 대한 표준을 이 단체에서 관리하고 있죠.&lt;/p&gt;
-
-&lt;p&gt;각각의 표준들은 고유한 이름과 번호를 가지고 있는데,&lt;/p&gt;
-
-&lt;p&gt;우리는 그 중에서도 ECMA-262라는 표준에 대해 알아보아야 합니다.&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h1 id=&quot;ecma-262&quot;&gt;ECMA-262&lt;/h1&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/img/ECMAScript6/2020-05-16-ECMAScript6-01-02.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;ECMA-262는 Ecma 인터내셔널에 의해 제정된 하나의 기술 규격의 이름으로, 범용 목적의 스크립트 언어에 대한 명세를 담고 있습니다.&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h1 id=&quot;스크립트-언어script-language&quot;&gt;스크립트 언어(Script Language)&lt;/h1&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/img/ECMAScript6/2020-05-16-ECMAScript6-01-03.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;스크립트 언어는 독립된 시스템에서 작동하도록 특별히 설계된 프로그래밍 언어입니다.&lt;/p&gt;
-
-&lt;p&gt;스크립트 언어에 포함되는 프로그래밍 언어들은 독립된 시스템을 위해 존재합니다.&lt;/p&gt;
-
-&lt;p&gt;예를 들어, 이동하기, 달리기, 점프하기라는 명령어를 여러분들이 사용할 수 있다고 생각해봅시다.&lt;/p&gt;
-
-&lt;p&gt;그렇다면 사람이나 개, 아니면 게임 캐릭터처럼 여러분들의 명령을 입력받고, 실행할 수 있는 무언가가 있어야 하겠죠?&lt;/p&gt;
-
-&lt;p&gt;만약 이동하고, 달리고, 점프를 할 수 있는 것들이 없다면 명령어는 아무 쓸모가 없겠죠.&lt;/p&gt;
-
-&lt;p&gt;여기서 찾을 수 있는 스크립트 언어의 특징으로는 응용 프로그램과는 독립적이고,&lt;/p&gt;
-
-&lt;p&gt;사용자가 직접 프로그램을 의도에 따라 동작시킬 수 있다는 것입니다. 스크립트 언어를 이용한 명령어의 실행이,&lt;/p&gt;
-
-&lt;p&gt;시스템 내부에서 어떤 원리로 동작하는지는 전혀 상관하지 않습니다. 단순히 사용자가 그 프로그램을 의도에 따라  제어할 수만 있다는 것만으로 충분하죠.&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h1 id=&quot;ecmascript&quot;&gt;ECMAScript&lt;/h1&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/img/ECMAScript6/2020-05-16-ECMAScript6-01-04.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;ECMAScript는 Ecma 인터내셔널에 의해 제정된 ECMA-262 기술 규격에 의해 정의된 범용 스크립트 언어입니다.&lt;/p&gt;
-
-&lt;p&gt;동의어로는 ‘ECMAScript 사양’(ECMAScript specification)가 있습니다.&lt;/p&gt;
-
-&lt;p&gt;ECMA-262는 표준의 이름이지만, ECMAScript는 ECMA-262에서 정의된 하나의 사양을 의미합니다.&lt;/p&gt;
-
-&lt;p&gt;ECMAScript는 스크립트 언어가 준수해야 하는 규칙, 세부 사항 및 지침을 제공합니다.&lt;/p&gt;
-
-&lt;p&gt;이해가 어렵다면 좀 더 쉬운 예시를 들어보죠. 우리가 일상생활에서 쓰는 언어의 기준이 되는 국어를 표준어라고 부르고,&lt;/p&gt;
-
-&lt;p&gt;국립국어원에서 관리하고 있습니다. 그리고 표준어는 국립국어원에서 제정한 여러가지 규칙들(대표적으로 발음이나 맞춤법)을&lt;/p&gt;
-
-&lt;p&gt;일정한 원리를 따르고 있습니다. ECMAScript에서도 마찬가지입니다. 국립국어원은 Ecma 인터내셔널, ECMA-262는 표준어고,&lt;/p&gt;
-
-&lt;p&gt;ECMAScript는 맞춤법과 같은 규칙으로 생각한다면 보다 쉽게 이해할 수 있겠습니다.&lt;/p&gt;
-
-&lt;p&gt;ECMAScript는 문서로 작성되어 있으며, 전문은 &lt;a href=&quot;https://www.ecma-international.org/publications/files/ECMA-ST/Ecma-262.pdf&quot;&gt;이 곳&lt;/a&gt;에서 확인하실 수 있습니다.&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h1 id=&quot;javascript&quot;&gt;JavaScript&lt;/h1&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/img/ECMAScript6/2020-05-16-ECMAScript6-01-05.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;JavaScript는 ECMAScript 사양을 준수하는 범용 스크립팅 언어입니다.&lt;/p&gt;
-
-&lt;p&gt;만약 여러분이 ECMAScript 문서를 읽게 된다면, 여러분은 어떻게 스크립트 언어를 만들 수 있는지를 알 수 있습니다.&lt;/p&gt;
-
-&lt;p&gt;반면 여러분이 JavaScript 문서를 읽게 된다면, 여러분은 어떻게 스크립트 언어를 쓸 수 있는지를 알 수 있습니다.&lt;/p&gt;
-
-&lt;p&gt;일부 사람들이 JavaScript를 ECMAScript의 방언이라고 부르는 이유는 경상도, 전라도, 충청도처럼 실제 방언과 같은 문맥으로 사용되기 때문일 겁니다.&lt;/p&gt;
-
-&lt;p&gt;방언은 표준어로부터 파생된 언어이지만, 각각의 방언들은 마치 다른 언어처럼 들리거든요.&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h1 id=&quot;자바스크립트-엔진javascript-engine&quot;&gt;자바스크립트 엔진(JavaScript Engine)&lt;/h1&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/img/ECMAScript6/2020-05-16-ECMAScript6-01-06.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;JavaScript 엔진은 JavaScript 코드를 이해하고 실행하는 프로그램 또는 인터프리터입니다. 동의어로는 ‘JavaScript 인터프리터’(JavaScript interpreter)가 있습니다.&lt;/p&gt;
-
-&lt;p&gt;JavaScript 엔진은 일반적으로 대부분의 웹 브라우저에서 찾아 볼 수 있습니다. 마치 아까 위에서 말했던 이동하고, 뛰고, 점프하는 명령어들을 실제로 이해하고 수행합니다. 마치 사람이 언어를 이해하는 것과 같은 맥락입니다.&lt;/p&gt;
-
-&lt;p&gt;JavaScript 엔진에는 여러 종류가 있는데, 예를 들자면 Google Chrome의 V8, Mozilla Firefox의 SpiderMonkey, Microsoft Edge의 Chakra 등이 있습니다. 다양한 종류가 있기 때문에, 각각의 JavaScript 엔진들은 다른 것들과 비교할 수 있는 몇 가지 특징을 갖습니다.&lt;/p&gt;
-
-&lt;p&gt;첫 번째 특징은 바로 수행 능력(Performance)이 차이가 난다는 것입니다. 만약 여러분들이 실제로 두 명의 사람에게 점프해!라고 명령을 내린다고 생각해봅시다. 사람들이 명령을 인지하고 이해한 후 처리하는 능력이 신체에 따라 다르므로, 운동 신경과 반사 신경이 좋은 사람은 아마 더 빠르고 높게 점프할 수 있을 것입니다. 이와 유사하게, 두 개의 웹 브라우저는 명령어를 이해할 수는 있는 능력은 같지만 속도에서 차이가 날 수 있는데, 이는 JavaScript 엔진이 얼마나 효율적으로 JavaScript를 처리하고 있는가에 따라 다르기 때문입니다.&lt;/p&gt;
-
-&lt;p&gt;두 번째 특징은 지원되는 ECMAScript가 다르다는 것입니다. 쉽게 이해하기 위해 같은 언어로 대화하고 있는 두 사람을 상상해봅시다. 많은 사람들이 영어를 사용할 줄 앎에도 불구하고, 어떤 사람은 다른 사람이 알지 못하는 문법이나 표현, 단어를 알 수도 있고 그렇지 않을 수도 있습니다. 마찬가지로, 웹 브라우저의 JavaScript 엔진이 JavaScript를 모두 이해할 수 있음에도 불구하고, 몇몇 브라우저들은 다른 브라우저들에 비해 매우 뛰어난 이해 능력을 갖고 있습니다. 이는 브라우저마다 언어를 지원하는 능력이 다르기 때문입니다.&lt;/p&gt;
-
-&lt;p&gt;브라우저가 얼마나 JavaScript를 잘 지원하느냐와 관련해서, 사람들은 일반적으로 JavaScript 호환성이라는 단어보다는 ECMAScript 호환성이라는 단어를 더 사용합니다.(사실 알고보면 JavaScript 엔진이 ECMAScript를 얼마나 잘 지원하느냐와 관련된 이야기지만요.)&lt;/p&gt;
-
-&lt;p&gt;아까 위에서 말했듯이, ECMAScript는 스크립트 언어가 어떻게 생겨야 하는지에 관한 사양입니다. 새로운 버전의 ECMAScript를 발표한다고해서 모든 JavaScript 엔진이 갑자기 이러한 새로운 기능을 갖게되는 것은 아닙니다. JavaScript 엔진이 최신 ECMAScript의 사양을 준수하던지 아닌지는 JavaScript 엔진을 담당하는 회사나 조직(Google, Mozilla, Microsoft 등)의 업데이트에 따라 달려있습니다.&lt;/p&gt;
-
-&lt;p&gt;따라서, 개발자들은 Google, Mozilla, Microsoft 등과 같은 JavaScript 엔진을 개발한 회사에게 “이 브라우저는 어떤 버전의 ECMAScript를 지원하나요?” 또는 “이 브라우저는 어떤 ECMAScript 기능을 지원하나요?”와 같은 질문을 하는 경향이 있습니다.&lt;/p&gt;
-
-&lt;p&gt;물론 새 버전의 ECMAScript가 나오면 JavaScript 엔진을 통째로 업데이트하지는 않고, 새로 추가된 ECMAScript 기능을 점진적으로 업데이트합니다.&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h1 id=&quot;ecmascript-6&quot;&gt;ECMAScript 6&lt;/h1&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/img/ECMAScript6/2020-05-16-ECMAScript6-01-07.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;ECMAScript 6는 ECMA-262 표준의 제 6판이며, ECMAScript 사양의 주요 변경 사항 및 개선 사항을 명세합니다.&lt;/p&gt;
-
-&lt;p&gt;동의어로는 ‘ES6’, ‘ES2015’, ‘ECMAScript 2015’가 있습니다.&lt;/p&gt;
-
-&lt;p&gt;국립국어원에서는 필요에 따라 표준어 규칙을 바꾸거나 새로운 단어를 표준어에 추가하기도 합니다.&lt;/p&gt;
-
-&lt;p&gt;Ecma 역시 마찬가지로, 필요성에 따라 ECMAScript를 개정합니다.&lt;/p&gt;
-
-&lt;p&gt;ECMAScript 6는 제 6판을 의미합니다.&lt;/p&gt;
-
-&lt;p&gt;같은 이름으로는 ES2015도 있는데, 이는 2015년 Ecma 인터내셔널이 ECMAScript를 매년마다 개정하기로 발표했기 때문입니다.&lt;/p&gt;
-
-&lt;p&gt;따라서 앞으로는 매년 해의 이름을 딴 ECMAScript가 새로 발표될 예정입니다.&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h1 id=&quot;바벨babel&quot;&gt;바벨(Babel)&lt;/h1&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/img/ECMAScript6/2020-05-16-ECMAScript6-01-08.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;개발자들은 ES6에서 새로 도입된 새로운 기술들을 사용할 수 있었지만, 다양한 브라우저 종류로 발생하는 호환성(Cross Browser) 문제 때문에 기술을 손쉽게 사용하기가 쉽지 않았습니다.&lt;/p&gt;
-
-&lt;p&gt;특히 Microsoft의 낡은 브라우저인 Internet Explorer가 ES6의 사양을 준수하지 않고 있죠.&lt;/p&gt;
-
-&lt;p&gt;이를 해결하기 위해 바벨이 등장했습니다.&lt;/p&gt;
-
-&lt;p&gt;바벨은 ES6 사양으로 작성된 코드를 함수적으로 동일한 ES5 코드로 바꿔주기 때문이죠.&lt;/p&gt;
-
-&lt;p&gt;대부분의 주요 브라우저는 ES5까지는 지원을 하기 때문에, 개발자들은 브라우저 간 호환성 걱정을 덜 수 있었습니다.&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;javascript가-먼저-나왔을까-아니면-ecmascript가-먼저-나왔을까&quot;&gt;JavaScript가 먼저 나왔을까, 아니면 ECMAScript가 먼저 나왔을까?&lt;/h3&gt;
-
-&lt;p&gt;JavaScript는 1996년에 만들어졌고, 그 다음에 JavaScript의 표준화를 위해 1997년에 ECMAScript가 만들어졌습니다. 당시 기준에서 JavaScript는 ECMAScript 사양을 따르고 있었기 때문에, JavaScript는 ECMAScript 사양을 준수하고 있던 언어의 예시였습니다.&lt;/p&gt;
-
-&lt;p&gt;여기서 우리는 재미있는 사실을 하나 알 수 있습니다. 바로, ECMAScript는 JavaScript를 기반으로 하는 동시에, JavaScript 역시 ECMAScript를 기반으로 한다는 거죠.&lt;/p&gt;
-
-&lt;p&gt;둘의 뗄레야 뗄 수 없는 관계, 그리고 그 두 용어가 혼용되어서 사용되던 이유는 바로 여기에서부터 출발하지 않았을까 생각해봅니다.&lt;/p&gt;
-
-</description>
-        <pubDate>Sat, 16 May 2020 00:00:00 +0900</pubDate>
-        <link>https://m-veloper.github.io/devlog/2020/05/16/ECMAScript6-01/</link>
-        <guid isPermaLink="true">https://m-veloper.github.io/devlog/2020/05/16/ECMAScript6-01/</guid>
-        
-        <category>ECMAScript6</category>
-        
-        <category>ES6</category>
-        
-        <category>ES2015</category>
         
         
         <category>devlog</category>

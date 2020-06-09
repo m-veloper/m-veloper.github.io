@@ -1,6 +1,14 @@
 [
 
 {
+"title"    : "[자바스크립트] 소수점 버림, 올림, 반올림, 자르기 방법",
+"category" : "",
+"tags"     : "web, javascript",
+"url"      : "/2020/06/10/tip-javascript-19/",
+"date"     : "2020-06-10 00:00:00 +0900"
+} ,
+
+{
 "title"    : "[JSTL] substring 문자열 자르기",
 "category" : "",
 "tags"     : "web, java, jstl, spring",
