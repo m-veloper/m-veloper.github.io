@@ -4,12 +4,22 @@
  <title>슬기로운 개발 생활</title>
  <link href="https://m-veloper.github.io/atom.xml" rel="self"/>
  <id>https://m-veloper.github.io</id>
- <updated>2020-06-10T00:31:44+09:00</updated>
+ <updated>2020-06-11T00:10:27+09:00</updated>
  <author>
    <name>m-veloper</name>
    <uri>https://m-veloper.github.io</uri>
    <email>m_veloper@naver.com</email>
  </author>
+
+ 
+
+ <entry>
+   <title>[JAVA] MyBatis(마이바티스) 에서 if문, choose문 사용하기</title>
+   <link href="https://m-veloper.github.io/tip/2020/06/11/tip-java-05/"/>
+   <id>https://m-veloper.github.io/tip/2020/06/11/tip-java-05</id>
+   <updated>2020-06-11T00:00:00+09:00</updated>
+   <content type="html">&lt;p&gt;&lt;img src=&quot;/assets/img/java/2020-06-09-tip-java-05.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt; &lt;h1 id=&quot;동적-쿼리if-choose&quot;&gt;동적 쿼리(if, choose)&lt;/h1&gt; &lt;p&gt;복잡한 형태의 쿼리를 만들다 보면 로직에따라 if문을 추가해야 한다던지 if else 문을 추가해야할 경우가 있습니다.&lt;/p&gt; &lt;p&gt;myBatis는 이를위해 동적 쿼리를 위한 기능을 제공합니다.&lt;/p&gt; &lt;p&gt;그중에서도 가장 많이 사용되는 if 문과 choose문을 살펴보겠습니다.&lt;/p&gt; &lt;p&gt;동적쿼리는 XML 매퍼에 지정하게 되는데, JSTL을 사용해봤던 사람들이라면 큰 어려움이 없는 문법입니다.&lt;/p&gt;...</content>
+ </entry>
 
  
 
@@ -99,16 +109,6 @@
    <id>https://m-veloper.github.io/devlog/2020/06/02/ECMAScript6-18</id>
    <updated>2020-06-02T00:00:00+09:00</updated>
    <content type="html">&lt;p&gt;&lt;img src=&quot;/assets/img/ECMAScript6/2020-06-02-ECMAScript6-18.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt; &lt;blockquote&gt; &lt;p&gt;이글은 “벨로퍼트”님의 동영상 강의를 보고 정리한 내용입니다.&lt;/p&gt; &lt;/blockquote&gt; &lt;p&gt;&lt;br /&gt;&lt;/p&gt; &lt;h1 id=&quot;scope&quot;&gt;Scope&lt;/h1&gt; &lt;p&gt;Scope 란, 우리가 변수 혹은 함수를 선언하게 될 때 해당 변수 또는 함수가 유효한 범위를 의미합니다. Scope 는 총 3가지 종류가있습니다.&lt;/p&gt; &lt;ul&gt; &lt;li&gt;Global (전역) Scope: 코드의 모든 범위에서 사용이 가능합니다.&lt;/li&gt; &lt;li&gt;Function (함수) Scope:...</content>
- </entry>
-
- 
-
- <entry>
-   <title>[Javascript/ECMAScript6/ES6] spread 와 rest</title>
-   <link href="https://m-veloper.github.io/devlog/2020/06/01/ECMAScript6-17/"/>
-   <id>https://m-veloper.github.io/devlog/2020/06/01/ECMAScript6-17</id>
-   <updated>2020-06-01T00:00:00+09:00</updated>
-   <content type="html">&lt;p&gt;&lt;img src=&quot;/assets/img/ECMAScript6/2020-06-01-ECMAScript6-17.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt; &lt;blockquote&gt; &lt;p&gt;이글은 “벨로퍼트”님의 동영상 강의를 보고 정리한 내용입니다.&lt;/p&gt; &lt;/blockquote&gt; &lt;p&gt;&lt;br /&gt;&lt;/p&gt; &lt;h1 id=&quot;spread-와-rest&quot;&gt;spread 와 rest&lt;/h1&gt; &lt;p&gt;이번에는 ES6 에서 도입된 spread 와 rest 문법에 입니다. 서로 완전히 다른 문법인데요, 은근히 좀 비슷합니다.&lt;/p&gt; &lt;p&gt;&lt;br /&gt;&lt;/p&gt; &lt;h2 id=&quot;spread&quot;&gt;spread&lt;/h2&gt; &lt;p&gt;일단 spread 문법부터 알아봅시다. spread 라는 단어가 가지고 있는 의미는 펼치다,...</content>
  </entry>
 
  

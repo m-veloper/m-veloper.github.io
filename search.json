@@ -1,6 +1,14 @@
 [
 
 {
+"title"    : "[JAVA] MyBatis(마이바티스) 에서 if문, choose문 사용하기",
+"category" : "",
+"tags"     : "web, java, spring, mybatis",
+"url"      : "/tip/2020/06/11/tip-java-05/",
+"date"     : "2020-06-11 00:00:00 +0900"
+} ,
+
+{
 "title"    : "[자바스크립트] 소수점 버림, 올림, 반올림, 자르기 방법",
 "category" : "",
 "tags"     : "web, javascript",
