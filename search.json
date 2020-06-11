@@ -1,6 +1,14 @@
 [
 
 {
+"title"    : "[CSS] Html input 에서 오른쪽 화살표, type=&#39;number&#39; 의 버튼 없애기 ( 증가,감소 버튼)",
+"category" : "",
+"tags"     : "web, css",
+"url"      : "/tip/2020/06/12/tip-css-06/",
+"date"     : "2020-06-12 00:00:00 +0900"
+} ,
+
+{
 "title"    : "[JAVA] MyBatis(마이바티스) 에서 if문, choose문 사용하기",
 "category" : "",
 "tags"     : "web, java, spring, mybatis",

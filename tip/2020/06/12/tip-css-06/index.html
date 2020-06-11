@@ -9,7 +9,7 @@
 	<meta name="naver-site-verification" content="fa37cbf8ce41948de6e94c01991ffa04cea9b093"/>
 	<meta name="google-site-verification" content="5M4Zw9wg_UqQkvlayfb5Mc_ogvJdc013w_zLUkxgO-Y" />
 
-	<!--<title>[자바스크립트] 문자열 길이(문자열 수) 확인</title>-->
+	<!--<title>[CSS] Html input 에서 오른쪽 화살표, type='number' 의 버튼 없애기 ( 증가,감소 버튼)</title>-->
 	<title>슬기로운 개발 생활</title>
 
 	<!-- CSS & fonts -->
@@ -1362,9 +1362,9 @@
 			<div id="container">
 				<main>
 					<article id="post-page">
-	<h2 class="title">[자바스크립트] 문자열 길이(문자열 수) 확인</h2>
+	<h2 class="title">[CSS] Html input 에서 오른쪽 화살표, type='number' 의 버튼 없애기 ( 증가,감소 버튼)</h2>
 	<a class="tag" href="" data-flip="title">
-		<time datetime="" class="by-line">2020년 03월 01일</time>
+		<time datetime="" class="by-line">2020년 06월 12일</time>
 	</a>
 	<hr>
 	<div class="content">
@@ -1380,20 +1380,30 @@
 			</div>
 		</div>
 
-		<p><img src="/assets/img/javascript/2020-03-01-tip-javascript-05.png" alt="" /></p>
+		<p><img src="/assets/img/css/2020-06-11-tip-css-06.png" alt="" /></p>
 
-<h1 id="자바스크립트-문자열-길이문자열-수-확인">자바스크립트 문자열 길이(문자열 수) 확인</h1>
-<h3 id="how-to-check-string-length-in-javascript">How to check String length in JavaScript</h3>
-<p><br />
-<br /></p>
+<p>input태그 사용시 type=”number” 로 지정하면 아래와 같은 현상이 나타날 때가 있습니다.</p>
 
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// 정말 단순이 변수에 담긴 문자의 길이를 알고 싶을 뿐.</span>
-<span class="c1">// length 함수를 사용하면 된다.</span>
+<p><img src="/assets/img/css/2020-06-11-tip-css-06-01.png" alt="" /></p>
 
-<span class="kd">let</span> <span class="nx">str</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">이렇게 쉬운걸 왜 몰랐을까 나는 똥멍청이 입니다.</span><span class="dl">"</span><span class="p">;</span>
-<span class="kd">let</span> <span class="nx">testString</span> <span class="o">=</span> <span class="nx">str</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">testString</span><span class="p">);</span>
+<p>바로 화살표 증가, 감소 버튼이 생겨버리는데요.</p>
+
+<p>간단히 없앨 수 있는 방법이 있습니다.</p>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">input</span><span class="o">[</span><span class="nt">type</span><span class="o">=</span><span class="s1">"number"</span><span class="o">]</span><span class="nd">::-webkit-outer-spin-button</span><span class="o">,</span>
+<span class="nt">input</span><span class="o">[</span><span class="nt">type</span><span class="o">=</span><span class="s1">"number"</span><span class="o">]</span><span class="nd">::-webkit-inner-spin-button</span> <span class="p">{</span>
+    <span class="nl">-webkit-appearance</span><span class="p">:</span> <span class="nb">none</span><span class="p">;</span>
+    <span class="nl">margin</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span>
+<span class="p">}</span>
 </code></pre></div></div>
+
+<p>위의 코드를 styleSheet 에 적용하시면 됩니다.</p>
+
+<ul>
+  <li>결과</li>
+</ul>
+
+<p><img src="/assets/img/css/2020-06-11-tip-css-06-02.png" alt="" /></p>
 
 
 
@@ -1431,9 +1441,9 @@
       }
 
       var d = function () {
-        this.page.title = "[자바스크립트] 문자열 길이(문자열 수) 확인",
-          this.page.identifier = "/tip/2020/03/01/tip-javascript-05",
-          this.page.url = "https://m-veloper.github.io/tip/2020/03/01/tip-javascript-05/"
+        this.page.title = "[CSS] Html input 에서 오른쪽 화살표, type='number' 의 버튼 없애기 ( 증가,감소 버튼)",
+          this.page.identifier = "/tip/2020/06/12/tip-css-06",
+          this.page.url = "https://m-veloper.github.io/tip/2020/06/12/tip-css-06/"
       };
       s._disqusFirst = void 0 === s._disqusFirst || s._disqusFirst, s._disqusLoading = void 0 !== s._disqusLoading && s._disqusLoading, s._disqusThis = !1, s._disqusThreadOffsetTop = i.getElementById(
         "disqus_thread").offsetTop, s._disqusLoading ? s._disqusFirst = !1 : (s._disqusLoading = !0, loadJSDeferred(
