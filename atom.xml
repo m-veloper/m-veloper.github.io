@@ -4,12 +4,22 @@
  <title>슬기로운 개발 생활</title>
  <link href="https://m-veloper.github.io/atom.xml" rel="self"/>
  <id>https://m-veloper.github.io</id>
- <updated>2020-06-13T01:09:40+09:00</updated>
+ <updated>2020-06-14T00:05:50+09:00</updated>
  <author>
    <name>m-veloper</name>
    <uri>https://m-veloper.github.io</uri>
    <email>m_veloper@naver.com</email>
  </author>
+
+ 
+
+ <entry>
+   <title>[CSS] 테이블(table)에 스크롤 기능 만들기</title>
+   <link href="https://m-veloper.github.io/tip/2020/06/14/tip-css-07/"/>
+   <id>https://m-veloper.github.io/tip/2020/06/14/tip-css-07</id>
+   <updated>2020-06-14T00:00:00+09:00</updated>
+   <content type="html">&lt;p&gt;&lt;img src=&quot;/assets/img/css/2020-06-13-tip-css-07.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt; &lt;h1 id=&quot;테이블-스크롤-기능&quot;&gt;테이블 스크롤 기능&lt;/h1&gt; &lt;p&gt;table 태그를 만들어서 작업하다보면 반응형에서 문제를 일이큽니다.&lt;/p&gt; &lt;p&gt;크기는 줄어드는데, 테이블의 데이터들 때문에 넓어지고나 늘어나거나 길어지곤 합니다.&lt;/p&gt; &lt;p&gt;이럴 때 테이블에 가로 또는 세로 스크롤 기능을 사용하면 됩니다.&lt;/p&gt; &lt;p&gt;&lt;br /&gt;&lt;/p&gt; &lt;h2 id=&quot;순서&quot;&gt;순서&lt;/h2&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;div 하위에 table 생성&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;div에 width 값이나 height...</content>
+ </entry>
 
  
 
@@ -99,16 +109,6 @@
    <id>https://m-veloper.github.io/devlog/2020/06/05/ECMAScript6-21</id>
    <updated>2020-06-05T00:00:00+09:00</updated>
    <content type="html">&lt;p&gt;&lt;img src=&quot;/assets/img/ECMAScript6/2020-06-05-ECMAScript6-21.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt; &lt;blockquote&gt; &lt;p&gt;이글은 “벨로퍼트”님의 동영상 강의를 보고 정리한 내용입니다.&lt;/p&gt; &lt;/blockquote&gt; &lt;p&gt;&lt;br /&gt;&lt;/p&gt; &lt;h1 id=&quot;카운터&quot;&gt;카운터&lt;/h1&gt; &lt;p&gt;버튼을 클릭하면 숫자가 올라가거나 내려가는 카운터입니다&lt;/p&gt; &lt;p&gt;&lt;br /&gt;&lt;/p&gt; &lt;h2 id=&quot;ui-만들기&quot;&gt;UI 만들기&lt;/h2&gt; &lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;&amp;lt;html&amp;gt;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;&amp;lt;head&amp;gt;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;&amp;lt;title&amp;gt;&lt;/span&gt;Parcel Sandbox&lt;span class=&quot;nt&quot;&gt;&amp;lt;/title&amp;gt;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;&amp;lt;meta&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;charset=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;UTF-8&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;...</content>
- </entry>
-
- 
-
- <entry>
-   <title>[Javascript/ECMAScript6/ES6] async/await</title>
-   <link href="https://m-veloper.github.io/devlog/2020/06/04/ECMAScript6-20/"/>
-   <id>https://m-veloper.github.io/devlog/2020/06/04/ECMAScript6-20</id>
-   <updated>2020-06-04T00:00:00+09:00</updated>
-   <content type="html">&lt;p&gt;&lt;img src=&quot;/assets/img/ECMAScript6/2020-06-04-ECMAScript6-20.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt; &lt;blockquote&gt; &lt;p&gt;이글은 “벨로퍼트”님의 동영상 강의를 보고 정리한 내용입니다.&lt;/p&gt; &lt;/blockquote&gt; &lt;p&gt;&lt;br /&gt;&lt;/p&gt; &lt;h1 id=&quot;asyncawait&quot;&gt;async/await&lt;/h1&gt; &lt;p&gt;async/await 문법은 ES8에 해당하는 문법으로서, Promise 를 더욱 쉽게 사용 할 수 있게 해줍니다.&lt;/p&gt; &lt;p&gt;기본적인 사용법을 알아봅시다.&lt;/p&gt; &lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;sleep&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;ms&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span...</content>
  </entry>
 
  

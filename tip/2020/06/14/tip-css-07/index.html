@@ -9,7 +9,7 @@
 	<meta name="naver-site-verification" content="fa37cbf8ce41948de6e94c01991ffa04cea9b093"/>
 	<meta name="google-site-verification" content="5M4Zw9wg_UqQkvlayfb5Mc_ogvJdc013w_zLUkxgO-Y" />
 
-	<!--<title>[Javascript/ECMAScript6/ES6] 조건문</title>-->
+	<!--<title>[CSS] 테이블(table)에 스크롤 기능 만들기</title>-->
 	<title>슬기로운 개발 생활</title>
 
 	<!-- CSS & fonts -->
@@ -1366,9 +1366,9 @@
 			<div id="container">
 				<main>
 					<article id="post-page">
-	<h2 class="title">[Javascript/ECMAScript6/ES6] 조건문</h2>
+	<h2 class="title">[CSS] 테이블(table)에 스크롤 기능 만들기</h2>
 	<a class="tag" href="" data-flip="title">
-		<time datetime="" class="by-line">2020년 05월 19일</time>
+		<time datetime="" class="by-line">2020년 06월 14일</time>
 	</a>
 	<hr>
 	<div class="content">
@@ -1384,130 +1384,100 @@
 			</div>
 		</div>
 
-		<p><img src="/assets/img/ECMAScript6/2020-05-19-ECMAScript6-04.png" alt="" /></p>
+		<p><img src="/assets/img/css/2020-06-13-tip-css-07.png" alt="" /></p>
 
-<blockquote>
-  <p>이글은 “벨로퍼트”님의 동영상 강의를 보고 정리한 내용입니다.</p>
-</blockquote>
+<h1 id="테이블-스크롤-기능">테이블 스크롤 기능</h1>
 
-<p><br /></p>
+<p>table 태그를 만들어서 작업하다보면 반응형에서 문제를 일이큽니다.</p>
 
-<h1 id="조건문">조건문</h1>
+<p>크기는 줄어드는데, 테이블의 데이터들 때문에 넓어지고나 늘어나거나 길어지곤 합니다.</p>
 
-<p>조건문을 사용하면 특정 조건이 만족됐을 때 특정 코드를 실행할 수 있습니다.</p>
+<p>이럴 때 테이블에 가로 또는 세로 스크롤 기능을 사용하면 됩니다.</p>
 
 <p><br /></p>
 
-<h2 id="if-문">if 문</h2>
+<h2 id="순서">순서</h2>
 
-<p>가장 기본적인 조건문은 if 문입니다.</p>
+<ul>
+  <li>
+    <p>div 하위에 table 생성</p>
+  </li>
+  <li>
+    <p>div에 width 값이나 height 값을 지정</p>
+  </li>
+  <li>
+    <p>overflow 속성을 사용하여 스크롤 여부 속성을 지정</p>
+  </li>
+  <li>
+    <p>필수 : table 에 white-space:nowrap; 적용</p>
 
-<p>if문은, “~~하다면 ~~를 해라” 를 의미합니다.</p>
+    <ul>
+      <li>물론 테이블 마다 사용법이 다르겠지만 , 일반적으로 정보 전달을 위한 테이블 요소인데, 정보의 내용이 많다면
+nowrap를 사용하여 줄바꿈을 막아주어야 테이블이 깨지지 않고 올바르게 보여지게 됩니다.</li>
+    </ul>
+  </li>
+</ul>
 
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">a</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
-<span class="k">if</span> <span class="p">(</span><span class="nx">a</span> <span class="o">+</span> <span class="mi">1</span> <span class="o">===</span> <span class="mi">2</span><span class="p">)</span> <span class="p">{</span>
-  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">a + 1 이 2 입니다.</span><span class="dl">'</span><span class="p">);</span>
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">/*해당 범위를 벗어나지 않으면 그대로 표시하고, 벗어나면 스크롤바를 표시*/</span>
+<span class="nt">overflow</span><span class="nd">:auto</span><span class="o">;</span>
+
+<span class="c">/*영역 범위의 초과 여부 상관없이 항상 테이블에 스크롤을 표시*/</span>
+<span class="nt">overflow</span><span class="nd">:scroll</span><span class="o">;</span>
+
+<span class="c">/*영역을 초과하면 초과한 부분은 사라짐*/</span>
+<span class="nt">overflow</span><span class="nd">:hidden</span>
+
+<span class="c">/*가로(너비) 스크롤만 표시.*/</span>
+<span class="nt">overflow-x</span><span class="nd">:scroll</span><span class="o">;</span>
+
+<span class="c">/*세로(높이) 스크롤만 표시.*/</span>
+<span class="nt">overflow-y</span><span class="nd">:scroll</span><span class="o">;</span>
+
+<span class="c">/*가로(너비) 스크롤만 표시하지 않음.*/</span>
+<span class="nt">overflow-x</span><span class="nd">:hidden</span><span class="o">;</span> 
+
+<span class="c">/*세로(높이) 스크롤만 표시하지 않음.*/</span>
+<span class="nt">overflow-y</span><span class="nd">:hidden</span><span class="o">;</span>
+</code></pre></div></div>
+
+<ul>
+  <li>html</li>
+</ul>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div&gt;</span>
+    <span class="nt">&lt;table&gt;</span>
+      <span class="nt">&lt;tr&gt;</span>
+        <span class="nt">&lt;th&gt;</span>제목<span class="nt">&lt;/th&gt;</span>
+        <span class="nt">&lt;th&gt;</span>제목<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;/tr&gt;</span>
+      <span class="nt">&lt;tr&gt;</span>
+        <span class="nt">&lt;td&gt;</span>테스트테스트테스트테스트테스트테스트테스트테스트테스트<span class="nt">&lt;/td&gt;</span>
+        <span class="nt">&lt;td&gt;</span>테스트테스트테스트테스트테스트테스트테스트테스트테스트<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;/tr&gt;</span>
+      <span class="nt">&lt;tr&gt;</span>
+        <span class="nt">&lt;td&gt;</span>테스트테스트테스트테스트테스트테스트테스트테스트테스트<span class="nt">&lt;/td&gt;</span>
+        <span class="nt">&lt;td&gt;</span>테스트테스트테스트테스트테스트테스트테스트테스트테스트<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;/tr&gt;</span>
+    <span class="nt">&lt;/table&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div></div>
+
+<ul>
+  <li>style</li>
+</ul>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">div</span> <span class="p">{</span>
+  <span class="nl">width</span><span class="p">:</span><span class="m">100%</span><span class="p">;</span>
+  <span class="nl">overflow</span><span class="p">:</span><span class="nb">auto</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nt">div</span> <span class="nt">table</span> <span class="p">{</span>
+  <span class="nl">white-space</span><span class="p">:</span><span class="nb">nowrap</span><span class="p">;</span>
+  <span class="nl">border-collapse</span><span class="p">:</span><span class="nb">collapse</span>
+<span class="p">}</span>
+<span class="nt">div</span> <span class="nt">table</span> <span class="nt">th</span><span class="o">,</span><span class="nt">div</span> <span class="nt">table</span> <span class="nt">td</span> <span class="p">{</span>
+  <span class="nl">border</span><span class="p">:</span><span class="m">1px</span> <span class="nb">solid</span> <span class="m">#555</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div></div>
-
-<p>결과는, “a + 1 이 2 입니다.” 이 출력됩니다.</p>
-
-<p>하지만, 만약에 여기서 a 를 0 으로 바꾼다면 어떨까요?</p>
-
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">a</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-<span class="k">if</span> <span class="p">(</span><span class="nx">a</span> <span class="o">+</span> <span class="mi">1</span> <span class="o">===</span> <span class="mi">2</span><span class="p">)</span> <span class="p">{</span>
-  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">a + 1 이 2 입니다.</span><span class="dl">'</span><span class="p">);</span>
-<span class="p">}</span>
-</code></pre></div></div>
-
-<p>결과는, 아무것도 출력되지 않습니다.</p>
-
-<p>if문을 사용하면, 이렇게 특정 조건이 만족 될 때에만 특정 코드를 실행 시킬 수 있습니다.</p>
-
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">if</span> <span class="p">(</span><span class="err">조건</span><span class="p">)</span> <span class="p">{</span>
-  <span class="err">코드</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre></div></div>
-
-<p>조건이 만족됐을 때 실행시킬 코드가 { } 로 감싸져있는데요, 이를 코드 블록이라고 합니다.</p>
-
-<p>만약에 조건이 true 가 된다면 우리가 지정한 코드가 실행되는 것이고, false 가 된다면 코드가 실행되지 않습니다.</p>
-
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">a</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
-<span class="k">if</span> <span class="p">(</span><span class="kc">true</span><span class="p">)</span> <span class="p">{</span>
-  <span class="kd">const</span> <span class="nx">a</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
-  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">if문 안의 a 값은 </span><span class="dl">'</span> <span class="o">+</span> <span class="nx">a</span><span class="p">);</span>
-<span class="p">}</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">if문 밖의 a 값은 </span><span class="dl">'</span> <span class="o">+</span> <span class="nx">a</span><span class="p">);</span>
-</code></pre></div></div>
-
-<p>위 코드에서는 if문에 조건을 true 로 설정했기 때문에 코드 블록 내부의 코드가 무조건 실행이 됩니다.</p>
-
-<p>결과는 다음과 같습니다</p>
-
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="dl">"</span><span class="s2">if문의 안의 a 값은 2</span><span class="dl">"</span>
-<span class="dl">"</span><span class="s2">if문 밖의 a 값은 1</span><span class="dl">"</span>
-</code></pre></div></div>
-
-<p><br /></p>
-
-<h2 id="if-else-문">if-else 문</h2>
-
-<p>if-else if 문은 여러 조건에 따라 다른 작업을 해야 할 때 사용합니다.</p>
-
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">a</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
-<span class="k">if</span> <span class="p">(</span><span class="nx">a</span> <span class="o">===</span> <span class="mi">5</span><span class="p">)</span> <span class="p">{</span>
-  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">5입니다!</span><span class="dl">'</span><span class="p">);</span>
-<span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">a</span> <span class="o">===</span> <span class="mi">10</span><span class="p">)</span> <span class="p">{</span>
-  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">10입니다!</span><span class="dl">'</span><span class="p">);</span>
-<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">5도 아니고 10도 아닙니다.</span><span class="dl">'</span><span class="p">);</span>
-<span class="p">}</span>
-</code></pre></div></div>
-
-<p>결과는 다음과 같습니다.</p>
-
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="dl">"</span><span class="s2">10입니다!</span><span class="dl">"</span>
-</code></pre></div></div>
-
-<p>한번 a 값을 5로 바꾸고 실행해보고, 7 로 바꾸고 실행해보세요.</p>
-
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">a</span> <span class="o">=</span> <span class="mi">5</span> <span class="o">-&gt;</span> <span class="dl">"</span><span class="s2">5입니다!</span><span class="dl">"</span>
-<span class="nx">a</span> <span class="o">=</span> <span class="mi">7</span> <span class="o">-&gt;</span> <span class="dl">"</span><span class="s2">5도 아니고 10도 아닙니다.</span><span class="dl">"</span>
-</code></pre></div></div>
-
-<p><br /></p>
-
-<h2 id="switchcase-문">switch/case 문</h2>
-
-<p>switch/case 문은 특정 값이 무엇이냐에 따라 다른 작업을 하고 싶을 때 사용합니다.</p>
-
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">device</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">iphone</span><span class="dl">'</span><span class="p">;</span>
-
-<span class="k">switch</span> <span class="p">(</span><span class="nx">device</span><span class="p">)</span> <span class="p">{</span>
-  <span class="k">case</span> <span class="dl">'</span><span class="s1">iphone</span><span class="dl">'</span><span class="p">:</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">아이폰!</span><span class="dl">'</span><span class="p">);</span>
-    <span class="k">break</span><span class="p">;</span>
-  <span class="k">case</span> <span class="dl">'</span><span class="s1">ipad</span><span class="dl">'</span><span class="p">:</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">아이패드!</span><span class="dl">'</span><span class="p">);</span>
-    <span class="k">break</span><span class="p">;</span>
-  <span class="k">case</span> <span class="dl">'</span><span class="s1">galaxy note</span><span class="dl">'</span><span class="p">:</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">갤럭시 노트!</span><span class="dl">'</span><span class="p">);</span>
-    <span class="k">break</span><span class="p">;</span>
-  <span class="nl">default</span><span class="p">:</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">모르겠네요..</span><span class="dl">'</span><span class="p">);</span>
-<span class="p">}</span>
-</code></pre></div></div>
-
-<p>device 값을 ‘iphone’, ‘ipad’, ‘galaxy note’, ‘macbook’ 으로 순서대로 바꿔가면서 코드를 실행해보세요.</p>
-
-<p>switch/case 문은 이와 같이 특정 값이 무엇이냐에 따라 다른 작업을 수행 할 수 있게 해줍니다.</p>
-
-<p>switch/case 문에서는 각 case 에서 실행할 코드를 작성하고 맨 마지막에 break; 를 해주어야 합니다.</p>
-
-<p>break 를 하지 않으면 그 다음 case 의 코드까지 실행해버립니다.</p>
-
-<p>그리고, 맨 아래의 default: 는 device 값이 우리가 case 로 준비하지 않은 값일 경우를 의미합니다</p>
 
 
 
@@ -1545,9 +1515,9 @@
       }
 
       var d = function () {
-        this.page.title = "[Javascript/ECMAScript6/ES6] 조건문",
-          this.page.identifier = "/devlog/2020/05/19/ECMAScript6-04",
-          this.page.url = "https://m-veloper.github.io/devlog/2020/05/19/ECMAScript6-04/"
+        this.page.title = "[CSS] 테이블(table)에 스크롤 기능 만들기",
+          this.page.identifier = "/tip/2020/06/14/tip-css-07",
+          this.page.url = "https://m-veloper.github.io/tip/2020/06/14/tip-css-07/"
       };
       s._disqusFirst = void 0 === s._disqusFirst || s._disqusFirst, s._disqusLoading = void 0 !== s._disqusLoading && s._disqusLoading, s._disqusThis = !1, s._disqusThreadOffsetTop = i.getElementById(
         "disqus_thread").offsetTop, s._disqusLoading ? s._disqusFirst = !1 : (s._disqusLoading = !0, loadJSDeferred(

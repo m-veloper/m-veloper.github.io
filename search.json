@@ -1,6 +1,14 @@
 [
 
 {
+"title"    : "[CSS] 테이블(table)에 스크롤 기능 만들기",
+"category" : "",
+"tags"     : "web, css",
+"url"      : "/tip/2020/06/14/tip-css-07/",
+"date"     : "2020-06-14 00:00:00 +0900"
+} ,
+
+{
 "title"    : "[JAVA] 소수점 올림, 반올림, 버림",
 "category" : "",
 "tags"     : "web, java, spring, mybatis",
