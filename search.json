@@ -1,6 +1,14 @@
 [
 
 {
+"title"    : "[jQuery(제이쿼리)] 셀렉트박스(SelectBox) 실행시 값(value) 가져오기",
+"category" : "",
+"tags"     : "web, javascript, jQuery",
+"url"      : "/tip/2020/06/15/tip-javascript-20/",
+"date"     : "2020-06-15 00:00:00 +0900"
+} ,
+
+{
 "title"    : "[CSS] 테이블(table)에 스크롤 기능 만들기",
 "category" : "",
 "tags"     : "web, css",
