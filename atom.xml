@@ -2,8 +2,8 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
  <title>슬기로운 개발 생활</title>
- <link href="http://localhost:4000/atom.xml" rel="self"/>
- <id>http://localhost:4000</id>
+ <link href="https://m-veloper.github.io/atom.xml" rel="self"/>
+ <id>https://m-veloper.github.io</id>
  <updated>2020-06-16T00:44:42+09:00</updated>
  <author>
    <name>m-veloper</name>
@@ -15,8 +15,8 @@
 
  <entry>
    <title>[AWS] Web Server(웹서버, 아파치) 와 WAS(톰캣) 이해하기 </title>
-   <link href="http://localhost:4000/tip/2020/06/16/tip-aws-01/"/>
-   <id>http://localhost:4000/tip/2020/06/16/tip-aws-01</id>
+   <link href="https://m-veloper.github.io/tip/2020/06/16/tip-aws-01/"/>
+   <id>https://m-veloper.github.io/tip/2020/06/16/tip-aws-01</id>
    <updated>2020-06-16T00:00:00+09:00</updated>
    <content type="html">&lt;p&gt;&lt;img src=&quot;/assets/img/aws/2020-06-15-tip-aws-01.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt; &lt;h1 id=&quot;web-server웹서버-란&quot;&gt;Web Server(웹서버) 란?&lt;/h1&gt; &lt;p&gt;Web Server(웹서버)를 알기전, 정적 페이지(Static Pages), 동적 페이지(Dynamic Pages)에대 해서 이해해야 한다.&lt;/p&gt; &lt;p&gt;&lt;br /&gt;&lt;/p&gt; &lt;h2 id=&quot;정적-페이지static-pages&quot;&gt;정적 페이지(Static Pages)&lt;/h2&gt; &lt;p&gt;&lt;br /&gt;&lt;/p&gt; &lt;p&gt;&lt;img src=&quot;/assets/img/aws/2020-06-15-tip-aws-01-01.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;Web Server는 파일 경로 이름을 받아 경로와 일치하는 file contents를 반환한다.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;항상 동일한 페이지를...</content>
  </entry>
@@ -25,8 +25,8 @@
 
  <entry>
    <title>[jQuery(제이쿼리)] 셀렉트박스(SelectBox) 실행시 값(value) 가져오기</title>
-   <link href="http://localhost:4000/tip/2020/06/15/tip-javascript-20/"/>
-   <id>http://localhost:4000/tip/2020/06/15/tip-javascript-20</id>
+   <link href="https://m-veloper.github.io/tip/2020/06/15/tip-javascript-20/"/>
+   <id>https://m-veloper.github.io/tip/2020/06/15/tip-javascript-20</id>
    <updated>2020-06-15T00:00:00+09:00</updated>
    <content type="html">&lt;p&gt;&lt;img src=&quot;/assets/img/javascript/2020-06-14-tip-javascript-20.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt; &lt;h1 id=&quot;onchange-함수-활용&quot;&gt;onchange() 함수 활용&lt;/h1&gt; &lt;p&gt;간단히 onchange 함수를 활용해볼 수 있다.&lt;/p&gt; &lt;ul&gt; &lt;li&gt;html&lt;/li&gt; &lt;/ul&gt; &lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;select&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;form-control&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;month&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;month&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;onchange=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;getMonth()&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;&amp;lt;option&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;value=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;1&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;1월&lt;span class=&quot;nt&quot;&gt;&amp;lt;/option&amp;gt;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;&amp;lt;option&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;value=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;2&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;2월&lt;span class=&quot;nt&quot;&gt;&amp;lt;/option&amp;gt;&lt;/span&gt;...</content>
  </entry>
@@ -35,8 +35,8 @@
 
  <entry>
    <title>[CSS] 테이블(table)에 스크롤 기능 만들기</title>
-   <link href="http://localhost:4000/tip/2020/06/14/tip-css-07/"/>
-   <id>http://localhost:4000/tip/2020/06/14/tip-css-07</id>
+   <link href="https://m-veloper.github.io/tip/2020/06/14/tip-css-07/"/>
+   <id>https://m-veloper.github.io/tip/2020/06/14/tip-css-07</id>
    <updated>2020-06-14T00:00:00+09:00</updated>
    <content type="html">&lt;p&gt;&lt;img src=&quot;/assets/img/css/2020-06-13-tip-css-07.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt; &lt;h1 id=&quot;테이블-스크롤-기능&quot;&gt;테이블 스크롤 기능&lt;/h1&gt; &lt;p&gt;table 태그를 만들어서 작업하다보면 반응형에서 문제를 일이큽니다.&lt;/p&gt; &lt;p&gt;크기는 줄어드는데, 테이블의 데이터들 때문에 넓어지고나 늘어나거나 길어지곤 합니다.&lt;/p&gt; &lt;p&gt;이럴 때 테이블에 가로 또는 세로 스크롤 기능을 사용하면 됩니다.&lt;/p&gt; &lt;p&gt;&lt;br /&gt;&lt;/p&gt; &lt;h2 id=&quot;순서&quot;&gt;순서&lt;/h2&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;div 하위에 table 생성&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;div에 width 값이나 height...</content>
  </entry>
@@ -45,8 +45,8 @@
 
  <entry>
    <title>[JAVA] 소수점 올림, 반올림, 버림</title>
-   <link href="http://localhost:4000/tip/2020/06/13/tip-java-06/"/>
-   <id>http://localhost:4000/tip/2020/06/13/tip-java-06</id>
+   <link href="https://m-veloper.github.io/tip/2020/06/13/tip-java-06/"/>
+   <id>https://m-veloper.github.io/tip/2020/06/13/tip-java-06</id>
    <updated>2020-06-13T00:00:00+09:00</updated>
    <content type="html">&lt;p&gt;&lt;img src=&quot;/assets/img/java/2020-06-12-tip-java-06.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt; &lt;h1 id=&quot;자바-소수점-올림-반올림-버림&quot;&gt;자바 소수점 올림, 반올림, 버림&lt;/h1&gt; &lt;p&gt;자바에서 긴 소수를 반올림하여 n번째 자리까지 나타내는 방법에 대해 알아보겠습니다. 여러가지 방법이 있겠습니다만 Math.round(); Math.ceil(); Math.floor(); 함수를 활용하거나 String.format(); 함수를 활용하는것이 대표적인 방식입니다.&lt;/p&gt; &lt;p&gt;위 함수들은 실수의 소수점 첫번째 자리를 반올림하여 정수로 리턴시켜줍니다. 하지만 이 메서드를 잘 활용하면 소수점 몇번째 자리까지...</content>
  </entry>
@@ -55,8 +55,8 @@
 
  <entry>
    <title>[CSS] Html input 에서 오른쪽 화살표, type='number' 의 버튼 없애기 ( 증가,감소 버튼)</title>
-   <link href="http://localhost:4000/tip/2020/06/12/tip-css-06/"/>
-   <id>http://localhost:4000/tip/2020/06/12/tip-css-06</id>
+   <link href="https://m-veloper.github.io/tip/2020/06/12/tip-css-06/"/>
+   <id>https://m-veloper.github.io/tip/2020/06/12/tip-css-06</id>
    <updated>2020-06-12T00:00:00+09:00</updated>
    <content type="html">&lt;p&gt;&lt;img src=&quot;/assets/img/css/2020-06-11-tip-css-06.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt; &lt;p&gt;input태그 사용시 type=”number” 로 지정하면 아래와 같은 현상이 나타날 때가 있습니다.&lt;/p&gt; &lt;p&gt;&lt;img src=&quot;/assets/img/css/2020-06-11-tip-css-06-01.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt; &lt;p&gt;바로 화살표 증가, 감소 버튼이 생겨버리는데요.&lt;/p&gt; &lt;p&gt;간단히 없앨 수 있는 방법이 있습니다.&lt;/p&gt; &lt;div class=&quot;language-css highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&quot;number&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;nd&quot;&gt;::-webkit-outer-spin-button&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&quot;number&quot;&lt;/span&gt;&lt;span...</content>
  </entry>
@@ -65,8 +65,8 @@
 
  <entry>
    <title>[JAVA] MyBatis(마이바티스) 에서 if문, choose문 사용하기</title>
-   <link href="http://localhost:4000/tip/2020/06/11/tip-java-05/"/>
-   <id>http://localhost:4000/tip/2020/06/11/tip-java-05</id>
+   <link href="https://m-veloper.github.io/tip/2020/06/11/tip-java-05/"/>
+   <id>https://m-veloper.github.io/tip/2020/06/11/tip-java-05</id>
    <updated>2020-06-11T00:00:00+09:00</updated>
    <content type="html">&lt;p&gt;&lt;img src=&quot;/assets/img/java/2020-06-09-tip-java-05.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt; &lt;h1 id=&quot;동적-쿼리if-choose&quot;&gt;동적 쿼리(if, choose)&lt;/h1&gt; &lt;p&gt;복잡한 형태의 쿼리를 만들다 보면 로직에따라 if문을 추가해야 한다던지 if else 문을 추가해야할 경우가 있습니다.&lt;/p&gt; &lt;p&gt;myBatis는 이를위해 동적 쿼리를 위한 기능을 제공합니다.&lt;/p&gt; &lt;p&gt;그중에서도 가장 많이 사용되는 if 문과 choose문을 살펴보겠습니다.&lt;/p&gt; &lt;p&gt;동적쿼리는 XML 매퍼에 지정하게 되는데, JSTL을 사용해봤던 사람들이라면 큰 어려움이 없는 문법입니다.&lt;/p&gt;...</content>
  </entry>
@@ -75,8 +75,8 @@
 
  <entry>
    <title>[자바스크립트] 소수점 버림, 올림, 반올림, 자르기 방법</title>
-   <link href="http://localhost:4000/2020/06/10/tip-javascript-19/"/>
-   <id>http://localhost:4000/2020/06/10/tip-javascript-19</id>
+   <link href="https://m-veloper.github.io/2020/06/10/tip-javascript-19/"/>
+   <id>https://m-veloper.github.io/2020/06/10/tip-javascript-19</id>
    <updated>2020-06-10T00:00:00+09:00</updated>
    <content type="html">&lt;p&gt;&lt;img src=&quot;/assets/img/javascript/2020-06-10-tip-javascript-19.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt; &lt;h1 id=&quot;math&quot;&gt;Math()&lt;/h1&gt; &lt;ul&gt; &lt;li&gt;Math.ceil() : 소수점 올림, 정수 반환&lt;/li&gt; &lt;li&gt;Math.floor() : 소수점 버림, 정수 반환&lt;/li&gt; &lt;li&gt;Math.round() : 소수점 반올림, 정수 반환&lt;/li&gt; &lt;/ul&gt; &lt;p&gt;&lt;br /&gt;&lt;/p&gt; &lt;h2 id=&quot;올림&quot;&gt;올림&lt;/h2&gt; &lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;testNum&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;99.11&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;Math&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span...</content>
  </entry>
@@ -85,8 +85,8 @@
 
  <entry>
    <title>[JSTL] substring 문자열 자르기</title>
-   <link href="http://localhost:4000/tip/2020/06/09/tip-jstl-04/"/>
-   <id>http://localhost:4000/tip/2020/06/09/tip-jstl-04</id>
+   <link href="https://m-veloper.github.io/tip/2020/06/09/tip-jstl-04/"/>
+   <id>https://m-veloper.github.io/tip/2020/06/09/tip-jstl-04</id>
    <updated>2020-06-09T00:00:00+09:00</updated>
    <content type="html">&lt;p&gt;&lt;img src=&quot;/assets/img/jstl/2020-06-09-tip-jstl-04.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt; &lt;h1 id=&quot;substring-문자열-자르기&quot;&gt;substring, 문자열 자르기&lt;/h1&gt; &lt;p&gt;Substring을 사용하기 위해선 function을 지정해야 하는데 아래의 태그를 jsp 페이지 최상단에 선언해주세요.&lt;/p&gt; &lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;%&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;@&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;taglib&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;prefix&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;fn&quot;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;uri&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;http://java.sun.com/jsp/jstl/functions&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&amp;gt;&lt;/span&gt; &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt; &lt;ul&gt; &lt;li&gt;사용법&lt;/li&gt; &lt;/ul&gt; &lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;c:&lt;/span&gt;&lt;span...</content>
  </entry>
@@ -95,8 +95,8 @@
 
  <entry>
    <title>[CSS] 텍스트가 div, code block 범위 밖으로 나가는 현상 해결</title>
-   <link href="http://localhost:4000/tip/2020/06/08/tip-css-05/"/>
-   <id>http://localhost:4000/tip/2020/06/08/tip-css-05</id>
+   <link href="https://m-veloper.github.io/tip/2020/06/08/tip-css-05/"/>
+   <id>https://m-veloper.github.io/tip/2020/06/08/tip-css-05</id>
    <updated>2020-06-08T00:00:00+09:00</updated>
    <content type="html">&lt;p&gt;&lt;img src=&quot;/assets/img/css/2020-06-08-tip-css-05.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt; &lt;p&gt;div 태그 또는 특정 태그에 코드나, 일반 텍스트 입력시 자동으로 줄 바꿈을 하지 못하고 범위를 벗어나는 경우가 있습니다.&lt;/p&gt; &lt;p&gt;저의 경우 블로그 포스팅시 코드블럭(code block) 범위를 벗어나는 경우였습니다.&lt;/p&gt; &lt;p&gt;이 문제를 해결하는 방법은 간단합니다.&lt;/p&gt; &lt;p&gt;div 또는 특정 태그의 스타일을 정해주는 부분에 “word-break:break-all;” 또는 “white-space: pre-wrap;”를 추가하면 됩니다.&lt;/p&gt; &lt;div...</content>
  </entry>
@@ -105,8 +105,8 @@
 
  <entry>
    <title>[CSS] 모바일(반응형) 에서 좌,우가 움직이는 현상, 수평 스크롤 없애기</title>
-   <link href="http://localhost:4000/tip/2020/06/07/tip-css-04/"/>
-   <id>http://localhost:4000/tip/2020/06/07/tip-css-04</id>
+   <link href="https://m-veloper.github.io/tip/2020/06/07/tip-css-04/"/>
+   <id>https://m-veloper.github.io/tip/2020/06/07/tip-css-04</id>
    <updated>2020-06-07T00:00:00+09:00</updated>
    <content type="html">&lt;p&gt;&lt;img src=&quot;/assets/img/css/2020-06-07-tip-css-04.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt; &lt;p&gt;모바일 웹에서 수평 스크롤(가로 스크롤)이 있을 경우 위의 그림과 같이 화면을 터치하여 왼쪽으로 이동시키면 사이트가 좌우로 움직이게 되는 문제 발생.&lt;/p&gt; &lt;p&gt;모바일 기기에서 수평 스크롤을 비활성화하여 이 문제를 해결할 수 있습니다.&lt;/p&gt; &lt;p&gt;비슷한 현상이 생기는경우 아래와 같이 수정해보길 바랍니다.&lt;/p&gt; &lt;p&gt;우선 다음 메타 태그를 header에 추가합니다. (이미 있는 경우...</content>
  </entry>
