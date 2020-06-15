@@ -1,6 +1,14 @@
 [
 
 {
+"title"    : "[AWS] Web Server(웹서버, 아파치) 와 WAS(톰캣) 이해하기 ",
+"category" : "",
+"tags"     : "web, apache, tomcat",
+"url"      : "/tip/2020/06/16/tip-aws-01/",
+"date"     : "2020-06-16 00:00:00 +0900"
+} ,
+
+{
 "title"    : "[jQuery(제이쿼리)] 셀렉트박스(SelectBox) 실행시 값(value) 가져오기",
 "category" : "",
 "tags"     : "web, javascript, jQuery",
