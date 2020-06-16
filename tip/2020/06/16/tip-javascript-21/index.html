@@ -1409,9 +1409,9 @@
 			<div id="container">
 				<main>
 					<article id="post-page">
-	<h2 class="title">[Sass/SCSS] 문법 - 중첩</h2>
+	<h2 class="title">[jQuery(제이쿼리)] 체크박스 값(checkbox value) 가져오기</h2>
 	<a class="tag" href="" data-flip="title">
-		<time datetime="" class="by-line">2020년 03월 12일</time>
+		<time datetime="" class="by-line">2020년 06월 16일</time>
 	</a>
 	<hr>
 	<div class="content">
@@ -1427,236 +1427,122 @@
 			<!--</div>-->
 		</div>
 
-		<p><img src="/assets/img/sass/2020-03-12-sass-05.png" alt="" /></p>
+		<p><img src="/assets/img/javascript/2020-06-21-tip-javascript-21.png" alt="" /></p>
 
-<h1 id="sassscss-문법---중첩">Sass(SCSS) 문법 - 중첩</h1>
+<h1 id="checkbox">Checkbox</h1>
+
+<p>체크박스에 제이쿼리나 자바스크립트로 이벤트를 처리해야할 경우가 종종 있다.</p>
+
+<p><br /></p>
+
+<h2 id="checked-여부-확인하기">checked 여부 확인하기</h2>
 
 <ul>
-  <li>Sass는 중첩 기능을 사용할 수 있습니다.</li>
-  <li>상위 선택자의 반복을 피하고 좀 더 편리하게 복잡한 구조를 작성할 수 있습니다.</li>
-  <li>SCSS:</li>
+  <li>id로 확인하기</li>
 </ul>
 
-<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.section</span> <span class="p">{</span>
-  <span class="nl">width</span><span class="p">:</span> <span class="m">100%</span><span class="p">;</span>
-  <span class="err">.list</span> <span class="err">{</span>
-    <span class="nl">padding</span><span class="p">:</span> <span class="m">20px</span><span class="p">;</span>
-    <span class="err">li</span> <span class="err">{</span>
-      <span class="nl">float</span><span class="p">:</span> <span class="nb">left</span><span class="p">;</span>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">input:checkbox[id="checkbox_id"]</span><span class="dl">'</span><span class="p">).</span><span class="nx">is</span><span class="p">(</span><span class="dl">"</span><span class="s2">:checked</span><span class="dl">"</span><span class="p">)</span> <span class="o">==</span> <span class="kc">true</span>
+</code></pre></div></div>
+
+<ul>
+  <li>name 으로 확인하기</li>
+</ul>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">input:checkbox[name="checkbox_name"]</span><span class="dl">'</span><span class="p">).</span><span class="nx">is</span><span class="p">(</span><span class="dl">"</span><span class="s2">:checked</span><span class="dl">"</span><span class="p">)</span> <span class="o">==</span> <span class="kc">true</span>
+</code></pre></div></div>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">input[name="checkbox_name"]</span><span class="dl">'</span><span class="p">).</span><span class="nx">is</span><span class="p">(</span><span class="dl">"</span><span class="s2">:checked</span><span class="dl">"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<ul>
+  <li>제이쿼리 prop() 메소드</li>
+</ul>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">#checkboxId</span><span class="dl">'</span><span class="p">).</span><span class="nx">prop</span><span class="p">(</span><span class="dl">"</span><span class="s2">checked</span><span class="dl">"</span><span class="p">);</span>
+</code></pre></div></div>
+
+<p><br /></p>
+
+<h2 id="checked-처리-하기">checked 처리 하기</h2>
+
+<ul>
+  <li>개별 처리</li>
+</ul>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">input:checkbox[id="checkbox_id"]</span><span class="dl">'</span><span class="p">).</span><span class="nx">attr</span><span class="p">(</span><span class="dl">"</span><span class="s2">checked</span><span class="dl">"</span><span class="p">,</span> <span class="kc">true</span><span class="p">);</span>
+</code></pre></div></div>
+
+<ul>
+  <li>전체 처리</li>
+</ul>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">input:checkbox[name="checkbox_name"]</span><span class="dl">'</span><span class="p">).</span><span class="nx">each</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+
+<span class="k">this</span><span class="p">.</span><span class="nx">checked</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+
+<span class="p">});</span>
+</code></pre></div></div>
+
+<p><br /></p>
+
+<h2 id="checkbox-value-값-확인">checkbox value 값 확인</h2>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">input:checkbox[id="checkbox_id"]</span><span class="dl">'</span><span class="p">).</span><span class="nx">val</span><span class="p">();</span>
+</code></pre></div></div>
+
+<p><br /></p>
+
+<h2 id="간단-예제로-체크박스-다루기">간단 예제로 체크박스 다루기</h2>
+
+<ul>
+  <li>HTML</li>
+</ul>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">""</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div&gt;</span>
+        <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"checkbox"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">class=</span><span class="s">"checkbox-test"</span> <span class="na">id=</span><span class="s">"test1"</span><span class="nt">&gt;</span>
+            체크1
+        <span class="nt">&lt;/label&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div&gt;</span>
+        <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"checkbox"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">class=</span><span class="s">"checkbox-test"</span> <span class="na">id=</span><span class="s">"test2"</span><span class="nt">&gt;</span>
+            체크2
+        <span class="nt">&lt;/label&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div&gt;</span>
+        <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"checkbox"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">class=</span><span class="s">"checkbox-test"</span> <span class="na">id=</span><span class="s">"test3"</span><span class="nt">&gt;</span>
+            체크3
+        <span class="nt">&lt;/label&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div></div>
+
+<ul>
+  <li>Script</li>
+</ul>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">$</span><span class="p">(</span><span class="dl">"</span><span class="s2">.checkbox-test</span><span class="dl">"</span><span class="p">).</span><span class="nx">click</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+  <span class="kd">let</span> <span class="nx">chekObj</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementsByClassName</span><span class="p">(</span><span class="dl">"</span><span class="s2">checkbox-test</span><span class="dl">"</span><span class="p">);</span>
+  <span class="kd">let</span> <span class="nx">lenth</span> <span class="o">=</span> <span class="nx">chekObj</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span>
+  <span class="kd">let</span> <span class="nx">checked</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+  <span class="kd">let</span> <span class="nx">checkboxTest</span><span class="p">;</span>
+
+  <span class="k">for</span> <span class="p">(</span><span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">lenth</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">chekObj</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">checked</span> <span class="o">===</span> <span class="kc">true</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nx">checked</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">;</span>
+      <span class="nx">checkboxTest</span> <span class="o">=</span> <span class="nx">chekObj</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">getAttribute</span><span class="p">(</span><span class="dl">"</span><span class="s2">id</span><span class="dl">"</span><span class="p">);</span>
+      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">checkboxTest</span><span class="p">);</span>
     <span class="p">}</span>
-  <span class="err">}</span>
-<span class="err">}</span>
-</code></pre></div></div>
-
-<ul>
-  <li>Compiled to:</li>
-</ul>
-
-<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.section</span> <span class="p">{</span>
-  <span class="nl">width</span><span class="p">:</span> <span class="m">100%</span><span class="p">;</span>
-<span class="p">}</span>
-<span class="nc">.section</span> <span class="nc">.list</span> <span class="p">{</span>
-  <span class="nl">padding</span><span class="p">:</span> <span class="m">20px</span><span class="p">;</span>
-<span class="p">}</span>
-<span class="nc">.section</span> <span class="nc">.list</span> <span class="nt">li</span> <span class="p">{</span>
-  <span class="nl">float</span><span class="p">:</span> <span class="nb">left</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre></div></div>
-
-<p><br /></p>
-
-<h2 id="ampersand-상위-선택자-참조">Ampersand (상위 선택자 참조)</h2>
-
-<ul>
-  <li>
-    <p>중첩 안에서 ＆ 키워드는 상위(부모) 선택자를 참조하여 치환합니다.</p>
-  </li>
-  <li>
-    <p>SCSS:</p>
-  </li>
-</ul>
-
-<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.btn</span> <span class="p">{</span>
-  <span class="nl">position</span><span class="p">:</span> <span class="nb">absolute</span><span class="p">;</span>
-  <span class="err">＆.active</span> <span class="err">{</span>
-    <span class="nl">color</span><span class="p">:</span> <span class="no">red</span><span class="p">;</span>
   <span class="p">}</span>
-<span class="err">}</span>
 
-<span class="nc">.list</span> <span class="p">{</span>
-  <span class="err">li</span> <span class="err">{</span>
-    <span class="err">＆:last-child</span> <span class="err">{</span>
-      <span class="nl">margin-right</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span>
-    <span class="p">}</span>
-  <span class="err">}</span>
-<span class="err">}</span>
-</code></pre></div></div>
-
-<ul>
-  <li>Compiled to:</li>
-</ul>
-
-<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.btn</span> <span class="p">{</span>
-  <span class="nl">position</span><span class="p">:</span> <span class="nb">absolute</span><span class="p">;</span>
-<span class="p">}</span>
-<span class="nc">.btn.active</span> <span class="p">{</span>
-  <span class="nl">color</span><span class="p">:</span> <span class="no">red</span><span class="p">;</span>
-<span class="p">}</span>
-<span class="nc">.list</span> <span class="nt">li</span><span class="nd">:last-child</span> <span class="p">{</span>
-  <span class="nl">margin-right</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre></div></div>
-
-<ul>
-  <li>
-    <p>＆키워드가 참조한 상위 선택자로 치환되는 것이기 때문에 다음과 같이 응용할 수도 있습니다.</p>
-  </li>
-  <li>
-    <p>SCSS:</p>
-  </li>
-</ul>
-
-<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.fs</span> <span class="p">{</span>
-  <span class="err">＆-small</span> <span class="err">{</span> <span class="nl">font-size</span><span class="p">:</span> <span class="m">12px</span><span class="p">;</span> <span class="p">}</span>
-  <span class="err">＆</span><span class="nt">-medium</span> <span class="p">{</span> <span class="nl">font-size</span><span class="p">:</span> <span class="m">14px</span><span class="p">;</span> <span class="p">}</span>
-  <span class="err">＆</span><span class="nt">-large</span> <span class="p">{</span> <span class="nl">font-size</span><span class="p">:</span> <span class="m">16px</span><span class="p">;</span> 
-<span class="p">}</span>
-</code></pre></div></div>
-
-<ul>
-  <li>Compiled to:</li>
-</ul>
-
-<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.fs-small</span> <span class="p">{</span>
-  <span class="nl">font-size</span><span class="p">:</span> <span class="m">12px</span><span class="p">;</span>
-<span class="p">}</span>
-<span class="nc">.fs-medium</span> <span class="p">{</span>
-  <span class="nl">font-size</span><span class="p">:</span> <span class="m">14px</span><span class="p">;</span>
-<span class="p">}</span>
-<span class="nc">.fs-large</span> <span class="p">{</span>
-  <span class="nl">font-size</span><span class="p">:</span> <span class="m">16px</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre></div></div>
-
-<p><br /></p>
-
-<h2 id="at-root-중첩-벗어나기">@at-root (중첩 벗어나기)</h2>
-
-<ul>
-  <li>
-    <p>중첩에서 벗어나고 싶을 때 @at-root 키워드를 사용합니다.</p>
-  </li>
-  <li>
-    <p>중첩 안에서 생성하되 중첩 밖에서 사용해야 경우에 유용합니다.</p>
-  </li>
-  <li>
-    <p>SCSS:</p>
-  </li>
-</ul>
-
-<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.list</span> <span class="p">{</span>
-  <span class="err">$</span><span class="py">w</span><span class="p">:</span> <span class="m">100px</span><span class="p">;</span>
-  <span class="err">$</span><span class="py">h</span><span class="p">:</span> <span class="m">50px</span><span class="p">;</span>
-  <span class="err">li</span> <span class="err">{</span>
-    <span class="nl">width</span><span class="p">:</span> <span class="err">$</span><span class="n">w</span><span class="p">;</span>
-    <span class="nl">height</span><span class="p">:</span> <span class="err">$</span><span class="n">h</span><span class="p">;</span>
+  <span class="k">if</span> <span class="p">(</span><span class="nx">checked</span> <span class="o">&gt;=</span> <span class="mi">2</span><span class="p">){</span>
+    <span class="nx">alert</span><span class="p">(</span><span class="dl">"</span><span class="s2">체크 해제 후 한 가지만 선택해 주세요</span><span class="dl">"</span><span class="p">);</span>
+    <span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
   <span class="p">}</span>
-  <span class="k">@at-root</span> <span class="p">.</span><span class="n">box</span> <span class="p">{</span>
-  <span class="nl">width</span><span class="p">:</span> <span class="err">$</span><span class="n">w</span><span class="p">;</span>
-  <span class="nl">height</span><span class="p">:</span> <span class="err">$</span><span class="n">h</span><span class="p">;</span>
-  <span class="p">}</span>
-<span class="err">}</span>
-</code></pre></div></div>
-
-<ul>
-  <li>Compiled to:</li>
-</ul>
-
-<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.fs-small</span> <span class="p">{</span>
-  <span class="nl">font-size</span><span class="p">:</span> <span class="m">12px</span><span class="p">;</span>
-<span class="p">}</span>
-<span class="nc">.fs-medium</span> <span class="p">{</span>
-  <span class="nl">font-size</span><span class="p">:</span> <span class="m">14px</span><span class="p">;</span>
-<span class="p">}</span>
-<span class="nc">.fs-large</span> <span class="p">{</span>
-  <span class="nl">font-size</span><span class="p">:</span> <span class="m">16px</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre></div></div>
-
-<ul>
-  <li>Error code:</li>
-</ul>
-
-<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.list</span> <span class="p">{</span>
-  <span class="err">$</span><span class="py">w</span><span class="p">:</span> <span class="m">100px</span><span class="p">;</span>
-  <span class="err">$</span><span class="py">h</span><span class="p">:</span> <span class="m">50px</span><span class="p">;</span>
-  <span class="err">li</span> <span class="err">{</span>
-    <span class="nl">width</span><span class="p">:</span> <span class="err">$</span><span class="n">w</span><span class="p">;</span>
-    <span class="nl">height</span><span class="p">:</span> <span class="err">$</span><span class="n">h</span><span class="p">;</span>
-  <span class="p">}</span>
-<span class="err">}</span>
-
-<span class="o">//</span> <span class="nt">Error</span>
-<span class="nc">.box</span> <span class="p">{</span>
-  <span class="nl">width</span><span class="p">:</span> <span class="err">$</span><span class="n">w</span><span class="p">;</span>
-  <span class="nl">height</span><span class="p">:</span> <span class="err">$</span><span class="n">h</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre></div></div>
-
-<ul>
-  <li>.list 안에 있는 특정 변수를 범위 밖에서 사용할 수 없기 때문에, 위 예제 처럼 @at-root 키워드를 사용해야 합니다.</li>
-</ul>
-
-<p><br /></p>
-
-<h2 id="중첩된-속성">중첩된 속성</h2>
-
-<ul>
-  <li>
-    <p>font-, margin- 등과 같이 동일한 네임 스페이스를 가지는 속성들을 다음과 같이 사용할 수 있습니다.</p>
-  </li>
-  <li>
-    <p>SCSS:</p>
-  </li>
-</ul>
-
-<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.box</span> <span class="p">{</span>
-  <span class="nl">font</span><span class="p">:</span> <span class="err">{</span>
-    <span class="n">weight</span><span class="p">:</span> <span class="nb">bold</span><span class="p">;</span>
-    <span class="nl">size</span><span class="p">:</span> <span class="m">10px</span><span class="p">;</span>
-    <span class="py">family</span><span class="p">:</span> <span class="nb">sans-serif</span><span class="p">;</span>
-  <span class="p">}</span><span class="o">;</span>
-  <span class="nt">margin</span><span class="o">:</span> <span class="p">{</span>
-    <span class="nl">top</span><span class="p">:</span> <span class="m">10px</span><span class="p">;</span>
-    <span class="nl">left</span><span class="p">:</span> <span class="m">20px</span><span class="p">;</span>
-  <span class="p">}</span><span class="o">;</span>
-  <span class="nt">padding</span><span class="o">:</span> <span class="p">{</span>
-    <span class="nl">bottom</span><span class="p">:</span> <span class="m">40px</span><span class="p">;</span>
-    <span class="nl">right</span><span class="p">:</span> <span class="m">30px</span><span class="p">;</span>
-  <span class="p">}</span><span class="o">;</span>
-<span class="err">}</span>
-</code></pre></div></div>
-
-<ul>
-  <li>Compiled to:</li>
-</ul>
-
-<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.box</span> <span class="p">{</span>
-  <span class="nl">font-weight</span><span class="p">:</span> <span class="nb">bold</span><span class="p">;</span>
-  <span class="nl">font-size</span><span class="p">:</span> <span class="m">10px</span><span class="p">;</span>
-  <span class="nl">font-family</span><span class="p">:</span> <span class="nb">sans-serif</span><span class="p">;</span>
-  <span class="nl">margin-top</span><span class="p">:</span> <span class="m">10px</span><span class="p">;</span>
-  <span class="nl">margin-left</span><span class="p">:</span> <span class="m">20px</span><span class="p">;</span>
-  <span class="nl">padding-bottom</span><span class="p">:</span> <span class="m">40px</span><span class="p">;</span>
-  <span class="nl">padding-right</span><span class="p">:</span> <span class="m">30px</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre></div></div>
-
-<p><br />
-<br /></p>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    본 포스팅은 HEROPY 님의 영상과 블로그를 보고 공부한 내용을 정리한 것입니다.
-    https://heropy.blog/2018/01/31/sass/
+<span class="p">});</span>
 </code></pre></div></div>
 
 
@@ -1695,9 +1581,9 @@
       }
 
       var d = function () {
-        this.page.title = "[Sass/SCSS] 문법 - 중첩",
-          this.page.identifier = "/devlog/2020/03/12/sass-05",
-          this.page.url = "https://m-veloper.github.io/devlog/2020/03/12/sass-05/"
+        this.page.title = "[jQuery(제이쿼리)] 체크박스 값(checkbox value) 가져오기",
+          this.page.identifier = "/tip/2020/06/16/tip-javascript-21",
+          this.page.url = "https://m-veloper.github.io/tip/2020/06/16/tip-javascript-21/"
       };
       s._disqusFirst = void 0 === s._disqusFirst || s._disqusFirst, s._disqusLoading = void 0 !== s._disqusLoading && s._disqusLoading, s._disqusThis = !1, s._disqusThreadOffsetTop = i.getElementById(
         "disqus_thread").offsetTop, s._disqusLoading ? s._disqusFirst = !1 : (s._disqusLoading = !0, loadJSDeferred(

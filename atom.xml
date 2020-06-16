@@ -4,12 +4,22 @@
  <title>슬기로운 개발 생활</title>
  <link href="https://m-veloper.github.io/atom.xml" rel="self"/>
  <id>https://m-veloper.github.io</id>
- <updated>2020-06-16T00:44:42+09:00</updated>
+ <updated>2020-06-16T11:46:01+09:00</updated>
  <author>
    <name>m-veloper</name>
    <uri>https://m-veloper.github.io</uri>
    <email>m_veloper@naver.com</email>
  </author>
+
+ 
+
+ <entry>
+   <title>[jQuery(제이쿼리)] 체크박스 값(checkbox value) 가져오기</title>
+   <link href="https://m-veloper.github.io/tip/2020/06/16/tip-javascript-21/"/>
+   <id>https://m-veloper.github.io/tip/2020/06/16/tip-javascript-21</id>
+   <updated>2020-06-16T00:00:00+09:00</updated>
+   <content type="html">&lt;p&gt;&lt;img src=&quot;/assets/img/javascript/2020-06-21-tip-javascript-21.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt; &lt;h1 id=&quot;checkbox&quot;&gt;Checkbox&lt;/h1&gt; &lt;p&gt;체크박스에 제이쿼리나 자바스크립트로 이벤트를 처리해야할 경우가 종종 있다.&lt;/p&gt; &lt;p&gt;&lt;br /&gt;&lt;/p&gt; &lt;h2 id=&quot;checked-여부-확인하기&quot;&gt;checked 여부 확인하기&lt;/h2&gt; &lt;ul&gt; &lt;li&gt;id로 확인하기&lt;/li&gt; &lt;/ul&gt; &lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;input:checkbox[id=&quot;checkbox_id&quot;]&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;is&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;:checked&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt; &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt; &lt;ul&gt; &lt;li&gt;name 으로 확인하기&lt;/li&gt;...</content>
+ </entry>
 
  
 
@@ -99,16 +109,6 @@
    <id>https://m-veloper.github.io/tip/2020/06/08/tip-css-05</id>
    <updated>2020-06-08T00:00:00+09:00</updated>
    <content type="html">&lt;p&gt;&lt;img src=&quot;/assets/img/css/2020-06-08-tip-css-05.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt; &lt;p&gt;div 태그 또는 특정 태그에 코드나, 일반 텍스트 입력시 자동으로 줄 바꿈을 하지 못하고 범위를 벗어나는 경우가 있습니다.&lt;/p&gt; &lt;p&gt;저의 경우 블로그 포스팅시 코드블럭(code block) 범위를 벗어나는 경우였습니다.&lt;/p&gt; &lt;p&gt;이 문제를 해결하는 방법은 간단합니다.&lt;/p&gt; &lt;p&gt;div 또는 특정 태그의 스타일을 정해주는 부분에 “word-break:break-all;” 또는 “white-space: pre-wrap;”를 추가하면 됩니다.&lt;/p&gt; &lt;div...</content>
- </entry>
-
- 
-
- <entry>
-   <title>[CSS] 모바일(반응형) 에서 좌,우가 움직이는 현상, 수평 스크롤 없애기</title>
-   <link href="https://m-veloper.github.io/tip/2020/06/07/tip-css-04/"/>
-   <id>https://m-veloper.github.io/tip/2020/06/07/tip-css-04</id>
-   <updated>2020-06-07T00:00:00+09:00</updated>
-   <content type="html">&lt;p&gt;&lt;img src=&quot;/assets/img/css/2020-06-07-tip-css-04.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt; &lt;p&gt;모바일 웹에서 수평 스크롤(가로 스크롤)이 있을 경우 위의 그림과 같이 화면을 터치하여 왼쪽으로 이동시키면 사이트가 좌우로 움직이게 되는 문제 발생.&lt;/p&gt; &lt;p&gt;모바일 기기에서 수평 스크롤을 비활성화하여 이 문제를 해결할 수 있습니다.&lt;/p&gt; &lt;p&gt;비슷한 현상이 생기는경우 아래와 같이 수정해보길 바랍니다.&lt;/p&gt; &lt;p&gt;우선 다음 메타 태그를 header에 추가합니다. (이미 있는 경우...</content>
  </entry>
 
  
