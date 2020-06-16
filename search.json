@@ -1,14 +1,6 @@
 [
 
 {
-"title"    : "[jQuery(제이쿼리)] 체크박스 값(checkbox value) 가져오기",
-"category" : "",
-"tags"     : "web, javascript, jQuery",
-"url"      : "/tip/2020/06/16/tip-javascript-21/",
-"date"     : "2020-06-16 00:00:00 +0900"
-} ,
-
-{
 "title"    : "[AWS] Web Server(웹서버, 아파치) 와 WAS(톰캣) 이해하기 ",
 "category" : "",
 "tags"     : "web, apache, tomcat",
