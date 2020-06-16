@@ -1,6 +1,14 @@
 [
 
 {
+"title"    : "[AWS] Web Server 와 WAS 를 구분하는 이유",
+"category" : "",
+"tags"     : "web, apache, tomcat",
+"url"      : "/tip/2020/06/17/tip-aws-02/",
+"date"     : "2020-06-17 00:00:00 +0900"
+} ,
+
+{
 "title"    : "[AWS] Web Server(웹서버, 아파치) 와 WAS(톰캣) 이해하기 ",
 "category" : "",
 "tags"     : "web, apache, tomcat",

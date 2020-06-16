@@ -1409,9 +1409,9 @@
 			<div id="container">
 				<main>
 					<article id="post-page">
-	<h2 class="title">[Sass/SCSS] 문법 - 중첩</h2>
+	<h2 class="title">[AWS] Web Server 와 WAS 를 구분하는 이유</h2>
 	<a class="tag" href="" data-flip="title">
-		<time datetime="" class="by-line">2020년 03월 12일</time>
+		<time datetime="" class="by-line">2020년 06월 17일</time>
 	</a>
 	<hr>
 	<div class="content">
@@ -1427,237 +1427,139 @@
 			<!--</div>-->
 		</div>
 
-		<p><img src="/assets/img/sass/2020-03-12-sass-05.png" alt="" /></p>
+		<p><img src="/assets/img/aws/2020-06-16-tip-aws-02.png" alt="" /></p>
 
-<h1 id="sassscss-문법---중첩">Sass(SCSS) 문법 - 중첩</h1>
+<h1 id="web-server-와-was-를-구분하는-이유">Web Server 와 WAS 를 구분하는 이유</h1>
 
-<ul>
-  <li>Sass는 중첩 기능을 사용할 수 있습니다.</li>
-  <li>상위 선택자의 반복을 피하고 좀 더 편리하게 복잡한 구조를 작성할 수 있습니다.</li>
-  <li>SCSS:</li>
-</ul>
-
-<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.section</span> <span class="p">{</span>
-  <span class="nl">width</span><span class="p">:</span> <span class="m">100%</span><span class="p">;</span>
-  <span class="err">.list</span> <span class="err">{</span>
-    <span class="nl">padding</span><span class="p">:</span> <span class="m">20px</span><span class="p">;</span>
-    <span class="err">li</span> <span class="err">{</span>
-      <span class="nl">float</span><span class="p">:</span> <span class="nb">left</span><span class="p">;</span>
-    <span class="p">}</span>
-  <span class="err">}</span>
-<span class="err">}</span>
-</code></pre></div></div>
-
-<ul>
-  <li>Compiled to:</li>
-</ul>
-
-<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.section</span> <span class="p">{</span>
-  <span class="nl">width</span><span class="p">:</span> <span class="m">100%</span><span class="p">;</span>
-<span class="p">}</span>
-<span class="nc">.section</span> <span class="nc">.list</span> <span class="p">{</span>
-  <span class="nl">padding</span><span class="p">:</span> <span class="m">20px</span><span class="p">;</span>
-<span class="p">}</span>
-<span class="nc">.section</span> <span class="nc">.list</span> <span class="nt">li</span> <span class="p">{</span>
-  <span class="nl">float</span><span class="p">:</span> <span class="nb">left</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre></div></div>
+<p><img src="/assets/img/aws/2020-06-16-tip-aws-02-01.png" alt="" /></p>
 
 <p><br /></p>
 
-<h2 id="ampersand-상위-선택자-참조">Ampersand (상위 선택자 참조)</h2>
+<h2 id="web-server-가-필요한-이유">Web Server 가 필요한 이유</h2>
 
-<ul>
-  <li>
-    <p>중첩 안에서 ＆ 키워드는 상위(부모) 선택자를 참조하여 치환합니다.</p>
-  </li>
-  <li>
-    <p>SCSS:</p>
-  </li>
-</ul>
+<p>클라이언트(웹 브라우저)에 이미지 파일(정적 컨텐츠)을 보내는 과정을 생각해보자.
+이미지 파일과 같은 정적인 파일들은 웹 문서(HTML 문서)가 클라이언트로 보내질 때 함께 가는 것이 아니다.</p>
 
-<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.btn</span> <span class="p">{</span>
-  <span class="nl">position</span><span class="p">:</span> <span class="nb">absolute</span><span class="p">;</span>
-  <span class="err">＆.active</span> <span class="err">{</span>
-    <span class="nl">color</span><span class="p">:</span> <span class="no">red</span><span class="p">;</span>
-  <span class="p">}</span>
-<span class="err">}</span>
+<p>클라이언트는 HTML 문서를 먼저 받고 그에 맞게 필요한 이미지 파일들을 다시 서버로 요청하면 그때서야 이미지 파일을 받아온다.
+Web Server를 통해 정적인 파일들을 Application Server까지 가지 않고 앞단에서 빠르게 보내줄 수 있다.</p>
 
-<span class="nc">.list</span> <span class="p">{</span>
-  <span class="err">li</span> <span class="err">{</span>
-    <span class="err">＆:last-child</span> <span class="err">{</span>
-      <span class="nl">margin-right</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span>
-    <span class="p">}</span>
-  <span class="err">}</span>
-<span class="err">}</span>
-</code></pre></div></div>
-
-<ul>
-  <li>Compiled to:</li>
-</ul>
-
-<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.btn</span> <span class="p">{</span>
-  <span class="nl">position</span><span class="p">:</span> <span class="nb">absolute</span><span class="p">;</span>
-<span class="p">}</span>
-<span class="nc">.btn.active</span> <span class="p">{</span>
-  <span class="nl">color</span><span class="p">:</span> <span class="no">red</span><span class="p">;</span>
-<span class="p">}</span>
-<span class="nc">.list</span> <span class="nt">li</span><span class="nd">:last-child</span> <span class="p">{</span>
-  <span class="nl">margin-right</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre></div></div>
-
-<ul>
-  <li>
-    <p>＆키워드가 참조한 상위 선택자로 치환되는 것이기 때문에 다음과 같이 응용할 수도 있습니다.</p>
-  </li>
-  <li>
-    <p>SCSS:</p>
-  </li>
-</ul>
-
-<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.fs</span> <span class="p">{</span>
-  <span class="err">＆-small</span> <span class="err">{</span> <span class="nl">font-size</span><span class="p">:</span> <span class="m">12px</span><span class="p">;</span> <span class="p">}</span>
-  <span class="err">＆</span><span class="nt">-medium</span> <span class="p">{</span> <span class="nl">font-size</span><span class="p">:</span> <span class="m">14px</span><span class="p">;</span> <span class="p">}</span>
-  <span class="err">＆</span><span class="nt">-large</span> <span class="p">{</span> <span class="nl">font-size</span><span class="p">:</span> <span class="m">16px</span><span class="p">;</span> 
-<span class="p">}</span>
-</code></pre></div></div>
-
-<ul>
-  <li>Compiled to:</li>
-</ul>
-
-<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.fs-small</span> <span class="p">{</span>
-  <span class="nl">font-size</span><span class="p">:</span> <span class="m">12px</span><span class="p">;</span>
-<span class="p">}</span>
-<span class="nc">.fs-medium</span> <span class="p">{</span>
-  <span class="nl">font-size</span><span class="p">:</span> <span class="m">14px</span><span class="p">;</span>
-<span class="p">}</span>
-<span class="nc">.fs-large</span> <span class="p">{</span>
-  <span class="nl">font-size</span><span class="p">:</span> <span class="m">16px</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre></div></div>
+<p>따라서 Web Server에서는 정적 컨텐츠만 처리하도록 기능을 분배하여 서버의 부담을 줄일 수 있다.</p>
 
 <p><br /></p>
 
-<h2 id="at-root-중첩-벗어나기">@at-root (중첩 벗어나기)</h2>
+<h2 id="wasweb-application-server-가-필요한-이유">WAS(Web Application Server) 가 필요한 이유</h2>
+
+<p>웹 페이지는 정적 컨텐츠와 동적 컨텐츠가 모두 존재한다.
+사용자의 요청에 맞게 적절한 동적 컨텐츠를 만들어서 제공해야 한다.</p>
+
+<p>이때, Web Server만을 이용한다면 사용자가 원하는 요청에 대한 결과값을 모두 미리 만들어 놓고 서비스를 해야 한다.
+하지만 이렇게 수행하기에는 자원이 절대적으로 부족하다.</p>
+
+<p>따라서 WAS를 통해 요청에 맞는 데이터를 DB에서 가져와서 비즈니스 로직에 맞게 그때 그때 결과를 만들어서 제공함으로써 
+자원을 효율적으로 사용할 수 있다.</p>
+
+<p><br /></p>
+
+<h2 id="was-가-web-server-의-기능까지-모두-수행하지-않는-이유">WAS 가 Web Server 의 기능까지 모두 수행하지 않는 이유</h2>
 
 <ul>
   <li>
-    <p>중첩에서 벗어나고 싶을 때 @at-root 키워드를 사용합니다.</p>
+    <p>기능을 분리하여 서버 부하 방지</p>
+
+    <ul>
+      <li>
+        <p>WAS는 DB 조회나 다양한 로직을 처리하느라 바쁘기 때문에 단순한 정적 컨텐츠는 Web Server에서 빠르게 클라이언트에 제공하는 것이 좋다.</p>
+      </li>
+      <li>
+        <p>WAS는 기본적으로 동적 컨텐츠를 제공하기 위해 존재하는 서버이다. 만약 정적 컨텐츠 요청까지 WAS가 처리한다면 정적 데이터 처리로 인해 부하가 커지게 되고, 
+동적 컨텐츠의 처리가 지연됨에 따라 수행 속도가 느려진다. 즉, 이로 인해 페이지 노출 시간이 늘어나게 될 것이다.</p>
+      </li>
+    </ul>
   </li>
   <li>
-    <p>중첩 안에서 생성하되 중첩 밖에서 사용해야 경우에 유용합니다.</p>
+    <p>물리적으로 분리하여 보안 강화</p>
+
+    <ul>
+      <li>SSL에 대한 암복호화 처리에 Web Server를 사용</li>
+    </ul>
   </li>
-  <li>
-    <p>SCSS:</p>
+  <li>여러 대의 WAS를 연결 가능
+    <ul>
+      <li>Load Balancing을 위해서 Web Server를 사용</li>
+      <li>fail over(장애 극복), fail back 처리에 유리</li>
+      <li>특히 대용량 웹 어플리케이션의 경우(여러 개의 서버 사용) Web Server와 WAS를 분리하여 무중단 운영을 위한 장애 극복에 쉽게 대응할 수 있다.
+        <ul>
+          <li>예를 들어, 앞 단의 Web Server에서 오류가 발생한 WAS를 이용하지 못하도록 한 후 WAS를 재시작함으로써 사용자는 오류를 느끼지 못하고 이용할 수 있다.</li>
+        </ul>
+      </li>
+    </ul>
   </li>
-</ul>
-
-<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.list</span> <span class="p">{</span>
-  <span class="err">$</span><span class="py">w</span><span class="p">:</span> <span class="m">100px</span><span class="p">;</span>
-  <span class="err">$</span><span class="py">h</span><span class="p">:</span> <span class="m">50px</span><span class="p">;</span>
-  <span class="err">li</span> <span class="err">{</span>
-    <span class="nl">width</span><span class="p">:</span> <span class="err">$</span><span class="n">w</span><span class="p">;</span>
-    <span class="nl">height</span><span class="p">:</span> <span class="err">$</span><span class="n">h</span><span class="p">;</span>
-  <span class="p">}</span>
-  <span class="k">@at-root</span> <span class="p">.</span><span class="n">box</span> <span class="p">{</span>
-  <span class="nl">width</span><span class="p">:</span> <span class="err">$</span><span class="n">w</span><span class="p">;</span>
-  <span class="nl">height</span><span class="p">:</span> <span class="err">$</span><span class="n">h</span><span class="p">;</span>
-  <span class="p">}</span>
-<span class="err">}</span>
-</code></pre></div></div>
-
-<ul>
-  <li>Compiled to:</li>
-</ul>
-
-<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.fs-small</span> <span class="p">{</span>
-  <span class="nl">font-size</span><span class="p">:</span> <span class="m">12px</span><span class="p">;</span>
-<span class="p">}</span>
-<span class="nc">.fs-medium</span> <span class="p">{</span>
-  <span class="nl">font-size</span><span class="p">:</span> <span class="m">14px</span><span class="p">;</span>
-<span class="p">}</span>
-<span class="nc">.fs-large</span> <span class="p">{</span>
-  <span class="nl">font-size</span><span class="p">:</span> <span class="m">16px</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre></div></div>
-
-<ul>
-  <li>Error code:</li>
-</ul>
-
-<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.list</span> <span class="p">{</span>
-  <span class="err">$</span><span class="py">w</span><span class="p">:</span> <span class="m">100px</span><span class="p">;</span>
-  <span class="err">$</span><span class="py">h</span><span class="p">:</span> <span class="m">50px</span><span class="p">;</span>
-  <span class="err">li</span> <span class="err">{</span>
-    <span class="nl">width</span><span class="p">:</span> <span class="err">$</span><span class="n">w</span><span class="p">;</span>
-    <span class="nl">height</span><span class="p">:</span> <span class="err">$</span><span class="n">h</span><span class="p">;</span>
-  <span class="p">}</span>
-<span class="err">}</span>
-
-<span class="o">//</span> <span class="nt">Error</span>
-<span class="nc">.box</span> <span class="p">{</span>
-  <span class="nl">width</span><span class="p">:</span> <span class="err">$</span><span class="n">w</span><span class="p">;</span>
-  <span class="nl">height</span><span class="p">:</span> <span class="err">$</span><span class="n">h</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre></div></div>
-
-<ul>
-  <li>.list 안에 있는 특정 변수를 범위 밖에서 사용할 수 없기 때문에, 위 예제 처럼 @at-root 키워드를 사용해야 합니다.</li>
+  <li>여러 웹 어플리케이션 서비스 가능
+    <ul>
+      <li>예를 들어, 하나의 서버에서 PHP Application과 Java Application을 함께 사용하는 경우</li>
+    </ul>
+  </li>
+  <li>기타
+    <ul>
+      <li>접근 허용 IP 관리, 2대 이상의 서버에서의 세션 관리 등도 Web Server에서 처리하면 효율적이다.</li>
+      <li>즉, 자원 이용의 효율성 및 장애 극복, 배포 및 유지보수의 편의성 을 위해 Web Server와 WAS를 분리한다.</li>
+    </ul>
+  </li>
+  <li>Web Server를 WAS 앞에 두고 필요한 WAS들을 Web Server에 플러그인 형태로 설정하면 더욱 효율적인 분산 처리가 가능하다.</li>
 </ul>
 
 <p><br /></p>
 
-<h2 id="중첩된-속성">중첩된 속성</h2>
+<h2 id="왜-웹서버를-was보다-앞에-설치를-할까">왜 웹서버를 WAS보다 앞에 설치를 할까?</h2>
 
 <ul>
   <li>
-    <p>font-, margin- 등과 같이 동일한 네임 스페이스를 가지는 속성들을 다음과 같이 사용할 수 있습니다.</p>
+    <p>WAS 자체로 웹 서버의 역할을 수행하기 때문에 무조건적으로 웹 서버를 앞단에 두어야 할 이유는 없다.</p>
   </li>
   <li>
-    <p>SCSS:</p>
+    <p>그런데 일반적으로 웹 서버를 WAS 앞 단에 배치하게 되는데, WAS만 사용하면 될 것이지 왜 웹 서버를 앞단에 배치하는 구조를 사용할까?</p>
+
+    <ul>
+      <li>
+        <p>WAS가 해야 할 일의 부담을 줄이기 위해서.</p>
+
+        <ul>
+          <li>WAS 앞에 웹 서버를 둬서 웹 서버에서는 정적인 문서만 처리하도록 하고, WAS는 애플리케이션의 로직만 수행하도록 기능을 분배하여 서버의 부담을 줄이기 위한 것</li>
+        </ul>
+      </li>
+    </ul>
   </li>
 </ul>
 
-<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.box</span> <span class="p">{</span>
-  <span class="nl">font</span><span class="p">:</span> <span class="err">{</span>
-    <span class="n">weight</span><span class="p">:</span> <span class="nb">bold</span><span class="p">;</span>
-    <span class="nl">size</span><span class="p">:</span> <span class="m">10px</span><span class="p">;</span>
-    <span class="py">family</span><span class="p">:</span> <span class="nb">sans-serif</span><span class="p">;</span>
-  <span class="p">}</span><span class="o">;</span>
-  <span class="nt">margin</span><span class="o">:</span> <span class="p">{</span>
-    <span class="nl">top</span><span class="p">:</span> <span class="m">10px</span><span class="p">;</span>
-    <span class="nl">left</span><span class="p">:</span> <span class="m">20px</span><span class="p">;</span>
-  <span class="p">}</span><span class="o">;</span>
-  <span class="nt">padding</span><span class="o">:</span> <span class="p">{</span>
-    <span class="nl">bottom</span><span class="p">:</span> <span class="m">40px</span><span class="p">;</span>
-    <span class="nl">right</span><span class="p">:</span> <span class="m">30px</span><span class="p">;</span>
-  <span class="p">}</span><span class="o">;</span>
-<span class="err">}</span>
-</code></pre></div></div>
+<p><img src="/assets/img/aws/2020-06-16-tip-aws-02-02.png" alt="" /></p>
 
 <ul>
-  <li>Compiled to:</li>
+  <li>
+    <p>위의 그림처럼 WAS앞에 웹 서버를 둠으로써 서버의 부담을 줄일 수 있음</p>
+  </li>
+  <li>
+    <p>웹 서버에서는 플러그인 형태로 WAS를 연결하면 일 처리를 나눌 수 있음</p>
+  </li>
+  <li>
+    <p>WAS의 환경설정 파일을 외부에 노출시키지 않도록 하기 위해서.</p>
+
+    <ul>
+      <li>
+        <p>클라이언트와 연결하는 포트가 직접 WAS에 연결이 되어 있다면 중요한 설정 파일들이 노출될 수 있기 때문에 WAS 설정 파일을 외부에 노출시키지 않도록 하기 위해서 웹 서버를 앞단에 배치.</p>
+      </li>
+      <li>
+        <p>웹 서버와 WAS에 접근하는 포트가 다르기 때문에, WAS에 들어오는 포트에는 방화벽을 쳐서 보안을 강화할 수도 있음.</p>
+      </li>
+    </ul>
+  </li>
 </ul>
 
-<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.box</span> <span class="p">{</span>
-  <span class="nl">font-weight</span><span class="p">:</span> <span class="nb">bold</span><span class="p">;</span>
-  <span class="nl">font-size</span><span class="p">:</span> <span class="m">10px</span><span class="p">;</span>
-  <span class="nl">font-family</span><span class="p">:</span> <span class="nb">sans-serif</span><span class="p">;</span>
-  <span class="nl">margin-top</span><span class="p">:</span> <span class="m">10px</span><span class="p">;</span>
-  <span class="nl">margin-left</span><span class="p">:</span> <span class="m">20px</span><span class="p">;</span>
-  <span class="nl">padding-bottom</span><span class="p">:</span> <span class="m">40px</span><span class="p">;</span>
-  <span class="nl">padding-right</span><span class="p">:</span> <span class="m">30px</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre></div></div>
+<h3 id="reference">Reference</h3>
 
-<p><br />
-<br /></p>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    본 포스팅은 HEROPY 님의 영상과 블로그를 보고 공부한 내용을 정리한 것입니다.
-    https://heropy.blog/2018/01/31/sass/
-</code></pre></div></div>
+<ul>
+  <li><a href="https://gmlwjd9405.github.io/2018/10/27/webserver-vs-was.html">Reference 1</a></li>
+  <li><a href="https://victorydntmd.tistory.com/121">Reference 2</a></li>
+</ul>
 
 
 
@@ -1695,9 +1597,9 @@
       }
 
       var d = function () {
-        this.page.title = "[Sass/SCSS] 문법 - 중첩",
-          this.page.identifier = "/devlog/2020/03/12/sass-05",
-          this.page.url = "https://m-veloper.github.io/devlog/2020/03/12/sass-05/"
+        this.page.title = "[AWS] Web Server 와 WAS 를 구분하는 이유",
+          this.page.identifier = "/tip/2020/06/17/tip-aws-02",
+          this.page.url = "https://m-veloper.github.io/tip/2020/06/17/tip-aws-02/"
       };
       s._disqusFirst = void 0 === s._disqusFirst || s._disqusFirst, s._disqusLoading = void 0 !== s._disqusLoading && s._disqusLoading, s._disqusThis = !1, s._disqusThreadOffsetTop = i.getElementById(
         "disqus_thread").offsetTop, s._disqusLoading ? s._disqusFirst = !1 : (s._disqusLoading = !0, loadJSDeferred(

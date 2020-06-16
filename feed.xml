@@ -5,9 +5,161 @@
     <description></description>
     <link>https://m-veloper.github.io/</link>
     <atom:link href="https://m-veloper.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 16 Jun 2020 12:40:28 +0900</pubDate>
-    <lastBuildDate>Tue, 16 Jun 2020 12:40:28 +0900</lastBuildDate>
+    <pubDate>Wed, 17 Jun 2020 00:03:36 +0900</pubDate>
+    <lastBuildDate>Wed, 17 Jun 2020 00:03:36 +0900</lastBuildDate>
     <generator>Jekyll v3.8.6</generator>
+    
+      <item>
+        <title>[AWS] Web Server 와 WAS 를 구분하는 이유</title>
+        <description>&lt;p&gt;&lt;img src=&quot;/assets/img/aws/2020-06-16-tip-aws-02.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;web-server-와-was-를-구분하는-이유&quot;&gt;Web Server 와 WAS 를 구분하는 이유&lt;/h1&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/aws/2020-06-16-tip-aws-02-01.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;web-server-가-필요한-이유&quot;&gt;Web Server 가 필요한 이유&lt;/h2&gt;
+
+&lt;p&gt;클라이언트(웹 브라우저)에 이미지 파일(정적 컨텐츠)을 보내는 과정을 생각해보자.
+이미지 파일과 같은 정적인 파일들은 웹 문서(HTML 문서)가 클라이언트로 보내질 때 함께 가는 것이 아니다.&lt;/p&gt;
+
+&lt;p&gt;클라이언트는 HTML 문서를 먼저 받고 그에 맞게 필요한 이미지 파일들을 다시 서버로 요청하면 그때서야 이미지 파일을 받아온다.
+Web Server를 통해 정적인 파일들을 Application Server까지 가지 않고 앞단에서 빠르게 보내줄 수 있다.&lt;/p&gt;
+
+&lt;p&gt;따라서 Web Server에서는 정적 컨텐츠만 처리하도록 기능을 분배하여 서버의 부담을 줄일 수 있다.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;wasweb-application-server-가-필요한-이유&quot;&gt;WAS(Web Application Server) 가 필요한 이유&lt;/h2&gt;
+
+&lt;p&gt;웹 페이지는 정적 컨텐츠와 동적 컨텐츠가 모두 존재한다.
+사용자의 요청에 맞게 적절한 동적 컨텐츠를 만들어서 제공해야 한다.&lt;/p&gt;
+
+&lt;p&gt;이때, Web Server만을 이용한다면 사용자가 원하는 요청에 대한 결과값을 모두 미리 만들어 놓고 서비스를 해야 한다.
+하지만 이렇게 수행하기에는 자원이 절대적으로 부족하다.&lt;/p&gt;
+
+&lt;p&gt;따라서 WAS를 통해 요청에 맞는 데이터를 DB에서 가져와서 비즈니스 로직에 맞게 그때 그때 결과를 만들어서 제공함으로써 
+자원을 효율적으로 사용할 수 있다.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;was-가-web-server-의-기능까지-모두-수행하지-않는-이유&quot;&gt;WAS 가 Web Server 의 기능까지 모두 수행하지 않는 이유&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;기능을 분리하여 서버 부하 방지&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;p&gt;WAS는 DB 조회나 다양한 로직을 처리하느라 바쁘기 때문에 단순한 정적 컨텐츠는 Web Server에서 빠르게 클라이언트에 제공하는 것이 좋다.&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;WAS는 기본적으로 동적 컨텐츠를 제공하기 위해 존재하는 서버이다. 만약 정적 컨텐츠 요청까지 WAS가 처리한다면 정적 데이터 처리로 인해 부하가 커지게 되고, 
+동적 컨텐츠의 처리가 지연됨에 따라 수행 속도가 느려진다. 즉, 이로 인해 페이지 노출 시간이 늘어나게 될 것이다.&lt;/p&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;물리적으로 분리하여 보안 강화&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;SSL에 대한 암복호화 처리에 Web Server를 사용&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;여러 대의 WAS를 연결 가능
+    &lt;ul&gt;
+      &lt;li&gt;Load Balancing을 위해서 Web Server를 사용&lt;/li&gt;
+      &lt;li&gt;fail over(장애 극복), fail back 처리에 유리&lt;/li&gt;
+      &lt;li&gt;특히 대용량 웹 어플리케이션의 경우(여러 개의 서버 사용) Web Server와 WAS를 분리하여 무중단 운영을 위한 장애 극복에 쉽게 대응할 수 있다.
+        &lt;ul&gt;
+          &lt;li&gt;예를 들어, 앞 단의 Web Server에서 오류가 발생한 WAS를 이용하지 못하도록 한 후 WAS를 재시작함으로써 사용자는 오류를 느끼지 못하고 이용할 수 있다.&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;여러 웹 어플리케이션 서비스 가능
+    &lt;ul&gt;
+      &lt;li&gt;예를 들어, 하나의 서버에서 PHP Application과 Java Application을 함께 사용하는 경우&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;기타
+    &lt;ul&gt;
+      &lt;li&gt;접근 허용 IP 관리, 2대 이상의 서버에서의 세션 관리 등도 Web Server에서 처리하면 효율적이다.&lt;/li&gt;
+      &lt;li&gt;즉, 자원 이용의 효율성 및 장애 극복, 배포 및 유지보수의 편의성 을 위해 Web Server와 WAS를 분리한다.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Web Server를 WAS 앞에 두고 필요한 WAS들을 Web Server에 플러그인 형태로 설정하면 더욱 효율적인 분산 처리가 가능하다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;왜-웹서버를-was보다-앞에-설치를-할까&quot;&gt;왜 웹서버를 WAS보다 앞에 설치를 할까?&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;WAS 자체로 웹 서버의 역할을 수행하기 때문에 무조건적으로 웹 서버를 앞단에 두어야 할 이유는 없다.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;그런데 일반적으로 웹 서버를 WAS 앞 단에 배치하게 되는데, WAS만 사용하면 될 것이지 왜 웹 서버를 앞단에 배치하는 구조를 사용할까?&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;p&gt;WAS가 해야 할 일의 부담을 줄이기 위해서.&lt;/p&gt;
+
+        &lt;ul&gt;
+          &lt;li&gt;WAS 앞에 웹 서버를 둬서 웹 서버에서는 정적인 문서만 처리하도록 하고, WAS는 애플리케이션의 로직만 수행하도록 기능을 분배하여 서버의 부담을 줄이기 위한 것&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/aws/2020-06-16-tip-aws-02-02.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;위의 그림처럼 WAS앞에 웹 서버를 둠으로써 서버의 부담을 줄일 수 있음&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;웹 서버에서는 플러그인 형태로 WAS를 연결하면 일 처리를 나눌 수 있음&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;WAS의 환경설정 파일을 외부에 노출시키지 않도록 하기 위해서.&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;p&gt;클라이언트와 연결하는 포트가 직접 WAS에 연결이 되어 있다면 중요한 설정 파일들이 노출될 수 있기 때문에 WAS 설정 파일을 외부에 노출시키지 않도록 하기 위해서 웹 서버를 앞단에 배치.&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;웹 서버와 WAS에 접근하는 포트가 다르기 때문에, WAS에 들어오는 포트에는 방화벽을 쳐서 보안을 강화할 수도 있음.&lt;/p&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;reference&quot;&gt;Reference&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://gmlwjd9405.github.io/2018/10/27/webserver-vs-was.html&quot;&gt;Reference 1&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://victorydntmd.tistory.com/121&quot;&gt;Reference 2&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+        <pubDate>Wed, 17 Jun 2020 00:00:00 +0900</pubDate>
+        <link>https://m-veloper.github.io/tip/2020/06/17/tip-aws-02/</link>
+        <guid isPermaLink="true">https://m-veloper.github.io/tip/2020/06/17/tip-aws-02/</guid>
+        
+        <category>web</category>
+        
+        <category>apache</category>
+        
+        <category>tomcat</category>
+        
+        
+        <category>tip</category>
+        
+      </item>
     
       <item>
         <title>[AWS] Web Server(웹서버, 아파치) 와 WAS(톰캣) 이해하기 </title>
@@ -5051,210 +5203,6 @@ ES7(ES2016) ES8(ES2017) ES9(ES2018) ES10(ES2019).. 새로운 자바스크립트 
         <category>ES6</category>
         
         <category>ES2015</category>
-        
-        
-        <category>devlog</category>
-        
-      </item>
-    
-      <item>
-        <title>[유닉스] 시스템 성능 관리 명령어</title>
-        <description>&lt;p&gt;&lt;img src=&quot;/assets/img/unix/2020-05-19-unix-54.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h1 id=&quot;시스템-성능-관리-명령어&quot;&gt;시스템 성능 관리 명령어&lt;/h1&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;개요&quot;&gt;개요&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;시스템이 현재 사용하고 있는 자원의 현황 조사&lt;/li&gt;
-  &lt;li&gt;시스템이 효율적으로 동작하고 있는지 검사&lt;/li&gt;
-  &lt;li&gt;시스템 성능에 영향을 미치는 요소, 시스템이 최적의 성능을 발휘하기 위해 무엇이 필요한지 알게 됨&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;시스템-상태--uptime&quot;&gt;시스템 상태 : uptime&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;시스템의 평균 부하에 대한 수치를 측정&lt;/li&gt;
-  &lt;li&gt;시스템이 얼마나 오랜 시간 동안 운영되고 있는지를 통계와 함께 보여줌
-    &lt;ul&gt;
-      &lt;li&gt;00:20:29 : 현재 시간&lt;/li&gt;
-      &lt;li&gt;up 2:27 : 부팅 후부터의 동작 시간&lt;/li&gt;
-      &lt;li&gt;2 users : 현재 서버에 접속된 사용자 수&lt;/li&gt;
-      &lt;li&gt;load average : 과거 1, 5, 15분간의 시스템 평균 부하(load)&lt;/li&gt;
-      &lt;li&gt;일반적으로 평균 부하가 5.0-10.0 이상이면 높은 부하이므로 부하 분산 필요&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# uptime&lt;/span&gt;
-00:20:29 up 2:27, 2 &lt;span class=&quot;nb&quot;&gt;users&lt;/span&gt;, load average: 0.16, 0.03, 0.01
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;프로세스-상태--ps&quot;&gt;프로세스 상태 : ps&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;현재 실행 중인 모든 프로세스들의 상태를 감시하는데 사용&lt;/li&gt;
-  &lt;li&gt;프로세스 목록, 각 프로세스의 상태, 크기, 이름, 소유자, CPU 시간, 실제 시간 등 정보를 보여줌&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;메모리-상태--vmstat&quot;&gt;메모리 상태 : vmstat&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;메모리의 상태와 성능 감시에 사용&lt;/li&gt;
-  &lt;li&gt;형식 : vmstat [delay [count]]
-    &lt;ul&gt;
-      &lt;li&gt;delay는 몇 초 간격으로 메모리 상태를 체크할 것인지 지정하는 값&lt;/li&gt;
-      &lt;li&gt;count는 명령어 사용자에게 몇 번이나 반복 실행하여 상태를 보여줄 것인지 그 회수를 지정하는 값&lt;/li&gt;
-      &lt;li&gt;count를 지정하지 않으면 지정된 시간 간격으로 정보를 수집하여 계속 출력&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# vmstat&lt;/span&gt;
-procs &lt;span class=&quot;nt&quot;&gt;-----------memory-------&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--swap-&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;---io-&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-system-&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--------cpu--------&lt;/span&gt;
-r b     swpd free buff   cache       si so    bi bo    &lt;span class=&quot;k&quot;&gt;in &lt;/span&gt;cs     us sy &lt;span class=&quot;nb&quot;&gt;id &lt;/span&gt;wa st
-1 0     5716 7176 62548 16540         0 0      0 1     31 11      5 12 5  0  0
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;vmstat 결과의 내용&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/img/unix/2020-05-19-unix-54-01.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;cpu-상태--mpstat&quot;&gt;CPU 상태 : mpstat&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;CPU의 성능 상태 출력&lt;/li&gt;
-  &lt;li&gt;SMP(대칭형 다중 프로세서)일 경우 각 프로세서별 상태를 보여줌&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# mpstat&lt;/span&gt;
-Linux 2.6.33.3-......
-
-21:36:59 CPU %user %nice %sys %iowait %irq %soft %steal %guest %idle
-21:36:59 all  5.18 0.00  2.32  5.43   0.51 0.13   0.00   0.00  86.96
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;mpstat 실행 결과&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/img/unix/2020-05-19-unix-54-02.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;네트워크-상태--netstat&quot;&gt;네트워크 상태 : netstat&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;네트워크와 관련된 다양한 정보를 알 수 있는 명령&lt;/li&gt;
-  &lt;li&gt;네트워크 연결 상태
-    &lt;ul&gt;
-      &lt;li&gt;옵션을 주지 않으면 활성화된 TCP와 UDP의 상태를 보여줌&lt;/li&gt;
-      &lt;li&gt;tcp만 연결 상태(state)를 나타냄&lt;/li&gt;
-      &lt;li&gt;udp는 비연결형 프로토콜&lt;/li&gt;
-      &lt;li&gt;프로토콜 연결 상태 : 현재 연결을 위한 ESTABLISHED, 연결을 기다리는 LISTEN, 종료 중에 있는 TIME_WAIT 등&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# netstat&lt;/span&gt;
-Active Internet connections &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;w/o servers&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-Proto Recv-Q Send-Q Local Address Foreign Address State
-tcp 70 0 10.0.2.15:56232 productsearch.ubu:https CLOSE_WAIT
-tcp 70 0 10.0.2.15:56255 productsearch.ubu:https CLOSE_WAIT
-......
-Active UNIX domain sockets &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;w/o servers&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-Proto RefCnt Flags  Type  State I-Node  Path
-unix    2     &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;  DGRAM        8157    /var/spool/postfix/dev/log
-unix    23    &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;  DGRAM        8155    /dev/log
-......
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;인터페이스 구성 정보
-    &lt;ul&gt;
-      &lt;li&gt;-i 옵션 사용&lt;/li&gt;
-      &lt;li&gt;네트워크 인터페이스 구성 정보인 라우팅 테이블 화면&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# netstat -i&lt;/span&gt;
-Kernel Interface table
-Iface MTU Met RX-OK RX-ERR RX-DRP RX-OVR TX-OK TX-ERR TX-DRP TX-OVR Flg
-eth0 1500  0 8402950  0      0      0    463998   0     0       0   BRU
-lo   16436 0 19117    0      0      0    19117    0     0       0   LRU
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/img/unix/2020-05-19-unix-54-03.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;디스크-상태--iostat&quot;&gt;디스크 상태 : iostat&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;디스크 ‘입출력’의 통계량과 전송비율 등 디스크 입출력에 관련된 상태 출력&lt;/li&gt;
-  &lt;li&gt;형식 : iostat [time [count]]&lt;/li&gt;
-  &lt;li&gt;time초 간격으로 count개의 상태를 체크하여 보여줌&lt;/li&gt;
-  &lt;li&gt;사용 예 : iostat 2 : 사용자의 중지 명령이 있을 때까지 2초 간격으로 업데이트된 목록을 보고함&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# iostat 2&lt;/span&gt;
-Linux 2.6.33.3-......
-
-avg-cpu: %user %nice %system %iowait %steal %idle
-          5.17  0.00   2.31   5.43    0.00  94.22
-Device: tps Blk_read/s Blk_wrtn/s Blk_read Blk_wrtn
-dev3-0  0.70   0.04       5.56      712     6190947
-
-avg-cpu: %user %nice %system %iowait %steal %idle
-         1.46   0.16   2.34   1.82    0.00  94.22
-Device: tps Blk_read/s Blk_wrtn/s Blk_read Blk_wrtn
-dev3-0  0.30  2.04        3.27       0        0
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/img/unix/2020-05-19-unix-54-04.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;cpu와-디스크-상태--sar&quot;&gt;CPU와 디스크 상태 : sar&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;sar 명령은 시스템 정보를 보고할 때 쓰이는 명령어&lt;/li&gt;
-  &lt;li&gt;cron 명령과 같이 사용하여 주기적으로 장기간 데이터를 수집할 수 있는 장점을 가짐&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/img/unix/2020-05-19-unix-54-05.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;sar의 CPU 분석 기능
-    &lt;ul&gt;
-      &lt;li&gt;CPU 이용 옵션 –u를 붙이지 않아도 기본적으로 같은 결과를 보고&lt;/li&gt;
-      &lt;li&gt;CPU는 사용 중이거나 휴지(idle) 상태
-        &lt;ul&gt;
-          &lt;li&gt;사용 중 : 시스템 고유 작업과 사용자의 작업을 수행&lt;/li&gt;
-          &lt;li&gt;사용 중이지 않을 때 : 입출력을 기다리거나 휴지 상태&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-</description>
-        <pubDate>Tue, 19 May 2020 00:00:00 +0900</pubDate>
-        <link>https://m-veloper.github.io/devlog/2020/05/19/unix-54/</link>
-        <guid isPermaLink="true">https://m-veloper.github.io/devlog/2020/05/19/unix-54/</guid>
-        
-        <category>unix</category>
         
         
         <category>devlog</category>
