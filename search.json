@@ -1,6 +1,14 @@
 [
 
 {
+"title"    : "[AWS] 우분투(Ubuntu)에서 아파치(Web Server) 와 톰캣(WAS) 연동하기",
+"category" : "",
+"tags"     : "web, apache, tomcat",
+"url"      : "/tip/2020/06/19/tip-aws-04/",
+"date"     : "2020-06-19 00:00:00 +0900"
+} ,
+
+{
 "title"    : "[AWS] 우분투(Ubuntu)에 아파치(웹서버), 톰캣(Tomcat), JDK(SDK) 설치하기",
 "category" : "",
 "tags"     : "web, apache, tomcat",

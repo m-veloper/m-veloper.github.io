@@ -5,9 +5,157 @@
     <description></description>
     <link>https://m-veloper.github.io/</link>
     <atom:link href="https://m-veloper.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 18 Jun 2020 00:13:24 +0900</pubDate>
-    <lastBuildDate>Thu, 18 Jun 2020 00:13:24 +0900</lastBuildDate>
+    <pubDate>Fri, 19 Jun 2020 00:00:30 +0900</pubDate>
+    <lastBuildDate>Fri, 19 Jun 2020 00:00:30 +0900</lastBuildDate>
     <generator>Jekyll v3.8.6</generator>
+    
+      <item>
+        <title>[AWS] 우분투(Ubuntu)에서 아파치(Web Server) 와 톰캣(WAS) 연동하기</title>
+        <description>&lt;p&gt;&lt;img src=&quot;/assets/img/aws/2020-06-19-tip-aws-04.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;아파치web-server-와-톰캣was-연동하기&quot;&gt;아파치(Web Server) 와 톰캣(WAS) 연동하기&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;AWS 우분투 설치 인스턴스 : Ubuntu Server 18.04 LTS&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;현재 계정에서 root 권한을 이용하여 명령어를 실행할 때에는 모든 명령어 앞에 “sudo” 를 붙여주시기 바랍니다.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;예&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt-get update
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;아파치(Web Server) 와 톰캣(WAS) 연동하기 위해서는 연동 커넥터를 설치해야합니다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;apt-get &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;libapache2-mod-jk
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;결로 설정을 위한 에디터 열기&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;vi /etc/apache2/sites-available/000-default.conf
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;설정하기&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;추가 : JKMount /* ajp13_worker
+        &lt;ul&gt;
+          &lt;li&gt;ajp13_worke는 설치시 기본 설정된 worklist명임.&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;기본 설정 주석처리 :  DocumentRoot /var/www/html 를 주석처리&lt;/li&gt;
+      &lt;li&gt;jsp를 읽을 톰캣 경로로 변경 :  DocumentRoot /usr/local/tomcat8.5/webapp/ROOT/&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;연동 설정을 위한 에디터 열기&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;vi /etc/libapache2-mod-jk/workers.properties
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;설정하기 (복사하여 붙여넣으세요)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# 실제 톰캣이 설치되어 있는 경로 &lt;/span&gt;
+workers.tomcat_home&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;/usr/local/tomcat8.5
+
+&lt;span class=&quot;c&quot;&gt;# 실제 java가 설치되어 있는 경로&lt;/span&gt;
+workers.java_home&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;/usr/lib/jvm/java-8-openjdk-amd64
+
+&lt;span class=&quot;c&quot;&gt;# 사용할 worker의 이름 리스트를 적어 준다.&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# 하나 이상 , 로 연결해서 적어 줄 수 있다.&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# apache에 tomcat을 하나 이상 연결 할 때 worker.list에 두개 이상의 worker를 설정하면 된다.&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# 기본 설정되어있음&lt;/span&gt;
+worker.list&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;ajp13_worker
+
+&lt;span class=&quot;c&quot;&gt;# 각각의 worker list 마다 설정을 진행해 준다.&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# tomcat에 설정 되어 있는 ajp port를 적어준다.&lt;/span&gt;
+
+worker.ajp13_worker.port&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;8009
+worker.ajp13_worker.host&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;localhost
+worker.ajp13_worker.type&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;ajp13
+worker.ajp13_worker.lbfactor&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;1
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;톰캣 설정 변경을 위한 에디터 열기&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;vi /usr/local/tomcat8.5/conf/server.xml
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;server.xml 부분에서 만약 아래 부분에 주석이 되어있다면 &lt;!-- --&gt; 주석 제거&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;Connector &lt;span class=&quot;nv&quot;&gt;port&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;8009&quot;&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;protocol&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;AJP/1.3&quot;&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;redirectPort&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;8443&quot;&lt;/span&gt; /&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;jk_module 경로 확인&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;vi /etc/apache2/mods-available/jk.conf
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;위의 jk.conf 에 workers.properties 가 위치한 기본 경로로 설정해줘야함&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;p&gt;복사 붙여넣기&lt;/p&gt;
+
+        &lt;ul&gt;
+          &lt;li&gt;JkWorkersFile /etc/libapache2-mod-jk/workers.properties&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;기본 경로가 위 처럼 설정되어 있다면 상관 없음.&lt;/p&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;reference&quot;&gt;Reference&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://minimi22.tistory.com/7&quot;&gt;Reference 1&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://chago.tistory.com/3&quot;&gt;Reference 2&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://nevernever.tistory.com/entry/aws-ubuntu-%EC%97%90%EC%84%9C-apache%EC%99%80-tomcat-%EC%97%B0%EB%8F%99%ED%95%98%EA%B8%B0&quot;&gt;Reference 3&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+        <pubDate>Fri, 19 Jun 2020 00:00:00 +0900</pubDate>
+        <link>https://m-veloper.github.io/tip/2020/06/19/tip-aws-04/</link>
+        <guid isPermaLink="true">https://m-veloper.github.io/tip/2020/06/19/tip-aws-04/</guid>
+        
+        <category>web</category>
+        
+        <category>apache</category>
+        
+        <category>tomcat</category>
+        
+        
+        <category>tip</category>
+        
+      </item>
     
       <item>
         <title>[AWS] 우분투(Ubuntu)에 아파치(웹서버), 톰캣(Tomcat), JDK(SDK) 설치하기</title>
@@ -4913,339 +5061,6 @@ map 함수를 사용하지 않고 우리가 지금까지 배운 지식들을 활
         <category>ES6</category>
         
         <category>ES2015</category>
-        
-        
-        <category>devlog</category>
-        
-      </item>
-    
-      <item>
-        <title>[유닉스] 시스템 백업과 복구 명령어</title>
-        <description>&lt;p&gt;&lt;img src=&quot;/assets/img/unix/2020-05-20-unix-55.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h1 id=&quot;시스템-백업과-복구-명령어&quot;&gt;시스템 백업과 복구 명령어&lt;/h1&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;테이프에-파일-보관--tar&quot;&gt;테이프에 파일 보관 : tar&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;tar 명령은 기본적으로 파일을 자기 테이프(magnetic tape)에 보관하도록 특별히 설계되었음&lt;/li&gt;
-  &lt;li&gt;현재는 여러 개의 파일들을 하나의 파일로 묶는 용도로 더 많이 쓰이고 있음&lt;/li&gt;
-  &lt;li&gt;tar 명령의 특징은 단순함, 신뢰성, 안정성, 자기 테이프 장치 이외의 어떤 매체에도 저장할 수 있는 유연성&lt;/li&gt;
-  &lt;li&gt;형식 : tar [options] [생성될 파일명] [대상 파일명 또는 대상 디렉토리, 장치명]&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/img/unix/2020-05-20-unix-55-01.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;가장 많이 사용되는 옵션은 cvf, tvf, xvf&lt;/li&gt;
-  &lt;li&gt;저장 매체로 플로피 디스크나 자기 테이프로 지정하고 백업하는 예
-    &lt;ul&gt;
-      &lt;li&gt;/dev/fd0는 플로피 드라이브를 백업 매체로 지정하는 것&lt;/li&gt;
-      &lt;li&gt;/var 디렉토리를 플로피 드라이브로 복사&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# tar –cf /dev/fd0 /var&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;백업될 크기가 하나의 플로피 디스크에 저장하기에 너무 커서 연속적으로 백업을 받아야 할 경우 –M 옵션 사용&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# tar –cMf /dev/fd0 /var&lt;/span&gt;
-&lt;span class=&quot;nb&quot;&gt;tar&lt;/span&gt;: Removing leading ‘/’ from member names
-Prepare volume &lt;span class=&quot;c&quot;&gt;#2 for ‘/dev/fd0’ and hit return;&lt;/span&gt;
-Prepare volume &lt;span class=&quot;c&quot;&gt;#3 for ‘/dev/fd0’ and hit return;&lt;/span&gt;
-Prepare volume &lt;span class=&quot;c&quot;&gt;#4 for ‘/dev/fd0’ and hit return;&lt;/span&gt;
-Prepare volume &lt;span class=&quot;c&quot;&gt;#5 for ‘/dev/fd0’ and hit return;&lt;/span&gt;
-......
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;/var 디렉토리를 자기 테이프로 백업하는 경우
-    &lt;ul&gt;
-      &lt;li&gt;/dev/st0는 자기 테이프 저장 매체를 의미&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# tar –cf /dev/st0 /var&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;플로피 디스크 /dev/fd0에 옵션 –tvf를 사용하여 백업된 데이터의 내용을 보는 예&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# tar –tvf /dev/fd0&lt;/span&gt;
-drwxr-xr-x root/root 0 2002-05-10 12:24:31 var/
-drwxr-xr-x root/root 0 2002-05-10 12:01:53 var/lost+found/
-drwxr-xr-x root/root 0 2002-05-10 03:41:43 var/lib/
-drwxr-xr-x root/root 0 1996-02-15 07:07:19 var/lib/rpm/
-&lt;span class=&quot;nt&quot;&gt;-rw-r&lt;/span&gt;—r- root/root 11403264 2002-05-10 12:28:35 var/lib/rpm/Packages
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;-xvf를 사용하여 tar로 백업한 파일을 복구&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# tar –xvMf /dev/fd0&lt;/span&gt;
-var/
-var/lost+found/
-var/lib/
-var/lib/rpm/
-var/lib/rpm/Packages
-Prepare volume &lt;span class=&quot;c&quot;&gt;#2 for ‘/dev/fd0’ and hit return:&lt;/span&gt;
-var/lib/rpm/Name
-var/lib/rpm/Basenames
-Prepare volume &lt;span class=&quot;c&quot;&gt;#3 for ‘dev/fd0’ and hit return:&lt;/span&gt;
-var/lib/rpm/Group
-......
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;/var 디렉토리를 usb 저장매체에 backup.tar 파일명으로 백업하고, 백업한 파일을 /test 디렉토리에 복구한 후에 ls 명령어로 확인하는 경우&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# tar –cf /dev/sdb1/backup.tar /var&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;# ls /dev/sdb1&lt;/span&gt;
-backup.tar
-&lt;span class=&quot;c&quot;&gt;# tar –xvf /dev/sdb1/backup.tar&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;# ls&lt;/span&gt;
-var
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;점진적-백업--dump-restore&quot;&gt;점진적 백업 : dump, restore&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;dump 명령은 파일 시스템을 백업하는데 있어서 가장 일반화된 명령어&lt;/li&gt;
-  &lt;li&gt;dump 명령을 사용하여 시스템을 백업하고 restore 명령을 사용하여 백업된 파일을 복구&lt;/li&gt;
-  &lt;li&gt;dump는 파일 시스템 전체나 파일 시스템의 일부를 백업할 수 있음&lt;/li&gt;
-  &lt;li&gt;백업될 파일은 0에서 9까지 레벨로 지정하여 작업&lt;/li&gt;
-  &lt;li&gt;동일한 파일 시스템을 백업할 때, 예전이 이미 백업해 놓은 파일이 있다면, 그 백업 파일과 비교해서 변경된 파일이나 수정된 파일만을 목록으로 만들어 변경된 목록만을 업데이트 하는 형식&lt;/li&gt;
-  &lt;li&gt;예를 들면,&lt;/li&gt;
-  &lt;li&gt;일요일에 파일 시스템을 레벨 0으로 완전 백업을 했을 경우&lt;/li&gt;
-  &lt;li&gt;월요일에 레벨 1로 덤프하면 완전 백업 이후 변경된 모든 데이터를 기록&lt;/li&gt;
-  &lt;li&gt;화요일에 레벨 2로 덤프하면 레벨 1 덤프 이후 변경된 데이터를 기록&lt;/li&gt;
-  &lt;li&gt;레벨 0은 완전 백업을 의미, 1에서 9까지는 점진적 백업이라 함&lt;/li&gt;
-  &lt;li&gt;형식 : dump [option argument] file-to-dump&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/img/unix/2020-05-20-unix-55-02.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;/home 디렉토리에 대해 전체 백업을 진행하여 /backup 디렉토리에 저장할 경우
-    &lt;ul&gt;
-      &lt;li&gt;dump 레벨 0으로 /home 디렉토리를 /backup 디렉토리에 backup.dump 파일로 백업&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# dump –0f /backup/backup.dump /home&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;tape 장치에 dump를 이용한 백업의 예
-    &lt;ul&gt;
-      &lt;li&gt;/home 디렉토리를 테이프 장치로 백업하는 예&lt;/li&gt;
-      &lt;li&gt;/dev/st0는 첫 번째 테이프 장치를 의미하는 시스템 파일&lt;/li&gt;
-      &lt;li&gt;테이프 장치가 여러 개 있다면 /dev/st1, /dev/st2 순서로 이름이 지정됨&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# dump –0f /dev/st0 /home&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;dump로 백업한 파일은 restore 명령으로 복구, restore는 dump로 백업한 파일만 복구시킬 수 있음&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/img/unix/2020-05-20-unix-55-03.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;restore 명령을 이용하여 /home 디렉토리 중에서 /home/user1 이라는 서브디렉토리만을 선택적으로 복구하는 예
-    &lt;ul&gt;
-      &lt;li&gt;복구하기 전에 /home/user1 디렉토리 안의 모든 파일을 지우고 시작&lt;/li&gt;
-      &lt;li&gt;add 명령을 사용하여 user1이 &lt;em&gt;user1으로 ‘&lt;/em&gt;’가 붙어있는데, 이는 백업 파일 (/backup/backup.dump)에서 user1 디렉토리만 활성화시켜 복구한다는 의미&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# restore –if /backup/backup.dump&lt;/span&gt;
-restore &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;ls&lt;/span&gt;
-......
-home/
-restore &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;home/
-restore &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;ls&lt;/span&gt;
-./home:
-ksshin/ user1/
-restore &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; add user1/
-restore &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; verbose
-verbose mode on
-restore &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;ls&lt;/span&gt;
-./home:
-4096 ./ 4096 ksshin/ 4096 &lt;span class=&quot;k&quot;&gt;*&lt;/span&gt;user1/
-2 ../
-restore &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;restore로 복구하기 전에, 백업한 디렉토리인 “/home”이 “/” 디렉토리 밑에 있으므로 “/”로 이동해서 복구해야 함&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;restore &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; extract
-Extract requested files
-You have not &lt;span class=&quot;nb&quot;&gt;read &lt;/span&gt;any volumes yet.
-Unless you know which volume your file&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;s&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; are on you ......
-......
-restore &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; quit
-&lt;span class=&quot;c&quot;&gt;# cd user1&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;# ls&lt;/span&gt;
-......
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;파일-보관--cpio&quot;&gt;파일 보관 : cpio&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;cpio 명령은 파일을 디스크 장치나 테이프 장치에 백업하기 위해 많이 사용되는 일반적인 명령&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/img/unix/2020-05-20-unix-55-04.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/img/unix/2020-05-20-unix-55-05.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;table&gt;
-      &lt;tbody&gt;
-        &lt;tr&gt;
-          &lt;td&gt;cpio 명령을 사용하여 백업하기 위해서는 “&lt;/td&gt;
-          &lt;td&gt;”(pipe) 기호와 리다이렉션 기호를 사용&lt;/td&gt;
-        &lt;/tr&gt;
-      &lt;/tbody&gt;
-    &lt;/table&gt;
-  &lt;/li&gt;
-  &lt;li&gt;cpio는 표준 입력장치로부터 입력사항을 받아들이고, 표준 출력장치로 출력사항을 보냄&lt;/li&gt;
-  &lt;li&gt;표준 입력은 ls, cat, find 명령을 사용할 수 있고, 출력은 저장 매체인 플로피 디스크, 테이프, 하드디스크 등&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;표준-입력으로-ls-명령을-사용하여-저장장치에-백업하는-예&quot;&gt;표준 입력으로 ls 명령을 사용하여 저장장치에 백업하는 예&lt;/h4&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;플로피에 백업&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# ls [백업할 파일] | cpio –o &amp;gt; /dev/fd0&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;테이프에 백업&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# ls [백업할 파일] | cpio –o &amp;gt; /dev/st0&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;하드디스크에 백업&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# ls [백업할 파일] | cpio –o &amp;gt; [아카이브 파일을 만들 위치]&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;usb에 백업&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# ls [백업할 파일] | cpio –o &amp;gt; /dev/sdb1&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h4 id=&quot;백업했던-파일을-복구하는-예&quot;&gt;백업했던 파일을 복구하는 예&lt;/h4&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;플로피의 백업 파일 복구&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# cpio –i &amp;lt; /dev/fd0&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;테이프의 백업 파일 복구&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# cpio –i &amp;lt; /dev/st0&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;하드디스크의 백업 파일 복구&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# cpio –i &amp;lt; [아카이브 파일 위치]&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;usb의 백업 파일 복구&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# cpio –i &amp;lt; /dev/sdb1&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h4 id=&quot;백업-저장-매체로-하드디스크를-지정하여-파일을-백업한-후-다시-백업한-파일을-복구하는-예&quot;&gt;백업 저장 매체로 하드디스크를 지정하여 파일을 백업한 후, 다시 백업한 파일을 복구하는 예&lt;/h4&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;백업&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# ls –F&lt;/span&gt;
-test1/ test2
-&lt;span class=&quot;c&quot;&gt;# ls | cpio –ov &amp;gt; backup.cpio&lt;/span&gt;
-backup.cpio
-test1
-test2
-1 blocks
-&lt;span class=&quot;c&quot;&gt;# ls –l backup.cpio&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;-rx---r-&lt;/span&gt; 1 root root 512 Jul 19 22:09 backup.cpio
-&lt;span class=&quot;c&quot;&gt;#&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;복구&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# rm –rf test1&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;# rm –f test2&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;# ls&lt;/span&gt;
-backup.cpio
-&lt;span class=&quot;c&quot;&gt;#&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;# cpio –ifv &amp;lt; backup.cpio&lt;/span&gt;
-cpio: backup.cpio not created: newer or same age version exists
-backup.cpio
-test1
-teset2
-1 blocks
-&lt;span class=&quot;c&quot;&gt;# ls&lt;/span&gt;
-backup.cpio test1 test2
-&lt;span class=&quot;c&quot;&gt;#&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-</description>
-        <pubDate>Wed, 20 May 2020 00:00:00 +0900</pubDate>
-        <link>https://m-veloper.github.io/devlog/2020/05/20/unix-55/</link>
-        <guid isPermaLink="true">https://m-veloper.github.io/devlog/2020/05/20/unix-55/</guid>
-        
-        <category>unix</category>
         
         
         <category>devlog</category>

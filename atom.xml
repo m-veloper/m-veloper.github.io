@@ -4,12 +4,22 @@
  <title>슬기로운 개발 생활</title>
  <link href="https://m-veloper.github.io/atom.xml" rel="self"/>
  <id>https://m-veloper.github.io</id>
- <updated>2020-06-18T00:13:24+09:00</updated>
+ <updated>2020-06-19T00:00:30+09:00</updated>
  <author>
    <name>m-veloper</name>
    <uri>https://m-veloper.github.io</uri>
    <email>m_veloper@naver.com</email>
  </author>
+
+ 
+
+ <entry>
+   <title>[AWS] 우분투(Ubuntu)에서 아파치(Web Server) 와 톰캣(WAS) 연동하기</title>
+   <link href="https://m-veloper.github.io/tip/2020/06/19/tip-aws-04/"/>
+   <id>https://m-veloper.github.io/tip/2020/06/19/tip-aws-04</id>
+   <updated>2020-06-19T00:00:00+09:00</updated>
+   <content type="html">&lt;p&gt;&lt;img src=&quot;/assets/img/aws/2020-06-19-tip-aws-04.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt; &lt;h1 id=&quot;아파치web-server-와-톰캣was-연동하기&quot;&gt;아파치(Web Server) 와 톰캣(WAS) 연동하기&lt;/h1&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;AWS 우분투 설치 인스턴스 : Ubuntu Server 18.04 LTS&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;현재 계정에서 root 권한을 이용하여 명령어를 실행할 때에는 모든 명령어 앞에 “sudo” 를 붙여주시기 바랍니다.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;예&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt-get...</content>
+ </entry>
 
  
 
@@ -99,16 +109,6 @@
    <id>https://m-veloper.github.io/2020/06/10/tip-javascript-19</id>
    <updated>2020-06-10T00:00:00+09:00</updated>
    <content type="html">&lt;p&gt;&lt;img src=&quot;/assets/img/javascript/2020-06-10-tip-javascript-19.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt; &lt;h1 id=&quot;math&quot;&gt;Math()&lt;/h1&gt; &lt;ul&gt; &lt;li&gt;Math.ceil() : 소수점 올림, 정수 반환&lt;/li&gt; &lt;li&gt;Math.floor() : 소수점 버림, 정수 반환&lt;/li&gt; &lt;li&gt;Math.round() : 소수점 반올림, 정수 반환&lt;/li&gt; &lt;/ul&gt; &lt;p&gt;&lt;br /&gt;&lt;/p&gt; &lt;h2 id=&quot;올림&quot;&gt;올림&lt;/h2&gt; &lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;testNum&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;99.11&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;Math&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span...</content>
- </entry>
-
- 
-
- <entry>
-   <title>[JSTL] substring 문자열 자르기</title>
-   <link href="https://m-veloper.github.io/tip/2020/06/09/tip-jstl-04/"/>
-   <id>https://m-veloper.github.io/tip/2020/06/09/tip-jstl-04</id>
-   <updated>2020-06-09T00:00:00+09:00</updated>
-   <content type="html">&lt;p&gt;&lt;img src=&quot;/assets/img/jstl/2020-06-09-tip-jstl-04.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt; &lt;h1 id=&quot;substring-문자열-자르기&quot;&gt;substring, 문자열 자르기&lt;/h1&gt; &lt;p&gt;Substring을 사용하기 위해선 function을 지정해야 하는데 아래의 태그를 jsp 페이지 최상단에 선언해주세요.&lt;/p&gt; &lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;%&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;@&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;taglib&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;prefix&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;fn&quot;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;uri&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;http://java.sun.com/jsp/jstl/functions&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&amp;gt;&lt;/span&gt; &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt; &lt;ul&gt; &lt;li&gt;사용법&lt;/li&gt; &lt;/ul&gt; &lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;c:&lt;/span&gt;&lt;span...</content>
  </entry>
 
  
