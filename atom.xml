@@ -4,12 +4,22 @@
  <title>슬기로운 개발 생활</title>
  <link href="https://m-veloper.github.io/atom.xml" rel="self"/>
  <id>https://m-veloper.github.io</id>
- <updated>2020-06-19T00:00:30+09:00</updated>
+ <updated>2020-06-20T00:17:32+09:00</updated>
  <author>
    <name>m-veloper</name>
    <uri>https://m-veloper.github.io</uri>
    <email>m_veloper@naver.com</email>
  </author>
+
+ 
+
+ <entry>
+   <title>[CSS] checkbox 사이즈 조절(네모 크기 늘리기)</title>
+   <link href="https://m-veloper.github.io/tip/2020/06/20/tip-css-08/"/>
+   <id>https://m-veloper.github.io/tip/2020/06/20/tip-css-08</id>
+   <updated>2020-06-20T00:00:00+09:00</updated>
+   <content type="html">&lt;p&gt;&lt;img src=&quot;/assets/img/css/2020-06-20-tip-css-08.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt; &lt;h1 id=&quot;checkbox-사이즈크기-조절-방법&quot;&gt;checkbox 사이즈(크기) 조절 방법&lt;/h1&gt; &lt;ul&gt; &lt;li&gt;첫 번째 방법&lt;/li&gt; &lt;/ul&gt; &lt;div class=&quot;language-css highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;checkbox&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;-ms-transform&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;scale&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;/* IE */&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;-moz-transform&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;scale&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;/* FF...</content>
+ </entry>
 
  
 
@@ -99,16 +109,6 @@
    <id>https://m-veloper.github.io/tip/2020/06/11/tip-java-05</id>
    <updated>2020-06-11T00:00:00+09:00</updated>
    <content type="html">&lt;p&gt;&lt;img src=&quot;/assets/img/java/2020-06-09-tip-java-05.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt; &lt;h1 id=&quot;동적-쿼리if-choose&quot;&gt;동적 쿼리(if, choose)&lt;/h1&gt; &lt;p&gt;복잡한 형태의 쿼리를 만들다 보면 로직에따라 if문을 추가해야 한다던지 if else 문을 추가해야할 경우가 있습니다.&lt;/p&gt; &lt;p&gt;myBatis는 이를위해 동적 쿼리를 위한 기능을 제공합니다.&lt;/p&gt; &lt;p&gt;그중에서도 가장 많이 사용되는 if 문과 choose문을 살펴보겠습니다.&lt;/p&gt; &lt;p&gt;동적쿼리는 XML 매퍼에 지정하게 되는데, JSTL을 사용해봤던 사람들이라면 큰 어려움이 없는 문법입니다.&lt;/p&gt;...</content>
- </entry>
-
- 
-
- <entry>
-   <title>[자바스크립트] 소수점 버림, 올림, 반올림, 자르기 방법</title>
-   <link href="https://m-veloper.github.io/2020/06/10/tip-javascript-19/"/>
-   <id>https://m-veloper.github.io/2020/06/10/tip-javascript-19</id>
-   <updated>2020-06-10T00:00:00+09:00</updated>
-   <content type="html">&lt;p&gt;&lt;img src=&quot;/assets/img/javascript/2020-06-10-tip-javascript-19.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt; &lt;h1 id=&quot;math&quot;&gt;Math()&lt;/h1&gt; &lt;ul&gt; &lt;li&gt;Math.ceil() : 소수점 올림, 정수 반환&lt;/li&gt; &lt;li&gt;Math.floor() : 소수점 버림, 정수 반환&lt;/li&gt; &lt;li&gt;Math.round() : 소수점 반올림, 정수 반환&lt;/li&gt; &lt;/ul&gt; &lt;p&gt;&lt;br /&gt;&lt;/p&gt; &lt;h2 id=&quot;올림&quot;&gt;올림&lt;/h2&gt; &lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;testNum&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;99.11&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;Math&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span...</content>
  </entry>
 
  

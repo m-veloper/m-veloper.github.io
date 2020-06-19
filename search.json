@@ -1,6 +1,14 @@
 [
 
 {
+"title"    : "[CSS] checkbox 사이즈 조절(네모 크기 늘리기)",
+"category" : "",
+"tags"     : "web, css",
+"url"      : "/tip/2020/06/20/tip-css-08/",
+"date"     : "2020-06-20 00:00:00 +0900"
+} ,
+
+{
 "title"    : "[AWS] 우분투(Ubuntu)에서 아파치(Web Server) 와 톰캣(WAS) 연동하기",
 "category" : "",
 "tags"     : "web, apache, tomcat",

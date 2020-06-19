@@ -1415,9 +1415,9 @@
 			<div id="container">
 				<main>
 					<article id="post-page">
-	<h2 class="title">[유닉스] 파일의 속성</h2>
+	<h2 class="title">[CSS] checkbox 사이즈 조절(네모 크기 늘리기)</h2>
 	<a class="tag" href="" data-flip="title">
-		<time datetime="" class="by-line">2020년 03월 13일</time>
+		<time datetime="" class="by-line">2020년 06월 20일</time>
 	</a>
 	<hr>
 	<div class="content">
@@ -1433,194 +1433,76 @@
 			<!--</div>-->
 		</div>
 
-		<p><img src="/assets/img/unix/2020-03-13-unix-16.png" alt="" /></p>
+		<p><img src="/assets/img/css/2020-06-20-tip-css-08.png" alt="" /></p>
 
-<h1 id="파일의-속성">파일의 속성</h1>
-<p><br /></p>
-
-<h3 id="파일-접근-권한의-개요">파일 접근 권한의 개요</h3>
+<h1 id="checkbox-사이즈크기-조절-방법">checkbox 사이즈(크기) 조절 방법</h1>
 
 <ul>
-  <li>다중 사용자 시스템인 유닉스에서 다른 사용자의 파일을 마음대로 사용할 수 없도록 하는 보안 기능 제공</li>
-  <li>사용자가 자신의 파일에 접근 권한 부여</li>
-  <li>부여된 권한만큼만 파일 사용 가능</li>
-  <li>접근 권한은 파일이 가지고 있는 속성 중 하나</li>
-  <li>권한 대상 : 파일의 사용자(소유자), 소유자가 속한 그룹, 그 밖의 사용자</li>
+  <li>첫 번째 방법</li>
 </ul>
 
-<p><img src="/assets/img/unix/2020-03-13-unix-16-01.png" alt="" />
-<br /></p>
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">input</span><span class="o">[</span><span class="nt">type</span><span class="o">=</span><span class="nt">checkbox</span><span class="o">]</span> <span class="p">{</span>
 
-<h3 id="파일-모드">파일 모드</h3>
+<span class="nl">-ms-transform</span><span class="p">:</span> <span class="n">scale</span><span class="p">(</span><span class="m">2</span><span class="p">);</span> <span class="c">/* IE */</span>
 
-<ul>
-  <li>숫자로 표현한 권한
-<img src="/assets/img/unix/2020-03-13-unix-16-02.png" alt="" />
-<br /></li>
-</ul>
+<span class="nl">-moz-transform</span><span class="p">:</span> <span class="n">scale</span><span class="p">(</span><span class="m">2</span><span class="p">);</span> <span class="c">/* FF */</span>
 
-<h3 id="파일의-속성-1">파일의 속성</h3>
-<ul>
-  <li>파일의 속성을 알기 위해 ‘ls –l’ 명령 사용</li>
-</ul>
+<span class="nl">-webkit-transform</span><span class="p">:</span> <span class="n">scale</span><span class="p">(</span><span class="m">2</span><span class="p">);</span> <span class="c">/* Safari and Chrome */</span>
 
-<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">ls</span> –l
-total 1
-<span class="nt">-rw-r--r--</span> 1 ksshin ksshin 221 6월 5 22:12 text
-<span class="err">$</span>
-</code></pre></div></div>
+<span class="nl">-o-transform</span><span class="p">:</span> <span class="n">scale</span><span class="p">(</span><span class="m">2</span><span class="p">);</span> <span class="c">/* Opera */</span>
 
-<p><img src="/assets/img/unix/2020-03-13-unix-16-03.png" alt="" />
-<br /></p>
+<span class="nl">padding</span><span class="p">:</span> <span class="m">10px</span><span class="p">;</span>
 
-<ul>
-  <li>
-    <p>파일 종류</p>
-
-    <ul>
-      <li>파일 속성의 첫 번째 항목</li>
-      <li>-는 일반 파일, d는 디렉토리 파일, l은 심볼릭 링크 파일 등</li>
-      <li>
-        <p>파일의 종류를 알려주는 명령 : file</p>
-
-        <ul>
-          <li>i) 형식 : file 파일명</li>
-          <li>ii) 사용 예 : file /etc/hosts</li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-</ul>
-
-<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>file <span class="nb">test </span>Unix
-<span class="nb">test</span>: ASCII text
-Unix: directory
-<span class="nv">$ </span> 
+<span class="p">}</span>
 </code></pre></div></div>
 
 <ul>
-  <li>
-    <p>파일 접근 권한</p>
-
-    <ul>
-      <li>파일의 소유자와 그룹, 기타 사용자들이 파일에 대해 가지고 있는 접근 권한을 표시</li>
-      <li>접근 권한은 파일 소유자가 chmod 명령을 사용해 변경 가능</li>
-    </ul>
-  </li>
-  <li>
-    <p>하드 링크 수</p>
-
-    <ul>
-      <li>하나의 file에 연결된 파일 이름의 개수</li>
-      <li>하드 링크는 한 파일에 여러 개의 파일명을 가질 수 있도록 하는 기능</li>
-    </ul>
-  </li>
-  <li>
-    <p>파일 소유자의 사용자 이름</p>
-
-    <ul>
-      <li>유닉스에서는 모든 파일에 소유자가 있음</li>
-      <li>시스템 관련된 파일들은 대부분 루트 계정이 소유자</li>
-      <li>일반 파일들은 해당 파일을 생성한 사용자가 소유자</li>
-    </ul>
-  </li>
-  <li>
-    <p>파일이 속한 그룹 이름</p>
-
-    <ul>
-      <li>사용자는 기본적으로 하나 이상의 그룹에 속해 있음</li>
-      <li>‘ls –l’ 명령의 결과에서 나온 그룹명은 파일이 속한 그룹 이름</li>
-      <li>사용자가 속한 그룹은 시스템 관리자가 사용자 등록시 결정</li>
-      <li>사용자가 임의로 자신의 그룹을 바꿀 수 없고 시스템 관리자에게 변경 요청</li>
-      <li>그룹이 정의된 파일은 /etc/group으로 시스템 관리자만 수정 가능</li>
-    </ul>
-  </li>
-  <li>
-    <p>파일 크기</p>
-
-    <ul>
-      <li>파일의 크기를 바이트 단위로 알려줌</li>
-    </ul>
-  </li>
-  <li>
-    <p>파일의 마지막 수정 일시</p>
-
-    <ul>
-      <li>파일이 마지막으로 수정된 날짜와 시각을 표시</li>
-      <li>연도가 표시되지 않으면 올해를 의미</li>
-    </ul>
-  </li>
+  <li>두 번째 방법</li>
 </ul>
 
-<p><br /></p>
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">input</span><span class="o">[</span><span class="nt">type</span><span class="o">=</span><span class="s1">"checkbox"</span><span class="o">]</span><span class="p">{</span>
 
-<h1 id="파일의-접근-권한">파일의 접근 권한</h1>
-<p><br /></p>
+<span class="nl">width</span><span class="p">:</span> <span class="m">30px</span><span class="p">;</span> <span class="c">/*Desired width*/</span>
 
-<h3 id="개요">개요</h3>
+<span class="nl">height</span><span class="p">:</span> <span class="m">30px</span><span class="p">;</span> <span class="c">/*Desired height*/</span>
 
-<ul>
-  <li>접근 권한은 사용자의 파일을 보호하는 가장 기본적인 보안 기능</li>
-  <li>접근 권한을 부여하기 위해 사용자를 세 카테고리로 구분</li>
-  <li>세 카테고리 : 파일의 소유자, 파일이 속한 그룹, 기타 사용자</li>
-</ul>
+<span class="nl">cursor</span><span class="p">:</span> <span class="nb">pointer</span><span class="p">;</span>
 
-<p><img src="/assets/img/unix/2020-03-13-unix-16-04.png" alt="" />
-<br /></p>
+<span class="nl">-webkit-appearance</span><span class="p">:</span> <span class="nb">none</span><span class="p">;</span>
 
-<h3 id="소유자">소유자</h3>
+<span class="nl">appearance</span><span class="p">:</span> <span class="nb">none</span><span class="p">;</span>
 
-<ul>
-  <li>파일을 생성한 사용자가 파일의 소유자임</li>
-  <li>파일의 소유자나 시스템 관리자가 명령을 이용하여 소유자 변경 가능</li>
-</ul>
-
-<h3 id="그룹">그룹</h3>
-
-<ul>
-  <li>파일과 동일한 그룹에 속한 사용자들</li>
-  <li>보통은 파일을 생성한 사용자의 기본 그룹으로 지정</li>
-  <li>root가 명령을 이용해 강제로 변경 가능</li>
-</ul>
-
-<h3 id="기타-사용자">기타 사용자</h3>
-
-<ul>
-  <li>소유자나 그룹 카테고리에 속하지 않은 사용자</li>
-</ul>
-
-<h3 id="접근-권한의-종류">접근 권한의 종류</h3>
-
-<ul>
-  <li>읽기 권한, 쓰기 권한, 실행 권한 세 가지로 구성</li>
-  <li>파일과 디렉토리에 대해 다른 의미로 해석됨</li>
-</ul>
-
-<p><img src="/assets/img/unix/2020-03-13-unix-16-05.png" alt="" />
-<br /></p>
-
-<h3 id="접근-권한-표기">접근 권한 표기</h3>
-
-<ul>
-  <li>사용자 카테고리별로 누가 파일을 읽고 쓰고 실행할 수 있는지를 문자로 표현한 것</li>
-  <li>사용자 카테고리별로 세가지 권한의 부여 여부를 rwx 세 문자를 이용해 그 순서대로 표시</li>
-  <li>해당 권한이 없을 경우 –로 표기</li>
-</ul>
-
-<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">ls</span> –l
-total 1
-<span class="nt">-rw-r--r--</span> 1 ksshin ksshin 221 6월 5 22:12 text
-<span class="err">$</span>
+<span class="p">}</span>
 </code></pre></div></div>
 
-<p><img src="/assets/img/unix/2020-03-13-unix-16-06.png" alt="" />
-<br /></p>
-
 <ul>
-  <li>소유자의 권한은 rw-, 그룹의 권한은 가운데의 r–, 기타 사용자의 권한은 마지막의 r–</li>
+  <li>세 번째 방법</li>
 </ul>
 
-<p><img src="/assets/img/unix/2020-03-13-unix-16-07.png" alt="" /></p>
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">input</span><span class="o">[</span><span class="nt">type</span><span class="o">=</span><span class="nt">checkbox</span><span class="o">]</span> <span class="p">{</span>
+
+<span class="py">zoom</span><span class="p">:</span> <span class="m">1.5</span><span class="p">;</span>
+
+<span class="p">}</span>
+</code></pre></div></div>
+
+<ul>
+  <li>네 번째 방법</li>
+</ul>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">input</span><span class="o">[</span><span class="nt">type</span><span class="o">=</span><span class="nt">checkbox</span><span class="o">]</span> <span class="p">{</span>
+
+<span class="nl">transform</span> <span class="p">:</span> <span class="n">scale</span><span class="p">(</span><span class="m">1.5</span><span class="p">);</span>
+
+<span class="p">}</span>
+</code></pre></div></div>
+
+<ul>
+  <li>다섯 번째 방법 (인라인)</li>
+</ul>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&lt;</span><span class="nt">input</span> <span class="nt">style</span><span class="o">=</span><span class="s1">"zoom:2.0;"</span> <span class="nt">type</span><span class="o">=</span><span class="s1">"checkbox"</span> <span class="nt">class</span><span class="o">=</span><span class="s1">"checkbox"</span><span class="o">&gt;</span>
+</code></pre></div></div>
 
 
 
@@ -1658,9 +1540,9 @@ total 1
       }
 
       var d = function () {
-        this.page.title = "[유닉스] 파일의 속성",
-          this.page.identifier = "/devlog/2020/03/13/unix-16",
-          this.page.url = "https://m-veloper.github.io/devlog/2020/03/13/unix-16/"
+        this.page.title = "[CSS] checkbox 사이즈 조절(네모 크기 늘리기)",
+          this.page.identifier = "/tip/2020/06/20/tip-css-08",
+          this.page.url = "https://m-veloper.github.io/tip/2020/06/20/tip-css-08/"
       };
       s._disqusFirst = void 0 === s._disqusFirst || s._disqusFirst, s._disqusLoading = void 0 !== s._disqusLoading && s._disqusLoading, s._disqusThis = !1, s._disqusThreadOffsetTop = i.getElementById(
         "disqus_thread").offsetTop, s._disqusLoading ? s._disqusFirst = !1 : (s._disqusLoading = !0, loadJSDeferred(
