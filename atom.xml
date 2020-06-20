@@ -4,12 +4,22 @@
  <title>슬기로운 개발 생활</title>
  <link href="https://m-veloper.github.io/atom.xml" rel="self"/>
  <id>https://m-veloper.github.io</id>
- <updated>2020-06-20T00:17:32+09:00</updated>
+ <updated>2020-06-21T00:06:30+09:00</updated>
  <author>
    <name>m-veloper</name>
    <uri>https://m-veloper.github.io</uri>
    <email>m_veloper@naver.com</email>
  </author>
+
+ 
+
+ <entry>
+   <title>[jQuery(제이쿼리)] 체크박스 값(checkbox value) 가져오기</title>
+   <link href="https://m-veloper.github.io/tip/2020/06/21/tip-javascript-21/"/>
+   <id>https://m-veloper.github.io/tip/2020/06/21/tip-javascript-21</id>
+   <updated>2020-06-21T00:00:00+09:00</updated>
+   <content type="html">&lt;p&gt;&lt;img src=&quot;/assets/img/javascript/2020-06-21-tip-javascript-21.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt; &lt;h1 id=&quot;checkbox&quot;&gt;Checkbox&lt;/h1&gt; &lt;p&gt;체크박스에 제이쿼리나 자바스크립트로 이벤트를 처리해야할 경우가 종종 있다.&lt;/p&gt; &lt;p&gt;&lt;br /&gt;&lt;/p&gt; &lt;h2 id=&quot;checked-여부-확인하기&quot;&gt;checked 여부 확인하기&lt;/h2&gt; &lt;ul&gt; &lt;li&gt;id로 확인하기&lt;/li&gt; &lt;/ul&gt; &lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;input:checkbox[id=&quot;checkbox_id&quot;]&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;is&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;:checked&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt; &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt; &lt;ul&gt; &lt;li&gt;name 으로 확인하기&lt;/li&gt;...</content>
+ </entry>
 
  
 
@@ -99,16 +109,6 @@
    <id>https://m-veloper.github.io/tip/2020/06/12/tip-css-06</id>
    <updated>2020-06-12T00:00:00+09:00</updated>
    <content type="html">&lt;p&gt;&lt;img src=&quot;/assets/img/css/2020-06-11-tip-css-06.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt; &lt;p&gt;input태그 사용시 type=”number” 로 지정하면 아래와 같은 현상이 나타날 때가 있습니다.&lt;/p&gt; &lt;p&gt;&lt;img src=&quot;/assets/img/css/2020-06-11-tip-css-06-01.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt; &lt;p&gt;바로 화살표 증가, 감소 버튼이 생겨버리는데요.&lt;/p&gt; &lt;p&gt;간단히 없앨 수 있는 방법이 있습니다.&lt;/p&gt; &lt;div class=&quot;language-css highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&quot;number&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;nd&quot;&gt;::-webkit-outer-spin-button&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&quot;number&quot;&lt;/span&gt;&lt;span...</content>
- </entry>
-
- 
-
- <entry>
-   <title>[JAVA] MyBatis(마이바티스) 에서 if문, choose문 사용하기</title>
-   <link href="https://m-veloper.github.io/tip/2020/06/11/tip-java-05/"/>
-   <id>https://m-veloper.github.io/tip/2020/06/11/tip-java-05</id>
-   <updated>2020-06-11T00:00:00+09:00</updated>
-   <content type="html">&lt;p&gt;&lt;img src=&quot;/assets/img/java/2020-06-09-tip-java-05.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt; &lt;h1 id=&quot;동적-쿼리if-choose&quot;&gt;동적 쿼리(if, choose)&lt;/h1&gt; &lt;p&gt;복잡한 형태의 쿼리를 만들다 보면 로직에따라 if문을 추가해야 한다던지 if else 문을 추가해야할 경우가 있습니다.&lt;/p&gt; &lt;p&gt;myBatis는 이를위해 동적 쿼리를 위한 기능을 제공합니다.&lt;/p&gt; &lt;p&gt;그중에서도 가장 많이 사용되는 if 문과 choose문을 살펴보겠습니다.&lt;/p&gt; &lt;p&gt;동적쿼리는 XML 매퍼에 지정하게 되는데, JSTL을 사용해봤던 사람들이라면 큰 어려움이 없는 문법입니다.&lt;/p&gt;...</content>
  </entry>
 
  
