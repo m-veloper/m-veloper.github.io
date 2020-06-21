@@ -1,6 +1,14 @@
 [
 
 {
+"title"    : "[Datatable] 제이쿼리 데이터데이블, 컬럼안에서 계산하는 팁 (DataTables, calculated column) ",
+"category" : "",
+"tags"     : "web, datatable, jQuery",
+"url"      : "/tip/2020/06/22/tip-datatable-01/",
+"date"     : "2020-06-22 00:00:00 +0900"
+} ,
+
+{
 "title"    : "[jQuery(제이쿼리)] 체크박스 값(checkbox value) 가져오기",
 "category" : "",
 "tags"     : "web, javascript, jQuery",

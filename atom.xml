@@ -4,12 +4,22 @@
  <title>슬기로운 개발 생활</title>
  <link href="https://m-veloper.github.io/atom.xml" rel="self"/>
  <id>https://m-veloper.github.io</id>
- <updated>2020-06-21T00:06:30+09:00</updated>
+ <updated>2020-06-22T00:32:36+09:00</updated>
  <author>
    <name>m-veloper</name>
    <uri>https://m-veloper.github.io</uri>
    <email>m_veloper@naver.com</email>
  </author>
+
+ 
+
+ <entry>
+   <title>[Datatable] 제이쿼리 데이터데이블, 컬럼안에서 계산하는 팁 (DataTables, calculated column) </title>
+   <link href="https://m-veloper.github.io/tip/2020/06/22/tip-datatable-01/"/>
+   <id>https://m-veloper.github.io/tip/2020/06/22/tip-datatable-01</id>
+   <updated>2020-06-22T00:00:00+09:00</updated>
+   <content type="html">&lt;p&gt;&lt;img src=&quot;/assets/img/datatable/2020-06-22-tip-datatable-01.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt; &lt;h1 id=&quot;컬럼안에서-계산하는-팁-datatables-calculated-column&quot;&gt;컬럼안에서 계산하는 팁 (DataTables, calculated column)&lt;/h1&gt; &lt;p&gt;데이터테이블을 사용중에 columns: [] 영역 안에서 서버에서 전달되는 data들끼리 연산해야할 때가 있습니다. 보통은 각각 전달되는 data: “객체명” 으로 하나씩 밖에 뿌려주지 못 하는데요, 아래와 같은 방법을 사용하면 쉽게 data: “객체명” + data: “객체명” 처럼 연산을 할 수 있습니다.&lt;/p&gt; &lt;div...</content>
+ </entry>
 
  
 
@@ -99,16 +109,6 @@
    <id>https://m-veloper.github.io/tip/2020/06/13/tip-java-06</id>
    <updated>2020-06-13T00:00:00+09:00</updated>
    <content type="html">&lt;p&gt;&lt;img src=&quot;/assets/img/java/2020-06-12-tip-java-06.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt; &lt;h1 id=&quot;자바-소수점-올림-반올림-버림&quot;&gt;자바 소수점 올림, 반올림, 버림&lt;/h1&gt; &lt;p&gt;자바에서 긴 소수를 반올림하여 n번째 자리까지 나타내는 방법에 대해 알아보겠습니다. 여러가지 방법이 있겠습니다만 Math.round(); Math.ceil(); Math.floor(); 함수를 활용하거나 String.format(); 함수를 활용하는것이 대표적인 방식입니다.&lt;/p&gt; &lt;p&gt;위 함수들은 실수의 소수점 첫번째 자리를 반올림하여 정수로 리턴시켜줍니다. 하지만 이 메서드를 잘 활용하면 소수점 몇번째 자리까지...</content>
- </entry>
-
- 
-
- <entry>
-   <title>[CSS] Html input 에서 오른쪽 화살표, type='number' 의 버튼 없애기 ( 증가,감소 버튼)</title>
-   <link href="https://m-veloper.github.io/tip/2020/06/12/tip-css-06/"/>
-   <id>https://m-veloper.github.io/tip/2020/06/12/tip-css-06</id>
-   <updated>2020-06-12T00:00:00+09:00</updated>
-   <content type="html">&lt;p&gt;&lt;img src=&quot;/assets/img/css/2020-06-11-tip-css-06.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt; &lt;p&gt;input태그 사용시 type=”number” 로 지정하면 아래와 같은 현상이 나타날 때가 있습니다.&lt;/p&gt; &lt;p&gt;&lt;img src=&quot;/assets/img/css/2020-06-11-tip-css-06-01.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt; &lt;p&gt;바로 화살표 증가, 감소 버튼이 생겨버리는데요.&lt;/p&gt; &lt;p&gt;간단히 없앨 수 있는 방법이 있습니다.&lt;/p&gt; &lt;div class=&quot;language-css highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&quot;number&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;nd&quot;&gt;::-webkit-outer-spin-button&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&quot;number&quot;&lt;/span&gt;&lt;span...</content>
  </entry>
 
  
