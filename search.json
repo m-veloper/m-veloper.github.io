@@ -1,6 +1,14 @@
 [
 
 {
+"title"    : "[자바스크립트] input 입력시 천 단위마다 자동으로 콤마(,) 입력",
+"category" : "",
+"tags"     : "web, javascript, jQuery",
+"url"      : "/tip/2020/06/23/tip-javascript-22/",
+"date"     : "2020-06-23 00:00:00 +0900"
+} ,
+
+{
 "title"    : "[Datatable] 제이쿼리 데이터데이블, 컬럼안에서 계산하는 팁 (DataTables, calculated column) ",
 "category" : "",
 "tags"     : "web, datatable, jQuery",

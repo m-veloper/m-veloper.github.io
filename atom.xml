@@ -4,12 +4,22 @@
  <title>슬기로운 개발 생활</title>
  <link href="https://m-veloper.github.io/atom.xml" rel="self"/>
  <id>https://m-veloper.github.io</id>
- <updated>2020-06-22T00:32:36+09:00</updated>
+ <updated>2020-06-23T00:14:09+09:00</updated>
  <author>
    <name>m-veloper</name>
    <uri>https://m-veloper.github.io</uri>
    <email>m_veloper@naver.com</email>
  </author>
+
+ 
+
+ <entry>
+   <title>[자바스크립트] input 입력시 천 단위마다 자동으로 콤마(,) 입력</title>
+   <link href="https://m-veloper.github.io/tip/2020/06/23/tip-javascript-22/"/>
+   <id>https://m-veloper.github.io/tip/2020/06/23/tip-javascript-22</id>
+   <updated>2020-06-23T00:00:00+09:00</updated>
+   <content type="html">&lt;p&gt;&lt;img src=&quot;/assets/img/javascript/2020-06-23-tip-javascript-22.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt; &lt;h1 id=&quot;자동으로-콤마-입력&quot;&gt;자동으로 콤마(,) 입력&lt;/h1&gt; &lt;p&gt;input 태그에 숫자를 입력시에 천 단위마다 자동으로 콤마를 찍어주는 팁입니다. “common.js” 라는 파일을 만들어 이렇게 전역적으로 사용되는 파일들을 작성하고 사용하시면 더 깔끔하게 사용하실 수 있어요.&lt;/p&gt; &lt;p&gt;&lt;br /&gt;&lt;/p&gt; &lt;h2 id=&quot;html-작성&quot;&gt;HTML 작성&lt;/h2&gt; &lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;nt&quot;&gt;&amp;lt;input&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;type=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;text&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;id=&lt;/span&gt;&lt;span...</content>
+ </entry>
 
  
 
@@ -99,16 +109,6 @@
    <id>https://m-veloper.github.io/tip/2020/06/14/tip-css-07</id>
    <updated>2020-06-14T00:00:00+09:00</updated>
    <content type="html">&lt;p&gt;&lt;img src=&quot;/assets/img/css/2020-06-13-tip-css-07.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt; &lt;h1 id=&quot;테이블-스크롤-기능&quot;&gt;테이블 스크롤 기능&lt;/h1&gt; &lt;p&gt;table 태그를 만들어서 작업하다보면 반응형에서 문제를 일이큽니다.&lt;/p&gt; &lt;p&gt;크기는 줄어드는데, 테이블의 데이터들 때문에 넓어지고나 늘어나거나 길어지곤 합니다.&lt;/p&gt; &lt;p&gt;이럴 때 테이블에 가로 또는 세로 스크롤 기능을 사용하면 됩니다.&lt;/p&gt; &lt;p&gt;&lt;br /&gt;&lt;/p&gt; &lt;h2 id=&quot;순서&quot;&gt;순서&lt;/h2&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;div 하위에 table 생성&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;div에 width 값이나 height...</content>
- </entry>
-
- 
-
- <entry>
-   <title>[JAVA] 소수점 올림, 반올림, 버림</title>
-   <link href="https://m-veloper.github.io/tip/2020/06/13/tip-java-06/"/>
-   <id>https://m-veloper.github.io/tip/2020/06/13/tip-java-06</id>
-   <updated>2020-06-13T00:00:00+09:00</updated>
-   <content type="html">&lt;p&gt;&lt;img src=&quot;/assets/img/java/2020-06-12-tip-java-06.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt; &lt;h1 id=&quot;자바-소수점-올림-반올림-버림&quot;&gt;자바 소수점 올림, 반올림, 버림&lt;/h1&gt; &lt;p&gt;자바에서 긴 소수를 반올림하여 n번째 자리까지 나타내는 방법에 대해 알아보겠습니다. 여러가지 방법이 있겠습니다만 Math.round(); Math.ceil(); Math.floor(); 함수를 활용하거나 String.format(); 함수를 활용하는것이 대표적인 방식입니다.&lt;/p&gt; &lt;p&gt;위 함수들은 실수의 소수점 첫번째 자리를 반올림하여 정수로 리턴시켜줍니다. 하지만 이 메서드를 잘 활용하면 소수점 몇번째 자리까지...</content>
  </entry>
 
  
