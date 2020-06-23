@@ -1,6 +1,14 @@
 [
 
 {
+"title"    : "[JAVA] static 변수와 static 메소드, Static 의 정리",
+"category" : "",
+"tags"     : "web, java, static",
+"url"      : "/tip/2020/06/24/tip-java-07/",
+"date"     : "2020-06-24 00:00:00 +0900"
+} ,
+
+{
 "title"    : "[자바스크립트] input 입력시 천 단위마다 자동으로 콤마(,) 입력",
 "category" : "",
 "tags"     : "web, javascript, jQuery",

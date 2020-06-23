@@ -4,12 +4,22 @@
  <title>슬기로운 개발 생활</title>
  <link href="https://m-veloper.github.io/atom.xml" rel="self"/>
  <id>https://m-veloper.github.io</id>
- <updated>2020-06-23T00:14:09+09:00</updated>
+ <updated>2020-06-24T00:04:22+09:00</updated>
  <author>
    <name>m-veloper</name>
    <uri>https://m-veloper.github.io</uri>
    <email>m_veloper@naver.com</email>
  </author>
+
+ 
+
+ <entry>
+   <title>[JAVA] static 변수와 static 메소드, Static 의 정리</title>
+   <link href="https://m-veloper.github.io/tip/2020/06/24/tip-java-07/"/>
+   <id>https://m-veloper.github.io/tip/2020/06/24/tip-java-07</id>
+   <updated>2020-06-24T00:00:00+09:00</updated>
+   <content type="html">&lt;p&gt;&lt;img src=&quot;/assets/img/java/2020-06-24-tip-java-07.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt; &lt;blockquote&gt; &lt;p&gt;이글은 “&lt;a href=&quot;https://mangkyu.tistory.com/&quot;&gt;망나니개발자&lt;/a&gt;“님의 글을 참고하였습니다.&lt;/p&gt; &lt;/blockquote&gt; &lt;h1 id=&quot;static&quot;&gt;Static&lt;/h1&gt; &lt;p&gt;Java에서 Static 키워드를 사용한다는 것은 메모리에 한번 할당되어 프로그램이 종료될 때 해제되는 것을 의미합니다. 이를 정확히 이해하기 위해서는 메모리 영역에 대한 이해가 필요합니다.&lt;/p&gt; &lt;p&gt;&lt;img src=&quot;/assets/img/java/2020-06-24-tip-java-07-01.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt; &lt;p&gt;일반적으로 우리가 만든 Class는 Static 영역에 생성되고, new 연산을 통해 생성한 객체는...</content>
+ </entry>
 
  
 
@@ -99,16 +109,6 @@
    <id>https://m-veloper.github.io/tip/2020/06/15/tip-javascript-20</id>
    <updated>2020-06-15T00:00:00+09:00</updated>
    <content type="html">&lt;p&gt;&lt;img src=&quot;/assets/img/javascript/2020-06-14-tip-javascript-20.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt; &lt;h1 id=&quot;onchange-함수-활용&quot;&gt;onchange() 함수 활용&lt;/h1&gt; &lt;p&gt;간단히 onchange 함수를 활용해볼 수 있다.&lt;/p&gt; &lt;ul&gt; &lt;li&gt;html&lt;/li&gt; &lt;/ul&gt; &lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;select&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;form-control&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;month&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;month&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;onchange=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;getMonth()&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;&amp;lt;option&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;value=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;1&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;1월&lt;span class=&quot;nt&quot;&gt;&amp;lt;/option&amp;gt;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;&amp;lt;option&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;value=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;2&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;2월&lt;span class=&quot;nt&quot;&gt;&amp;lt;/option&amp;gt;&lt;/span&gt;...</content>
- </entry>
-
- 
-
- <entry>
-   <title>[CSS] 테이블(table)에 스크롤 기능 만들기</title>
-   <link href="https://m-veloper.github.io/tip/2020/06/14/tip-css-07/"/>
-   <id>https://m-veloper.github.io/tip/2020/06/14/tip-css-07</id>
-   <updated>2020-06-14T00:00:00+09:00</updated>
-   <content type="html">&lt;p&gt;&lt;img src=&quot;/assets/img/css/2020-06-13-tip-css-07.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt; &lt;h1 id=&quot;테이블-스크롤-기능&quot;&gt;테이블 스크롤 기능&lt;/h1&gt; &lt;p&gt;table 태그를 만들어서 작업하다보면 반응형에서 문제를 일이큽니다.&lt;/p&gt; &lt;p&gt;크기는 줄어드는데, 테이블의 데이터들 때문에 넓어지고나 늘어나거나 길어지곤 합니다.&lt;/p&gt; &lt;p&gt;이럴 때 테이블에 가로 또는 세로 스크롤 기능을 사용하면 됩니다.&lt;/p&gt; &lt;p&gt;&lt;br /&gt;&lt;/p&gt; &lt;h2 id=&quot;순서&quot;&gt;순서&lt;/h2&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;div 하위에 table 생성&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;div에 width 값이나 height...</content>
  </entry>
 
  
