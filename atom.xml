@@ -4,12 +4,22 @@
  <title>슬기로운 개발 생활</title>
  <link href="https://m-veloper.github.io/atom.xml" rel="self"/>
  <id>https://m-veloper.github.io</id>
- <updated>2020-06-24T00:04:22+09:00</updated>
+ <updated>2020-06-25T00:40:09+09:00</updated>
  <author>
    <name>m-veloper</name>
    <uri>https://m-veloper.github.io</uri>
    <email>m_veloper@naver.com</email>
  </author>
+
+ 
+
+ <entry>
+   <title>[ERROR_LOG] Required String parameter parameter is not present </title>
+   <link href="https://m-veloper.github.io/tip/2020/06/25/tip-errorlog-01/"/>
+   <id>https://m-veloper.github.io/tip/2020/06/25/tip-errorlog-01</id>
+   <updated>2020-06-25T00:00:00+09:00</updated>
+   <content type="html">&lt;p&gt;&lt;img src=&quot;/assets/img/errorlog/2020-06-25-tip-errorlog-01.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt; &lt;h1 id=&quot;required-string-parameter-parameter-is-not-present&quot;&gt;Required String parameter ‘parameter’ is not present&lt;/h1&gt; &lt;p&gt;Ajax로 Json에 담아 컨트롤러에 파라미터 값을 보냈고, 컨트롤러의 @RequestParam 으로 해당 파라미터값을 받았을 때, 전달 받은 파라미터값이 없거나 타입이 다를 경우 발생하였음.&lt;/p&gt; &lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nd&quot;&gt;@RequestMapping&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;path&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;getMemberInfo&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;nd&quot;&gt;@ResponseBody&lt;/span&gt; &lt;span...</content>
+ </entry>
 
  
 
@@ -99,16 +109,6 @@
    <id>https://m-veloper.github.io/tip/2020/06/16/tip-aws-01</id>
    <updated>2020-06-16T00:00:00+09:00</updated>
    <content type="html">&lt;p&gt;&lt;img src=&quot;/assets/img/aws/2020-06-15-tip-aws-01.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt; &lt;h1 id=&quot;web-server웹서버-란&quot;&gt;Web Server(웹서버) 란?&lt;/h1&gt; &lt;p&gt;Web Server(웹서버)를 알기전, 정적 페이지(Static Pages), 동적 페이지(Dynamic Pages)에대 해서 이해해야 한다.&lt;/p&gt; &lt;p&gt;&lt;br /&gt;&lt;/p&gt; &lt;h2 id=&quot;정적-페이지static-pages&quot;&gt;정적 페이지(Static Pages)&lt;/h2&gt; &lt;p&gt;&lt;br /&gt;&lt;/p&gt; &lt;p&gt;&lt;img src=&quot;/assets/img/aws/2020-06-15-tip-aws-01-01.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;Web Server는 파일 경로 이름을 받아 경로와 일치하는 file contents를 반환한다.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;항상 동일한 페이지를...</content>
- </entry>
-
- 
-
- <entry>
-   <title>[jQuery(제이쿼리)] 셀렉트박스(SelectBox) 실행시 값(value) 가져오기</title>
-   <link href="https://m-veloper.github.io/tip/2020/06/15/tip-javascript-20/"/>
-   <id>https://m-veloper.github.io/tip/2020/06/15/tip-javascript-20</id>
-   <updated>2020-06-15T00:00:00+09:00</updated>
-   <content type="html">&lt;p&gt;&lt;img src=&quot;/assets/img/javascript/2020-06-14-tip-javascript-20.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt; &lt;h1 id=&quot;onchange-함수-활용&quot;&gt;onchange() 함수 활용&lt;/h1&gt; &lt;p&gt;간단히 onchange 함수를 활용해볼 수 있다.&lt;/p&gt; &lt;ul&gt; &lt;li&gt;html&lt;/li&gt; &lt;/ul&gt; &lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;select&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;form-control&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;month&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;month&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;onchange=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;getMonth()&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;&amp;lt;option&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;value=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;1&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;1월&lt;span class=&quot;nt&quot;&gt;&amp;lt;/option&amp;gt;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;&amp;lt;option&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;value=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;2&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;2월&lt;span class=&quot;nt&quot;&gt;&amp;lt;/option&amp;gt;&lt;/span&gt;...</content>
  </entry>
 
  

@@ -1,6 +1,14 @@
 [
 
 {
+"title"    : "[ERROR_LOG] Required String parameter parameter is not present ",
+"category" : "",
+"tags"     : "web, errorLog",
+"url"      : "/tip/2020/06/25/tip-errorlog-01/",
+"date"     : "2020-06-25 00:00:00 +0900"
+} ,
+
+{
 "title"    : "[JAVA] static 변수와 static 메소드, Static 의 정리",
 "category" : "",
 "tags"     : "web, java, static",
