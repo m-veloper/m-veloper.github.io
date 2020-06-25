@@ -4,12 +4,22 @@
  <title>슬기로운 개발 생활</title>
  <link href="https://m-veloper.github.io/atom.xml" rel="self"/>
  <id>https://m-veloper.github.io</id>
- <updated>2020-06-25T00:40:09+09:00</updated>
+ <updated>2020-06-26T00:12:12+09:00</updated>
  <author>
    <name>m-veloper</name>
    <uri>https://m-veloper.github.io</uri>
    <email>m_veloper@naver.com</email>
  </author>
+
+ 
+
+ <entry>
+   <title>[JSTL] 비교 연산하는 간단한 방법 eq, ne, empty</title>
+   <link href="https://m-veloper.github.io/tip/2020/06/26/tip-jstl-05/"/>
+   <id>https://m-veloper.github.io/tip/2020/06/26/tip-jstl-05</id>
+   <updated>2020-06-26T00:00:00+09:00</updated>
+   <content type="html">&lt;p&gt;&lt;img src=&quot;/assets/img/jstl/2020-06-26-tip-jstl-05.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt; &lt;h1 id=&quot;비교-연산-eq-ne-empty&quot;&gt;비교 연산 (eq, ne, empty)&lt;/h1&gt; &lt;p&gt;jstl 사용시 eq, ne, empty 로 비교 연산 하는 방법&lt;/p&gt; &lt;p&gt;&lt;br /&gt;&lt;/p&gt; &lt;h2 id=&quot;eq-equal--&quot;&gt;eq, equal( == )&lt;/h2&gt; &lt;ul&gt; &lt;li&gt;eq 는 equal, == 라는 의미&lt;/li&gt; &lt;/ul&gt; &lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;c:&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;test&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;${ memberName eq null...</content>
+ </entry>
 
  
 
@@ -99,16 +109,6 @@
    <id>https://m-veloper.github.io/tip/2020/06/17/tip-aws-02</id>
    <updated>2020-06-17T00:00:00+09:00</updated>
    <content type="html">&lt;p&gt;&lt;img src=&quot;/assets/img/aws/2020-06-16-tip-aws-02.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt; &lt;h1 id=&quot;web-server-와-was-를-구분하는-이유&quot;&gt;Web Server 와 WAS 를 구분하는 이유&lt;/h1&gt; &lt;p&gt;&lt;img src=&quot;/assets/img/aws/2020-06-16-tip-aws-02-01.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt; &lt;p&gt;&lt;br /&gt;&lt;/p&gt; &lt;h2 id=&quot;web-server-가-필요한-이유&quot;&gt;Web Server 가 필요한 이유&lt;/h2&gt; &lt;p&gt;클라이언트(웹 브라우저)에 이미지 파일(정적 컨텐츠)을 보내는 과정을 생각해보자. 이미지 파일과 같은 정적인 파일들은 웹 문서(HTML 문서)가 클라이언트로 보내질 때 함께 가는 것이 아니다.&lt;/p&gt; &lt;p&gt;클라이언트는 HTML 문서를...</content>
- </entry>
-
- 
-
- <entry>
-   <title>[AWS] Web Server(웹서버, 아파치) 와 WAS(톰캣) 이해하기 </title>
-   <link href="https://m-veloper.github.io/tip/2020/06/16/tip-aws-01/"/>
-   <id>https://m-veloper.github.io/tip/2020/06/16/tip-aws-01</id>
-   <updated>2020-06-16T00:00:00+09:00</updated>
-   <content type="html">&lt;p&gt;&lt;img src=&quot;/assets/img/aws/2020-06-15-tip-aws-01.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt; &lt;h1 id=&quot;web-server웹서버-란&quot;&gt;Web Server(웹서버) 란?&lt;/h1&gt; &lt;p&gt;Web Server(웹서버)를 알기전, 정적 페이지(Static Pages), 동적 페이지(Dynamic Pages)에대 해서 이해해야 한다.&lt;/p&gt; &lt;p&gt;&lt;br /&gt;&lt;/p&gt; &lt;h2 id=&quot;정적-페이지static-pages&quot;&gt;정적 페이지(Static Pages)&lt;/h2&gt; &lt;p&gt;&lt;br /&gt;&lt;/p&gt; &lt;p&gt;&lt;img src=&quot;/assets/img/aws/2020-06-15-tip-aws-01-01.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;Web Server는 파일 경로 이름을 받아 경로와 일치하는 file contents를 반환한다.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;항상 동일한 페이지를...</content>
  </entry>
 
  

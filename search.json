@@ -1,6 +1,14 @@
 [
 
 {
+"title"    : "[JSTL] 비교 연산하는 간단한 방법 eq, ne, empty",
+"category" : "",
+"tags"     : "web, java, jstl, spring",
+"url"      : "/tip/2020/06/26/tip-jstl-05/",
+"date"     : "2020-06-26 00:00:00 +0900"
+} ,
+
+{
 "title"    : "[ERROR_LOG] Required String parameter parameter is not present ",
 "category" : "",
 "tags"     : "web, errorLog",
