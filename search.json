@@ -1,6 +1,14 @@
 [
 
 {
+"title"    : "[CSS] 말풍선, 툴팁(tooltip), title 태그(속성)  줄바꿈, 개행 처리하기",
+"category" : "",
+"tags"     : "web, css",
+"url"      : "/tip/2020/06/27/tip-css-09/",
+"date"     : "2020-06-27 00:00:00 +0900"
+} ,
+
+{
 "title"    : "[JSTL] 비교 연산하는 간단한 방법 eq, ne, empty",
 "category" : "",
 "tags"     : "web, java, jstl, spring",

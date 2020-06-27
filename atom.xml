@@ -4,12 +4,22 @@
  <title>슬기로운 개발 생활</title>
  <link href="https://m-veloper.github.io/atom.xml" rel="self"/>
  <id>https://m-veloper.github.io</id>
- <updated>2020-06-26T00:12:12+09:00</updated>
+ <updated>2020-06-27T11:38:47+09:00</updated>
  <author>
    <name>m-veloper</name>
    <uri>https://m-veloper.github.io</uri>
    <email>m_veloper@naver.com</email>
  </author>
+
+ 
+
+ <entry>
+   <title>[CSS] 말풍선, 툴팁(tooltip), title 태그(속성)  줄바꿈, 개행 처리하기</title>
+   <link href="https://m-veloper.github.io/tip/2020/06/27/tip-css-09/"/>
+   <id>https://m-veloper.github.io/tip/2020/06/27/tip-css-09</id>
+   <updated>2020-06-27T00:00:00+09:00</updated>
+   <content type="html">&lt;p&gt;&lt;img src=&quot;/assets/img/css/2020-06-27-tip-css-09.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt; &lt;h1 id=&quot;툴팁tooltip-title-태그속성--줄바꿈-개행-처리&quot;&gt;툴팁(tooltip), title 태그(속성) 줄바꿈, 개행 처리&lt;/h1&gt; &lt;p&gt;툴팁을 사용하다보면 내용이 길어져서 줄바꿈을 해야할 때가 있습니다.&lt;/p&gt; &lt;p&gt;그럴 때 간단하게 해결할 수 있는 방법이 있습니다.&lt;/p&gt; &lt;p&gt;&lt;br /&gt;&lt;/p&gt; &lt;h2 id=&quot;html-number-code-를-사용하여-줄바꿈-처리하기&quot;&gt;HTML NUMBER CODE 를 사용하여 줄바꿈 처리하기&lt;/h2&gt; &lt;p&gt;&lt;img src=&quot;/assets/img/css/2020-06-27-tip-css-09-01.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt; &lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;nt&quot;&gt;&amp;lt;span&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;title=&lt;/span&gt;&lt;span...</content>
+ </entry>
 
  
 
@@ -99,16 +109,6 @@
    <id>https://m-veloper.github.io/tip/2020/06/18/tip-aws-03</id>
    <updated>2020-06-18T00:00:00+09:00</updated>
    <content type="html">&lt;p&gt;&lt;img src=&quot;/assets/img/aws/2020-06-18-tip-aws-03.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt; &lt;h1 id=&quot;우분투ubuntu에-아파치웹서버-톰캣tomcat-jdksdk-설치하기&quot;&gt;우분투(Ubuntu)에 아파치(웹서버), 톰캣(Tomcat), JDK(SDK) 설치하기&lt;/h1&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;AWS 우분투 설치 인스턴스 : Ubuntu Server 18.04 LTS&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;현재 계정에서 root 권한을 이용하여 명령어를 실행할 때에는 모든 명령어 앞에 “sudo” 를 붙여주시기 바랍니다.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;예&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt-get...</content>
- </entry>
-
- 
-
- <entry>
-   <title>[AWS] Web Server 와 WAS 를 구분하는 이유</title>
-   <link href="https://m-veloper.github.io/tip/2020/06/17/tip-aws-02/"/>
-   <id>https://m-veloper.github.io/tip/2020/06/17/tip-aws-02</id>
-   <updated>2020-06-17T00:00:00+09:00</updated>
-   <content type="html">&lt;p&gt;&lt;img src=&quot;/assets/img/aws/2020-06-16-tip-aws-02.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt; &lt;h1 id=&quot;web-server-와-was-를-구분하는-이유&quot;&gt;Web Server 와 WAS 를 구분하는 이유&lt;/h1&gt; &lt;p&gt;&lt;img src=&quot;/assets/img/aws/2020-06-16-tip-aws-02-01.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt; &lt;p&gt;&lt;br /&gt;&lt;/p&gt; &lt;h2 id=&quot;web-server-가-필요한-이유&quot;&gt;Web Server 가 필요한 이유&lt;/h2&gt; &lt;p&gt;클라이언트(웹 브라우저)에 이미지 파일(정적 컨텐츠)을 보내는 과정을 생각해보자. 이미지 파일과 같은 정적인 파일들은 웹 문서(HTML 문서)가 클라이언트로 보내질 때 함께 가는 것이 아니다.&lt;/p&gt; &lt;p&gt;클라이언트는 HTML 문서를...</content>
  </entry>
 
  
