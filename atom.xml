@@ -4,12 +4,22 @@
  <title>슬기로운 개발 생활</title>
  <link href="https://m-veloper.github.io/atom.xml" rel="self"/>
  <id>https://m-veloper.github.io</id>
- <updated>2020-06-29T20:27:39+09:00</updated>
+ <updated>2020-06-30T21:34:51+09:00</updated>
  <author>
    <name>m-veloper</name>
    <uri>https://m-veloper.github.io</uri>
    <email>m_veloper@naver.com</email>
  </author>
+
+ 
+
+ <entry>
+   <title>[JAVA] 자바(java.time) 날짜, 시간 구하기 (LocalDate, LocalTime, LocalDateTime 사용법)</title>
+   <link href="https://m-veloper.github.io/tip/2020/06/30/tip-java-08/"/>
+   <id>https://m-veloper.github.io/tip/2020/06/30/tip-java-08</id>
+   <updated>2020-06-30T00:00:00+09:00</updated>
+   <content type="html">&lt;style&gt; table { display: table; text-align: center; width: 100%; overflow: auto; word-break: normal; word-break: keep-all; } table th, table td { padding: 6px 13px; border: 1px solid #ddd; } .table { text-align: center; margin: auto; } &lt;/style&gt; &lt;p&gt;&lt;img src=&quot;/assets/img/java/2020-06-30-tip-java-08.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt; &lt;h1 id=&quot;javatime&quot;&gt;java.time&lt;/h1&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;Java 1.8 (자바 8) 이전에서는...</content>
+ </entry>
 
  
 
@@ -99,16 +109,6 @@
    <id>https://m-veloper.github.io/tip/2020/06/20/tip-css-08</id>
    <updated>2020-06-20T00:00:00+09:00</updated>
    <content type="html">&lt;p&gt;&lt;img src=&quot;/assets/img/css/2020-06-20-tip-css-08.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt; &lt;h1 id=&quot;checkbox-사이즈크기-조절-방법&quot;&gt;checkbox 사이즈(크기) 조절 방법&lt;/h1&gt; &lt;ul&gt; &lt;li&gt;첫 번째 방법&lt;/li&gt; &lt;/ul&gt; &lt;div class=&quot;language-css highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;checkbox&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;-ms-transform&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;scale&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;/* IE */&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;-moz-transform&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;scale&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;/* FF...</content>
- </entry>
-
- 
-
- <entry>
-   <title>[AWS] 우분투(Ubuntu)에서 아파치(Web Server) 와 톰캣(WAS) 연동하기</title>
-   <link href="https://m-veloper.github.io/tip/2020/06/19/tip-aws-04/"/>
-   <id>https://m-veloper.github.io/tip/2020/06/19/tip-aws-04</id>
-   <updated>2020-06-19T00:00:00+09:00</updated>
-   <content type="html">&lt;p&gt;&lt;img src=&quot;/assets/img/aws/2020-06-19-tip-aws-04.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt; &lt;h1 id=&quot;아파치web-server-와-톰캣was-연동하기&quot;&gt;아파치(Web Server) 와 톰캣(WAS) 연동하기&lt;/h1&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;AWS 우분투 설치 인스턴스 : Ubuntu Server 18.04 LTS&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;현재 계정에서 root 권한을 이용하여 명령어를 실행할 때에는 모든 명령어 앞에 “sudo” 를 붙여주시기 바랍니다.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;예&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt-get...</content>
  </entry>
 
  

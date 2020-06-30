@@ -1457,9 +1457,9 @@
 			<div id="container">
 				<main>
 					<article id="post-page">
-	<h2 class="title">[유닉스] 복사, 삭제, 이동</h2>
+	<h2 class="title">[JAVA] 자바(java.time) 날짜, 시간 구하기 (LocalDate, LocalTime, LocalDateTime 사용법)</h2>
 	<a class="tag" href="" data-flip="title">
-		<time datetime="" class="by-line">2020년 02월 29일</time>
+		<time datetime="" class="by-line">2020년 06월 30일</time>
 	</a>
 	<hr>
 	<div class="content">
@@ -1475,357 +1475,483 @@
 			<!--</div>-->
 		</div>
 
-		<p><img src="/assets/img/unix/2020-02-29-unix-11.png" alt="" /></p>
+		<style>
+table {
+    display: table;
+    text-align: center;
+    width: 100%;
+    overflow: auto;
+    word-break: normal;
+    word-break: keep-all;
+}
 
-<h1 id="파일-복사">파일 복사</h1>
-<p><br />
-<br /></p>
+table th,
+table td {
+    padding: 6px 13px;
+    border: 1px solid #ddd;
+}
 
-<h3 id="cp-명령">cp 명령</h3>
+.table {
+    text-align: center;
+    margin: auto;
+}
+</style>
+
+<p><img src="/assets/img/java/2020-06-30-tip-java-08.png" alt="" /></p>
+
+<h1 id="javatime">java.time</h1>
 
 <ul>
-  <li>파일이나 디렉토리를 복사</li>
-  <li>형식 : cp [옵션] 파일명1/디렉토리명1 파일명2/디렉토리명2</li>
   <li>
-    <p>옵션</p>
-
-    <ul>
-      <li>-i : 파일명2가 존재할 경우 덮어쓸 것인지 물어봄</li>
-      <li>-r :디렉토리를 복사할 때 지정</li>
-    </ul>
+    <p>Java 1.8 (자바 8) 이전에서는 보통 Calendar를 사용하고, Date/long/String 으로 변환후 사용하는 방법을 많이 사용함.</p>
   </li>
-  <li>사용 예 :<br /> 
-  p file1 file2<br />
-  cp f1 f2 f3 dir1<br />
-  cp –r dir1 dir2</li>
-</ul>
-
-<h3 id="파일을-파일로-복사">파일을 파일로 복사</h3>
-
-<ul>
-  <li>첫 번째 인자와 두 번째 인자 모두 파일명 사용</li>
-  <li>두 번째 인자의 파일명이 존재하지 않으면 새로 생성됨</li>
-  <li>이미 존재하면 원래의 파일에 덮어 씌워짐</li>
-  <li>/etc 디렉토리에 있는 파일을 현재 디렉토리의 etc_hosts라는 파일로 복사</li>
-</ul>
-
-<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">cp</span> /etc/hosts etc_hosts
-<span class="nv">$ </span><span class="nb">ls
-</span>etc_hosts
-<span class="err">$</span>
-</code></pre></div></div>
-
-<ul>
-  <li>현재 디렉토리에서 파일 복사</li>
-</ul>
-
-<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">cp </span>etc_hosts tmp_hosts
-<span class="nv">$ </span><span class="nb">ls
-</span>etc_hosts tmp_hosts
-<span class="err">$</span>
-</code></pre></div></div>
-
-<h3 id="파일을-디렉토리로-복사">파일을 디렉토리로 복사</h3>
-
-<ul>
-  <li>첫 번째 인자는 파일명, 두 번째 인자는 디렉토리명 사용</li>
-  <li>파일을 현재 디렉토리에 복사</li>
-</ul>
-
-<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">cp</span> /etc/hosts <span class="nb">.</span>
-<span class="nv">$ </span><span class="nb">ls
-</span>etc_hosts hosts tmp_hosts
-<span class="err">$</span>
-</code></pre></div></div>
-
-<ul>
-  <li>현재 디렉토리가 아닌 다른 디렉토리로 복사</li>
-</ul>
-
-<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">mkdir </span>temp
-<span class="nv">$ </span><span class="nb">cp </span>hosts temp
-<span class="nv">$ </span><span class="nb">ls </span>temp
-hosts
-<span class="err">$</span>
-</code></pre></div></div>
-
-<ul>
-  <li>파일명을 바꿔서 복사</li>
-</ul>
-
-<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">cp </span>hosts temp/hosts1
-<span class="nv">$ </span><span class="nb">ls </span>temp
-hosts hosts1
-<span class="err">$</span>
-</code></pre></div></div>
-
-<h3 id="여러-개의-파일을-디렉토리에-복사">여러 개의 파일을 디렉토리에 복사</h3>
-
-<ul>
-  <li>첫 번째 인자의 자리에 파일명 여러 개 사용</li>
-  <li>마지막 인자는 반드시 디렉토리명이어야 함</li>
-</ul>
-
-<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">cp </span>etc_hosts tmp_hosts temp
-<span class="nv">$ </span><span class="nb">ls </span>temp
-etc_hosts hosts hosts1 tmp_hosts
-<span class="err">$</span>
-</code></pre></div></div>
-
-<h3 id="-i-옵션-사용">-i 옵션 사용</h3>
-
-<ul>
-  <li>두 번째 인자에 지정한 파일명이 이미 존재하면 겹쳐서 복사할 것인지 물어봄</li>
-  <li>“y”나 “n”으로 대답</li>
-</ul>
-
-<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">cp</span> –i tmp_hosts hosts
-<span class="nb">cp</span>: overwrite hosts? n
-<span class="err">$</span>
-</code></pre></div></div>
-
-<h3 id="디렉토리를-복사">디렉토리를 복사</h3>
-
-<ul>
-  <li>-r 옵션 사용하지 않을 경우 오류 발생
-    <ul>
-      <li>유닉스 버전에 따라 오류 메시지는 다르게 출력됨</li>
-      <li>“cp: temp: is a directory“라는 오류 메시지가 출력되기도 함</li>
-    </ul>
+  <li>
+    <p>Java 1.8 (자바 8) 후에는 LocalDate, LocalTime, LocalDateTime 등이 추가되어 날짜, 시간관련하여 코드를 짜기가 더 쉬워짐</p>
   </li>
-</ul>
-
-<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">cp </span>temp tmp
-<span class="nb">cp</span>: omitting directory ‘temp’
-<span class="err">$</span>
-</code></pre></div></div>
-
-<ul>
-  <li>-r 옵션 사용하여 복사할 경우 디렉토리 내에 있던 파일이나 하위 디렉토리 모두 복사</li>
-</ul>
-
-<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">cp</span> –r temp tmp
-<span class="nv">$ </span><span class="nb">ls</span> –F
-etc_hosts hosts temp/ tmp/ tmp_hosts
-<span class="nv">$ </span><span class="nb">ls </span>tmp
-hosts hosts1
-<span class="err">$</span>
-</code></pre></div></div>
-
-<ul>
-  <li>두 번째 인자인 tmp 디렉토리가 원래 없었으므로 원본 디렉토리와 같은 위치에 새로 생성됨</li>
-  <li>두 번째 인자가 기존에 있던 디렉토리 이름이면 원본 디렉토리는 두 번째 인자로 지정한 디렉토리 아래에 같은 이름으로 복사됨</li>
 </ul>
 
 <p><br /></p>
 
-<h1 id="파일-삭제">파일 삭제</h1>
-<p><br /></p>
-
-<p>###rm 명령</p>
-
-<ul>
-  <li>파일을 삭제</li>
-  <li>형식 : rm [옵션] 파일명/디렉토리명</li>
-  <li>옵션
-    <ul>
-      <li>-i : 지정한 파일을 정말 삭제할 것인지 확인</li>
-      <li>-r : 디렉토리를 삭제할 때 지정</li>
-    </ul>
-  </li>
-  <li>사용 예 :
-    <ul>
-      <li>rm file</li>
-    </ul>
-  </li>
-</ul>
-
-<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">rm</span> –r <span class="nb">dir</span>
-</code></pre></div></div>
-
-<h3 id="기본-삭제">기본 삭제</h3>
-
-<ul>
-  <li>인자를 파일로 지정하면 해당파일 삭제</li>
-  <li>유닉스에는 ‘휴지통’ 기능이 없어, 삭제된 파일은 복구할 수 없음</li>
-</ul>
-
-<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">rm </span>hosts
-<span class="err">$</span>
-</code></pre></div></div>
-
-<h3 id="-i-옵션을-사용한-파일-삭제">-i 옵션을 사용한 파일 삭제</h3>
-
-<ul>
-  <li>
-    <p>지정한 파일을 정말 삭제할 것인지 물어봄</p>
-
-    <ul>
-      <li>y를 입력하면 삭제되고, n을 입력하면 삭제되지 않음</li>
-    </ul>
-  </li>
-</ul>
-
-<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">rm</span> –i hosts1
-<span class="nb">rm</span>: remove regular file hosts1? y
-<span class="err">$</span>
-</code></pre></div></div>
-
-<h3 id="디렉토리-삭제">디렉토리 삭제</h3>
-
-<ul>
-  <li>-r 옵션을 사용하면 디렉토리가 비어 있는지 여부와 상관없이 디렉토리 및 그 아래 모든 파일 삭제</li>
-  <li>-r 옵션 없이 삭제</li>
-</ul>
-
-<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">rm </span>tmp
-<span class="nb">rm</span>: cannot remove ‘tmp’: Is a directory
-<span class="err">$</span>
-</code></pre></div></div>
-
-<ul>
-  <li>rmdir 명령으로 삭제</li>
-</ul>
-
-<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">rmdir </span>tmp
-<span class="nb">rmdir</span>: failed to remove ‘tmp’: Directory not empty
-<span class="nv">$ </span><span class="nb">ls </span>tmp
-hosts hosts1 text
-<span class="err">$</span>
-</code></pre></div></div>
-
-<ul>
-  <li>-r 옵션으로 삭제</li>
-</ul>
-
-<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">rm</span> –r tmp
-<span class="nv">$ </span><span class="nb">ls</span> –F
-etc_hosts hosts temp/ tmp_hosts
-<span class="err">$</span>
-</code></pre></div></div>
-
-<ul>
-  <li>-ri 옵션으로 삭제</li>
-</ul>
-
-<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">rm</span> –ri temp
-<span class="nb">rm</span>: descend into directory temp? y
-<span class="nb">rm</span>: descend into directory temp/tmp? y
-<span class="nb">rm</span>: remove regular file temp/tmp/text1? y
-<span class="nb">rm</span>: remove directory temp/tmp? y
-<span class="nb">rm</span>: remove regular file temp/hosts1? y
-<span class="nb">rm</span>: remove regular file temp/text? y
-<span class="nb">rm</span>: remove regular file temp/hosts? y
-<span class="nb">rm</span>: remove directory temp? n
-<span class="err">$</span>
-</code></pre></div></div>
+<h1 id="날짜와-시간-객체-생성">날짜와 시간 객체 생성</h1>
 
 <p><br /></p>
 
-<h1 id="파일-이동">파일 이동</h1>
+<h2 id="날짜---localdate">날짜 - LocalDate</h2>
 
-<p><br /><br /></p>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">LocalDate</span> <span class="n">currentDate</span> <span class="o">=</span> <span class="nc">LocalDate</span><span class="o">.</span><span class="na">now</span><span class="o">();</span>    <span class="c1">// 컴퓨터의 현재 날짜 정보를 저장한 LocalDate 객체를 리턴한다.</span>
+<span class="nc">LocalDate</span> <span class="n">targetDate</span> <span class="o">=</span> <span class="nc">LocalDate</span><span class="o">.</span><span class="na">of</span><span class="o">(</span><span class="kt">int</span> <span class="n">year</span><span class="o">,</span> <span class="kt">int</span> <span class="n">month</span><span class="o">,</span> <span class="kt">int</span> <span class="n">dayOfMonth</span><span class="o">);</span>   <span class="c1">// 파라미터로 주어진 날짜 정보를 저장한 LocalDate 객체를 리턴한다. 결과 : 1986-11-22</span>
+</code></pre></div></div>
 
-<h3 id="mvmove-명령">mv(move) 명령</h3>
+<div class="table">
+<table>
+  <thead>
+    <tr>
+      <th>리턴 타입</th>
+      <th>메소드(매개변수)</th>
+      <th>설명</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>int</td>
+      <td>getYear()</td>
+      <td>년</td>
+    </tr>
+    <tr>
+      <td>Month</td>
+      <td>getMonth()</td>
+      <td>Month 열거 값(JANUARY, FEBRUARY, MARCH ..)</td>
+    </tr>
+    <tr>
+      <td>int</td>
+      <td>getMonthValue()</td>
+      <td>월(1, 2, 3 ..)</td>
+    </tr>
+    <tr>
+      <td>int</td>
+      <td>getDayOfYear()</td>
+      <td>일년의 몇 번째 일</td>
+    </tr>
+    <tr>
+      <td>int</td>
+      <td>getDayOfMonth()</td>
+      <td>월의 몇 번째 일</td>
+    </tr>
+    <tr>
+      <td>DayOfWeek</td>
+      <td>getDayOfWeek()</td>
+      <td>요일(MONDAY, TUESDAY, WEDNESDAY..)</td>
+    </tr>
+    <tr>
+      <td>boolean</td>
+      <td>isLeapYear()</td>
+      <td>윤년여부</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<h2 id="시간---localtime">시간 - LocalTime</h2>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">LocalTime</span> <span class="n">currentTime</span> <span class="o">=</span> <span class="nc">LocalTime</span><span class="o">.</span><span class="na">now</span><span class="o">();</span>    <span class="c1">// 컴퓨터의 현재 시간 정보. 결과 : 16:24:02.408 </span>
+<span class="nc">LocalTime</span> <span class="n">targetTime</span> <span class="o">=</span> <span class="nc">LocalTime</span><span class="o">.</span><span class="na">of</span><span class="o">(</span><span class="kt">int</span> <span class="n">hour</span><span class="o">,</span> <span class="kt">int</span> <span class="n">minute</span><span class="o">,</span> <span class="kt">int</span> <span class="n">second</span><span class="o">,</span> <span class="kt">int</span> <span class="n">nanoOfSecond</span><span class="o">);</span> <span class="c1">// 파라미터로 주어진 시간 정보를 저장한 LocalTime 객체를 리턴한다.</span>
+</code></pre></div></div>
+
+<div class="table">
+<table>
+  <thead>
+    <tr>
+      <th>리턴 타입</th>
+      <th>메소드(매개변수)</th>
+      <th>설명</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>int</td>
+      <td>getHour()</td>
+      <td>시간</td>
+    </tr>
+    <tr>
+      <td>int</td>
+      <td>getMinute()</td>
+      <td>분</td>
+    </tr>
+    <tr>
+      <td>int</td>
+      <td>getSecond()</td>
+      <td>초</td>
+    </tr>
+    <tr>
+      <td>int</td>
+      <td>getNano()</td>
+      <td>나노초</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<h2 id="localdatetime-날짜와-시간-정보가-모두-필요하다면">LocalDateTime ()날짜와 시간 정보가 모두 필요하다면)</h2>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nc">LocalDateTime</span> <span class="n">currentDateTime</span> <span class="o">=</span> <span class="nc">LocalDateTime</span><span class="o">.</span><span class="na">now</span><span class="o">();</span>    <span class="c1">// 컴퓨터의 현재 날짜와 시간 정보.</span>
+ <span class="nc">LocalDateTime</span> <span class="n">targetDateTime</span> <span class="o">=</span> <span class="nc">LocalDateTime</span><span class="o">.</span><span class="na">of</span><span class="o">(</span><span class="kt">int</span> <span class="n">year</span><span class="o">,</span> <span class="kt">int</span> <span class="n">month</span><span class="o">,</span> <span class="kt">int</span> <span class="n">dayOfMonth</span><span class="o">,</span> <span class="kt">int</span> <span class="n">hour</span><span class="o">,</span> <span class="kt">int</span> <span class="n">minute</span><span class="o">,</span> <span class="kt">int</span> <span class="n">second</span><span class="o">,</span> <span class="kt">int</span> <span class="n">nanoOfSecond</span><span class="o">);</span>
+</code></pre></div></div>
+
+<h2 id="zoneddatetime">ZonedDateTime</h2>
 
 <ul>
-  <li>파일의 이름을 바꾸거나 다른 디렉토리로 이동</li>
-  <li>형식 : mv [옵션] 파일명1/디렉토리명1 파일명2/디렉토리명2</li>
   <li>
-    <p>옵션</p>
-
-    <ul>
-      <li>-i : 파일명2/디렉토리명2가 존재하면 덮어쓸 것인지 물어봄</li>
-    </ul>
+    <p>ISO-8601 달력 시스템에서 정의하고 있는 타임존의 날짜와 시간을 저장하는 클래스이다.</p>
   </li>
-  <li>사용 예 :</li>
+  <li>
+    <p>결과는 2020-06-01T16:54:05.739+09:00[Asia/Seoul]와 같고, 맨 뒤에 +09:00[Asia/Seoul] 협정세계시와의 시차(+9시간)와 ZoneId(Asia/Seoul) 정보가 붙는다.</p>
+  </li>
 </ul>
 
-<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">mv </span>file1 file2
-<span class="nb">mv </span>file1 dir1
-<span class="nb">mv </span>file1 file2 file3 dir1
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">ZonedDateTime</span> <span class="n">utcDateTime</span> <span class="o">=</span> <span class="nc">ZonedDateTime</span><span class="o">.</span><span class="na">now</span><span class="o">(</span><span class="nc">ZoneId</span><span class="o">.</span><span class="na">of</span><span class="o">(</span><span class="s">"UTC"</span><span class="o">));</span>
+<span class="nc">ZonedDateTime</span> <span class="n">seoulDateTime</span> <span class="o">=</span> <span class="nc">ZonedDateTime</span><span class="o">.</span><span class="na">now</span><span class="o">(</span><span class="nc">ZoneId</span><span class="o">.</span><span class="na">of</span><span class="o">(</span><span class="s">"Asia/Seoul"</span><span class="o">));</span>
 </code></pre></div></div>
 
-<h3 id="파일을-파일로-이동">파일을 파일로 이동</h3>
+<div class="table">
+<table>
+  <thead>
+    <tr>
+      <th>리턴 타입</th>
+      <th>메소드(매개변수)</th>
+      <th>설명</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>ZoneId</td>
+      <td>getZone()</td>
+      <td>ZoneId를 리턴(Asia/Seoul)</td>
+    </tr>
+    <tr>
+      <td>ZoneOffset</td>
+      <td>getOffset()</td>
+      <td>UTC와의 시차를 리턴(+09:00)</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<p><br /></p>
+
+<h1 id="날짜와-시간-사용하기">날짜와 시간 사용하기</h1>
+
+<p><br /></p>
+
+<h2 id="날짜-더하고-빼기">날짜 더하고, 빼기</h2>
 
 <ul>
-  <li>첫 번째 인자와 두 번째 인자를 모두 파일명으로 지정</li>
-  <li>결과적으로는 이름 변경</li>
-  <li>두 번째 인자로 지정한 파일이 존재하면 내용 덮어씀</li>
+  <li>년, 월, 일, 주를 더하거나 뺄 수 있다.</li>
 </ul>
 
-<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">mv </span>hosts text
-<span class="nv">$ </span><span class="nb">ls</span> –F
-etc_hosts temp/ text tmp_hosts
-<span class="err">$</span>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">LocalDateTime</span> <span class="n">currentDateTime</span> <span class="o">=</span> <span class="nc">LocalDateTime</span><span class="o">.</span><span class="na">now</span><span class="o">();</span>
+<span class="nc">LocalDateTime</span> <span class="n">targetDateTime</span> <span class="o">=</span> <span class="n">currentDateTime</span>
+        <span class="o">.</span><span class="na">plusYears</span><span class="o">(</span><span class="kt">long</span><span class="o">)</span>       <span class="c1">// 년도 더하기</span>
+        <span class="o">.</span><span class="na">minusYears</span><span class="o">(</span><span class="kt">long</span><span class="o">)</span>      <span class="c1">// 년도 빼기</span>
+        <span class="o">.</span><span class="na">plusMonths</span><span class="o">(</span><span class="kt">long</span><span class="o">)</span>      <span class="c1">// 월 더하기 </span>
+        <span class="o">.</span><span class="na">minusMonths</span><span class="o">(</span><span class="kt">long</span><span class="o">)</span>     <span class="c1">// 월 빼기</span>
+        <span class="o">.</span><span class="na">plusDays</span><span class="o">(</span><span class="kt">long</span><span class="o">)</span>        <span class="c1">// 일 더하기 </span>
+        <span class="o">.</span><span class="na">minusDays</span><span class="o">(</span><span class="kt">long</span><span class="o">)</span>       <span class="c1">// 일 빼기</span>
+        <span class="o">.</span><span class="na">plusWeeks</span><span class="o">(</span><span class="kt">long</span><span class="o">)</span>       <span class="c1">// 주 더하기</span>
+        <span class="o">.</span><span class="na">minusWeeks</span><span class="o">(</span><span class="kt">long</span><span class="o">);</span>     <span class="c1">// 주 빼기</span>
 </code></pre></div></div>
 
-<h3 id="파일을-디렉토리로-이동">파일을 디렉토리로 이동</h3>
+<p><br /></p>
+
+<h2 id="시간-더하고-빼기">시간 더하고, 빼기</h2>
 
 <ul>
-  <li>두 번째 인자로 디렉토리 지정</li>
+  <li>시간, 분, 초, 나노초를 더하거나 뺄 수 있다.</li>
 </ul>
 
-<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">mv </span>text temp
-<span class="nv">$ </span><span class="nb">ls</span> –F
-etc_hosts temp/ tmp_hosts
-<span class="err">$</span>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">LocalDateTime</span> <span class="n">currentDateTime</span> <span class="o">=</span> <span class="nc">LocalDateTime</span><span class="o">.</span><span class="na">now</span><span class="o">();</span>
+<span class="nc">LocalDateTime</span> <span class="n">targetDateTime</span> <span class="o">=</span> <span class="n">currentDateTime</span>
+        <span class="o">.</span><span class="na">plusHours</span><span class="o">(</span><span class="kt">long</span><span class="o">)</span>       <span class="c1">// 시간 더하기</span>
+        <span class="o">.</span><span class="na">minusHours</span><span class="o">(</span><span class="kt">long</span><span class="o">)</span>      <span class="c1">// 시간 빼기</span>
+        <span class="o">.</span><span class="na">plusMinutes</span><span class="o">(</span><span class="kt">long</span><span class="o">)</span>     <span class="c1">// 분 더하기 </span>
+        <span class="o">.</span><span class="na">minusMinutes</span><span class="o">(</span><span class="kt">long</span><span class="o">)</span>    <span class="c1">// 분 빼기</span>
+        <span class="o">.</span><span class="na">plusSeconds</span><span class="o">(</span><span class="kt">long</span><span class="o">)</span>     <span class="c1">// 초 더하기 </span>
+        <span class="o">.</span><span class="na">minusSeconds</span><span class="o">(</span><span class="kt">long</span><span class="o">)</span>    <span class="c1">// 초 빼기</span>
+        <span class="o">.</span><span class="na">plusNanos</span><span class="o">(</span><span class="kt">long</span><span class="o">)</span>       <span class="c1">// 나노초 더하기</span>
+        <span class="o">.</span><span class="na">minusNanos</span><span class="o">(</span><span class="kt">long</span><span class="o">);</span>     <span class="c1">// 나노초 빼기</span>
+</code></pre></div></div>
+
+<p><br /></p>
+
+<h2 id="날짜와-시간을-변경">날짜와 시간을 변경</h2>
+
+<ul>
+  <li>년, 월, 월의 몇 번째 일인지, 년의 몇번 번째 일인지를 변경할 수 있다.</li>
+</ul>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">LocalDateTime</span> <span class="n">currentDateTime</span> <span class="o">=</span> <span class="nc">LocalDateTime</span><span class="o">.</span><span class="na">now</span><span class="o">();</span>
+<span class="nc">LocalDateTime</span> <span class="n">targetDateTime</span> <span class="o">=</span> <span class="n">currentDateTime</span>
+                <span class="o">.</span><span class="na">withYear</span><span class="o">(</span><span class="kt">int</span><span class="o">)</span>          <span class="c1">// 년도를 변경</span>
+                <span class="o">.</span><span class="na">withMonth</span><span class="o">(</span><span class="kt">int</span><span class="o">)</span>         <span class="c1">// 월 변경</span>
+                <span class="o">.</span><span class="na">withDayOfMonth</span><span class="o">(</span><span class="kt">int</span><span class="o">)</span>    <span class="c1">// 월의 일을 변경</span>
+                <span class="o">.</span><span class="na">withDayOfYear</span><span class="o">(</span><span class="kt">int</span><span class="o">);</span>    <span class="c1">// 년도의 일을 변경</span>
+                <span class="o">.</span><span class="na">with</span><span class="o">(</span><span class="nc">TemporalAdjuster</span> <span class="n">adjuster</span><span class="o">)</span> <span class="c1">// 현재 날짜를 기준으로 상대적인 날짜로 변경</span>
 </code></pre></div></div>
 
 <ul>
-  <li>두 번째 인자로 디렉토리명과 파일명을 모두 지정하면 지정한 디렉토리로 파일명 바꿔서 이동</li>
+  <li>마지막에 .with(TemporalAdjuster adjuster) 메소드를 사용하면 현재 날짜를 기준으로 
+년도의 첫 번째 일, 마지막 일, 월의 첫 번째 일, 마지막일, 지난 요일 및, 돌아오는 요일 등 상대적인 날짜로 변경을 할 수 있다</li>
 </ul>
 
-<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">mv </span>tmp_hosts temp/hosts
-<span class="nv">$ </span><span class="nb">ls</span> –F
-etc_hosts temp/
-<span class="nv">$ </span><span class="nb">ls </span>temp
-hosts text
-<span class="err">$</span>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">LocalDateTime</span> <span class="n">currentDateTime</span> <span class="o">=</span> <span class="nc">LocalDateTime</span><span class="o">.</span><span class="na">now</span><span class="o">();</span>
+<span class="nc">LocalDateTime</span> <span class="n">targetDateTime</span> <span class="o">=</span> <span class="n">currentDateTime</span>
+        <span class="o">.</span><span class="na">with</span><span class="o">(</span><span class="nc">TemporalAdjusters</span><span class="o">.</span><span class="na">firstDayOfYear</span><span class="o">())</span>       <span class="c1">// 이번 년도의 첫 번째 일(1월 1일)</span>
+        <span class="o">.</span><span class="na">with</span><span class="o">(</span><span class="nc">TemporalAdjusters</span><span class="o">.</span><span class="na">lastDayOfYear</span><span class="o">())</span>        <span class="c1">// 이번 년도의 마지막 일(12월 31일)</span>
+        <span class="o">.</span><span class="na">with</span><span class="o">(</span><span class="nc">TemporalAdjusters</span><span class="o">.</span><span class="na">firstDayOfNextYear</span><span class="o">())</span>   <span class="c1">// 다음 년도의 첫 번째 일(1월 1일)</span>
+        <span class="o">.</span><span class="na">with</span><span class="o">(</span><span class="nc">TemporalAdjusters</span><span class="o">.</span><span class="na">firstDayOfMonth</span><span class="o">())</span>      <span class="c1">// 이번 달의 첫 번째 일(1일)</span>
+        <span class="o">.</span><span class="na">with</span><span class="o">(</span><span class="nc">TemporalAdjusters</span><span class="o">.</span><span class="na">lastDayOfMonth</span><span class="o">())</span>       <span class="c1">// 이번 달의 마지막 일</span>
+        <span class="o">.</span><span class="na">with</span><span class="o">(</span><span class="nc">TemporalAdjusters</span><span class="o">.</span><span class="na">firstDayOfNextMonth</span><span class="o">())</span>  <span class="c1">// 다음 달의 첫 번째 일(1일)</span>
+        <span class="o">.</span><span class="na">with</span><span class="o">(</span><span class="nc">TemporalAdjusters</span><span class="o">.</span><span class="na">firstInMonth</span><span class="o">(</span><span class="nc">DayOfWeek</span><span class="o">.</span><span class="na">MONDAY</span><span class="o">))</span> <span class="c1">// 이번 달의 첫 번째 요일(여기서는 월요일)</span>
+        <span class="o">.</span><span class="na">with</span><span class="o">(</span><span class="nc">TemporalAdjusters</span><span class="o">.</span><span class="na">lastInMonth</span><span class="o">(</span><span class="nc">DayOfWeek</span><span class="o">.</span><span class="na">FRIDAY</span><span class="o">))</span>  <span class="c1">// 이번 달의 마지막 요일(여기서는 마지막 금요일)</span>
+        <span class="o">.</span><span class="na">with</span><span class="o">(</span><span class="nc">TemporalAdjusters</span><span class="o">.</span><span class="na">next</span><span class="o">(</span><span class="nc">DayOfWeek</span><span class="o">.</span><span class="na">FRIDAY</span><span class="o">))</span>       <span class="c1">// 다음주 금요일</span>
+        <span class="o">.</span><span class="na">with</span><span class="o">(</span><span class="nc">TemporalAdjusters</span><span class="o">.</span><span class="na">nextOrSame</span><span class="o">(</span><span class="nc">DayOfWeek</span><span class="o">.</span><span class="na">FRIDAY</span><span class="o">))</span> <span class="c1">// 다음주 금요일(오늘 포함. 오늘이 금요일이라면 오늘 날짜가 표시 된다.)</span>
+        <span class="o">.</span><span class="na">with</span><span class="o">(</span><span class="nc">TemporalAdjusters</span><span class="o">.</span><span class="na">previous</span><span class="o">(</span><span class="nc">DayOfWeek</span><span class="o">.</span><span class="na">FRIDAY</span><span class="o">))</span>     <span class="c1">// 지난주 금요일</span>
+        <span class="o">.</span><span class="na">with</span><span class="o">(</span><span class="nc">TemporalAdjusters</span><span class="o">.</span><span class="na">previousOrSame</span><span class="o">(</span><span class="nc">DayOfWeek</span><span class="o">.</span><span class="na">FRIDAY</span><span class="o">));</span><span class="c1">// 지난주 금요일(오늘 포함)</span>
 </code></pre></div></div>
 
-<h3 id="여러-개의-파일을-디렉토리로-이동">여러 개의 파일을 디렉토리로 이동</h3>
+<p><br /></p>
+
+<h2 id="날짜-비교">날짜 비교</h2>
 
 <ul>
-  <li>첫 번째 인자의 자리에 파일명 여러 개 지정하면 두 번째 인자를 반드시 디렉토리로 해야 함</li>
-  <li>마지막 지정한 디렉토리로 파일이 모두 이동</li>
+  <li>
+    <p>LocalDate, LocalDateTime</p>
+  </li>
+  <li>
+    <p>isBefore(ChronoLocalDate other), isEqual(ChronoLocalDate other), isAfter(ChronoLocalDate other) 메소드를 사용해 날짜를 비교할 수 있다. 
+리턴 타입은 boolean이다.</p>
+  </li>
 </ul>
 
-<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">mv </span>temp/hosts temp/text <span class="nb">.</span>
-<span class="nv">$ </span><span class="nb">ls</span> –F
-etc_hosts hosts temp/ text
-<span class="err">$</span>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">LocalDateTime</span> <span class="n">startDateTime</span> <span class="o">=</span> <span class="nc">LocalDateTime</span><span class="o">.</span><span class="na">now</span><span class="o">();</span>
+<span class="nc">LocalDateTime</span> <span class="n">endDateTime</span> <span class="o">=</span> <span class="nc">LocalDateTime</span><span class="o">.</span><span class="na">of</span><span class="o">(</span><span class="mi">2020</span><span class="o">,</span> <span class="mi">6</span><span class="o">,</span> <span class="mi">1</span><span class="o">,</span> <span class="mi">23</span><span class="o">,</span> <span class="mi">59</span><span class="o">,</span> <span class="mi">59</span><span class="o">);</span>
+
+<span class="c1">// startDateTime이 endDateTime 보다 이전 날짜 인지 비교</span>
+<span class="n">startDateTime</span><span class="o">.</span><span class="na">isBefore</span><span class="o">(</span><span class="n">endDateTime</span><span class="o">);</span>    <span class="c1">// true</span>
+
+<span class="c1">// 동일 날짜인지 비교</span>
+<span class="n">startDateTime</span><span class="o">.</span><span class="na">isEqual</span><span class="o">(</span><span class="n">endDateTime</span><span class="o">);</span> <span class="c1">// false</span>
+
+<span class="c1">// startDateTime이 endDateTime 보다 이후 날짜인지 비교</span>
+<span class="n">startDateTime</span><span class="o">.</span><span class="na">isAfter</span><span class="o">(</span><span class="n">endDateTime</span><span class="o">);</span> <span class="c1">// false</span>
 </code></pre></div></div>
 
-<h3 id="-i-옵션을-사용한-이동">-i 옵션을 사용한 이동</h3>
+<p><br /></p>
+
+<h2 id="시간-비교">시간 비교</h2>
 
 <ul>
-  <li>두 번째 인자에 지정한 파일명이 기존에 있는 파일일 경우 덮어쓸 것인지 물어봄</li>
+  <li>
+    <p>LocalTime과 LocalDateTime</p>
+  </li>
+  <li>
+    <p>isBefore(LocalTime other), isAfter(LocalTime other) 메소드를 사용해 시간을 비교할 수 있다. 리턴 타입은 boolean이다.</p>
+  </li>
 </ul>
 
-<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">mv</span> –i etc_hosts hosts
-<span class="nb">mv</span>: overwrite ‘hosts’? n
-<span class="err">$</span>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">LocalTime</span> <span class="n">startTime</span> <span class="o">=</span> <span class="nc">LocalTime</span><span class="o">.</span><span class="na">now</span><span class="o">();</span>  <span class="c1">// 23:52:35.603</span>
+<span class="nc">LocalTime</span> <span class="n">endTime</span> <span class="o">=</span> <span class="nc">LocalTime</span><span class="o">.</span><span class="na">of</span><span class="o">(</span><span class="mi">23</span><span class="o">,</span> <span class="mi">59</span><span class="o">,</span> <span class="mi">59</span><span class="o">);</span>
+
+<span class="c1">// startTime이 endTime 보다 이전 시간 인지 비교</span>
+<span class="n">startTime</span><span class="o">.</span><span class="na">isBefore</span><span class="o">(</span><span class="n">endTime</span><span class="o">);</span>    <span class="c1">// true</span>
+
+<span class="c1">// startTime이 endTime 보다 이후 시간 인지 비교</span>
+<span class="n">startTime</span><span class="o">.</span><span class="na">isAfter</span><span class="o">(</span><span class="n">endTime</span><span class="o">);</span> <span class="c1">// false</span>
 </code></pre></div></div>
 
-<h3 id="디렉토리를-디렉토리로-이동">디렉토리를 디렉토리로 이동</h3>
+<p><br /></p>
+
+<h2 id="날짜-차이-계산">날짜 차이 계산</h2>
 
 <ul>
-  <li>두 인자 모두 디렉토리명으로 지정</li>
-  <li>첫 번째 인자인 디렉토리가 두 번째 인자 디렉토리 아래로 이동</li>
-  <li>두 번째 인자가 새로운 이름이면 디렉토리 이름 변경</li>
+  <li>
+    <p>LocalDate는 until(ChronoLocalDate endDate) 메소드를 사용해서 날짜 차이를 계산</p>
+  </li>
+  <li>
+    <p>리턴 타입은 java.time.Period</p>
+  </li>
+  <li>
+    <p>Period 클래스의 getYears(), getMonths(), getDays() 메소드를 사용해서 년도 차이, 월의 차이, 일의 차이를 계산</p>
+  </li>
 </ul>
 
-<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">cp</span> –r temp tmp
-<span class="nv">$ </span><span class="nb">ls</span> –F
-etc_hosts hosts temp/ text tmp/
-<span class="nv">$ </span><span class="nb">mv </span>tmp temp
-<span class="nv">$ </span><span class="nb">ls</span> <span class="nt">-F</span>
-etc_hosts hosts temp/ text
-<span class="nv">$ </span><span class="nb">ls</span> –F temp
-etc_hosts hosts text tmp/
-<span class="err">$</span>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">LocalDate</span> <span class="n">currentDate</span> <span class="o">=</span> <span class="nc">LocalDate</span><span class="o">.</span><span class="na">now</span><span class="o">();</span> <span class="c1">// 2020-04-02</span>
+<span class="nc">LocalDate</span> <span class="n">targetDate</span> <span class="o">=</span> <span class="nc">LocalDate</span><span class="o">.</span><span class="na">of</span><span class="o">(</span><span class="mi">2020</span><span class="o">,</span><span class="mi">5</span><span class="o">,</span><span class="mi">5</span><span class="o">);</span>
+
+<span class="nc">Period</span> <span class="n">period</span> <span class="o">=</span> <span class="n">currentDate</span><span class="o">.</span><span class="na">until</span><span class="o">(</span><span class="n">targetDate</span><span class="o">);</span>
+
+<span class="n">period</span><span class="o">.</span><span class="na">getYears</span><span class="o">();</span>      <span class="c1">// 0년</span>
+<span class="n">period</span><span class="o">.</span><span class="na">getMonths</span><span class="o">();</span>     <span class="c1">// 1개월</span>
+<span class="n">period</span><span class="o">.</span><span class="na">getDays</span><span class="o">();</span>       <span class="c1">// 3일 차이</span>
 </code></pre></div></div>
+
+<ul>
+  <li>Period 클래스의 between(LocalDate startDate, LocalDate endDate) 메소드를 사용해서도 날짜 차이를 구할 수 있고, 리턴 타입은 Period 이다.</li>
+</ul>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">LocalDate</span> <span class="n">startDate</span> <span class="o">=</span> <span class="nc">LocalDate</span><span class="o">.</span><span class="na">now</span><span class="o">();</span> <span class="c1">// 2020-04-02</span>
+<span class="nc">LocalDate</span> <span class="n">endDate</span> <span class="o">=</span> <span class="nc">LocalDate</span><span class="o">.</span><span class="na">of</span><span class="o">(</span><span class="mi">2020</span><span class="o">,</span><span class="mi">5</span><span class="o">,</span><span class="mi">5</span><span class="o">);</span>
+
+<span class="nc">Period</span> <span class="n">period</span> <span class="o">=</span> <span class="nc">Period</span><span class="o">.</span><span class="na">between</span><span class="o">(</span><span class="n">startDate</span><span class="o">,</span> <span class="n">endDate</span><span class="o">);</span>
+
+<span class="n">period</span><span class="o">.</span><span class="na">getYears</span><span class="o">();</span>      <span class="c1">// 0년</span>
+<span class="n">period</span><span class="o">.</span><span class="na">getMonths</span><span class="o">();</span>     <span class="c1">// 1개월</span>
+<span class="n">period</span><span class="o">.</span><span class="na">getDays</span><span class="o">();</span>       <span class="c1">// 3일 차이</span>
+</code></pre></div></div>
+
+<p><br /></p>
+
+<h2 id="시간-차이-계산">시간 차이 계산</h2>
+
+<ul>
+  <li>
+    <p>LocalDate, LocalTime, LocaDateTime은 until(Temporal end, TemporalUnit unit) 메소드를 사용하여 시간 차이를 계산</p>
+  </li>
+  <li>
+    <p>리턴 타입은 long</p>
+  </li>
+  <li>
+    <p>인터페이스의 구현체로 자바가 제공해주는 ChronoUnit을 사용</p>
+  </li>
+</ul>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">LocalTime</span> <span class="n">startTime</span> <span class="o">=</span> <span class="nc">LocalTime</span><span class="o">.</span><span class="na">now</span><span class="o">();</span>  <span class="c1">// 00:35:39</span>
+<span class="nc">LocalTime</span> <span class="n">endTime</span> <span class="o">=</span> <span class="nc">LocalTime</span><span class="o">.</span><span class="na">of</span><span class="o">(</span><span class="mi">12</span><span class="o">,</span><span class="mi">59</span><span class="o">,</span><span class="mo">00</span><span class="o">);</span>
+
+<span class="n">startTime</span><span class="o">.</span><span class="na">until</span><span class="o">(</span><span class="n">endTime</span><span class="o">,</span> <span class="nc">ChronoUnit</span><span class="o">.</span><span class="na">HOURS</span><span class="o">);</span> 
+</code></pre></div></div>
+
+<ul>
+  <li>
+    <p>다른 방법으로 java.time.Duration 클래스의 between(Temporal start, Temporal end) 메소드를 사용해서도 시간 차이를 구할 수 있다.</p>
+  </li>
+  <li>
+    <p>리턴 타입은 Duration</p>
+  </li>
+</ul>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">LocalTime</span> <span class="n">startTime</span> <span class="o">=</span> <span class="nc">LocalTime</span><span class="o">.</span><span class="na">now</span><span class="o">();</span>  <span class="c1">// 00:35:39</span>
+<span class="nc">LocalTime</span> <span class="n">endTime</span> <span class="o">=</span> <span class="nc">LocalTime</span><span class="o">.</span><span class="na">of</span><span class="o">(</span><span class="mi">12</span><span class="o">,</span><span class="mi">59</span><span class="o">,</span><span class="mo">00</span><span class="o">);</span>
+
+<span class="nc">Duration</span> <span class="n">duration</span> <span class="o">=</span> <span class="nc">Duration</span><span class="o">.</span><span class="na">between</span><span class="o">(</span><span class="n">startTime</span><span class="o">,</span> <span class="n">endTime</span><span class="o">);</span>
+<span class="n">duration</span><span class="o">.</span><span class="na">getSeconds</span><span class="o">();</span>      <span class="c1">// 초의 차이</span>
+<span class="n">duration</span><span class="o">.</span><span class="na">getNano</span><span class="o">();</span>         <span class="c1">// 나노초의 차이</span>
+</code></pre></div></div>
+
+<p><br /></p>
+
+<h2 id="전체-시간을-기준으로-차이-계산">전체 시간을 기준으로 차이 계산</h2>
+
+<ul>
+  <li>
+    <p>Period 클래스의 between()메소드를 사용해서 계산하는 경우</p>
+  </li>
+  <li>
+    <p>예를 들어 계산 결과가 1개월 3일 차이 일때 33일이 나오도록 전체 일을 구하는 방법은 
+ChronoUnit 클래스의 between(Temporal start, Temporal end) 메소드를 사용하면 되고, 리턴 타입은 long 이다.</p>
+  </li>
+</ul>
+
+<div class="table">
+<table>
+  <thead>
+    <tr>
+      <th>클래스</th>
+      <th>설명</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>ChronoUnit.YEARS</td>
+      <td>전체 년 차이</td>
+    </tr>
+    <tr>
+      <td>ChronoUnit.MONTHS</td>
+      <td>전체 월 차이</td>
+    </tr>
+    <tr>
+      <td>ChronoUnit.WEEKS</td>
+      <td>전체 주 차이</td>
+    </tr>
+    <tr>
+      <td>ChronoUnit.DAYS</td>
+      <td>전체 일 차이</td>
+    </tr>
+    <tr>
+      <td>ChronoUnit.HOURS</td>
+      <td>전체 시간 차이</td>
+    </tr>
+    <tr>
+      <td>ChronoUnit.SECONDS</td>
+      <td>전체 초 차이</td>
+    </tr>
+    <tr>
+      <td>ChronoUnit.MILLIS</td>
+      <td>전체 밀리초 차이</td>
+    </tr>
+    <tr>
+      <td>ChronoUnit.NANOS</td>
+      <td>전체 나노초 차이</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">LocalDate</span> <span class="n">startDate</span> <span class="o">=</span> <span class="nc">LocalDate</span><span class="o">.</span><span class="na">now</span><span class="o">();</span> <span class="c1">// 2020-04-02</span>
+<span class="nc">LocalDate</span> <span class="n">endDate</span> <span class="o">=</span> <span class="nc">LocalDate</span><span class="o">.</span><span class="na">of</span><span class="o">(</span><span class="mi">2020</span><span class="o">,</span><span class="mi">5</span><span class="o">,</span><span class="mi">5</span><span class="o">);</span>
+
+<span class="nc">ChronoUnit</span><span class="o">.</span><span class="na">DAYS</span><span class="o">.</span><span class="na">between</span><span class="o">(</span><span class="n">startDate</span><span class="o">,</span> <span class="n">endDate</span><span class="o">);</span> <span class="c1">// 결과 : 33 (1개월 3일)</span>
+</code></pre></div></div>
+
+<p><br /></p>
+
+<h2 id="날짜-포맷하기">날짜 포맷하기</h2>
+
+<ul>
+  <li>format(DateTimeFormatter formatter) 메소드를 사용해서 원하는 문자열로 변환시킬 수 있다.</li>
+</ul>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">LocalDateTime</span> <span class="n">now</span> <span class="o">=</span> <span class="nc">LocalDateTime</span><span class="o">.</span><span class="na">now</span><span class="o">();</span>
+<span class="nc">DateTimeFormatter</span> <span class="n">dateTimeFormatter</span> <span class="o">=</span> <span class="nc">DateTimeFormatter</span><span class="o">.</span><span class="na">ofPattern</span><span class="o">(</span><span class="s">"yyyy년 M월 d일 a h시 m분"</span><span class="o">);</span>
+<span class="nc">String</span> <span class="n">nowString</span> <span class="o">=</span> <span class="n">now</span><span class="o">.</span><span class="na">format</span><span class="o">(</span><span class="n">dateTimeFormatter</span><span class="o">);</span>   <span class="c1">// 결과 : 2020년 4월 2일 오전 1시 4분</span>
+</code></pre></div></div>
+
+<p><br /></p>
+
+<h3 id="reference">Reference</h3>
+
+<ul>
+  <li><a href="http://blog.eomdev.com/java/2016/04/01/%EC%9E%90%EB%B0%948%EC%9D%98-java.time-%ED%8C%A8%ED%82%A4%EC%A7%80.html">Reference</a></li>
+</ul>
 
 
 
@@ -1863,9 +1989,9 @@ etc_hosts hosts text tmp/
       }
 
       var d = function () {
-        this.page.title = "[유닉스] 복사, 삭제, 이동",
-          this.page.identifier = "/devlog/2020/02/29/unix-11",
-          this.page.url = "https://m-veloper.github.io/devlog/2020/02/29/unix-11/"
+        this.page.title = "[JAVA] 자바(java.time) 날짜, 시간 구하기 (LocalDate, LocalTime, LocalDateTime 사용법)",
+          this.page.identifier = "/tip/2020/06/30/tip-java-08",
+          this.page.url = "https://m-veloper.github.io/tip/2020/06/30/tip-java-08/"
       };
       s._disqusFirst = void 0 === s._disqusFirst || s._disqusFirst, s._disqusLoading = void 0 !== s._disqusLoading && s._disqusLoading, s._disqusThis = !1, s._disqusThreadOffsetTop = i.getElementById(
         "disqus_thread").offsetTop, s._disqusLoading ? s._disqusFirst = !1 : (s._disqusLoading = !0, loadJSDeferred(
