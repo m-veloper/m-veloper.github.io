@@ -4,12 +4,22 @@
  <title>슬기로운 개발 생활</title>
  <link href="https://m-veloper.github.io/atom.xml" rel="self"/>
  <id>https://m-veloper.github.io</id>
- <updated>2020-06-30T21:34:51+09:00</updated>
+ <updated>2020-07-01T10:33:43+09:00</updated>
  <author>
    <name>m-veloper</name>
    <uri>https://m-veloper.github.io</uri>
    <email>m_veloper@naver.com</email>
  </author>
+
+ 
+
+ <entry>
+   <title>[JAVA] 자바(java.time) 날짜, 시간 구하기 (LocalDate, LocalTime, LocalDateTime 자주쓰는 메소드 정리)</title>
+   <link href="https://m-veloper.github.io/tip/2020/07/01/tip-java-09/"/>
+   <id>https://m-veloper.github.io/tip/2020/07/01/tip-java-09</id>
+   <updated>2020-07-01T00:00:00+09:00</updated>
+   <content type="html">&lt;p&gt;&lt;img src=&quot;/assets/img/java/2020-07-01-tip-java-09.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt; &lt;h1 id=&quot;자주-쓰는-메소드-정리&quot;&gt;자주 쓰는 메소드 정리&lt;/h1&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;LocalDate : [ 년,월,일 ]과 같은 날짜만 표현&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;LocalTime : [시,분,초]와 같이 시간만 표현&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;LocalDateTime : [ 년,월,일,시,분,초 ]를 표현&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Period : 두 날짜 사이의 [년,월,일]로 표현&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Duration : 두 시간...</content>
+ </entry>
 
  
 
@@ -99,16 +109,6 @@
    <id>https://m-veloper.github.io/tip/2020/06/21/tip-javascript-21</id>
    <updated>2020-06-21T00:00:00+09:00</updated>
    <content type="html">&lt;p&gt;&lt;img src=&quot;/assets/img/javascript/2020-06-21-tip-javascript-21.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt; &lt;h1 id=&quot;checkbox&quot;&gt;Checkbox&lt;/h1&gt; &lt;p&gt;체크박스에 제이쿼리나 자바스크립트로 이벤트를 처리해야할 경우가 종종 있다.&lt;/p&gt; &lt;p&gt;&lt;br /&gt;&lt;/p&gt; &lt;h2 id=&quot;checked-여부-확인하기&quot;&gt;checked 여부 확인하기&lt;/h2&gt; &lt;ul&gt; &lt;li&gt;id로 확인하기&lt;/li&gt; &lt;/ul&gt; &lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;input:checkbox[id=&quot;checkbox_id&quot;]&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;is&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;:checked&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt; &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt; &lt;ul&gt; &lt;li&gt;name 으로 확인하기&lt;/li&gt;...</content>
- </entry>
-
- 
-
- <entry>
-   <title>[CSS] checkbox 사이즈 조절(네모 크기 늘리기)</title>
-   <link href="https://m-veloper.github.io/tip/2020/06/20/tip-css-08/"/>
-   <id>https://m-veloper.github.io/tip/2020/06/20/tip-css-08</id>
-   <updated>2020-06-20T00:00:00+09:00</updated>
-   <content type="html">&lt;p&gt;&lt;img src=&quot;/assets/img/css/2020-06-20-tip-css-08.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt; &lt;h1 id=&quot;checkbox-사이즈크기-조절-방법&quot;&gt;checkbox 사이즈(크기) 조절 방법&lt;/h1&gt; &lt;ul&gt; &lt;li&gt;첫 번째 방법&lt;/li&gt; &lt;/ul&gt; &lt;div class=&quot;language-css highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;checkbox&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;-ms-transform&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;scale&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;/* IE */&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;-moz-transform&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;scale&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;/* FF...</content>
  </entry>
 
  
