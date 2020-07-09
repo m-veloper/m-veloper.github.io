@@ -1,6 +1,22 @@
 [
 
 {
+"title"    : "[JAVA] 자바 메모리 구조 - 2편",
+"category" : "",
+"tags"     : "web, java, memory",
+"url"      : "/tip/2020/07/04/tip-java-11/",
+"date"     : "2020-07-04 00:00:00 +0900"
+} ,
+
+{
+"title"    : "[JAVA] 자바 메모리 구조 - 1편",
+"category" : "",
+"tags"     : "web, java, memory",
+"url"      : "/tip/2020/07/03/tip-java-10/",
+"date"     : "2020-07-03 00:00:00 +0900"
+} ,
+
+{
 "title"    : "[JAVA] 자바(java.time) 날짜, 시간 구하기 (LocalDate, LocalTime, LocalDateTime 자주쓰는 메소드 정리)",
 "category" : "",
 "tags"     : "web, java, static",

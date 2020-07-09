@@ -4,12 +4,32 @@
  <title>슬기로운 개발 생활</title>
  <link href="https://m-veloper.github.io/atom.xml" rel="self"/>
  <id>https://m-veloper.github.io</id>
- <updated>2020-07-01T10:33:43+09:00</updated>
+ <updated>2020-07-09T16:09:24+09:00</updated>
  <author>
    <name>m-veloper</name>
    <uri>https://m-veloper.github.io</uri>
    <email>m_veloper@naver.com</email>
  </author>
+
+ 
+
+ <entry>
+   <title>[JAVA] 자바 메모리 구조 - 2편</title>
+   <link href="https://m-veloper.github.io/tip/2020/07/04/tip-java-11/"/>
+   <id>https://m-veloper.github.io/tip/2020/07/04/tip-java-11</id>
+   <updated>2020-07-04T00:00:00+09:00</updated>
+   <content type="html">&lt;p&gt;&lt;img src=&quot;/assets/img/java/2020-07-04-tip-java-11.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt; &lt;h1 id=&quot;스택-영역stack-area&quot;&gt;스택 영역(Stack Area)&lt;/h1&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;스택 영역에는 지역변수와 매개변수가 저장된다.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;참조변수에 저장되는 메모리주소는 스택영역에 저장되지만, 그 주소가 가리키는 메모리는 모두 힙 영역에 저장된다.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;지역변수 : 로컬변수(local variable)&lt;/p&gt; &lt;ul&gt; &lt;li&gt;메소드 내에서 선언된 변수&lt;/li&gt; &lt;/ul&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;매개변수 : 파라미터(parameter)&lt;/p&gt; &lt;ul&gt; &lt;li&gt;메소드에 argument(인자)로...</content>
+ </entry>
+
+ 
+
+ <entry>
+   <title>[JAVA] 자바 메모리 구조 - 1편</title>
+   <link href="https://m-veloper.github.io/tip/2020/07/03/tip-java-10/"/>
+   <id>https://m-veloper.github.io/tip/2020/07/03/tip-java-10</id>
+   <updated>2020-07-03T00:00:00+09:00</updated>
+   <content type="html">&lt;p&gt;&lt;img src=&quot;/assets/img/java/2020-07-03-tip-java-10.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt; &lt;h1 id=&quot;자바-메모리-구조&quot;&gt;자바 메모리 구조&lt;/h1&gt; &lt;ul&gt; &lt;li&gt;컴퓨터 프로그램이 실행되기 위해 필요한 메모리를 우리는 ‘메인 메모리’라고 한다.&lt;/li&gt; &lt;li&gt;물리적으로는 우리가 램(RAM)이라고 부르기도 한다&lt;/li&gt; &lt;li&gt;메인메모리를 관리하는게 OS이고, JVM(자바 버추얼 머신!)은 OS로부터 필요한만큼 할당 받음.&lt;/li&gt; &lt;li&gt;JVM은 OS로부터 받은 메모리를  나누어 관리함&lt;/li&gt; &lt;li&gt;OS로부터 받은 메모리 공간을 “Runtime Data Area”라고 하며. 이 부분을 5개...</content>
+ </entry>
 
  
 
@@ -89,26 +109,6 @@
    <id>https://m-veloper.github.io/tip/2020/06/23/tip-javascript-22</id>
    <updated>2020-06-23T00:00:00+09:00</updated>
    <content type="html">&lt;p&gt;&lt;img src=&quot;/assets/img/javascript/2020-06-23-tip-javascript-22.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt; &lt;h1 id=&quot;자동으로-콤마-입력&quot;&gt;자동으로 콤마(,) 입력&lt;/h1&gt; &lt;p&gt;input 태그에 숫자를 입력시에 천 단위마다 자동으로 콤마를 찍어주는 팁입니다. “common.js” 라는 파일을 만들어 이렇게 전역적으로 사용되는 파일들을 작성하고 사용하시면 더 깔끔하게 사용하실 수 있어요.&lt;/p&gt; &lt;p&gt;&lt;br /&gt;&lt;/p&gt; &lt;h2 id=&quot;html-작성&quot;&gt;HTML 작성&lt;/h2&gt; &lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;nt&quot;&gt;&amp;lt;input&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;type=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;text&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;id=&lt;/span&gt;&lt;span...</content>
- </entry>
-
- 
-
- <entry>
-   <title>[Datatable] 제이쿼리 데이터데이블, 컬럼안에서 계산하는 팁 (DataTables, calculated column) </title>
-   <link href="https://m-veloper.github.io/tip/2020/06/22/tip-datatable-01/"/>
-   <id>https://m-veloper.github.io/tip/2020/06/22/tip-datatable-01</id>
-   <updated>2020-06-22T00:00:00+09:00</updated>
-   <content type="html">&lt;p&gt;&lt;img src=&quot;/assets/img/datatable/2020-06-22-tip-datatable-01.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt; &lt;h1 id=&quot;컬럼안에서-계산하는-팁-datatables-calculated-column&quot;&gt;컬럼안에서 계산하는 팁 (DataTables, calculated column)&lt;/h1&gt; &lt;p&gt;데이터테이블을 사용중에 columns: [] 영역 안에서 서버에서 전달되는 data들끼리 연산해야할 때가 있습니다. 보통은 각각 전달되는 data: “객체명” 으로 하나씩 밖에 뿌려주지 못 하는데요, 아래와 같은 방법을 사용하면 쉽게 data: “객체명” + data: “객체명” 처럼 연산을 할 수 있습니다.&lt;/p&gt; &lt;div...</content>
- </entry>
-
- 
-
- <entry>
-   <title>[jQuery(제이쿼리)] 체크박스 값(checkbox value) 가져오기</title>
-   <link href="https://m-veloper.github.io/tip/2020/06/21/tip-javascript-21/"/>
-   <id>https://m-veloper.github.io/tip/2020/06/21/tip-javascript-21</id>
-   <updated>2020-06-21T00:00:00+09:00</updated>
-   <content type="html">&lt;p&gt;&lt;img src=&quot;/assets/img/javascript/2020-06-21-tip-javascript-21.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt; &lt;h1 id=&quot;checkbox&quot;&gt;Checkbox&lt;/h1&gt; &lt;p&gt;체크박스에 제이쿼리나 자바스크립트로 이벤트를 처리해야할 경우가 종종 있다.&lt;/p&gt; &lt;p&gt;&lt;br /&gt;&lt;/p&gt; &lt;h2 id=&quot;checked-여부-확인하기&quot;&gt;checked 여부 확인하기&lt;/h2&gt; &lt;ul&gt; &lt;li&gt;id로 확인하기&lt;/li&gt; &lt;/ul&gt; &lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;input:checkbox[id=&quot;checkbox_id&quot;]&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;is&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;:checked&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt; &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt; &lt;ul&gt; &lt;li&gt;name 으로 확인하기&lt;/li&gt;...</content>
  </entry>
 
  
