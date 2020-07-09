@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4c62f87d-2e27-4843-baac-9df94dc5670e" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/10/index.html" afterPath="$PROJECT_DIR$/10/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/11/index.html" afterPath="$PROJECT_DIR$/11/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/12/index.html" afterPath="$PROJECT_DIR$/12/index.html" />
@@ -304,6 +305,8 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tip/2020/06/28/tip-css-10/index.html" afterPath="$PROJECT_DIR$/tip/2020/06/28/tip-css-10/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tip/2020/06/30/tip-java-08/index.html" afterPath="$PROJECT_DIR$/tip/2020/06/30/tip-java-08/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tip/2020/07/01/tip-java-09/index.html" afterPath="$PROJECT_DIR$/tip/2020/07/01/tip-java-09/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tip/2020/07/03/tip-java-10/index.html" afterPath="$PROJECT_DIR$/tip/2020/07/03/tip-java-10/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tip/2020/07/04/tip-java-11/index.html" afterPath="$PROJECT_DIR$/tip/2020/07/04/tip-java-11/index.html" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -319,9 +322,15 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/2020/01/01/portfolio-17/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="350">
-              <caret line="1545" column="76" lean-forward="true" selection-start-line="1545" selection-start-column="76" selection-end-line="1545" selection-end-column="76" />
-              <folding />
+            <state relative-caret-position="185">
+              <caret line="1535" column="27" lean-forward="false" selection-start-line="1535" selection-start-column="27" selection-end-line="1535" selection-end-column="27" />
+              <folding>
+                <marker date="1594308779031" expanded="true" signature="31945:32397" ph="..." />
+                <marker date="1594308779031" expanded="true" signature="31945:32405" ph="..." />
+                <marker date="1594308779031" expanded="true" signature="31969:32197" ph="..." />
+                <marker date="1594308779031" expanded="true" signature="32259:32387" ph="..." />
+                <marker date="1594308779031" expanded="true" signature="32353:32378" ph="{...}" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -401,8 +410,8 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scratches" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -681,6 +690,7 @@
       <setting name="passParentEnv" value="true" />
       <setting name="launchBrowser" value="true" />
       <setting name="launchBrowserUrl" value="" />
+      <setting name="depsClasspath" value="false" />
       <method />
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
@@ -764,9 +774,6 @@
       <option name="workingDirectory" />
       <option name="isAlternativeJrePathEnabled" value="false" />
       <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="project" working-dir="">
       <method />
     </configuration>
     <configuration default="true" type="PyBehaveRunConfigurationType" factoryName="Behave">
@@ -872,6 +879,12 @@
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.npm" factoryName="npm">
@@ -879,19 +892,6 @@
       <scripts />
       <node-interpreter value="project" />
       <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="mocha-javascript-test-runner" factoryName="Mocha">
-      <node-interpreter>project</node-interpreter>
-      <node-options />
-      <working-directory />
-      <pass-parent-env>true</pass-parent-env>
-      <envs />
-      <ui />
-      <extra-mocha-options />
-      <test-kind>DIRECTORY</test-kind>
-      <test-directory />
-      <recursive>false</recursive>
       <method />
     </configuration>
     <configuration default="true" type="osgi.bnd.run" factoryName="Run Launcher">
@@ -991,10 +991,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22854000" />
+    <option name="totallyTimeSpent" value="22872000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="1912" y="-8" width="1936" height="1056" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1013,7 +1013,7 @@
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32486773" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32473117" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1022,10 +1022,33 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1043,7 +1066,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <marker date="1594308779031" expanded="true" signature="31945:32397" ph="..." />
+            <marker date="1594308779031" expanded="true" signature="31945:32405" ph="..." />
+            <marker date="1594308779031" expanded="true" signature="31969:32197" ph="..." />
+            <marker date="1594308779031" expanded="true" signature="32259:32387" ph="..." />
+            <marker date="1594308779031" expanded="true" signature="32353:32378" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1051,7 +1080,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <marker date="1594308779031" expanded="true" signature="31945:32397" ph="..." />
+            <marker date="1594308779031" expanded="true" signature="31945:32405" ph="..." />
+            <marker date="1594308779031" expanded="true" signature="31969:32197" ph="..." />
+            <marker date="1594308779031" expanded="true" signature="32259:32387" ph="..." />
+            <marker date="1594308779031" expanded="true" signature="32353:32378" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1059,7 +1094,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <marker date="1594308779031" expanded="true" signature="31945:32397" ph="..." />
+            <marker date="1594308779031" expanded="true" signature="31945:32405" ph="..." />
+            <marker date="1594308779031" expanded="true" signature="31969:32197" ph="..." />
+            <marker date="1594308779031" expanded="true" signature="32259:32387" ph="..." />
+            <marker date="1594308779031" expanded="true" signature="32353:32378" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1067,303 +1108,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/2020/01/01/portfolio-17/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/2020/01/01/portfolio-17/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/2020/01/01/portfolio-17/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/2020/01/01/portfolio-17/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/2020/01/01/portfolio-17/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/2020/01/01/portfolio-17/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/2020/01/01/portfolio-17/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/2020/01/01/portfolio-17/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/2020/01/01/portfolio-17/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/2020/01/01/portfolio-17/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/2020/01/01/portfolio-17/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/2020/01/01/portfolio-17/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/2020/01/01/portfolio-17/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/2020/01/01/portfolio-17/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/2020/01/01/portfolio-17/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/2020/01/01/portfolio-17/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/2020/01/01/portfolio-17/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/2020/01/01/portfolio-17/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/2020/01/01/portfolio-17/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/2020/01/01/portfolio-17/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/2020/01/01/portfolio-17/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/2020/01/01/portfolio-17/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/2020/01/01/portfolio-17/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/2020/01/01/portfolio-17/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/2020/01/01/portfolio-17/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/2020/01/01/portfolio-17/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/2020/01/01/portfolio-17/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/2020/01/01/portfolio-17/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/2020/01/01/portfolio-17/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/2020/01/01/portfolio-17/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/2020/01/01/portfolio-17/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/2020/01/01/portfolio-17/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/2020/01/01/portfolio-17/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/2020/01/01/portfolio-17/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/2020/01/01/portfolio-17/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/2020/01/01/portfolio-17/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/2020/01/01/portfolio-17/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <marker date="1594308779031" expanded="true" signature="31945:32397" ph="..." />
+            <marker date="1594308779031" expanded="true" signature="31945:32405" ph="..." />
+            <marker date="1594308779031" expanded="true" signature="31969:32197" ph="..." />
+            <marker date="1594308779031" expanded="true" signature="32259:32387" ph="..." />
+            <marker date="1594308779031" expanded="true" signature="32353:32378" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1383,9 +1134,617 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/2020/01/01/portfolio-17/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="1545" column="76" lean-forward="true" selection-start-line="1545" selection-start-column="76" selection-end-line="1545" selection-end-column="76" />
-          <folding />
+        <state relative-caret-position="185">
+          <caret line="1530" column="27" lean-forward="false" selection-start-line="1530" selection-start-column="27" selection-end-line="1530" selection-end-column="27" />
+          <folding>
+            <marker date="1594308779031" expanded="true" signature="31945:32397" ph="..." />
+            <marker date="1594308779031" expanded="true" signature="31945:32405" ph="..." />
+            <marker date="1594308779031" expanded="true" signature="31969:32197" ph="..." />
+            <marker date="1594308779031" expanded="true" signature="32259:32387" ph="..." />
+            <marker date="1594308779031" expanded="true" signature="32353:32378" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/2020/01/01/portfolio-17/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1594308779031" expanded="true" signature="31945:32397" ph="..." />
+            <marker date="1594308779031" expanded="true" signature="31945:32405" ph="..." />
+            <marker date="1594308779031" expanded="true" signature="31969:32197" ph="..." />
+            <marker date="1594308779031" expanded="true" signature="32259:32387" ph="..." />
+            <marker date="1594308779031" expanded="true" signature="32353:32378" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/2020/01/01/portfolio-17/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1594308779031" expanded="true" signature="31945:32397" ph="..." />
+            <marker date="1594308779031" expanded="true" signature="31945:32405" ph="..." />
+            <marker date="1594308779031" expanded="true" signature="31969:32197" ph="..." />
+            <marker date="1594308779031" expanded="true" signature="32259:32387" ph="..." />
+            <marker date="1594308779031" expanded="true" signature="32353:32378" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/2020/01/01/portfolio-17/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1594308779031" expanded="true" signature="31945:32397" ph="..." />
+            <marker date="1594308779031" expanded="true" signature="31945:32405" ph="..." />
+            <marker date="1594308779031" expanded="true" signature="31969:32197" ph="..." />
+            <marker date="1594308779031" expanded="true" signature="32259:32387" ph="..." />
+            <marker date="1594308779031" expanded="true" signature="32353:32378" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/2020/01/01/portfolio-17/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1594308779031" expanded="true" signature="31945:32397" ph="..." />
+            <marker date="1594308779031" expanded="true" signature="31945:32405" ph="..." />
+            <marker date="1594308779031" expanded="true" signature="31969:32197" ph="..." />
+            <marker date="1594308779031" expanded="true" signature="32259:32387" ph="..." />
+            <marker date="1594308779031" expanded="true" signature="32353:32378" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/2020/01/01/portfolio-17/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1594308779031" expanded="true" signature="31945:32397" ph="..." />
+            <marker date="1594308779031" expanded="true" signature="31945:32405" ph="..." />
+            <marker date="1594308779031" expanded="true" signature="31969:32197" ph="..." />
+            <marker date="1594308779031" expanded="true" signature="32259:32387" ph="..." />
+            <marker date="1594308779031" expanded="true" signature="32353:32378" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/2020/01/01/portfolio-17/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1594308779031" expanded="true" signature="31945:32397" ph="..." />
+            <marker date="1594308779031" expanded="true" signature="31945:32405" ph="..." />
+            <marker date="1594308779031" expanded="true" signature="31969:32197" ph="..." />
+            <marker date="1594308779031" expanded="true" signature="32259:32387" ph="..." />
+            <marker date="1594308779031" expanded="true" signature="32353:32378" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/2020/01/01/portfolio-17/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1594308779031" expanded="true" signature="31945:32397" ph="..." />
+            <marker date="1594308779031" expanded="true" signature="31945:32405" ph="..." />
+            <marker date="1594308779031" expanded="true" signature="31969:32197" ph="..." />
+            <marker date="1594308779031" expanded="true" signature="32259:32387" ph="..." />
+            <marker date="1594308779031" expanded="true" signature="32353:32378" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/2020/01/01/portfolio-17/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1594308779031" expanded="true" signature="31945:32397" ph="..." />
+            <marker date="1594308779031" expanded="true" signature="31945:32405" ph="..." />
+            <marker date="1594308779031" expanded="true" signature="31969:32197" ph="..." />
+            <marker date="1594308779031" expanded="true" signature="32259:32387" ph="..." />
+            <marker date="1594308779031" expanded="true" signature="32353:32378" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/2020/01/01/portfolio-17/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1594308779031" expanded="true" signature="31945:32397" ph="..." />
+            <marker date="1594308779031" expanded="true" signature="31945:32405" ph="..." />
+            <marker date="1594308779031" expanded="true" signature="31969:32197" ph="..." />
+            <marker date="1594308779031" expanded="true" signature="32259:32387" ph="..." />
+            <marker date="1594308779031" expanded="true" signature="32353:32378" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/2020/01/01/portfolio-17/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1594308779031" expanded="true" signature="31945:32397" ph="..." />
+            <marker date="1594308779031" expanded="true" signature="31945:32405" ph="..." />
+            <marker date="1594308779031" expanded="true" signature="31969:32197" ph="..." />
+            <marker date="1594308779031" expanded="true" signature="32259:32387" ph="..." />
+            <marker date="1594308779031" expanded="true" signature="32353:32378" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/2020/01/01/portfolio-17/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1594308779031" expanded="true" signature="31945:32397" ph="..." />
+            <marker date="1594308779031" expanded="true" signature="31945:32405" ph="..." />
+            <marker date="1594308779031" expanded="true" signature="31969:32197" ph="..." />
+            <marker date="1594308779031" expanded="true" signature="32259:32387" ph="..." />
+            <marker date="1594308779031" expanded="true" signature="32353:32378" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/2020/01/01/portfolio-17/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1594308779031" expanded="true" signature="31945:32397" ph="..." />
+            <marker date="1594308779031" expanded="true" signature="31945:32405" ph="..." />
+            <marker date="1594308779031" expanded="true" signature="31969:32197" ph="..." />
+            <marker date="1594308779031" expanded="true" signature="32259:32387" ph="..." />
+            <marker date="1594308779031" expanded="true" signature="32353:32378" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/2020/01/01/portfolio-17/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1594308779031" expanded="true" signature="31945:32397" ph="..." />
+            <marker date="1594308779031" expanded="true" signature="31945:32405" ph="..." />
+            <marker date="1594308779031" expanded="true" signature="31969:32197" ph="..." />
+            <marker date="1594308779031" expanded="true" signature="32259:32387" ph="..." />
+            <marker date="1594308779031" expanded="true" signature="32353:32378" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/2020/01/01/portfolio-17/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1594308779031" expanded="true" signature="31945:32397" ph="..." />
+            <marker date="1594308779031" expanded="true" signature="31945:32405" ph="..." />
+            <marker date="1594308779031" expanded="true" signature="31969:32197" ph="..." />
+            <marker date="1594308779031" expanded="true" signature="32259:32387" ph="..." />
+            <marker date="1594308779031" expanded="true" signature="32353:32378" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/2020/01/01/portfolio-17/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1594308779031" expanded="true" signature="31945:32397" ph="..." />
+            <marker date="1594308779031" expanded="true" signature="31945:32405" ph="..." />
+            <marker date="1594308779031" expanded="true" signature="31969:32197" ph="..." />
+            <marker date="1594308779031" expanded="true" signature="32259:32387" ph="..." />
+            <marker date="1594308779031" expanded="true" signature="32353:32378" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/2020/01/01/portfolio-17/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1594308779031" expanded="true" signature="31945:32397" ph="..." />
+            <marker date="1594308779031" expanded="true" signature="31945:32405" ph="..." />
+            <marker date="1594308779031" expanded="true" signature="31969:32197" ph="..." />
+            <marker date="1594308779031" expanded="true" signature="32259:32387" ph="..." />
+            <marker date="1594308779031" expanded="true" signature="32353:32378" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/2020/01/01/portfolio-17/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1594308779031" expanded="true" signature="31945:32397" ph="..." />
+            <marker date="1594308779031" expanded="true" signature="31945:32405" ph="..." />
+            <marker date="1594308779031" expanded="true" signature="31969:32197" ph="..." />
+            <marker date="1594308779031" expanded="true" signature="32259:32387" ph="..." />
+            <marker date="1594308779031" expanded="true" signature="32353:32378" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/2020/01/01/portfolio-17/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1594308779031" expanded="true" signature="31945:32397" ph="..." />
+            <marker date="1594308779031" expanded="true" signature="31945:32405" ph="..." />
+            <marker date="1594308779031" expanded="true" signature="31969:32197" ph="..." />
+            <marker date="1594308779031" expanded="true" signature="32259:32387" ph="..." />
+            <marker date="1594308779031" expanded="true" signature="32353:32378" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/2020/01/01/portfolio-17/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1594308779031" expanded="true" signature="31945:32397" ph="..." />
+            <marker date="1594308779031" expanded="true" signature="31945:32405" ph="..." />
+            <marker date="1594308779031" expanded="true" signature="31969:32197" ph="..." />
+            <marker date="1594308779031" expanded="true" signature="32259:32387" ph="..." />
+            <marker date="1594308779031" expanded="true" signature="32353:32378" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/2020/01/01/portfolio-17/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1594308779031" expanded="true" signature="31945:32397" ph="..." />
+            <marker date="1594308779031" expanded="true" signature="31945:32405" ph="..." />
+            <marker date="1594308779031" expanded="true" signature="31969:32197" ph="..." />
+            <marker date="1594308779031" expanded="true" signature="32259:32387" ph="..." />
+            <marker date="1594308779031" expanded="true" signature="32353:32378" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/2020/01/01/portfolio-17/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1594308779031" expanded="true" signature="31945:32397" ph="..." />
+            <marker date="1594308779031" expanded="true" signature="31945:32405" ph="..." />
+            <marker date="1594308779031" expanded="true" signature="31969:32197" ph="..." />
+            <marker date="1594308779031" expanded="true" signature="32259:32387" ph="..." />
+            <marker date="1594308779031" expanded="true" signature="32353:32378" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/2020/01/01/portfolio-17/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1594308779031" expanded="true" signature="31945:32397" ph="..." />
+            <marker date="1594308779031" expanded="true" signature="31945:32405" ph="..." />
+            <marker date="1594308779031" expanded="true" signature="31969:32197" ph="..." />
+            <marker date="1594308779031" expanded="true" signature="32259:32387" ph="..." />
+            <marker date="1594308779031" expanded="true" signature="32353:32378" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/2020/01/01/portfolio-17/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1594308779031" expanded="true" signature="31945:32397" ph="..." />
+            <marker date="1594308779031" expanded="true" signature="31945:32405" ph="..." />
+            <marker date="1594308779031" expanded="true" signature="31969:32197" ph="..." />
+            <marker date="1594308779031" expanded="true" signature="32259:32387" ph="..." />
+            <marker date="1594308779031" expanded="true" signature="32353:32378" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/2020/01/01/portfolio-17/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1594308779031" expanded="true" signature="31945:32397" ph="..." />
+            <marker date="1594308779031" expanded="true" signature="31945:32405" ph="..." />
+            <marker date="1594308779031" expanded="true" signature="31969:32197" ph="..." />
+            <marker date="1594308779031" expanded="true" signature="32259:32387" ph="..." />
+            <marker date="1594308779031" expanded="true" signature="32353:32378" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/2020/01/01/portfolio-17/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1594308779031" expanded="true" signature="31945:32397" ph="..." />
+            <marker date="1594308779031" expanded="true" signature="31945:32405" ph="..." />
+            <marker date="1594308779031" expanded="true" signature="31969:32197" ph="..." />
+            <marker date="1594308779031" expanded="true" signature="32259:32387" ph="..." />
+            <marker date="1594308779031" expanded="true" signature="32353:32378" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/2020/01/01/portfolio-17/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1594308779031" expanded="true" signature="31945:32397" ph="..." />
+            <marker date="1594308779031" expanded="true" signature="31945:32405" ph="..." />
+            <marker date="1594308779031" expanded="true" signature="31969:32197" ph="..." />
+            <marker date="1594308779031" expanded="true" signature="32259:32387" ph="..." />
+            <marker date="1594308779031" expanded="true" signature="32353:32378" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/2020/01/01/portfolio-17/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1594308779031" expanded="true" signature="31945:32397" ph="..." />
+            <marker date="1594308779031" expanded="true" signature="31945:32405" ph="..." />
+            <marker date="1594308779031" expanded="true" signature="31969:32197" ph="..." />
+            <marker date="1594308779031" expanded="true" signature="32259:32387" ph="..." />
+            <marker date="1594308779031" expanded="true" signature="32353:32378" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/2020/01/01/portfolio-17/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1594308779031" expanded="true" signature="31945:32397" ph="..." />
+            <marker date="1594308779031" expanded="true" signature="31945:32405" ph="..." />
+            <marker date="1594308779031" expanded="true" signature="31969:32197" ph="..." />
+            <marker date="1594308779031" expanded="true" signature="32259:32387" ph="..." />
+            <marker date="1594308779031" expanded="true" signature="32353:32378" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/2020/01/01/portfolio-17/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1594308779031" expanded="true" signature="31945:32397" ph="..." />
+            <marker date="1594308779031" expanded="true" signature="31945:32405" ph="..." />
+            <marker date="1594308779031" expanded="true" signature="31969:32197" ph="..." />
+            <marker date="1594308779031" expanded="true" signature="32259:32387" ph="..." />
+            <marker date="1594308779031" expanded="true" signature="32353:32378" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/2020/01/01/portfolio-17/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1594308779031" expanded="true" signature="31945:32397" ph="..." />
+            <marker date="1594308779031" expanded="true" signature="31945:32405" ph="..." />
+            <marker date="1594308779031" expanded="true" signature="31969:32197" ph="..." />
+            <marker date="1594308779031" expanded="true" signature="32259:32387" ph="..." />
+            <marker date="1594308779031" expanded="true" signature="32353:32378" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/2020/01/01/portfolio-17/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1594308779031" expanded="true" signature="31945:32397" ph="..." />
+            <marker date="1594308779031" expanded="true" signature="31945:32405" ph="..." />
+            <marker date="1594308779031" expanded="true" signature="31969:32197" ph="..." />
+            <marker date="1594308779031" expanded="true" signature="32259:32387" ph="..." />
+            <marker date="1594308779031" expanded="true" signature="32353:32378" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/2020/01/01/portfolio-17/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1594308779031" expanded="true" signature="31945:32397" ph="..." />
+            <marker date="1594308779031" expanded="true" signature="31945:32405" ph="..." />
+            <marker date="1594308779031" expanded="true" signature="31969:32197" ph="..." />
+            <marker date="1594308779031" expanded="true" signature="32259:32387" ph="..." />
+            <marker date="1594308779031" expanded="true" signature="32353:32378" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/2020/01/01/portfolio-17/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1594308779031" expanded="true" signature="31945:32397" ph="..." />
+            <marker date="1594308779031" expanded="true" signature="31945:32405" ph="..." />
+            <marker date="1594308779031" expanded="true" signature="31969:32197" ph="..." />
+            <marker date="1594308779031" expanded="true" signature="32259:32387" ph="..." />
+            <marker date="1594308779031" expanded="true" signature="32353:32378" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/2020/01/01/portfolio-17/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1594308779031" expanded="true" signature="31945:32397" ph="..." />
+            <marker date="1594308779031" expanded="true" signature="31945:32405" ph="..." />
+            <marker date="1594308779031" expanded="true" signature="31969:32197" ph="..." />
+            <marker date="1594308779031" expanded="true" signature="32259:32387" ph="..." />
+            <marker date="1594308779031" expanded="true" signature="32353:32378" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/2020/01/01/portfolio-17/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1594308779031" expanded="true" signature="31945:32397" ph="..." />
+            <marker date="1594308779031" expanded="true" signature="31945:32405" ph="..." />
+            <marker date="1594308779031" expanded="true" signature="31969:32197" ph="..." />
+            <marker date="1594308779031" expanded="true" signature="32259:32387" ph="..." />
+            <marker date="1594308779031" expanded="true" signature="32353:32378" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/2020/01/01/portfolio-17/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1594308779031" expanded="true" signature="31945:32397" ph="..." />
+            <marker date="1594308779031" expanded="true" signature="31945:32405" ph="..." />
+            <marker date="1594308779031" expanded="true" signature="31969:32197" ph="..." />
+            <marker date="1594308779031" expanded="true" signature="32259:32387" ph="..." />
+            <marker date="1594308779031" expanded="true" signature="32353:32378" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/2020/01/01/portfolio-17/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1594308779031" expanded="true" signature="31945:32397" ph="..." />
+            <marker date="1594308779031" expanded="true" signature="31945:32405" ph="..." />
+            <marker date="1594308779031" expanded="true" signature="31969:32197" ph="..." />
+            <marker date="1594308779031" expanded="true" signature="32259:32387" ph="..." />
+            <marker date="1594308779031" expanded="true" signature="32353:32378" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/2020/01/01/portfolio-17/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1594308779031" expanded="true" signature="31945:32397" ph="..." />
+            <marker date="1594308779031" expanded="true" signature="31945:32405" ph="..." />
+            <marker date="1594308779031" expanded="true" signature="31969:32197" ph="..." />
+            <marker date="1594308779031" expanded="true" signature="32259:32387" ph="..." />
+            <marker date="1594308779031" expanded="true" signature="32353:32378" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/2020/01/01/portfolio-17/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1594308779031" expanded="true" signature="31945:32397" ph="..." />
+            <marker date="1594308779031" expanded="true" signature="31945:32405" ph="..." />
+            <marker date="1594308779031" expanded="true" signature="31969:32197" ph="..." />
+            <marker date="1594308779031" expanded="true" signature="32259:32387" ph="..." />
+            <marker date="1594308779031" expanded="true" signature="32353:32378" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/2020/01/01/portfolio-17/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1594308779031" expanded="true" signature="31945:32397" ph="..." />
+            <marker date="1594308779031" expanded="true" signature="31945:32405" ph="..." />
+            <marker date="1594308779031" expanded="true" signature="31969:32197" ph="..." />
+            <marker date="1594308779031" expanded="true" signature="32259:32387" ph="..." />
+            <marker date="1594308779031" expanded="true" signature="32353:32378" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/2020/01/01/portfolio-17/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1594308779031" expanded="true" signature="31945:32397" ph="..." />
+            <marker date="1594308779031" expanded="true" signature="31945:32405" ph="..." />
+            <marker date="1594308779031" expanded="true" signature="31969:32197" ph="..." />
+            <marker date="1594308779031" expanded="true" signature="32259:32387" ph="..." />
+            <marker date="1594308779031" expanded="true" signature="32353:32378" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tip/2020/03/04/tip-jstl-01/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="14" column="22" lean-forward="false" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tip/2020/03/04/tip-jstl-01/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="14" column="22" lean-forward="false" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/2020/01/01/portfolio-17/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="185">
+          <caret line="1535" column="27" lean-forward="false" selection-start-line="1535" selection-start-column="27" selection-end-line="1535" selection-end-column="27" />
+          <folding>
+            <marker date="1594308779031" expanded="true" signature="31945:32397" ph="..." />
+            <marker date="1594308779031" expanded="true" signature="31945:32405" ph="..." />
+            <marker date="1594308779031" expanded="true" signature="31969:32197" ph="..." />
+            <marker date="1594308779031" expanded="true" signature="32259:32387" ph="..." />
+            <marker date="1594308779031" expanded="true" signature="32353:32378" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
