@@ -1,6 +1,14 @@
 [
 
 {
+"title"    : "[ERROR_LOG] MyBatis Dynamic(동적) SQL 에러, org.apache.ibatis.ognl.ExpressionSyntaxException: Malformed OGNL expression ",
+"category" : "",
+"tags"     : "web, errorLog",
+"url"      : "/tip/2020/07/16/tip-errorlog-02/",
+"date"     : "2020-07-16 00:00:00 +0900"
+} ,
+
+{
 "title"    : "[JAVA] 자바 메모리 구조 - 2편",
 "category" : "",
 "tags"     : "web, java, memory",
