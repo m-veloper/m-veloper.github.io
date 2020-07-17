@@ -1,6 +1,14 @@
 [
 
 {
+"title"    : "[jQuery(제이쿼리)] JSTL을 사용하여 select box 값 고정하기",
+"category" : "",
+"tags"     : "web, javascript, jQuery, jstl, java",
+"url"      : "/tip/2020/07/17/tip-javascript-23/",
+"date"     : "2020-07-17 00:00:00 +0900"
+} ,
+
+{
 "title"    : "[ERROR_LOG] MyBatis Dynamic(동적) SQL 에러, org.apache.ibatis.ognl.ExpressionSyntaxException: Malformed OGNL expression ",
 "category" : "",
 "tags"     : "web, errorLog",
