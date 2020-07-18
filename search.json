@@ -1,6 +1,22 @@
 [
 
 {
+"title"    : "[자바스크립트] input value 에 JSON으로 데이터 전달하기",
+"category" : "",
+"tags"     : "web, javascript, jQuery",
+"url"      : "/tip/2020/07/19/tip-javascript-25/",
+"date"     : "2020-07-19 00:00:00 +0900"
+} ,
+
+{
+"title"    : "[jQuery(제이쿼리)] .not() 을 사용하여 특정 요소(선택자)를 제외하고 선택하기 ",
+"category" : "",
+"tags"     : "web, javascript, jQuery",
+"url"      : "/tip/2020/07/18/tip-javascript-24/",
+"date"     : "2020-07-18 00:00:00 +0900"
+} ,
+
+{
 "title"    : "[jQuery(제이쿼리)] JSTL을 사용하여 select box 값 고정하기",
 "category" : "",
 "tags"     : "web, javascript, jQuery, jstl, java",

@@ -4,12 +4,32 @@
  <title>슬기로운 개발 생활</title>
  <link href="https://m-veloper.github.io/atom.xml" rel="self"/>
  <id>https://m-veloper.github.io</id>
- <updated>2020-07-17T20:26:40+09:00</updated>
+ <updated>2020-07-19T01:01:18+09:00</updated>
  <author>
    <name>m-veloper</name>
    <uri>https://m-veloper.github.io</uri>
    <email>m_veloper@naver.com</email>
  </author>
+
+ 
+
+ <entry>
+   <title>[자바스크립트] input value 에 JSON으로 데이터 전달하기</title>
+   <link href="https://m-veloper.github.io/tip/2020/07/19/tip-javascript-25/"/>
+   <id>https://m-veloper.github.io/tip/2020/07/19/tip-javascript-25</id>
+   <updated>2020-07-19T00:00:00+09:00</updated>
+   <content type="html">&lt;p&gt;&lt;img src=&quot;/assets/img/javascript/2020-07-19-tip-javascript-25.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt; &lt;p&gt;&lt;br /&gt;&lt;/p&gt; &lt;h1 id=&quot;input-태그에-에-json으로-데이터-전달&quot;&gt;input 태그에 에 JSON으로 데이터 전달&lt;/h1&gt; &lt;p&gt;input 태그를 사용하다 보면 value 값으로 데이터를 한 번에 여러개를 전달하는 일이 생깁니다.&lt;/p&gt; &lt;p&gt;그냥 일차원 적으로 value=”값1, 값2, 값3” 이렇게 생각을 할 수도 있는데, 이렇게 코딩을 하면&lt;/p&gt; &lt;p&gt;value 값을 자바스크립트로 뽑아낼 수는 있으나.. 비효율적인 코딩 입니다.&lt;/p&gt; &lt;p&gt;한...</content>
+ </entry>
+
+ 
+
+ <entry>
+   <title>[jQuery(제이쿼리)] .not() 을 사용하여 특정 요소(선택자)를 제외하고 선택하기 </title>
+   <link href="https://m-veloper.github.io/tip/2020/07/18/tip-javascript-24/"/>
+   <id>https://m-veloper.github.io/tip/2020/07/18/tip-javascript-24</id>
+   <updated>2020-07-18T00:00:00+09:00</updated>
+   <content type="html">&lt;p&gt;&lt;img src=&quot;/assets/img/javascript/2020-07-18-tip-javascript-24.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt; &lt;p&gt;&lt;br /&gt;&lt;/p&gt; &lt;h1 id=&quot;not&quot;&gt;.not()&lt;/h1&gt; &lt;p&gt;.not()은 제이쿼리로 선택한 선택자(요소)들 중에서, 특정 선택자(요소)만을 제외하는 함수입니다.&lt;/p&gt; &lt;p&gt;자주 사용되는 함수는 아니지만 종종 필요한 경우가 있더라구요.&lt;/p&gt; &lt;p&gt;&lt;br /&gt;&lt;/p&gt; &lt;h2 id=&quot;html&quot;&gt;html&lt;/h2&gt; &lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;div&amp;gt;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;&amp;lt;button&amp;gt;&lt;/span&gt;클릭해보아요&lt;span class=&quot;nt&quot;&gt;&amp;lt;/button&amp;gt;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;&amp;lt;ul&amp;gt;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;&amp;lt;li&amp;gt;&lt;/span&gt;1&lt;span class=&quot;nt&quot;&gt;&amp;lt;/li&amp;gt;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;&amp;lt;li&amp;gt;&lt;/span&gt;2&lt;span class=&quot;nt&quot;&gt;&amp;lt;/li&amp;gt;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;&amp;lt;li&amp;gt;&lt;/span&gt;3&lt;span class=&quot;nt&quot;&gt;&amp;lt;/li&amp;gt;&lt;/span&gt; &lt;span...</content>
+ </entry>
 
  
 
@@ -89,26 +109,6 @@
    <id>https://m-veloper.github.io/tip/2020/06/27/tip-css-09</id>
    <updated>2020-06-27T00:00:00+09:00</updated>
    <content type="html">&lt;p&gt;&lt;img src=&quot;/assets/img/css/2020-06-27-tip-css-09.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt; &lt;h1 id=&quot;툴팁tooltip-title-태그속성--줄바꿈-개행-처리&quot;&gt;툴팁(tooltip), title 태그(속성) 줄바꿈, 개행 처리&lt;/h1&gt; &lt;p&gt;툴팁을 사용하다보면 내용이 길어져서 줄바꿈을 해야할 때가 있습니다.&lt;/p&gt; &lt;p&gt;그럴 때 간단하게 해결할 수 있는 방법이 있습니다.&lt;/p&gt; &lt;p&gt;&lt;br /&gt;&lt;/p&gt; &lt;h2 id=&quot;html-number-code-를-사용하여-줄바꿈-처리하기&quot;&gt;HTML NUMBER CODE 를 사용하여 줄바꿈 처리하기&lt;/h2&gt; &lt;p&gt;&lt;img src=&quot;/assets/img/css/2020-06-27-tip-css-09-01.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt; &lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;nt&quot;&gt;&amp;lt;span&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;title=&lt;/span&gt;&lt;span...</content>
- </entry>
-
- 
-
- <entry>
-   <title>[JSTL] 비교 연산하는 간단한 방법 eq, ne, empty</title>
-   <link href="https://m-veloper.github.io/tip/2020/06/26/tip-jstl-05/"/>
-   <id>https://m-veloper.github.io/tip/2020/06/26/tip-jstl-05</id>
-   <updated>2020-06-26T00:00:00+09:00</updated>
-   <content type="html">&lt;p&gt;&lt;img src=&quot;/assets/img/jstl/2020-06-26-tip-jstl-05.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt; &lt;h1 id=&quot;비교-연산-eq-ne-empty&quot;&gt;비교 연산 (eq, ne, empty)&lt;/h1&gt; &lt;p&gt;jstl 사용시 eq, ne, empty 로 비교 연산 하는 방법&lt;/p&gt; &lt;p&gt;&lt;br /&gt;&lt;/p&gt; &lt;h2 id=&quot;eq-equal--&quot;&gt;eq, equal( == )&lt;/h2&gt; &lt;ul&gt; &lt;li&gt;eq 는 equal, == 라는 의미&lt;/li&gt; &lt;/ul&gt; &lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;c:&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;test&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;${ memberName eq null...</content>
- </entry>
-
- 
-
- <entry>
-   <title>[ERROR_LOG] Required String parameter parameter is not present </title>
-   <link href="https://m-veloper.github.io/tip/2020/06/25/tip-errorlog-01/"/>
-   <id>https://m-veloper.github.io/tip/2020/06/25/tip-errorlog-01</id>
-   <updated>2020-06-25T00:00:00+09:00</updated>
-   <content type="html">&lt;p&gt;&lt;img src=&quot;/assets/img/errorlog/2020-06-25-tip-errorlog-01.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt; &lt;h1 id=&quot;required-string-parameter-parameter-is-not-present&quot;&gt;Required String parameter ‘parameter’ is not present&lt;/h1&gt; &lt;p&gt;Ajax로 Json에 담아 컨트롤러에 파라미터 값을 보냈고, 컨트롤러의 @RequestParam 으로 해당 파라미터값을 받았을 때, 전달 받은 파라미터값이 없거나 타입이 다를 경우 발생하였음.&lt;/p&gt; &lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nd&quot;&gt;@RequestMapping&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;path&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;getMemberInfo&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;nd&quot;&gt;@ResponseBody&lt;/span&gt; &lt;span...</content>
  </entry>
 
  

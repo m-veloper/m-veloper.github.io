@@ -2,6 +2,38 @@
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
     <url>
+      <loc>https://m-veloper.github.io/tip/2020/07/19/tip-javascript-25/</loc>
+      
+        <lastmod>2020-07-19T00:00:00+09:00</lastmod>
+      
+
+      
+        <changefreq>weekly</changefreq>
+      
+
+      
+          <priority>1.0</priority>
+      
+
+    </url>
+  
+    <url>
+      <loc>https://m-veloper.github.io/tip/2020/07/18/tip-javascript-24/</loc>
+      
+        <lastmod>2020-07-18T00:00:00+09:00</lastmod>
+      
+
+      
+        <changefreq>weekly</changefreq>
+      
+
+      
+          <priority>1.0</priority>
+      
+
+    </url>
+  
+    <url>
       <loc>https://m-veloper.github.io/tip/2020/07/17/tip-javascript-23/</loc>
       
         <lastmod>2020-07-17T00:00:00+09:00</lastmod>
