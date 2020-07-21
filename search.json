@@ -1,6 +1,14 @@
 [
 
 {
+"title"    : "[JAVA/JAVASCRIPT] Ajax Json Array(json배열) 컨트롤러로 전달하기",
+"category" : "",
+"tags"     : "web, javascript, ajax, json, controller",
+"url"      : "/tip/2020/07/21/tip-javascript-26/",
+"date"     : "2020-07-21 00:00:00 +0900"
+} ,
+
+{
 "title"    : "[자바스크립트] input value 에 JSON으로 데이터 전달하기",
 "category" : "",
 "tags"     : "web, javascript, jQuery",
