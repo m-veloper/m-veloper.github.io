@@ -4,12 +4,32 @@
  <title>슬기로운 개발 생활</title>
  <link href="https://m-veloper.github.io/atom.xml" rel="self"/>
  <id>https://m-veloper.github.io</id>
- <updated>2020-07-21T20:12:28+09:00</updated>
+ <updated>2020-07-24T00:13:59+09:00</updated>
  <author>
    <name>m-veloper</name>
    <uri>https://m-veloper.github.io</uri>
    <email>m_veloper@naver.com</email>
  </author>
+
+ 
+
+ <entry>
+   <title>[ERROR_LOG] javax.mail.AuthenticationFailedException: 535-5.7.8 Username and Password not accepted </title>
+   <link href="https://m-veloper.github.io/tip/2020/07/23/tip-errorlog-03/"/>
+   <id>https://m-veloper.github.io/tip/2020/07/23/tip-errorlog-03</id>
+   <updated>2020-07-23T00:00:00+09:00</updated>
+   <content type="html">&lt;p&gt;&lt;img src=&quot;/assets/img/errorlog/2020-07-23-tip-errorlog-03.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt; &lt;p&gt;&lt;br /&gt;&lt;/p&gt; &lt;h1 id=&quot;java-mail-에러&quot;&gt;java mail 에러&lt;/h1&gt; &lt;h2 id=&quot;javaxmailauthenticationfailedexception-535-578-username-and-password-not-accepted&quot;&gt;javax.mail.AuthenticationFailedException: 535-5.7.8 Username and Password not accepted&lt;/h2&gt; &lt;p&gt;자바 메일 서비스를 구글 계정으로 사용중인데, 발생한 메시지 입니다.&lt;/p&gt; &lt;p&gt;구글 계정에서 설정 때문에 발생한 에러입니다. 에러를 해결하기 위해서는 복잡한 과정이 아니라, 간단히 설정 부분만 체크해주면 해결됩니다.&lt;/p&gt; &lt;p&gt;&lt;br /&gt;&lt;/p&gt; &lt;h1 id=&quot;구글-메일-설정-확인&quot;&gt;구글 메일 설정...</content>
+ </entry>
+
+ 
+
+ <entry>
+   <title>[CSS] 스크롤바(scrollbar)를 디자인 하기</title>
+   <link href="https://m-veloper.github.io/tip/2020/07/22/tip-css-11/"/>
+   <id>https://m-veloper.github.io/tip/2020/07/22/tip-css-11</id>
+   <updated>2020-07-22T00:00:00+09:00</updated>
+   <content type="html">&lt;p&gt;&lt;img src=&quot;/assets/img/css/2020-07-22-tip-css-11.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt; &lt;p&gt;&lt;br /&gt;&lt;/p&gt; &lt;h1 id=&quot;스크롤바scrollbar를-디자인-하기&quot;&gt;스크롤바(scrollbar)를 디자인 하기&lt;/h1&gt; &lt;p&gt;스크롤바 스타일에 관한 웹표준은 존재하지 않는다고 합니다.&lt;/p&gt; &lt;p&gt;다만 wekbit 브라우저(크롬, 사파리, 오페라)에서는 가상요소를 사용하여 스타일을 적용할 수 있다고 합니다.&lt;/p&gt; &lt;p&gt;&lt;br /&gt;&lt;/p&gt; &lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;&amp;lt;html&amp;gt;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;&amp;lt;head&amp;gt;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;&amp;lt;style&amp;gt;&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;.container&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;width&lt;/span&gt;&lt;span...</content>
+ </entry>
 
  
 
@@ -89,26 +109,6 @@
    <id>https://m-veloper.github.io/tip/2020/07/01/tip-java-09</id>
    <updated>2020-07-01T00:00:00+09:00</updated>
    <content type="html">&lt;p&gt;&lt;img src=&quot;/assets/img/java/2020-07-01-tip-java-09.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt; &lt;h1 id=&quot;자주-쓰는-메소드-정리&quot;&gt;자주 쓰는 메소드 정리&lt;/h1&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;LocalDate : [ 년,월,일 ]과 같은 날짜만 표현&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;LocalTime : [시,분,초]와 같이 시간만 표현&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;LocalDateTime : [ 년,월,일,시,분,초 ]를 표현&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Period : 두 날짜 사이의 [년,월,일]로 표현&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Duration : 두 시간...</content>
- </entry>
-
- 
-
- <entry>
-   <title>[JAVA] 자바(java.time) 날짜, 시간 구하기 (LocalDate, LocalTime, LocalDateTime 사용법)</title>
-   <link href="https://m-veloper.github.io/tip/2020/06/30/tip-java-08/"/>
-   <id>https://m-veloper.github.io/tip/2020/06/30/tip-java-08</id>
-   <updated>2020-06-30T00:00:00+09:00</updated>
-   <content type="html">&lt;style&gt; table { display: table; text-align: center; width: 100%; overflow: auto; word-break: normal; word-break: keep-all; } table th, table td { padding: 6px 13px; border: 1px solid #ddd; } .table { text-align: center; margin: auto; } &lt;/style&gt; &lt;p&gt;&lt;img src=&quot;/assets/img/java/2020-06-30-tip-java-08.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt; &lt;h1 id=&quot;javatime&quot;&gt;java.time&lt;/h1&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;Java 1.8 (자바 8) 이전에서는...</content>
- </entry>
-
- 
-
- <entry>
-   <title>[CSS] 테이블 헤드 고정하고  스크롤 하는 방법. table with fixed thead and scrollable tbody</title>
-   <link href="https://m-veloper.github.io/tip/2020/06/28/tip-css-10/"/>
-   <id>https://m-veloper.github.io/tip/2020/06/28/tip-css-10</id>
-   <updated>2020-06-28T00:00:00+09:00</updated>
-   <content type="html">&lt;p&gt;&lt;img src=&quot;/assets/img/css/2020-06-29-tip-css-10.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt; &lt;h1 id=&quot;테이블-헤드-고정-바디-스크롤&quot;&gt;테이블 헤드 고정 바디 스크롤&lt;/h1&gt; &lt;p&gt;테이블을 만들면서 데이터 리스트들을 뿌려줄때 페이징 처리가 아니라, 스크롤 형태의 테이블을 만들고 싶은데, 일반적으로 만들면 테이블 전체에 스크롤이 적용됩니다. 아래의 방법으로 만들면 헤드부분은 고정되며 리스트로 뿌려진 데이터들만 스크롤이 적용됩니다.&lt;/p&gt; &lt;p&gt;&lt;br /&gt;&lt;/p&gt; &lt;h2 id=&quot;모든-브라우저-공통-작동하는-코드&quot;&gt;모든 브라우저 공통 작동하는 코드&lt;/h2&gt; &lt;ul&gt; &lt;li&gt;단점이라면 css...</content>
  </entry>
 
  

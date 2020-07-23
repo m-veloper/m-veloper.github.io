@@ -1,6 +1,22 @@
 [
 
 {
+"title"    : "[ERROR_LOG] javax.mail.AuthenticationFailedException: 535-5.7.8 Username and Password not accepted ",
+"category" : "",
+"tags"     : "web, errorLog",
+"url"      : "/tip/2020/07/23/tip-errorlog-03/",
+"date"     : "2020-07-23 00:00:00 +0900"
+} ,
+
+{
+"title"    : "[CSS] 스크롤바(scrollbar)를 디자인 하기",
+"category" : "",
+"tags"     : "web, css",
+"url"      : "/tip/2020/07/22/tip-css-11/",
+"date"     : "2020-07-22 00:00:00 +0900"
+} ,
+
+{
 "title"    : "[JAVA/JAVASCRIPT] Ajax Json Array(json배열) 컨트롤러로 전달하기",
 "category" : "",
 "tags"     : "web, javascript, ajax, json, controller",
