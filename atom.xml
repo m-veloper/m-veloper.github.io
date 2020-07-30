@@ -4,12 +4,22 @@
  <title>슬기로운 개발 생활</title>
  <link href="https://m-veloper.github.io/atom.xml" rel="self"/>
  <id>https://m-veloper.github.io</id>
- <updated>2020-07-24T00:13:59+09:00</updated>
+ <updated>2020-07-31T01:00:27+09:00</updated>
  <author>
    <name>m-veloper</name>
    <uri>https://m-veloper.github.io</uri>
    <email>m_veloper@naver.com</email>
  </author>
+
+ 
+
+ <entry>
+   <title>[JAVA] 자바 날짜 비교하기, compareTo</title>
+   <link href="https://m-veloper.github.io/tip/2020/07/31/tip-java-12/"/>
+   <id>https://m-veloper.github.io/tip/2020/07/31/tip-java-12</id>
+   <updated>2020-07-31T00:00:00+09:00</updated>
+   <content type="html">&lt;p&gt;&lt;img src=&quot;/assets/img/java/2020-07-31-tip-java-12.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt; &lt;p&gt;&lt;br /&gt;&lt;/p&gt; &lt;h1 id=&quot;자바-날짜-비교하기-compareto&quot;&gt;자바 날짜 비교하기, compareTo&lt;/h1&gt; &lt;p&gt;개발을 하다보면 오늘을 기준으로 이전 날짜에 대한 로직, 이후 날짜에 대한 로직을 구현해야할 때가 있습니다. 날짜를 비교하는 간단한 방법은 compareTo() 를 이용하는 방법이 있습니다.&lt;/p&gt; &lt;h2 id=&quot;acomparetob&quot;&gt;A.compareTo(B)&lt;/h2&gt; &lt;ul&gt; &lt;li&gt;A와 B가 같으면 0을 반환&lt;/li&gt; &lt;li&gt;A가 B보다 크면 양수(1)를 반환&lt;/li&gt; &lt;li&gt;A가 B보다...</content>
+ </entry>
 
  
 
@@ -99,16 +109,6 @@
    <id>https://m-veloper.github.io/tip/2020/07/03/tip-java-10</id>
    <updated>2020-07-03T00:00:00+09:00</updated>
    <content type="html">&lt;p&gt;&lt;img src=&quot;/assets/img/java/2020-07-03-tip-java-10.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt; &lt;h1 id=&quot;자바-메모리-구조&quot;&gt;자바 메모리 구조&lt;/h1&gt; &lt;ul&gt; &lt;li&gt;컴퓨터 프로그램이 실행되기 위해 필요한 메모리를 우리는 ‘메인 메모리’라고 한다.&lt;/li&gt; &lt;li&gt;물리적으로는 우리가 램(RAM)이라고 부르기도 한다&lt;/li&gt; &lt;li&gt;메인메모리를 관리하는게 OS이고, JVM(자바 버추얼 머신!)은 OS로부터 필요한만큼 할당 받음.&lt;/li&gt; &lt;li&gt;JVM은 OS로부터 받은 메모리를  나누어 관리함&lt;/li&gt; &lt;li&gt;OS로부터 받은 메모리 공간을 “Runtime Data Area”라고 하며. 이 부분을 5개...</content>
- </entry>
-
- 
-
- <entry>
-   <title>[JAVA] 자바(java.time) 날짜, 시간 구하기 (LocalDate, LocalTime, LocalDateTime 자주쓰는 메소드 정리)</title>
-   <link href="https://m-veloper.github.io/tip/2020/07/01/tip-java-09/"/>
-   <id>https://m-veloper.github.io/tip/2020/07/01/tip-java-09</id>
-   <updated>2020-07-01T00:00:00+09:00</updated>
-   <content type="html">&lt;p&gt;&lt;img src=&quot;/assets/img/java/2020-07-01-tip-java-09.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt; &lt;h1 id=&quot;자주-쓰는-메소드-정리&quot;&gt;자주 쓰는 메소드 정리&lt;/h1&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;LocalDate : [ 년,월,일 ]과 같은 날짜만 표현&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;LocalTime : [시,분,초]와 같이 시간만 표현&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;LocalDateTime : [ 년,월,일,시,분,초 ]를 표현&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Period : 두 날짜 사이의 [년,월,일]로 표현&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Duration : 두 시간...</content>
  </entry>
 
  
